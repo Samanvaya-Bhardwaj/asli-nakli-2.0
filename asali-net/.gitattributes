@@ -1,0 +1,7 @@
+# Containers run Linux: keep LF in the repository and in checkouts on every PC.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.joblib binary
