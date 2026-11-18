@@ -95,9 +95,7 @@ def test_guard_protects_share_routes_but_not_health(settings: Settings, key):
     assert r.headers["content-type"].startswith("application/problem+json")
     assert r.json()["code"] == "unknown_org"
     signed = sign_request(key, "dist-north", "GET", "/share/v1/org", NOW)
-    assert (
-        client.get("/share/v1/org", headers=signed).status_code == 404
-    )  # passed the guard; route comes in M4
+    assert client.get("/share/v1/org", headers=signed).status_code == 200
     stale = sign_request(key, "dist-north", "GET", "/share/v1/org", NOW - 500)
     assert client.get("/share/v1/org", headers=stale).json()["code"] == "clock_skew"
 

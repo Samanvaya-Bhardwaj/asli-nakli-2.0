@@ -5,7 +5,7 @@ Every failure becomes a SourceUnavailable with a reason, so a result can say who
 
 import asyncio
 import time
-from collections.abc import Callable
+from collections.abc import Awaitable, Callable
 from typing import Any
 
 import httpx
@@ -35,15 +35,20 @@ class ShareClient:
         base_url_for: Callable[[str], str | None],
         clock: Callable[[], float] = time.time,
         breaker: Breaker | None = None,
+        on_unknown: Callable[[], Awaitable[None]] | None = None,
     ) -> None:
         self.org_id, self.key, self.http = org_id, key, http
         self.base_url_for, self.clock = base_url_for, clock
         self.breaker = breaker or Breaker()
+        self.on_unknown = on_unknown
 
     async def get(self, org_id: str, path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
         if self.breaker.is_open(org_id, self.clock()):
             raise SourceUnavailable(org_id, "skipped")
         base = self.base_url_for(org_id)
+        if base is None and self.on_unknown is not None:
+            await self.on_unknown()
+            base = self.base_url_for(org_id)
         if base is None:
             raise SourceUnavailable(org_id, "unknown_org")
         reason = "unreachable"

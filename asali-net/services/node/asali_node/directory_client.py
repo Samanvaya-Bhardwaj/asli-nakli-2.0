@@ -39,6 +39,7 @@ class DirectoryClient:
         self.s, self.key, self.http, self.clock = settings, key, http, clock
         self.cache_path = settings.data_dir / "directory_cache.json"
         self._by_id: dict[str, dict[str, Any]] = {}
+        self._last_refresh = 0.0
         self._load_cache()
 
     def _url(self, path: str) -> str:
@@ -83,6 +84,12 @@ class DirectoryClient:
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         self.cache_path.write_text(json.dumps({"fetched_at": fetched_at, "orgs": orgs}), encoding="utf-8")
         return DirectoryView(orgs, None)
+
+    async def refresh(self, min_interval: float = 5.0) -> None:
+        """Re-read the list now, at most once per min_interval; used when an unknown org shows up."""
+        if self.clock() - self._last_refresh >= min_interval:
+            self._last_refresh = self.clock()
+            await self.orgs()
 
     def public_key(self, org_id: str) -> str | None:
         org = self._by_id.get(org_id)

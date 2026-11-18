@@ -27,6 +27,10 @@ def install_share_guard(app: FastAPI) -> None:
         clock: Callable[[], float] = getattr(request.app.state, "clock", time.time)
         lookup: Callable[[str], str | None] = getattr(request.app.state, "key_lookup", lambda _: None)
         path_with_query = path + (f"?{request.url.query}" if request.url.query else "")
+        refresh = getattr(request.app.state, "refresh_directory", None)
+        caller = request.headers.get("x-asali-org", "")
+        if caller and lookup(caller) is None and refresh is not None:
+            await refresh()
         try:
             request.state.caller_org = verify_request(
                 request.headers, request.method, path_with_query, clock(), lookup

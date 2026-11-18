@@ -60,11 +60,8 @@ async def test_signature_is_accepted_by_a_real_node_guard(settings: Settings):
     http = httpx.AsyncClient(transport=httpx.ASGITransport(app=node))
     client = ShareClient("shop-delhi", key, http, lambda _: "https://10.0.0.4:8202", clock=Clock())
     async with http:
-        with pytest.raises(SourceUnavailable) as e:
-            await client.get("shop-mumbai", "/share/v1/org", {"serials": "A,B", "q": "x y"})
-    assert (
-        e.value.reason == "http_404"
-    )  # 404, not 401: the guard accepted the signature; the route arrives in M4
+        org = await client.get("shop-mumbai", "/share/v1/org", {"serials": "A,B", "q": "x y"})
+    assert org["org_id"] == "shop-mumbai"  # the guard accepted a signature over an encoded query string
 
 
 async def test_timeout_is_retried_once_then_reported():

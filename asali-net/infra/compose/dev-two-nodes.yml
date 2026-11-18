@@ -1,0 +1,49 @@
+# Development only: a directory and two SQLite nodes over plain HTTP, all on one computer.
+# Run from asali-net/:  docker compose -f infra/compose/dev-two-nodes.yml --env-file infra/compose/dev.env up -d --build
+name: asali-dev-two-nodes
+
+x-node: &node
+  build: { context: ../.., dockerfile: services/node/Dockerfile }
+  depends_on: [directory]
+
+services:
+  directory:
+    build: { context: ../.., dockerfile: services/directory/Dockerfile }
+    environment:
+      JOIN_TOKEN: ${JOIN_TOKEN:?set JOIN_TOKEN in dev.env}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:?set ADMIN_TOKEN in dev.env}
+    ports: ["8400:8000"]
+
+  shop-delhi:
+    <<: *node
+    environment:
+      ORG_ID: shop-delhi
+      ORG_TYPE: shop
+      ORG_NAME: Sharma Medicos
+      ORG_CITY: Delhi
+      ORG_STATE: DL
+      ENGINE: sqlite
+      SQLITE_PATH: /data/own.sqlite
+      DIRECTORY_URL: http://directory:8000
+      JOIN_TOKEN: ${JOIN_TOKEN}
+      PUBLIC_BASE_URL: http://shop-delhi:8000
+      HOST_NAME: dev-container-a
+      ASALI_MODE: simulation
+    ports: ["8201:8000"]
+
+  dist-north:
+    <<: *node
+    environment:
+      ORG_ID: dist-north
+      ORG_TYPE: distributor
+      ORG_NAME: North Star Distributors
+      ORG_CITY: Delhi
+      ORG_STATE: DL
+      ENGINE: sqlite
+      SQLITE_PATH: /data/own.sqlite
+      DIRECTORY_URL: http://directory:8000
+      JOIN_TOKEN: ${JOIN_TOKEN}
+      PUBLIC_BASE_URL: http://dist-north:8000
+      HOST_NAME: dev-container-b
+      ASALI_MODE: simulation
+    ports: ["8101:8000"]
