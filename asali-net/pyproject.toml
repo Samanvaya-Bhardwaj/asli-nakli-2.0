@@ -1,0 +1,26 @@
+[tool.uv.workspace]
+members = ["packages/asali_codes", "packages/asali_text", "services/node", "services/directory"]
+
+[dependency-groups]
+dev = ["pytest==9.2.0", "hypothesis==6.170.15", "ruff==0.17.5", "mypy==2.4.1", "httpx==0.28.1"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib -q --ignore=docs/vibe/generated"
+testpaths = ["packages", "services", "docs/vibe"]
+pythonpath = ["docs/vibe", "packages/asali_codes/tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["apps", "ml/data", "docs/plan", "docs/vibe/generated"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["packages/asali_codes/asali_codes"]
+strict = true

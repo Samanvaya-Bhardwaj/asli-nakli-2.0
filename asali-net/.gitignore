@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+infra/out/
+**/.env
+!**/.env.example
+**/node_modules/
+apps/portal-web/dist/
+ml/data/generated/
