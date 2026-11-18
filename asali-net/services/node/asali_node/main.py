@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 
 from asali_node import config_api
+from asali_node.auth.share_guard import install_share_guard
 from asali_node.logging_setup import configure_logging, install_request_logging
 from asali_node.problems import install_problem_handlers
 from asali_node.settings import Settings
@@ -14,7 +15,8 @@ def create_app(settings: Settings) -> FastAPI:
     app = FastAPI(title=f"Asali node {settings.org_id}", version="1")
     app.state.settings = settings
     install_problem_handlers(app)
-    install_request_logging(app, settings.org_id)
+    install_share_guard(app)
+    install_request_logging(app, settings.org_id)  # added last, so it wraps the guard and logs 401s
     app.include_router(config_api.router)
     app.include_router(share_common.router)
     return app
