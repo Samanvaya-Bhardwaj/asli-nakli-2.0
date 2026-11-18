@@ -11,6 +11,7 @@ package = false
 addopts = "--import-mode=importlib -q --ignore=docs/vibe/generated"
 testpaths = ["packages", "services", "docs/vibe"]
 pythonpath = ["docs/vibe", "packages/asali_codes/tests"]
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient` is deprecated"]
 
 [tool.ruff]
 line-length = 110

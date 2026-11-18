@@ -8,6 +8,7 @@ Format: `| # | Milestone | File | What was observed | What changed |`
 |---|---|---|---|---|
 | 1 | M0 | `pyproject.toml` (pytest config) | The first run of `pytest docs/vibe` collected 8 tests instead of 4: the snapshot copy of `test_snapshot.py` under `generated/` was collected too | Added `--ignore=docs/vibe/generated` to pytest options and excluded the folder from ruff |
 | 3 | M1 | `apps/portal-web/src/lib/codes.ts` (`labelLine`) | 2 of 35 Vitest cases failed: label lines lost their first field (the lot). `LABEL.test()` in `parse` left `lastIndex` after the first match, and `matchAll` copies `lastIndex` from the regex it is given | Reset `LABEL.lastIndex = 0` before `matchAll` |
+| 4 | M2 | `services/directory/tests/test_directory.py` | 1 of 16 failed with a TypeError in the test: the bad-`org_id` case passed `org_id` twice to the helper | The test now updates the body dict instead. The service code was unchanged. |
 | 2 | M1 | `asali_codes/parse.py` (`_bare`) | `parse("hello world")` returned `bare_serial`: any 10–12 letters counted as a serial, because L and O are read as digits | A bare serial must be exactly 11 characters, or 10–12 characters including at least one digit |
 
 ## Deviations from the plan
