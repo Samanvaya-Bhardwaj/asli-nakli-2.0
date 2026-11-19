@@ -3,14 +3,13 @@ from datetime import date, datetime, timedelta
 import pytest
 from asali_node.canonical import IST, NewBatch, NewProduct, NewShipment, UnitRef
 
+KINDS = ("pharma",)
 AT = datetime(2026, 11, 2, 10, 30, tzinfo=IST)
 GTIN = "08901001000124"
 
 
 @pytest.fixture
 def store(env):
-    if env.spec.kind != "pharma":
-        pytest.skip(f"{env.spec.org_id} is not a pharma org")
     return env.rw()
 
 

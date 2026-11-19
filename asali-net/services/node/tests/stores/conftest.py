@@ -5,10 +5,11 @@ or infra/scripts/local_engines.py when Docker is not available). If a port is cl
 with the reason; they are never silently passed.
 """
 
-import importlib.util
+import contextlib
 import os
 import sys
-from dataclasses import dataclass
+from collections.abc import Iterator
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -56,14 +57,18 @@ class Env:
     rw_target: str
     ro_target: str
     city: str = "Test City"
+    opened: list[Any] = field(default_factory=list)
 
     def rw(self) -> Any:
         s = store_class(self.spec.org_id)(self.rw_target, "rw", self.city)
         s.init_schema()
+        self.opened.append(s)
         return s
 
     def ro(self) -> Any:
-        return store_class(self.spec.org_id)(self.ro_target, "ro", self.city)
+        s = store_class(self.spec.org_id)(self.ro_target, "ro", self.city)
+        self.opened.append(s)
+        return s
 
 
 def _db_name(org_id: str) -> str:
@@ -75,11 +80,14 @@ def _pg_env(spec: OrgStore) -> Env:
 
     name = _db_name(spec.org_id)
     with psycopg.connect(le.PG_SUPER, autocommit=True) as c:
-        c.execute(f'DROP DATABASE IF EXISTS "{name}" WITH (FORCE)')
-        c.execute(f'CREATE DATABASE "{name}" OWNER app_rw')
-        c.execute(f'GRANT CONNECT ON DATABASE "{name}" TO share_ro')
+        if not c.execute("SELECT 1 FROM pg_database WHERE datname = %s", (name,)).fetchone():
+            c.execute(f'CREATE DATABASE "{name}" OWNER app_rw')
+            c.execute(f'GRANT CONNECT ON DATABASE "{name}" TO share_ro')
     base = f"postgresql://%s:%s@127.0.0.1:{le.PG_PORT}/{name}"
-    with psycopg.connect(le.PG_SUPER.replace("/postgres", f"/{name}"), autocommit=True) as c:
+    with psycopg.connect(f"{le.PG_SUPER.rsplit('/', 1)[0]}/{name}", autocommit=True) as c:
+        # a fresh, empty schema for every test, with the same grants the compose init script sets
+        c.execute("DROP SCHEMA public CASCADE")
+        c.execute("CREATE SCHEMA public AUTHORIZATION app_rw")
         c.execute("GRANT USAGE ON SCHEMA public TO share_ro")
         c.execute(
             "ALTER DEFAULT PRIVILEGES FOR ROLE app_rw IN SCHEMA public GRANT SELECT ON TABLES TO share_ro"
@@ -107,26 +115,27 @@ def _mongo_env(spec: OrgStore) -> Env:
     return Env(spec, base % ("app_rw", le.RW_PW), base % ("share_ro", le.RO_PW))
 
 
-@pytest.fixture(params=list(ORG_STORES), ids=list(ORG_STORES))
-def env(request: pytest.FixtureRequest, tmp_path: Path, engines_up: dict[str, bool]) -> Env:
+def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
+    """Run each test once per organisation of the kinds the module names in KINDS (all kinds if it has none)."""
+    if "env" in metafunc.fixturenames:
+        kinds = getattr(metafunc.module, "KINDS", None)
+        ids = [o for o, s in ORG_STORES.items() if kinds is None or s.kind in kinds]
+        metafunc.parametrize("env", ids, indirect=True)
+
+
+@pytest.fixture
+def env(request: pytest.FixtureRequest, tmp_path: Path, engines_up: dict[str, bool]) -> Iterator[Env]:
     spec = ORG_STORES[request.param]
-    if importlib.util.find_spec(f"asali_node.stores.{spec.module}") is None:
-        pytest.skip(f"{spec.org_id}: store not written yet")
     if spec.engine == "sqlite":
         path = str(tmp_path / f"{spec.org_id}.sqlite")
-        return Env(spec, path, path)
-    if not engines_up[spec.engine]:
-        pytest.skip(
-            f"{spec.org_id}: {spec.engine} is not reachable (start test-engines.yml or local_engines.py)"
-        )
-    return _pg_env(spec) if spec.engine == "pg" else _mongo_env(spec)
-
-
-def of_kind(*kinds: str) -> Any:
-    """Decorator-free helper: skip a test unless the org is one of the kinds."""
-
-    def check(env: Env) -> None:
-        if env.spec.kind not in kinds:
-            pytest.skip(f"{env.spec.org_id} is a {env.spec.kind}")
-
-    return check
+        e = Env(spec, path, path)
+    else:
+        if not engines_up[spec.engine]:
+            pytest.skip(
+                f"{spec.org_id}: {spec.engine} is not reachable (start test-engines.yml or local_engines.py)"
+            )
+        e = _pg_env(spec) if spec.engine == "pg" else _mongo_env(spec)
+    yield e
+    for s in e.opened:  # close every pool or connection the test opened
+        with contextlib.suppress(Exception):
+            s.close()

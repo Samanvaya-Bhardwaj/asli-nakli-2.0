@@ -1,0 +1,26 @@
+{
+  "collections": {
+    "stock": {
+      "bsonType": "object",
+      "required": ["_id", "in"],
+      "properties": {
+        "_id": {"bsonType": "string"},
+        "in": {"bsonType": "object", "required": ["from", "at", "ref"]},
+        "sale": {"bsonType": ["object", "null"]},
+        "ret": {"bsonType": ["object", "null"]}
+      }
+    },
+    "bills": {
+      "bsonType": "object",
+      "required": ["_id", "at", "lines", "amountPaise"],
+      "properties": {"at": {"bsonType": "date"}, "lines": {"bsonType": "array"}, "amountPaise": {"bsonType": ["int", "long"]}}
+    },
+    "staff": {"bsonType": "object", "required": ["_id", "hash", "role", "name"]},
+    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
+    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+  },
+  "indexes": {
+    "stock": [{"keys": [["in.from", 1], ["in.ref", 1]], "name": "in_from_ref"}],
+    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+  }
+}

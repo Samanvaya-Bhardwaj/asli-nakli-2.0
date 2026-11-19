@@ -40,16 +40,39 @@ def start_postgres(bin_dir: Path) -> None:
     data = WORK / "pg"
     if not (data / "PG_VERSION").exists():
         data.parent.mkdir(parents=True, exist_ok=True)
-        r = _run([str(bin_dir / "initdb.exe"), "-D", str(data), "-U", "postgres", "-A", "trust",
-                  "--encoding=UTF8", "--locale=C"])  # fmt: skip
+        r = _run(
+            [
+                str(bin_dir / "initdb.exe"),
+                "-D",
+                str(data),
+                "-U",
+                "postgres",
+                "-A",
+                "trust",
+                "--encoding=UTF8",
+                "--locale=C",
+            ]
+        )
         if r.returncode:
             raise RuntimeError(r.stderr)
     # pg_ctl's child keeps inherited pipes open, so send its output to a file instead of capturing it
     r = subprocess.run(
-        [str(bin_dir / "pg_ctl.exe"), "start", "-D", str(data), "-w", "-l", str(WORK / "pg.log"),
-         "-o", f"-p {PG_PORT} -c listen_addresses=127.0.0.1 -c shared_buffers=64MB"],
-        stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=90,
-    )  # fmt: skip
+        [
+            str(bin_dir / "pg_ctl.exe"),
+            "start",
+            "-D",
+            str(data),
+            "-w",
+            "-l",
+            str(WORK / "pg.log"),
+            "-o",
+            f"-p {PG_PORT} -c listen_addresses=127.0.0.1 -c shared_buffers=64MB",
+        ],
+        stdin=subprocess.DEVNULL,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        timeout=90,
+    )
     if r.returncode:
         raise RuntimeError((WORK / "pg.log").read_text(errors="replace")[-600:])
     import psycopg
@@ -66,11 +89,22 @@ def start_mongo(bin_dir: Path) -> None:
     data = WORK / "mongo"
     data.mkdir(parents=True, exist_ok=True)
     subprocess.Popen(
-        [str(bin_dir / "mongod.exe"), "--dbpath", str(data), "--port", str(MONGO_PORT),
-         "--bind_ip", "127.0.0.1", "--auth", "--wiredTigerCacheSizeGB", "0.25"],  # fmt: skip
-        stdout=(WORK / "mongo.log").open("wb"), stderr=subprocess.STDOUT,
+        [
+            str(bin_dir / "mongod.exe"),
+            "--dbpath",
+            str(data),
+            "--port",
+            str(MONGO_PORT),
+            "--bind_ip",
+            "127.0.0.1",
+            "--auth",
+            "--wiredTigerCacheSizeGB",
+            "0.25",
+        ],
+        stdout=(WORK / "mongo.log").open("wb"),
+        stderr=subprocess.STDOUT,
         creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
-    )  # fmt: skip
+    )
     for _ in range(60):
         if port_open(MONGO_PORT):
             break
@@ -111,5 +145,7 @@ if __name__ == "__main__":
             start_postgres(pg_dir)
         if mongo_dir:
             start_mongo(mongo_dir)
-        print(f"postgres :{PG_PORT} {'up' if port_open(PG_PORT) else 'down'}, "
-              f"mongo :{MONGO_PORT} {'up' if port_open(MONGO_PORT) else 'down'}")  # fmt: skip
+        print(
+            f"postgres :{PG_PORT} {'up' if port_open(PG_PORT) else 'down'}, "
+            f"mongo :{MONGO_PORT} {'up' if port_open(MONGO_PORT) else 'down'}"
+        )

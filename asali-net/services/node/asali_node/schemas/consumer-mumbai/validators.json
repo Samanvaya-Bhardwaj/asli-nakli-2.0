@@ -1,0 +1,28 @@
+{
+  "collections": {
+    "scans": {
+      "bsonType": "object",
+      "required": ["_id", "input", "code", "result", "where", "when"],
+      "properties": {
+        "input": {"bsonType": "object", "required": ["raw"]},
+        "code": {"bsonType": "object"},
+        "result": {"bsonType": "object"},
+        "where": {"bsonType": "object", "required": ["city"]},
+        "when": {"bsonType": "date"}
+      }
+    },
+    "reports": {
+      "bsonType": "object",
+      "required": ["_id", "doc", "code", "where", "when"],
+      "properties": {"where": {"bsonType": "object", "required": ["city"]}, "when": {"bsonType": "date"}}
+    },
+    "staff": {"bsonType": "object", "required": ["_id", "hash", "role", "name"]},
+    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
+    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+  },
+  "indexes": {
+    "scans": [{"keys": [["code.gtin", 1], ["code.sn", 1]], "name": "code"}],
+    "reports": [{"keys": [["when", 1]], "name": "when"}],
+    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+  }
+}

@@ -4,6 +4,7 @@ import pytest
 from asali_node.canonical import IST, NewReceipt, NewReturn, NewSale, NewShipment, SaleLine, UnitRef
 from asali_node.stores.protocols import NotSupported
 
+KINDS = ("distributor", "shop")
 AT = datetime(2026, 11, 3, 9, 0, tzinfo=IST)
 GTIN = "08901001000124"
 SN = [f"TP{i:09d}" for i in range(1, 4)]
@@ -12,8 +13,6 @@ REF_KEEPERS = {"shop-delhi", "dist-south"}  # these two keep lot and expiry next
 
 @pytest.fixture
 def held(env):
-    if env.spec.kind not in ("distributor", "shop"):
-        pytest.skip(f"{env.spec.org_id} is not a distributor or shop")
     s = env.rw()
     s.record_receipt(NewReceipt(from_org="tarang", source_ref="SHP-1", at=AT, by="ravi",
                                 units=[UnitRef(gtin=GTIN, serial=x, lot="LOT-001", expiry=date(2028, 9, 30))

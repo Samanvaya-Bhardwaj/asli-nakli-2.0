@@ -1,0 +1,28 @@
+{
+  "collections": {
+    "movements": {
+      "bsonType": "object",
+      "required": ["dir", "party", "at", "ref", "items"],
+      "properties": {
+        "dir": {"enum": ["IN", "OUT"]},
+        "party": {"bsonType": "string"},
+        "at": {"bsonType": "date"},
+        "ref": {"bsonType": "string"},
+        "items": {
+          "bsonType": "array",
+          "items": {"bsonType": "object", "required": ["g", "s"], "properties": {"g": {"bsonType": "string"}, "s": {"bsonType": "string"}}}
+        }
+      }
+    },
+    "staff": {"bsonType": "object", "required": ["_id", "hash", "role", "name"]},
+    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
+    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+  },
+  "indexes": {
+    "movements": [
+      {"keys": [["items.s", 1]], "name": "items_s"},
+      {"keys": [["dir", 1], ["party", 1]], "name": "dir_party"}
+    ],
+    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+  }
+}
