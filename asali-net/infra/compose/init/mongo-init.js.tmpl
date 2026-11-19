@@ -1,0 +1,5 @@
+// Runs once when the org's MongoDB container is first created (mongosh, as the root user).
+// ${DB_NAME}, ${RW_PASSWORD} and ${RO_PASSWORD} are filled in by make_stack.py from the generated .env.
+const orgDb = db.getSiblingDB("${DB_NAME}");
+orgDb.createUser({ user: "app_rw", pwd: "${RW_PASSWORD}", roles: [{ role: "readWrite", db: "${DB_NAME}" }] });
+orgDb.createUser({ user: "share_ro", pwd: "${RO_PASSWORD}", roles: [{ role: "read", db: "${DB_NAME}" }] });

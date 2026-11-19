@@ -21,6 +21,11 @@ extend-exclude = ["apps", "ml/data", "docs/plan", "docs/vibe/generated"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
 
+[tool.ruff.lint.per-file-ignores]
+# SQL text and test data stay one clause or one record per line
+"services/node/asali_node/stores/*.py" = ["E501"]
+"services/node/tests/**/*.py" = ["E501"]
+
 [tool.mypy]
 python_version = "3.11"
 files = ["packages/asali_codes/asali_codes"]

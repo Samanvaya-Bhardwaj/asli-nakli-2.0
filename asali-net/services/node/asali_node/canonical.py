@@ -116,6 +116,7 @@ class Alert(Model):
     issued_at: AwareDT
     reason: str
     doc_id: str | None
+    states: list[str] | None = None  # None means national
 
 
 class Licence(Model):
@@ -260,6 +261,7 @@ class NewAlert(Model):
     issued_at: AwareDT
     reason: str
     doc_id: str | None = None
+    states: list[str] | None = None
 
 
 class NewInspection(Model):
@@ -267,3 +269,6 @@ class NewInspection(Model):
     inspected_at: AwareDT
     outcome: str
     doc_id: str | None = None
+
+
+NewDispatch = NewShipment  # a distributor's dispatch has the same fields as a pharma shipment

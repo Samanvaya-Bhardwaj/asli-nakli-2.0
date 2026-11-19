@@ -1,0 +1,11 @@
+-- Runs once, as the superuser, when the org's PostgreSQL container is first created.
+-- ${DB_NAME}, ${RW_PASSWORD} and ${RO_PASSWORD} are filled in by make_stack.py from the generated .env.
+CREATE ROLE app_rw LOGIN PASSWORD '${RW_PASSWORD}';
+CREATE ROLE share_ro LOGIN PASSWORD '${RO_PASSWORD}';
+CREATE DATABASE "${DB_NAME}" OWNER app_rw;
+GRANT CONNECT ON DATABASE "${DB_NAME}" TO share_ro;
+\connect "${DB_NAME}"
+GRANT USAGE ON SCHEMA public TO share_ro;
+-- tables that app_rw creates later are readable by share_ro, and only readable
+ALTER DEFAULT PRIVILEGES FOR ROLE app_rw IN SCHEMA public GRANT SELECT ON TABLES TO share_ro;
+ALTER DEFAULT PRIVILEGES FOR ROLE app_rw IN SCHEMA public GRANT SELECT ON SEQUENCES TO share_ro;

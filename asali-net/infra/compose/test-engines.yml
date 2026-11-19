@@ -1,0 +1,19 @@
+# One PostgreSQL and one MongoDB for the store tests (ports 55432 and 57017).
+#   docker compose -f infra/compose/test-engines.yml up -d
+# Without Docker: infra/scripts/local_engines.py starts the same two engines from the vendors' zip builds.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command: ["postgres", "-c", "shared_buffers=64MB"]
+    ports: ["127.0.0.1:55432:5432"]
+    volumes:
+      - ./init/test-roles.sql:/docker-entrypoint-initdb.d/10-roles.sql:ro
+  mongo:
+    image: mongo:7
+    command: ["mongod", "--auth", "--wiredTigerCacheSizeGB", "0.25"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin_pw
+    ports: ["127.0.0.1:57017:27017"]
