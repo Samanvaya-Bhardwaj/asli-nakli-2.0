@@ -72,7 +72,7 @@ class Env:
 
 
 def _db_name(org_id: str) -> str:
-    return "asali_" + org_id.replace("-", "_")
+    return "asalitest_" + org_id.replace("-", "_")  # never the names the simulation network uses
 
 
 def _pg_env(spec: OrgStore) -> Env:
