@@ -1,8 +1,10 @@
 {
   "S1": {"verdict": "genuine", "reasons": []},
   "S2": {"verdict": "do_not_use", "reasons": ["NOT_ISSUED"]},
-  "S3": {"verdict": "do_not_use", "reasons": ["COPIED_CODE", "CHAIN_BREAK"], "note": "the planted copy also carries a forged receipt that dist-west has no dispatch for"},
+  "S3": {"verdict": "do_not_use", "reasons": ["COPIED_CODE", "CHAIN_BREAK", "TEXT_CONTRADICTION"], "note": "the planted copy also has a forged receipt; the Bengaluru complaint names a city with no sale on record"},
   "S4": {"verdict": "do_not_use", "reasons": ["RECALLED"]},
+  "S5": {"verdict": "do_not_use", "reasons": ["QUALITY_FAILED"], "note": "from a regulator notice that exists only as text"},
+  "S6": {"verdict": "caution", "reasons": ["COLD_CHAIN"]},
   "S7": {"verdict": "caution", "reasons": ["CHAIN_BREAK"]},
   "S8": {"verdict": "cannot_check", "reasons": ["SOURCE_MISSING"], "note": "while dist-west is stopped; genuine again afterwards"},
   "S9": {"status": "needs_confirmation", "after_confirmation": "S1"}

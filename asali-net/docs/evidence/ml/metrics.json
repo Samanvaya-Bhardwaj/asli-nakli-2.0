@@ -1,7 +1,7 @@
 {
  "metrics": {
-  "m1_macro_f1": 0.9506578947368421,
-  "m2_micro_f1": 0.6536964980544747,
+  "m1_macro_f1": 0.9579275418776783,
+  "m2_micro_f1": 0.6614173228346457,
   "codes_precision": 1.0,
   "codes_recall": 0.9955555555555556,
   "names_precision": 0.9867963314358001,
@@ -27,20 +27,20 @@
  },
  "missed": {
   "m2_micro_f1": [
-   0.6536964980544747,
+   0.6614173228346457,
    0.8
   ]
  },
  "m3": {
   "precision": 1.0,
   "recall": 0.9029411764705882,
-  "brier": 0.016978921819457583,
-  "baseline_precision": 0.937799043062201,
-  "baseline_recall": 0.5764705882352941,
+  "brier": 0.016998878524873126,
+  "baseline_precision": 0.9383886255924171,
+  "baseline_recall": 0.5823529411764706,
   "true_links": 340,
   "candidates": 605,
-  "noisy_code_links": 2,
-  "found_noisy_by_m3": 2,
+  "noisy_code_links": 0,
+  "found_noisy_by_m3": 0,
   "found_noisy_by_baseline": 0
  },
  "mentions": {
@@ -79,8 +79,8 @@
   "queries": 96
  },
  "per_label_f1": {
-  "suspected_fake": 0.5882352941176471,
-  "packaging_different": 0.5945945945945946,
+  "suspected_fake": 0.6060606060606061,
+  "packaging_different": 0.6285714285714286,
   "no_effect": 0.5185185185185185,
   "side_effect": 0.7368421052631579,
   "expired_or_near_expiry": 0.8461538461538461,

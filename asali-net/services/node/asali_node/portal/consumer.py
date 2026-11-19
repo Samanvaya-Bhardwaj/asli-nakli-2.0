@@ -17,6 +17,7 @@ from asali_node.canonical import NewCheck, NewReport
 from asali_node.problems import Problem
 from asali_node.stores.sqlbase import new_id
 from asali_node.verify.checks import PLACEHOLDER_GTIN, Resolution, resolve_input
+from asali_node.verify.documents import retrieve
 from asali_node.verify.engine import verify_pack
 from asali_node.verify.trace import Tracer
 
@@ -81,7 +82,7 @@ async def verify_resolved(
 ) -> dict[str, Any]:
     result = await verify_pack(request.app.state.share, _orgs(request), res.gtin or PLACEHOLDER_GTIN, res.serial or "",
                                mode=deps.settings_of(request).asali_mode, read=res.read,
-                               documents=getattr(request.app.state, "documents_fn", None))  # fmt: skip
+                               documents=lambda trace: retrieve(request.app.state.share, _orgs(request), trace))  # fmt: skip
     if result["pack"]["gtin"] == PLACEHOLDER_GTIN:
         result["pack"]["gtin"] = None
     if record:
@@ -139,7 +140,8 @@ async def stream(request: Request, raw: str, city: str = "Unknown") -> Streaming
         total = 1 + sum(o["org_type"] in ("regulator", "shop", "consumer") for o in orgs)
         tracer = Tracer(request.app.state.share, orgs)
         task = asyncio.create_task(verify_pack(request.app.state.share, orgs, res.gtin or PLACEHOLDER_GTIN, res.serial or "",
-                                               mode=deps.settings_of(request).asali_mode, read=res.read, tracer=tracer))  # fmt: skip
+                                               mode=deps.settings_of(request).asali_mode, read=res.read, tracer=tracer,
+                                               documents=lambda trace: retrieve(request.app.state.share, orgs, trace)))  # fmt: skip
         while not task.done():
             yield sse(
                 "progress",

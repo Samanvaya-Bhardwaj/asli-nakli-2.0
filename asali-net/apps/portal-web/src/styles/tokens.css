@@ -1,0 +1,49 @@
+/* Colour tokens (DESIGN.md 3.1). Status colours mean a status and nothing else. One accent per portal type. */
+:root {
+  --bg: #f7f7f5; --surface: #ffffff; --sunken: #efefec;
+  --border: #dadad5; --border-strong: #b9b9b2;
+  --text: #1b1b19; --text-muted: #55554e; --text-meta: #66665e;
+
+  --ok-fg: #14532d; --ok-bg: #e7f4ea; --ok-line: #9bd3a9; --ok-solid: #1f7a3a;
+  --warn-fg: #7a4a00; --warn-bg: #fdf2dc; --warn-line: #f0c77a; --warn-solid: #9a5b00;
+  --bad-fg: #8a1c12; --bad-bg: #fbe7e4; --bad-line: #f0a79d; --bad-solid: #b42318;
+  --unknown-fg: #3f4651; --unknown-bg: #eceef1; --unknown-line: #c3c8d0; --unknown-solid: #5b6573;
+
+  --accent-pharma: #24569e; --accent-distributor: #6a3d9a; --accent-shop: #0b6a80;
+  --accent-consumer: #1b1b19; --accent-regulator: #2f3e5c;
+  --accent: var(--accent-pharma);
+  --on-accent: #ffffff;
+  --shadow-float: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+
+:root[data-theme='dark'] {
+  --bg: #141413; --surface: #1c1c1a; --sunken: #111110; --border: #34342f; --border-strong: #4a4a43;
+  --text: #ededE8; --text-muted: #b4b4ac; --text-meta: #a2a29a;
+  --ok-fg: #9fdcb0; --ok-bg: #12301d; --ok-line: #2e6b41; --ok-solid: #3fa35e;
+  --warn-fg: #f3cb80; --warn-bg: #33250c; --warn-line: #7a5a1e; --warn-solid: #d08a1c;
+  --bad-fg: #f5a99f; --bad-bg: #3a1512; --bad-line: #7e2e25; --bad-solid: #e0523f;
+  --unknown-fg: #c3c8d0; --unknown-bg: #22262c; --unknown-line: #454c56; --unknown-solid: #8a93a0;
+  --accent-pharma: #7fa6e0; --accent-distributor: #b593db; --accent-shop: #5db3c7;
+  --accent-consumer: #ededE8; --accent-regulator: #9daed0; --on-accent: #111110;
+  --shadow-float: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #141413; --surface: #1c1c1a; --sunken: #111110; --border: #34342f; --border-strong: #4a4a43;
+    --text: #ededE8; --text-muted: #b4b4ac; --text-meta: #a2a29a;
+    --ok-fg: #9fdcb0; --ok-bg: #12301d; --ok-line: #2e6b41; --ok-solid: #3fa35e;
+    --warn-fg: #f3cb80; --warn-bg: #33250c; --warn-line: #7a5a1e; --warn-solid: #d08a1c;
+    --bad-fg: #f5a99f; --bad-bg: #3a1512; --bad-line: #7e2e25; --bad-solid: #e0523f;
+    --unknown-fg: #c3c8d0; --unknown-bg: #22262c; --unknown-line: #454c56; --unknown-solid: #8a93a0;
+    --accent-pharma: #7fa6e0; --accent-distributor: #b593db; --accent-shop: #5db3c7;
+    --accent-consumer: #ededE8; --accent-regulator: #9daed0; --on-accent: #111110;
+    --shadow-float: none;
+  }
+}
+
+:root[data-portal='pharma'] { --accent: var(--accent-pharma); }
+:root[data-portal='distributor'] { --accent: var(--accent-distributor); }
+:root[data-portal='shop'] { --accent: var(--accent-shop); }
+:root[data-portal='consumer'] { --accent: var(--accent-consumer); }
+:root[data-portal='regulator'] { --accent: var(--accent-regulator); }

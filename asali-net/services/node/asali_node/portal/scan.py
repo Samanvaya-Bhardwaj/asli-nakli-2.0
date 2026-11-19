@@ -203,7 +203,7 @@ def _write(request: Request, kind: str, s: ScanSession, units: list[UnitRef], at
         missing = [u.serial for u in s.missing()]
         hook = getattr(request.app.state, "on_discrepancy", None)
         if missing and hook:
-            hook(s.from_org, s.source_ref, missing, at)
+            hook(s.from_org, s.source_ref, missing, at, len(s.expected), len(units))
         return {"kind": "receive", "received": len(units), "missing": missing, "source_ref": s.source_ref}
     if kind == "sell":
         prices = body.prices or {}

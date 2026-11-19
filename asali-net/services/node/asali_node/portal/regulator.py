@@ -85,3 +85,86 @@ async def investigate(body: InvestigateIn, request: Request) -> dict[str, Any]:
     if res.decision == "needs_confirmation":
         res.read["note"] = "The code was corrected from what was typed; check it against the pack."
     return {"status": "done", "result": await verify_resolved(request, res, False)}
+
+
+@router.get("/complaints")
+async def complaints(request: Request) -> dict[str, Any]:
+    """Customer complaints from every consumer node, grouped by the batch they were linked to (TEXT_ML.md 6.5)."""
+    from collections import Counter
+
+    from asali_text.clusters import unusual
+
+    from asali_node.network.client import SourceUnavailable
+
+    state = request.app.state
+    known = state.directory.known()
+    consumers = [o["org_id"] for o in known if o["org_type"] == "consumer"]
+    pharmas = [o["org_id"] for o in known if o["org_type"] == "pharma"]
+    docs = await state.share.gather(
+        [
+            (c, "/share/v1/documents/search", {"doc_types": "consumer_complaint", "limit": 50})
+            for c in consumers
+        ],
+        6.0,
+    )
+    cats = await state.share.gather(
+        [(p, "/share/v1/products", None) for p in pharmas]
+        + [(p, "/share/v1/batches", None) for p in pharmas],
+        6.0,
+    )
+    names = {
+        x["gtin"]: f"{x['brand']} {x['strength']}"
+        for r in cats[: len(pharmas)]
+        if not isinstance(r, SourceUnavailable)
+        for x in r["products"]
+    }
+    status = {
+        (b["gtin"], b["lot"]): b["status"]
+        for r in cats[len(pharmas) :]
+        if not isinstance(r, SourceUnavailable)
+        for b in r["batches"]
+    }
+    groups: dict[str, dict[str, Any]] = {}
+    seen: set[str] = set()
+    for r in docs:
+        if isinstance(r, SourceUnavailable):
+            continue
+        for h in r["hits"]:
+            batch = next(
+                (
+                    x["entity_key"]
+                    for x in h["links"]
+                    if x["entity_key"].startswith("batch:") and x["confidence"] >= 0.8
+                ),
+                None,
+            )
+            if batch is None or h["body"] in seen:
+                continue
+            seen.add(h["body"])
+            g = groups.setdefault(
+                batch,
+                {
+                    "batch": batch.split("/", 1)[1],
+                    "gtin": batch[6:].split("/")[0],
+                    "count": 0,
+                    "cities": set(),
+                    "labels": Counter(),
+                },
+            )
+            g["count"] += 1
+            if h["meta"].get("city"):
+                g["cities"].add(h["meta"]["city"])
+            g["labels"].update(h["issue_labels"])
+    expected = max(0.5, sum(g["count"] for g in groups.values()) / max(1, len(groups)))
+    rows = [
+        {"batch": g["batch"], "product": names.get(g["gtin"], g["gtin"]), "count": g["count"], "cities": sorted(g["cities"]),
+         "labels": [k.replace("_", " ") for k, _ in g["labels"].most_common(3)], "unusual": unusual(g["count"], expected),
+         "status": status.get((g["gtin"], g["batch"]), "unknown")}
+        for g in groups.values()
+    ]  # fmt: skip
+    rows.sort(key=lambda r: -int(r["count"]))
+    return {
+        "groups": rows,
+        "unusual": sum(bool(r["unusual"]) for r in rows),
+        "total": sum(int(r["count"]) for r in rows),
+    }

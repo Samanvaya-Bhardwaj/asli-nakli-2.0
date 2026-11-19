@@ -38,6 +38,8 @@ class Settings(BaseSettings):
     shop_settings_json: str | None = None
     staff_seed_json: str | None = None
     served_states: str | None = None  # JSON list of state codes a distributor serves
+    ml_models_dir: Path | None = None  # trained text models; the text pipeline is off without them
+    web_dir: Path | None = None  # the built portal (apps/portal-web/dist); served at / when set
 
     @field_validator("shop_settings_json")
     @classmethod

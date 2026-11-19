@@ -15,6 +15,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import httpx
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "seed"))
 sys.path.insert(0, str(ROOT / "infra" / "scripts"))
@@ -57,7 +59,7 @@ def force_and_sell(shop: Portal, frm: str, ref: str, code: tuple[str, str], hour
 
 
 def main() -> int:
-    argparse.ArgumentParser().add_argument("--simulation", action="store_true", required=True)
+
     state = json.loads((OUT / "seed_state.json").read_text())
     password = json.loads((OUT / "secrets.json").read_text())["staff_password"]
     p = {k: Portal(k, f"http://127.0.0.1:{v}", password) for k, v in PORTS.items()}
@@ -113,5 +115,75 @@ def main() -> int:
     return 0
 
 
+def plant_text() -> None:
+    """The text-only scenarios: S3's complaint, S5 (a regulator notice with no structured alert), S6 (a cold chain report)."""
+    out = json.loads((OUT / "scenarios.json").read_text())
+    state = json.loads((OUT / "seed_state.json").read_text())
+    password = json.loads((OUT / "secrets.json").read_text())["staff_password"]
+    ports = {
+        "regulator": 8401,
+        "dist-north": 8101,
+        "dist-west": 8102,
+        "dist-south": 8103,
+        "kesar": 8303,
+        "tarang": 8301,
+        "medivra": 8302,
+    }
+    p = {k: Portal(k, f"http://127.0.0.1:{v}", password) for k, v in ports.items()}
+    used = {tuple(out[k]["raw"].split(")")[1::2]) for k in out}  # noqa: F841
+    kesar = [tuple(c) for b in state["bills"] for c in b["codes"] if c[1].startswith("KS")]
+    brand = {x["gtin"]: x for x in p["kesar"].call("GET", "/api/products")["products"]}
+    at_text = "2026-11-18T10:00:00+05:30"
+
+    if "S5" not in out:  # an official notice that exists only as text
+        g, s = next(c for c in kesar if brand[c[0]]["generic"] != "insulin glargine")
+        lot = p["kesar"].call("GET", f"/api/unit/{g}/{s}")["lot"]
+        text = f"Drugs declared not of standard quality, November 2026.\n1. {brand[g]['generic'].title()} Injection | B.No. {lot} | Mfd by Kesar Biologics | Dissolution failed"
+        r = p["regulator"].call("POST", "/api/documents", json={"text": text, "at": at_text})
+        out["S5"] = {"gtin": g, "serial": s, "raw": element(g, s), "lot": lot, "doc_id": r["doc_id"]}
+
+    if "S6" not in out:  # a temperature report for the shipment that carried an insulin pack
+        g, s = next(c for c in kesar if brand[c[0]]["generic"] == "insulin glargine")
+        view = p["kesar"].call("GET", f"/api/unit/{g}/{s}")
+        dist = next(e["to_org"] for e in view["events"] if e["event_type"] == "ship")
+        ship = next(
+            e for e in p[dist].call("GET", f"/api/unit/{g}/{s}")["events"] if e["event_type"] == "ship"
+        )
+        text = (
+            f"Shipment {ship['ref']} ({dist} to {ship['to_org']}). Logger TL-22.\n12/10 09:10  6.1 C\n12/10 11:40  13.8 C\n12/10 14:30  14.2 C\n"
+            "Reefer unit failed near Panipat. Temperature above 8 C for about 3 h 20 min. Cartons delivered."
+        )
+        r = p[dist].call("POST", "/api/documents", json={"text": text, "at": at_text})
+        out["S6"] = {
+            "gtin": g,
+            "serial": s,
+            "raw": element(g, s),
+            "shipment": ship["ref"],
+            "doc_id": r["doc_id"],
+        }
+
+    if "complaint" not in out["S3"]:  # a customer in a third city says they bought the same code
+        s3 = out["S3"]
+        maker = {"TP": "tarang", "MV": "medivra", "KS": "kesar"}[s3["serial"][:2]]
+        name = next(
+            x["brand"] for x in p[maker].call("GET", "/api/products")["products"] if x["gtin"] == s3["gtin"]
+        )
+        text = f"Maine 3 Nov ko Namma Pharmacy Bengaluru se {name} liya. Code {s3['serial'][:4]}-{s3['serial'][4:8]}-{s3['serial'][8:]}. Packing alag hai aur dawai se koi fayda nahi hua."
+        r = httpx.post(
+            "http://127.0.0.1:8403/api/report",
+            json={"text": text, "city": "Mumbai", "at": at_text},
+            timeout=60,
+        )
+        out["S3"]["complaint"] = r.json()["doc_id"]
+    (OUT / "scenarios.json").write_text(json.dumps(out, indent=1))
+    print("text scenarios planted: S3 complaint, S5, S6")
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--simulation", action="store_true", required=True)
+    ap.add_argument(
+        "--text", action="store_true", help="plant the text scenarios (after the corpus is posted)"
+    )
+    args = ap.parse_args()
+    sys.exit(plant_text() or 0 if args.text else main())

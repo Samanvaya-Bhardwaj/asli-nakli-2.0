@@ -195,3 +195,14 @@ def discover() -> None:
             for p in root.rglob(exe):
                 os.environ[var] = str(p.parent)
                 break
+
+
+def urls_pg(name: str) -> tuple[str, str]:
+    """The connection URLs for a database provision_pg already made."""
+    base = f"postgresql://%s:%s@127.0.0.1:{PG_PORT}/{name}"
+    return base % ("app_rw", RW_PW), base % ("share_ro", RO_PW)
+
+
+def urls_mongo(name: str) -> tuple[str, str]:
+    base = f"mongodb://%s:%s@127.0.0.1:{MONGO_PORT}/{name}?authSource={name}"
+    return base % ("app_rw", RW_PW), base % ("share_ro", RO_PW)

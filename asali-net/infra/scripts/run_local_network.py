@@ -51,13 +51,15 @@ def secrets_file() -> dict[str, object]:
 
 
 def node_env(
-    org_id: str, org: network_model.Org, s: dict[str, object], dir_url: str, data: Path
+    org_id: str, org: network_model.Org, s: dict[str, object], dir_url: str, data: Path, keep: bool = False
 ) -> dict[str, str]:
     env = {
         "ORG_ID": org_id, "ORG_TYPE": org.type, "ORG_NAME": org.name, "ORG_CITY": org.city, "ORG_STATE": org.state,
         "ENGINE": org.engine, "DIRECTORY_URL": dir_url, "JOIN_TOKEN": str(s["join_token"]),
         "PUBLIC_BASE_URL": f"http://127.0.0.1:{org.port}", "HOST_NAME": HOST, "ASALI_MODE": "simulation",
         "DATA_DIR": str(data), "BCRYPT_ROUNDS": "6",
+        "ML_MODELS_DIR": str(ROOT / "ml" / "models"),
+        "WEB_DIR": str(ROOT / "apps" / "portal-web" / "dist"),
         "STAFF_SEED_JSON": json.dumps([{"username": "staff", "password": s["staff_password"], "role": "admin",
                                         "display_name": f"{org.name} staff"}]),
     }  # fmt: skip
@@ -70,9 +72,13 @@ def node_env(
     if org.engine == "sqlite":
         env["SQLITE_PATH"] = str(data / "own.sqlite")
     elif org.engine == "postgres":
-        env["DB_RW_URL"], env["DB_RO_URL"] = le.provision_pg("asali_" + org_id.replace("-", "_"))
+        env["DB_RW_URL"], env["DB_RO_URL"] = (le.urls_pg if keep else le.provision_pg)(
+            "asali_" + org_id.replace("-", "_")
+        )
     else:
-        env["DB_RW_URL"], env["DB_RO_URL"] = le.provision_mongo("asali_" + org_id.replace("-", "_"))
+        env["DB_RW_URL"], env["DB_RO_URL"] = (le.urls_mongo if keep else le.provision_mongo)(
+            "asali_" + org_id.replace("-", "_")
+        )
     return env
 
 
@@ -99,6 +105,9 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--stop", action="store_true")
     ap.add_argument("--fresh", action="store_true", help="delete earlier data first")
+    ap.add_argument(
+        "--keep", action="store_true", help="keep the databases as they are (restart with new code or models)"
+    )
     args = ap.parse_args()
     if args.stop:
         stop()
@@ -133,13 +142,13 @@ def main() -> int:
         for org_id, org in net.orgs.items():
             data = OUT / "data" / org_id
             data.mkdir(parents=True, exist_ok=True)
-            env = node_env(org_id, org, s, dir_url, data)
+            env = node_env(org_id, org, s, dir_url, data, keep=args.keep)
             (OUT / "envs").mkdir(exist_ok=True)
             (OUT / "envs" / f"{org_id}.json").write_text(json.dumps(env))
             procs.append(spawn("asali_node.main:app_from_env", org.port, env,
                                OUT / "logs" / f"{org_id}.log"))  # fmt: skip
         for org in net.orgs.values():
-            wait_for(f"http://127.0.0.1:{org.port}/share/v1/health")
+            wait_for(f"http://127.0.0.1:{org.port}/share/v1/health", 180)
         pid_file().write_text(
             json.dumps(dict(zip(["directory", *net.orgs], [p.pid for p in procs], strict=True)))
         )

@@ -44,9 +44,13 @@ async def network_lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.share = ShareClient(s.org_id, key, http, directory.base_url, on_unknown=directory.refresh)
     stop = asyncio.Event()
     task = asyncio.create_task(_join(directory, stop))
+    text = getattr(app.state, "text", None)
+    relink = asyncio.create_task(text.relink_loop(stop)) if text is not None else None
     try:
         yield
     finally:
         stop.set()
         await task
+        if relink is not None:
+            await relink
         await http.aclose()
