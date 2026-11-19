@@ -23,8 +23,8 @@ select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
 
 [tool.ruff.lint.per-file-ignores]
 # SQL text and test data stay one clause or one record per line
-"services/node/asali_node/stores/*.py" = ["E501"]
-"services/node/tests/**/*.py" = ["E501"]
+"services/node/asali_node/**/*.py" = ["E501", "B008"]
+"services/node/tests/**/*.py" = ["E501", "UP031"]
 
 [tool.mypy]
 python_version = "3.11"

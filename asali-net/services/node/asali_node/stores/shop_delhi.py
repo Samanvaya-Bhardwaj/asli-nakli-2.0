@@ -10,6 +10,7 @@ from asali_node.canonical import (
     NewSale,
     Shipment,
     StockLine,
+    UnitRef,
     UnitView,
 )
 from asali_node.stores.protocols import NotSupported
@@ -129,3 +130,10 @@ class ShopDelhiStore(SqlStore):
 
     def shipments_to(self, org_id: str, since: datetime | None = None) -> list[Shipment]:
         return []
+
+    def sold(self) -> list[UnitRef]:
+        rows = self.db.rows(
+            "SELECT si.gtin, si.sn FROM sale_items si JOIN sales s ON s.bill_no = si.bill_no "
+            "WHERE NOT EXISTS (SELECT 1 FROM returns r WHERE r.sn = si.sn AND r.at >= s.sold_at) ORDER BY si.sn"
+        )
+        return [UnitRef(gtin=g, serial=s) for g, s in rows]

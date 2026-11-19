@@ -10,6 +10,7 @@ from asali_node.canonical import (
     NewSale,
     Shipment,
     StockLine,
+    UnitRef,
     UnitView,
 )
 from asali_node.stores.protocols import NotSupported
@@ -93,3 +94,9 @@ class ShopMumbaiStore(SqlStore):
 
     def shipments_to(self, org_id: str, since: datetime | None = None) -> list[Shipment]:
         return []
+
+    def sold(self) -> list[UnitRef]:
+        rows = self.db.rows(
+            f"SELECT l.gtin, l.serial FROM inventory_ledger l WHERE l.kind = 'SALE' AND {_LAST} ORDER BY l.serial"
+        )
+        return [UnitRef(gtin=g, serial=s) for g, s in rows]

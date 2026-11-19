@@ -12,6 +12,7 @@ from asali_node.canonical import (
     NewSale,
     Shipment,
     StockLine,
+    UnitRef,
     UnitView,
 )
 from asali_node.stores.mongobase import MongoStore, unknown_unit, view
@@ -96,3 +97,10 @@ class ShopBengaluruStore(MongoStore):
 
     def shipments_to(self, org_id: str, since: datetime | None = None) -> list[Shipment]:
         return []
+
+    def sold(self) -> list[UnitRef]:
+        out = []
+        for d in self.db["stock"].find({"sale": {"$ne": None}, "ret": None}).sort("_id", 1):
+            gtin, serial = d["_id"].split("/")
+            out.append(UnitRef(gtin=gtin, serial=serial))
+        return out

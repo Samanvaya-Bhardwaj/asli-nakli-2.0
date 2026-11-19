@@ -26,6 +26,7 @@ from asali_node.canonical import (
     Shipment,
     StaffRecord,
     StockLine,
+    UnitRef,
     UnitView,
 )  # fmt: skip
 
@@ -66,6 +67,7 @@ class HolderStore(CommonStore, Protocol):  # distributor and shop
     def record_dispatch(self, d: NewDispatch) -> Shipment: ...  # shop raises NotSupported
     def record_sale(self, s: NewSale) -> None: ...  # shop only
     def record_return(self, r: NewReturn) -> None: ...  # shop only
+    def sold(self) -> list[UnitRef]: ...  # shop only: packs sold and not returned
     def unit_view(self, gtin: str, serial: str) -> UnitView: ...
     def stock(self) -> list[StockLine]: ...
     def shipments_to(self, org_id: str, since: datetime | None = None) -> list[Shipment]: ...

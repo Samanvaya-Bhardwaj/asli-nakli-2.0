@@ -88,3 +88,17 @@ def test_shop_sale_and_return(held):
         s.record_return(
             NewReturn(bill_no="B-9", gtin=GTIN, serial=SN[1], reason="x", at=AT + timedelta(days=2))
         )
+
+
+def test_sold_lists_sold_and_not_returned_packs(held):
+    s, kind = held
+    if kind == "distributor":
+        with pytest.raises(NotSupported):
+            s.sold()
+        return
+    assert s.sold() == []
+    s.record_sale(NewSale(bill_no="B-1", at=AT + timedelta(days=1),
+                          lines=[SaleLine(gtin=GTIN, serial=x, mrp_paise=100) for x in SN[:2]]))  # fmt: skip
+    assert sorted(u.serial for u in s.sold()) == SN[:2]
+    s.record_return(NewReturn(bill_no="B-1", gtin=GTIN, serial=SN[0], reason="x", at=AT + timedelta(days=2)))
+    assert [u.serial for u in s.sold()] == [SN[1]]

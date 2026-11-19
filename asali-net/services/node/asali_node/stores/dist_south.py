@@ -148,3 +148,6 @@ class DistSouthStore(SqlStore):
             ]
             out.append(Shipment(shipment_id=inv, from_org=self.ORG, to_org=org_id, at=at, units=units))
         return out
+
+    def sold(self) -> list[UnitRef]:
+        raise NotSupported("a distributor does not sell to customers")

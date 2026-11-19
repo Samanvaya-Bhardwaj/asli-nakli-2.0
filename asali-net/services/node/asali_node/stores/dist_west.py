@@ -100,3 +100,6 @@ class DistWestStore(MongoStore):
                     Shipment(shipment_id=m["ref"], from_org=self.ORG, to_org=org_id, at=at, units=units)
                 )
         return out
+
+    def sold(self) -> list[UnitRef]:
+        raise NotSupported("a distributor does not sell to customers")
