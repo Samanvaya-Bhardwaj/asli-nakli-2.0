@@ -1,0 +1,48 @@
+# The whole network in one place: who runs where, on which port, over which engine.
+# No IP addresses and no secrets. Names, roles and fictional identifiers only.
+pcs:
+  PC-A: {role: people, machine: "Windows, Intel i7 H-series, 16 GB"}
+  PC-B: {role: pharma, machine: "Mac, Apple M4, 16 GB"}
+  PC-C: {role: distributors, machine: "Windows, Ryzen 5 U-series, 8 GB"}
+  PC-D: {role: shops, machine: "Windows, 8 GB"}
+
+directory: {pc: PC-A, port: 8400}
+
+orgs:
+  tarang:
+    {type: pharma, name: Tarang Pharma, city: Baddi, state: HP, engine: postgres, port: 8301, pc: PC-B,
+     issuer_code: TP, gs1_prefix: "8901001"}
+  medivra:
+    {type: pharma, name: Medivra Labs, city: Hyderabad, state: TG, engine: mongo, port: 8302, pc: PC-B,
+     issuer_code: MV, gs1_prefix: "8901002"}
+  kesar:
+    {type: pharma, name: Kesar Biologics, city: Pune, state: MH, engine: sqlite, port: 8303, pc: PC-B,
+     issuer_code: KS, gs1_prefix: "8901003"}
+  dist-north:
+    {type: distributor, name: North Star Distributors, city: Delhi, state: DL, engine: postgres, port: 8101,
+     pc: PC-C, served_states: [DL, HR, UP, PB, HP]}
+  dist-west:
+    {type: distributor, name: Western Medilink, city: Mumbai, state: MH, engine: mongo, port: 8102, pc: PC-C,
+     served_states: [MH, GJ, GA]}
+  dist-south:
+    {type: distributor, name: Dakshin Pharma Agencies, city: Bengaluru, state: KA, engine: sqlite, port: 8103,
+     pc: PC-C, served_states: [KA, TN, KL, TG]}
+  shop-delhi:
+    {type: shop, name: Sharma Medicos, city: Delhi, state: DL, engine: sqlite, port: 8201, pc: PC-D,
+     shop: {area: Lajpat Nagar, state_code: "07", receipt_language: hi, drug_licence_no: DL-R-20417,
+            gstin: 07AAAAA0000A1Z5, helpline: "011-2300-0000"}}
+  shop-mumbai:
+    {type: shop, name: Apna Chemist, city: Mumbai, state: MH, engine: postgres, port: 8202, pc: PC-D,
+     shop: {area: Andheri, state_code: "27", receipt_language: mr, drug_licence_no: MH-R-88213,
+            gstin: 27AAAAA0000A1Z5, helpline: "022-2600-0000"}}
+  shop-bengaluru:
+    {type: shop, name: Namma Pharmacy, city: Bengaluru, state: KA, engine: mongo, port: 8203, pc: PC-D,
+     shop: {area: Jayanagar, state_code: "29", receipt_language: kn, drug_licence_no: KA-R-55102,
+            gstin: 29AAAAA0000A1Z5, helpline: "080-2200-0000"}}
+  regulator:
+    {type: regulator, name: State and Central Drug Control, city: Delhi, state: DL, engine: postgres, port: 8401,
+     pc: PC-A}
+  consumer-delhi:
+    {type: consumer, name: Asali Check, city: Delhi, state: DL, engine: sqlite, port: 8402, pc: PC-A}
+  consumer-mumbai:
+    {type: consumer, name: Asali Check, city: Mumbai, state: MH, engine: mongo, port: 8403, pc: PC-A}

@@ -12,7 +12,7 @@ from asali_node.auth.staff import seed_staff
 from asali_node.documents_store import FileDocuments
 from asali_node.logging_setup import configure_logging, install_request_logging
 from asali_node.portal import common as portal_common
-from asali_node.portal import consumer, holder, pharma, regulator, scan
+from asali_node.portal import consumer, holder, pharma, regulator, scan, sim
 from asali_node.problems import install_problem_handlers
 from asali_node.runtime import network_lifespan
 from asali_node.scan_sessions import SessionTable as ScanSessions
@@ -26,7 +26,7 @@ from asali_node.stores.registry import open_store
 PORTAL_BY_TYPE = {
     "pharma": [pharma, scan],
     "distributor": [holder, scan],
-    "shop": [holder, scan],
+    "shop": [holder, scan, sim],
     "consumer": [consumer],
     "regulator": [regulator],
 }
@@ -47,6 +47,7 @@ def create_app(settings: Settings, rw: Any = None, ro: Any = None) -> FastAPI:
     app.state.settings = settings
     app.state.rw, app.state.ro = rw, ro
     app.state.sessions, app.state.scans = StaffSessions(), ScanSessions()
+    app.state.pending = {}  # consumer checks waiting for the person to confirm a corrected code
     app.state.activity = ActivityLog(settings.data_dir)
     app.state.documents = FileDocuments(settings.data_dir)
     if rw is not None:

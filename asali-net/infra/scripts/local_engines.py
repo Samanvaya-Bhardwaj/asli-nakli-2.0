@@ -149,3 +149,49 @@ if __name__ == "__main__":
             f"postgres :{PG_PORT} {'up' if port_open(PG_PORT) else 'down'}, "
             f"mongo :{MONGO_PORT} {'up' if port_open(MONGO_PORT) else 'down'}"
         )
+
+
+def provision_pg(name: str) -> tuple[str, str]:
+    """A fresh database owned by app_rw, readable by share_ro. Returns (read-write URL, read-only URL)."""
+    import psycopg
+
+    with psycopg.connect(PG_SUPER, autocommit=True) as c:
+        c.execute(f'DROP DATABASE IF EXISTS "{name}" WITH (FORCE)')
+        c.execute(f'CREATE DATABASE "{name}" OWNER app_rw')
+        c.execute(f'GRANT CONNECT ON DATABASE "{name}" TO share_ro')
+    with psycopg.connect(f"{PG_SUPER.rsplit('/', 1)[0]}/{name}", autocommit=True) as c:
+        c.execute("GRANT USAGE ON SCHEMA public TO share_ro")
+        c.execute(
+            "ALTER DEFAULT PRIVILEGES FOR ROLE app_rw IN SCHEMA public GRANT SELECT ON TABLES TO share_ro"
+        )
+        c.execute(
+            "ALTER DEFAULT PRIVILEGES FOR ROLE app_rw IN SCHEMA public GRANT SELECT ON SEQUENCES TO share_ro"
+        )
+    base = f"postgresql://%s:%s@127.0.0.1:{PG_PORT}/{name}"
+    return base % ("app_rw", RW_PW), base % ("share_ro", RO_PW)
+
+
+def provision_mongo(name: str) -> tuple[str, str]:
+    from pymongo import MongoClient
+    from pymongo.errors import OperationFailure
+
+    admin: MongoClient = MongoClient(MONGO_ADMIN)
+    admin.drop_database(name)
+    for user, pw, role in (("app_rw", RW_PW, "readWrite"), ("share_ro", RO_PW, "read")):
+        try:
+            admin[name].command("createUser", user, pwd=pw, roles=[role])
+        except OperationFailure as e:
+            if e.code != 51003:
+                raise
+    base = f"mongodb://%s:%s@127.0.0.1:{MONGO_PORT}/{name}?authSource={name}"
+    return base % ("app_rw", RW_PW), base % ("share_ro", RO_PW)
+
+
+def discover() -> None:
+    """Find the unpacked vendor zips in %TEMP%/asali-engines when the environment variables are not set."""
+    root = Path(os.environ.get("TEMP", tempfile.gettempdir())) / "asali-engines"
+    for var, exe in (("ASALI_PG_BIN", "postgres.exe"), ("ASALI_MONGO_BIN", "mongod.exe")):
+        if not os.environ.get(var) and root.exists():
+            for p in root.rglob(exe):
+                os.environ[var] = str(p.parent)
+                break

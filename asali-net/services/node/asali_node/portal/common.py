@@ -44,3 +44,10 @@ def logout(request: Request, response: Response) -> dict[str, str]:
 @router.get("/me")
 def me(request: Request, session: Session = Depends(current_staff)) -> dict[str, Any]:
     return _who(request, session)
+
+
+@router.get("/unit/{gtin}/{serial}")
+def unit(gtin: str, serial: str, request: Request, _: Session = Depends(current_staff)) -> dict[str, Any]:
+    """What this organisation's own records say about one pack, for its own staff."""
+    deps.need_type(request, "pharma", "distributor", "shop")
+    return dict(deps.rw(request).unit_view(gtin, serial).model_dump(mode="json"))

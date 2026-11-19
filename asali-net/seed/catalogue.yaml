@@ -1,0 +1,26 @@
+# Fictional brands over real generic names. Three batches per product, 40 packs per batch.
+batches_per_product: 3
+packs_per_batch: 40
+tarang:
+  - {brand: Amoxitar, generic: amoxicillin, strength: 500 mg, form: capsule, pack_size: 10, min_c: 15, max_c: 25, mrp_paise: 9800}
+  - {brand: Paratar, generic: paracetamol, strength: 650 mg, form: tablet, pack_size: 15, min_c: 15, max_c: 30, mrp_paise: 3200}
+  - {brand: Atorvatar, generic: atorvastatin, strength: 10 mg, form: tablet, pack_size: 10, min_c: 15, max_c: 25, mrp_paise: 7400}
+  - {brand: Pantotar, generic: pantoprazole, strength: 40 mg, form: tablet, pack_size: 15, min_c: 15, max_c: 25, mrp_paise: 11200}
+medivra:
+  - {brand: Azivra, generic: azithromycin, strength: 500 mg, form: tablet, pack_size: 3, min_c: 15, max_c: 25, mrp_paise: 11900}
+  - {brand: Metvra, generic: metformin, strength: 500 mg, form: tablet, pack_size: 20, min_c: 15, max_c: 30, mrp_paise: 2800}
+  - {brand: Cetivra, generic: cetirizine, strength: 10 mg, form: tablet, pack_size: 10, min_c: 15, max_c: 30, mrp_paise: 2400}
+  - {brand: Amlovra, generic: amlodipine, strength: 5 mg, form: tablet, pack_size: 15, min_c: 15, max_c: 25, mrp_paise: 4100}
+kesar:
+  - {brand: Glargikes, generic: insulin glargine, strength: 100 IU/ml, form: injection, pack_size: 1, min_c: 2, max_c: 8, mrp_paise: 62500}
+  - {brand: Enoxkes, generic: enoxaparin, strength: 40 mg, form: injection, pack_size: 1, min_c: null, max_c: 25, mrp_paise: 48000}
+  - {brand: Filgrakes, generic: filgrastim, strength: 300 mcg, form: injection, pack_size: 1, min_c: 2, max_c: 8, mrp_paise: 91000}
+  - {brand: Cobalkes, generic: methylcobalamin, strength: 1500 mcg, form: injection, pack_size: 5, min_c: 15, max_c: 25, mrp_paise: 18500}
+# which distributor receives which pharma batch (by batch number within a product), and which shop each distributor serves
+route:
+  batch_to_distributor: [dist-north, dist-west, dist-south]
+  distributor_to_shop: {dist-north: shop-delhi, dist-west: shop-mumbai, dist-south: shop-bengaluru}
+shipped_share: 0.75      # of the packs in a batch, shipped to the distributor
+forwarded_share: 0.7     # of what a distributor holds, dispatched to its shop
+sold_share: 0.6          # of what a shop holds, sold
+misread_rate: 0.03       # typed codes with an injected mistake

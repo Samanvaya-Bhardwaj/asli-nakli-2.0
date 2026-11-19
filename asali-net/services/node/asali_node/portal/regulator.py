@@ -67,3 +67,21 @@ def set_licence(body: LicenceIn, request: Request, staff: Session = Depends(curr
     deps.rw(request).set_licence(Licence(**body.model_dump()))
     request.app.state.activity.add(staff.username, "licence", f"{body.org_id} {body.status}")
     return {"org_id": body.org_id, "status": body.status}
+
+
+class InvestigateIn(BaseModel):
+    raw: str = Field(min_length=3, max_length=500)
+
+
+@router.post("/investigate")
+async def investigate(body: InvestigateIn, request: Request) -> dict[str, Any]:
+    """The same verification a consumer gets, for a staff member to look into a pack. Nothing is recorded."""
+    from asali_node.portal.consumer import _orgs, verify_resolved
+    from asali_node.verify.checks import resolve_input
+
+    res = await resolve_input(body.raw, request.app.state.share, _orgs(request))
+    if res.decision not in ("verify", "needs_confirmation") or res.serial is None:
+        return {"status": res.decision, "message": res.message, "choices": res.choices, "read": res.read}
+    if res.decision == "needs_confirmation":
+        res.read["note"] = "The code was corrected from what was typed; check it against the pack."
+    return {"status": "done", "result": await verify_resolved(request, res, False)}

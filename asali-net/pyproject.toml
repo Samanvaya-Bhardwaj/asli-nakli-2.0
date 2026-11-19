@@ -9,9 +9,10 @@ package = false
 
 [tool.pytest.ini_options]
 addopts = "--import-mode=importlib -q --ignore=docs/vibe/generated"
-testpaths = ["packages", "services", "docs/vibe"]
-pythonpath = ["docs/vibe", "packages/asali_codes/tests"]
+testpaths = ["packages", "services", "docs/vibe", "infra", "seed", "tests"]
+pythonpath = ["docs/vibe", "packages/asali_codes/tests", "services/node/tests/verify"]
 filterwarnings = ["ignore:Using `httpx` with `starlette.testclient` is deprecated"]
+markers = ["network: needs the running simulation network (--simulation-up)"]
 
 [tool.ruff]
 line-length = 110
@@ -25,6 +26,8 @@ select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
 # SQL text and test data stay one clause or one record per line
 "services/node/asali_node/**/*.py" = ["E501", "B008"]
 "services/node/tests/**/*.py" = ["E501", "UP031"]
+"infra/**/*.py" = ["E501", "E402", "RUF012"]
+"seed/**/*.py" = ["E501", "E402"]
 
 [tool.mypy]
 python_version = "3.11"

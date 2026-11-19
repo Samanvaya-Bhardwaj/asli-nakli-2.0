@@ -1,0 +1,9 @@
+{
+  "S1": {"verdict": "genuine", "reasons": []},
+  "S2": {"verdict": "do_not_use", "reasons": ["NOT_ISSUED"]},
+  "S3": {"verdict": "do_not_use", "reasons": ["COPIED_CODE", "CHAIN_BREAK"], "note": "the planted copy also carries a forged receipt that dist-west has no dispatch for"},
+  "S4": {"verdict": "do_not_use", "reasons": ["RECALLED"]},
+  "S7": {"verdict": "caution", "reasons": ["CHAIN_BREAK"]},
+  "S8": {"verdict": "cannot_check", "reasons": ["SOURCE_MISSING"], "note": "while dist-west is stopped; genuine again afterwards"},
+  "S9": {"status": "needs_confirmation", "after_confirmation": "S1"}
+}
