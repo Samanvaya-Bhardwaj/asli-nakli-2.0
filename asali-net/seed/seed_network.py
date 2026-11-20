@@ -1,6 +1,7 @@
 """Fill the simulated network through the portals' own APIs, as each organisation's staff would.
 
     python seed/seed_network.py --simulation
+    python seed/seed_network.py --directory-url https://192.168.1.11:8400 --ca rootCA.pem --password ...
 
 Pharma makes batches and packs and ships to distributors; distributors receive and forward to their shop;
 shops receive and sell. Every code is typed through a scan session, about 3 % with a slip that the session
@@ -19,6 +20,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "seed"))
 sys.path.insert(0, str(ROOT / "infra" / "scripts"))
+import addressing
 import network_model
 from client import Portal, at
 
@@ -38,8 +40,8 @@ def save(state: dict[str, Any]) -> None:
     STATE.write_text(json.dumps(state, indent=1))
 
 
-def portals(net: network_model.Network, password: str) -> dict[str, Portal]:
-    return {k: Portal(k, f"http://127.0.0.1:{o.port}", password) for k, o in net.orgs.items()
+def portals(net: network_model.Network, addr: addressing.Addressing, password: str) -> dict[str, Portal]:
+    return {k: Portal(k, addr.url(k), password, verify=addr.verify) for k, o in net.orgs.items()
             if o.type in ("pharma", "distributor", "shop")}  # fmt: skip
 
 
@@ -77,6 +79,8 @@ def ship_out(p: Portal, cat: dict[str, Any], state: dict[str, Any], rng: random.
                 continue
             labels = p.call("GET", f"/api/batches/{batch['lot']}/labels")["labels"]
             take = labels[: int(len(labels) * cat["shipped_share"])]
+            if not take:  # a batch made in the portal with no packs printed yet
+                continue
             dist = route[n % len(route)]
             done = p.scan_session("dispatch", [(x["gtin"], x["serial"]) for x in take], rng, cat["misread_rate"],
                                   {"at": at(hour)}, to_org=dist)  # fmt: skip
@@ -143,13 +147,17 @@ def sell(
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--simulation", action="store_true", required=True)
+    addressing.add_arguments(ap)
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
     net = network_model.load()
     cat = yaml.safe_load((ROOT / "seed" / "catalogue.yaml").read_text(encoding="utf-8"))
-    password = json.loads((OUT / "secrets.json").read_text())["staff_password"]
-    rng, state, ps = random.Random(args.seed), load_state(), portals(net, password)
+    password = addressing.staff_password(args.password, OUT / "secrets.json")
+    rng, state, ps = (
+        random.Random(args.seed),
+        load_state(),
+        portals(net, addressing.from_args(args), password),
+    )
     rate = cat["misread_rate"]
     for org in ("tarang", "medivra", "kesar"):
         make_catalogue(ps[org], cat[org], cat, state, hour=0)

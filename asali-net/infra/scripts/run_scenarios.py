@@ -6,6 +6,7 @@ Writes docs/evidence/simulation/results.json: for each scenario the verdict, the
 in the history, and whether it matches seed/expected.json.
 """
 
+import argparse
 import json
 import sys
 from datetime import datetime
@@ -15,6 +16,8 @@ import httpx
 
 ROOT = Path(__file__).resolve().parents[2]
 SIM = ROOT / "infra" / "out" / "SIM"
+sys.path.insert(0, str(ROOT / "seed"))
+import addressing
 
 
 def clear_check_history() -> None:
@@ -29,10 +32,17 @@ def clear_check_history() -> None:
 
 
 def main() -> int:
-    clear_check_history()
+    ap = argparse.ArgumentParser()
+    addressing.add_arguments(ap)
+    args = ap.parse_args()
+    if not (args.simulation or args.directory_url):
+        args.simulation = True  # the original behaviour: no arguments means the local simulation
+    addr = addressing.from_args(args)
+    if args.simulation:
+        clear_check_history()
     expected = json.loads((ROOT / "seed" / "expected.json").read_text())
     scenarios = json.loads((SIM / "scenarios.json").read_text())
-    consumer = httpx.Client(base_url="http://127.0.0.1:8402", timeout=60)
+    consumer = httpx.Client(base_url=addr.consumer("Delhi"), timeout=60, verify=addr.verify)
     results: dict[str, dict[str, object]] = {}
     for name, want in expected.items():
         if (
@@ -61,7 +71,9 @@ def main() -> int:
         json.dumps(
             {
                 "run_at": datetime.now().isoformat(timespec="seconds"),
-                "mode": "simulation on one computer",
+                "mode": "simulation on one computer"
+                if args.simulation
+                else f"network via directory {addr.directory_url}",
                 "results": results,
             },
             indent=1,

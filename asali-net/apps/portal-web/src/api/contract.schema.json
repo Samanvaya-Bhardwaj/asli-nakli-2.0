@@ -1,0 +1,1061 @@
+{
+ "$defs": {
+  "CheckDone": {
+   "additionalProperties": false,
+   "properties": {
+    "result": {
+     "$ref": "#/$defs/VerifyResult"
+    },
+    "status": {
+     "const": "done",
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "result"
+   ],
+   "title": "CheckDone",
+   "type": "object"
+  },
+  "CheckNeedsChoice": {
+   "additionalProperties": false,
+   "properties": {
+    "choices": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "message": {
+     "type": "string"
+    },
+    "read": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/CodeRead"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "status": {
+     "enum": [
+      "needs_choice",
+      "unreadable"
+     ],
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "message",
+    "choices"
+   ],
+   "title": "CheckNeedsChoice",
+   "type": "object"
+  },
+  "CheckNeedsConfirmation": {
+   "additionalProperties": false,
+   "properties": {
+    "check_id": {
+     "type": "string"
+    },
+    "choices": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "message": {
+     "type": "string"
+    },
+    "read": {
+     "$ref": "#/$defs/CodeRead"
+    },
+    "serial": {
+     "type": "string"
+    },
+    "serial_shown": {
+     "type": "string"
+    },
+    "status": {
+     "const": "needs_confirmation",
+     "type": "string"
+    }
+   },
+   "required": [
+    "status",
+    "message",
+    "read",
+    "choices",
+    "check_id",
+    "serial",
+    "serial_shown"
+   ],
+   "title": "CheckNeedsConfirmation",
+   "type": "object"
+  },
+  "ClaimRow": {
+   "additionalProperties": false,
+   "properties": {
+    "against": {
+     "type": "string"
+    },
+    "check": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "value": {}
+   },
+   "required": [
+    "name",
+    "value",
+    "check",
+    "against"
+   ],
+   "title": "ClaimRow",
+   "type": "object"
+  },
+  "CodeRead": {
+   "additionalProperties": false,
+   "properties": {
+    "confirmed": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "corrections": {
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "type": "array"
+    },
+    "decision": {
+     "type": "string"
+    },
+    "raw": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "raw",
+    "decision",
+    "corrections"
+   ],
+   "title": "CodeRead",
+   "type": "object"
+  },
+  "Config": {
+   "additionalProperties": false,
+   "properties": {
+    "city": {
+     "type": "string"
+    },
+    "gs1_prefix": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "host_name": {
+     "type": "string"
+    },
+    "issuer_code": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "mode": {
+     "enum": [
+      "network",
+      "simulation"
+     ],
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_type": {
+     "enum": [
+      "pharma",
+      "distributor",
+      "shop",
+      "consumer",
+      "regulator"
+     ],
+     "type": "string"
+    },
+    "shop": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ShopSettings"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "state": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "org_id",
+    "org_type",
+    "name",
+    "city",
+    "state",
+    "mode",
+    "host_name",
+    "issuer_code",
+    "gs1_prefix",
+    "shop"
+   ],
+   "title": "Config",
+   "type": "object"
+  },
+  "DocHit": {
+   "additionalProperties": false,
+   "properties": {
+    "claims": {
+     "items": {
+      "$ref": "#/$defs/ClaimRow"
+     },
+     "type": "array"
+    },
+    "created_at": {
+     "type": "string"
+    },
+    "doc_id": {
+     "type": "string"
+    },
+    "doc_type": {
+     "type": "string"
+    },
+    "issue_labels": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "kind": {
+     "enum": [
+      "official",
+      "operational",
+      "allegation"
+     ],
+     "type": "string"
+    },
+    "label": {
+     "type": "string"
+    },
+    "linked_to": {
+     "items": {
+      "$ref": "#/$defs/DocLink"
+     },
+     "type": "array"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_name": {
+     "type": "string"
+    },
+    "snippet": {
+     "$ref": "#/$defs/Snippet"
+    },
+    "title": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "org_id",
+    "org_name",
+    "doc_type",
+    "kind",
+    "title",
+    "created_at",
+    "snippet",
+    "linked_to",
+    "claims",
+    "issue_labels",
+    "label"
+   ],
+   "title": "DocHit",
+   "type": "object"
+  },
+  "DocLink": {
+   "additionalProperties": false,
+   "properties": {
+    "because": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "confidence": {
+     "type": "number"
+    },
+    "entity": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "entity",
+    "confidence",
+    "because"
+   ],
+   "title": "DocLink",
+   "type": "object"
+  },
+  "HistoryEvent": {
+   "additionalProperties": false,
+   "properties": {
+    "at": {
+     "type": "string"
+    },
+    "city": {
+     "type": "string"
+    },
+    "event_id": {
+     "type": "string"
+    },
+    "event_type": {
+     "type": "string"
+    },
+    "from_org": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "gtin": {
+     "type": "string"
+    },
+    "lot": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "ref": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "serial": {
+     "type": "string"
+    },
+    "to_org": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "event_id",
+    "org_id",
+    "event_type",
+    "at",
+    "gtin",
+    "serial",
+    "lot",
+    "from_org",
+    "to_org",
+    "ref",
+    "city"
+   ],
+   "title": "HistoryEvent",
+   "type": "object"
+  },
+  "HistoryHop": {
+   "additionalProperties": false,
+   "properties": {
+    "city": {
+     "type": "string"
+    },
+    "events": {
+     "items": {
+      "$ref": "#/$defs/HistoryEvent"
+     },
+     "type": "array"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_name": {
+     "type": "string"
+    },
+    "served_by": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ServedBy"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "unavailable": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "org_id",
+    "org_name",
+    "city",
+    "unavailable",
+    "events",
+    "served_by"
+   ],
+   "title": "HistoryHop",
+   "type": "object"
+  },
+  "Me": {
+   "additionalProperties": false,
+   "properties": {
+    "display_name": {
+     "type": "string"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_type": {
+     "enum": [
+      "pharma",
+      "distributor",
+      "shop",
+      "consumer",
+      "regulator"
+     ],
+     "type": "string"
+    },
+    "role": {
+     "type": "string"
+    },
+    "username": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "username",
+    "role",
+    "display_name",
+    "org_id",
+    "org_type"
+   ],
+   "title": "Me",
+   "type": "object"
+  },
+  "Network": {
+   "additionalProperties": false,
+   "properties": {
+    "directory_stale": {},
+    "mode": {
+     "enum": [
+      "network",
+      "simulation"
+     ],
+     "type": "string"
+    },
+    "online": {
+     "type": "integer"
+    },
+    "orgs": {
+     "items": {
+      "$ref": "#/$defs/NetworkOrg"
+     },
+     "type": "array"
+    },
+    "self": {
+     "type": "string"
+    },
+    "total": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "orgs",
+    "online",
+    "total",
+    "mode",
+    "self",
+    "directory_stale"
+   ],
+   "title": "Network",
+   "type": "object"
+  },
+  "NetworkOrg": {
+   "additionalProperties": false,
+   "properties": {
+    "city": {
+     "type": "string"
+    },
+    "engine": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "host_name": {
+     "type": "string"
+    },
+    "last_seen": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "latency_ms": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "name": {
+     "type": "string"
+    },
+    "online": {
+     "type": "boolean"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_type": {
+     "enum": [
+      "pharma",
+      "distributor",
+      "shop",
+      "consumer",
+      "regulator"
+     ],
+     "type": "string"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "state": {
+     "type": "string"
+    },
+    "vault": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "org_id",
+    "org_type",
+    "name",
+    "city",
+    "state",
+    "host_name",
+    "last_seen",
+    "online",
+    "latency_ms",
+    "engine",
+    "vault"
+   ],
+   "title": "NetworkOrg",
+   "type": "object"
+  },
+  "Pack": {
+   "additionalProperties": false,
+   "properties": {
+    "expiry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "found": {
+     "type": "boolean"
+    },
+    "gtin": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "lot": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "product": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Product"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "serial": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "gtin",
+    "serial",
+    "lot",
+    "expiry",
+    "product",
+    "found"
+   ],
+   "title": "Pack",
+   "type": "object"
+  },
+  "Parties": {
+   "additionalProperties": false,
+   "properties": {
+    "parties": {
+     "items": {
+      "$ref": "#/$defs/Party"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "parties"
+   ],
+   "title": "Parties",
+   "type": "object"
+  },
+  "Party": {
+   "additionalProperties": false,
+   "properties": {
+    "base_url": {
+     "type": "string"
+    },
+    "city": {
+     "type": "string"
+    },
+    "host_name": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_type": {
+     "enum": [
+      "pharma",
+      "distributor",
+      "shop",
+      "consumer",
+      "regulator"
+     ],
+     "type": "string"
+    },
+    "serves_here": {
+     "type": "boolean"
+    },
+    "state": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "org_id",
+    "org_type",
+    "name",
+    "city",
+    "state",
+    "host_name",
+    "base_url",
+    "serves_here"
+   ],
+   "title": "Party",
+   "type": "object"
+  },
+  "Product": {
+   "additionalProperties": false,
+   "properties": {
+    "brand": {
+     "type": "string"
+    },
+    "generic": {
+     "type": "string"
+    },
+    "strength": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "brand",
+    "generic",
+    "strength"
+   ],
+   "title": "Product",
+   "type": "object"
+  },
+  "Reason": {
+   "additionalProperties": false,
+   "properties": {
+    "code": {
+     "type": "string"
+    },
+    "evidence": {
+     "items": {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     "type": "array"
+    },
+    "strength": {
+     "enum": [
+      "do_not_use",
+      "caution",
+      "cannot_check"
+     ],
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "code",
+    "strength",
+    "text",
+    "evidence"
+   ],
+   "title": "Reason",
+   "type": "object"
+  },
+  "ServedBy": {
+   "additionalProperties": false,
+   "properties": {
+    "at": {
+     "type": "string"
+    },
+    "host_name": {
+     "type": "string"
+    },
+    "org_id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "org_id",
+    "host_name",
+    "at"
+   ],
+   "title": "ServedBy",
+   "type": "object"
+  },
+  "ShopSettings": {
+   "additionalProperties": false,
+   "properties": {
+    "area": {
+     "type": "string"
+    },
+    "drug_licence_no": {
+     "type": "string"
+    },
+    "gstin": {
+     "type": "string"
+    },
+    "helpline": {
+     "type": "string"
+    },
+    "receipt_language": {
+     "enum": [
+      "en",
+      "hi",
+      "mr",
+      "kn"
+     ],
+     "type": "string"
+    },
+    "state_code": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "area",
+    "state_code",
+    "receipt_language",
+    "drug_licence_no",
+    "gstin",
+    "helpline"
+   ],
+   "title": "ShopSettings",
+   "type": "object"
+  },
+  "Snippet": {
+   "additionalProperties": false,
+   "properties": {
+    "text": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "text"
+   ],
+   "title": "Snippet",
+   "type": "object"
+  },
+  "Source": {
+   "additionalProperties": false,
+   "properties": {
+    "host_name": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "ms": {
+     "type": "integer"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "reason": {
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "answered",
+      "unreachable",
+      "skipped"
+     ],
+     "type": "string"
+    }
+   },
+   "required": [
+    "org_id",
+    "status",
+    "ms",
+    "host_name",
+    "reason"
+   ],
+   "title": "Source",
+   "type": "object"
+  },
+  "VerifyResult": {
+   "additionalProperties": false,
+   "properties": {
+    "action": {
+     "type": "string"
+    },
+    "checked_at": {
+     "type": "string"
+    },
+    "documents": {
+     "items": {
+      "$ref": "#/$defs/DocHit"
+     },
+     "type": "array"
+    },
+    "headline": {
+     "type": "string"
+    },
+    "history": {
+     "items": {
+      "$ref": "#/$defs/HistoryHop"
+     },
+     "type": "array"
+    },
+    "mode": {
+     "enum": [
+      "network",
+      "simulation"
+     ],
+     "type": "string"
+    },
+    "pack": {
+     "$ref": "#/$defs/Pack"
+    },
+    "read": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/CodeRead"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "reasons": {
+     "items": {
+      "$ref": "#/$defs/Reason"
+     },
+     "type": "array"
+    },
+    "sources": {
+     "items": {
+      "$ref": "#/$defs/Source"
+     },
+     "type": "array"
+    },
+    "verdict": {
+     "enum": [
+      "genuine",
+      "caution",
+      "do_not_use",
+      "cannot_check"
+     ],
+     "type": "string"
+    },
+    "word": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "verdict",
+    "word",
+    "headline",
+    "action",
+    "reasons",
+    "pack",
+    "read",
+    "history",
+    "documents",
+    "sources",
+    "mode",
+    "checked_at"
+   ],
+   "title": "VerifyResult",
+   "type": "object"
+  }
+ },
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "additionalProperties": false,
+ "properties": {
+  "CheckDone": {
+   "$ref": "#/$defs/CheckDone"
+  },
+  "CheckNeedsChoice": {
+   "$ref": "#/$defs/CheckNeedsChoice"
+  },
+  "CheckNeedsConfirmation": {
+   "$ref": "#/$defs/CheckNeedsConfirmation"
+  },
+  "Config": {
+   "$ref": "#/$defs/Config"
+  },
+  "Me": {
+   "$ref": "#/$defs/Me"
+  },
+  "Network": {
+   "$ref": "#/$defs/Network"
+  },
+  "Parties": {
+   "$ref": "#/$defs/Parties"
+  },
+  "VerifyResult": {
+   "$ref": "#/$defs/VerifyResult"
+  }
+ },
+ "required": [
+  "Config",
+  "Me",
+  "VerifyResult",
+  "CheckDone",
+  "CheckNeedsConfirmation",
+  "CheckNeedsChoice",
+  "Network",
+  "Parties"
+ ],
+ "title": "Contract",
+ "type": "object"
+}

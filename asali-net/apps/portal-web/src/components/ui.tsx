@@ -84,7 +84,7 @@ export function Skeleton({ rows = 4, label }: { rows?: number; label?: string })
 
 export function Table({ head, children }: { head: string[]; children: ReactNode }) {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto" role="region" aria-label="Table, scrolls sideways" tabIndex={0}>
       <table className="w-full border-collapse text-left text-sm">
         <thead>
           <tr className="border-b border-line-strong">
@@ -106,5 +106,5 @@ export const Td = ({ children, mono = false, className = '' }: { children?: Reac
 
 export function Status({ tone, children }: { tone: 'ok' | 'warn' | 'bad' | 'unknown'; children: ReactNode }) {
   const c = { ok: 'text-ok-fg bg-ok-bg border-ok-line', warn: 'text-warn-fg bg-warn-bg border-warn-line', bad: 'text-bad-fg bg-bad-bg border-bad-line', unknown: 'text-unk-fg bg-unk-bg border-unk-line' }[tone]
-  return <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[13px] font-semibold ${c}`}>{children}</span>
+  return <span className={`inline-block shrink-0 self-start whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[13px] font-semibold ${c}`}>{children}</span>
 }

@@ -1,6 +1,7 @@
 """Plant scenarios S1-S4, S7, S8 and S9 in the seeded simulation network, through the portal APIs.
 
     python seed/scenarios.py --simulation
+    python seed/scenarios.py --directory-url https://192.168.1.11:8400 --ca rootCA.pem --password ...
 
 Writes infra/out/SIM/scenarios.json (the codes to check). The expected result for each is in seed/expected.json.
 S3 and S7 need a pack that reached a shop without the paperwork; the simulation-only force-receipt route
@@ -21,11 +22,26 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "seed"))
 sys.path.insert(0, str(ROOT / "infra" / "scripts"))
 sys.path.insert(0, str(ROOT / "services" / "node"))
+import addressing
 from asali_node.packs import make_serial
 from client import Portal, at
 
 OUT = ROOT / "infra" / "out" / "SIM"
-PORTS = {"shop-delhi": 8201, "shop-mumbai": 8202, "shop-bengaluru": 8203, "tarang": 8301, "medivra": 8302}
+PORTS = ["shop-delhi", "shop-mumbai", "shop-bengaluru", "tarang", "medivra"]
+ADDR: addressing.Addressing | None = None
+PASSWORD: str | None = None
+
+
+def portal(org: str) -> Portal:
+    assert ADDR is not None
+    return Portal(
+        org, ADDR.url(org), addressing.staff_password(PASSWORD, OUT / "secrets.json"), verify=ADDR.verify
+    )
+
+
+def consumer_post(city: str, path: str, **kw: Any) -> httpx.Response:
+    assert ADDR is not None
+    return httpx.post(ADDR.consumer(city) + path, verify=ADDR.verify, **kw)
 
 
 def element(gtin: str, serial: str) -> str:
@@ -63,8 +79,8 @@ def clean(codes, used, ok=lambda g, s: True, allow=("genuine",)):
     for g, s in codes:
         if g in used or not ok(g, s):
             continue
-        r = httpx.post(
-            "http://127.0.0.1:8402/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
+        r = consumer_post(
+            "Delhi", "/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
         ).json()
         if (
             r.get("status") == "done"
@@ -79,8 +95,7 @@ def clean(codes, used, ok=lambda g, s: True, allow=("genuine",)):
 def main() -> int:
 
     state = json.loads((OUT / "seed_state.json").read_text())
-    password = json.loads((OUT / "secrets.json").read_text())["staff_password"]
-    p = {k: Portal(k, f"http://127.0.0.1:{v}", password) for k, v in PORTS.items()}
+    p = {k: portal(k) for k in PORTS}
     planted = OUT / "scenarios.json"
     out: dict[str, Any] = json.loads(planted.read_text()) if planted.exists() else {}
     sold = {
@@ -138,7 +153,6 @@ def plant_text() -> None:
     """The text-only scenarios: S3's complaint, S5 (a regulator notice with no structured alert), S6 (a cold chain report)."""
     out = json.loads((OUT / "scenarios.json").read_text())
     state = json.loads((OUT / "seed_state.json").read_text())
-    password = json.loads((OUT / "secrets.json").read_text())["staff_password"]
     ports = {
         "regulator": 8401,
         "dist-north": 8101,
@@ -148,7 +162,7 @@ def plant_text() -> None:
         "tarang": 8301,
         "medivra": 8302,
     }
-    p = {k: Portal(k, f"http://127.0.0.1:{v}", password) for k, v in ports.items()}
+    p = {k: portal(k) for k in ports}
     used = {tuple(out[k]["raw"].split(")")[1::2]) for k in out}  # noqa: F841
     kesar = [tuple(c) for b in state["bills"] for c in b["codes"] if c[1].startswith("KS")]
     brand = {x["gtin"]: x for x in p["kesar"].call("GET", "/api/products")["products"]}
@@ -178,8 +192,8 @@ def plant_text() -> None:
     if "S6" not in out:  # a temperature report for the shipment that carried a cold-chain (insulin) pack
         blocked = {"RECALLED", "QUALITY_FAILED", "COPIED_CODE", "NOT_ISSUED"}
         for g, s in (c for c in kesar if brand[c[0]]["generic"] == "insulin glargine"):
-            reply = httpx.post(
-                "http://127.0.0.1:8402/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
+            reply = consumer_post(
+                "Delhi", "/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
             ).json()
             if reply["status"] == "done" and not blocked & {x["code"] for x in reply["result"]["reasons"]}:
                 break
@@ -210,10 +224,8 @@ def plant_text() -> None:
             x["brand"] for x in p[maker].call("GET", "/api/products")["products"] if x["gtin"] == s3["gtin"]
         )
         text = f"Maine 3 Nov ko Namma Pharmacy Bengaluru se {name} liya. Code {s3['serial'][:4]}-{s3['serial'][4:8]}-{s3['serial'][8:]}. Packing alag hai aur dawai se koi fayda nahi hua."
-        r = httpx.post(
-            "http://127.0.0.1:8403/api/report",
-            json={"text": text, "city": "Mumbai", "at": at_text},
-            timeout=60,
+        r = consumer_post(
+            "Mumbai", "/api/report", json={"text": text, "city": "Mumbai", "at": at_text}, timeout=60
         )
         out["S3"]["complaint"] = r.json()["doc_id"]
     (OUT / "scenarios.json").write_text(json.dumps(out, indent=1))
@@ -222,9 +234,10 @@ def plant_text() -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--simulation", action="store_true", required=True)
+    addressing.add_arguments(ap)
     ap.add_argument(
         "--text", action="store_true", help="plant the text scenarios (after the corpus is posted)"
     )
     args = ap.parse_args()
+    ADDR, PASSWORD = addressing.from_args(args), args.password
     sys.exit(plant_text() or 0 if args.text else main())

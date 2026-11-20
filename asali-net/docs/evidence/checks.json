@@ -1,15 +1,15 @@
 {
- "run_at": "2026-11-20T09:50:56",
+ "run_at": "2026-11-20T10:27:06",
  "results": [
   {
    "check": "pytest (all, network tests skipped)",
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "........................................................................ [ 62%]",
-    "........................................................................ [ 77%]",
-    "........................................................................ [ 93%]",
-    ".....................sssssssssss                                         [100%]"
+    "........................................................................ [ 60%]",
+    "........................................................................ [ 75%]",
+    "........................................................................ [ 90%]",
+    "..........................sssssssssssssssssss                            [100%]"
    ]
   },
   {
@@ -17,7 +17,7 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "...........                                                              [100%]"
+    "...................                                                      [100%]"
    ]
   },
   {
@@ -33,7 +33,7 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "192 files already formatted"
+    "202 files already formatted"
    ]
   },
   {
@@ -49,10 +49,10 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    " Test Files  2 passed (2)",
-    "      Tests  40 passed (40)",
-    "   Start at  09:50:35",
-    "   Duration  2.05s (environment 67%, setup 23%, import 4%, tests 3%, transform 3%, worker 1%)"
+    " Test Files  4 passed (4)",
+    "      Tests  48 passed (48)",
+    "   Start at  10:26:39",
+    "   Duration  4.34s (environment 66%, setup 16%, import 9%, tests 6%, transform 2%, worker 1%)"
    ]
   },
   {
@@ -66,10 +66,10 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "(!) Some chunks are larger than 500 kB after minification. Consider:",
-    "- Using dynamic import() to code-split the application",
-    "- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting",
-    "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\u001b[39m"
+    "dist/assets/es-DvBOkqQP.js                                                   42.24 kB \u00e2\u201d\u201a gzip:  14.37 kB",
+    "dist/assets/StaffApp-DcwJx41l.js                                             72.58 kB \u00e2\u201d\u201a gzip:  22.95 kB",
+    "dist/assets/index-CqcpI3D-.js                                               468.87 kB \u00e2\u201d\u201a gzip: 150.04 kB",
+    "\u001b[32m\u00e2\u0153\u201c built in 1.55s\u001b[39m"
    ]
   },
   {

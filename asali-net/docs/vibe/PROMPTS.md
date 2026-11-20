@@ -62,3 +62,13 @@ Result:
 ## Later sessions
 
 Each implementing session uses `docs/plan/AGENT_PROMPT.md` with `<MILESTONE>` filled in. Record each one here, with the milestone it was given.
+
+## V2-3: finish M3 to M11 (20 Nov 2026)
+
+```text
+continue and complete till m11 end to end! be quick! take all the skills you need install install plugins do the rest
+...
+yes finish whats left and get it done and finish everything
+```
+
+Result: milestones M3 to M12 built and checked. In the last round: seed and scenario scripts address nodes through the directory, API types generated from Pydantic models, regulator, outage and phone browser tests, theme switch and phone More menu, audit and critique fixes. Files written in this last round were **not** snapshotted before their first run (`addressing.py`, `contract.py`, `gen_api_types.py`, `theme.ts`, `ThemeSwitch.tsx`, the new e2e specs), so `docs/vibe/generated/` has no first version of them. The test for each fix was written before the fix.

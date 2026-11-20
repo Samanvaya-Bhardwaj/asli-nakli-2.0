@@ -8,8 +8,8 @@ Built 20 Nov 2026 from the files in `docs/evidence/`.
 - **Docker was never run.** The development PC has no WSL2. The generated compose files are tested as data (`infra/tests/test_make_stack.py`) and have not been started.
 - **The text vault is SQLite full-text search, not Meilisearch.** Meilisearch's binary is blocked by Windows Smart App Control on the development PC.
 - **The hand-written ML test set has not been provided** by the team. The ML report says so in its first line.
-- **Superpowers and Humanizer plugins were not installed** (they need the user's `/plugin` commands). Impeccable's detector was run and is at zero findings; its critique, audit and polish commands were not run as skills, and no humanizer pass was made on the prose.
-- **Not written:** generated API types (task 4.8; the types are written by hand), the dark-mode switch (the portal follows the system setting), a "More" menu on the phone bottom bar, and addressing other computers from the seed scripts.
+- **Superpowers and Humanizer plugins were not installed** (they need the user's `/plugin` commands), so no humanizer pass was made on the prose. Impeccable's detector is at zero findings; its audit and critique were done as a pass by Claude, not by a second person (`docs/evidence/ui/impeccable-review.md`).
+- **The seed and scenario scripts address nodes through the directory** (`--directory-url`, `--ca`), but have only been run against the local directory, never against four computers.
 - **Hindi, Marathi and Kannada receipt text is unreviewed** and marked so in the files and on screen.
 - **ML target missed:** m2_micro_f1 is 0.643 against a target of 0.8 on the generated test families. Thresholds were not tuned on test data.
 
@@ -28,7 +28,7 @@ Built 20 Nov 2026 from the files in `docs/evidence/`.
 
 ## Automated checks
 
-Run 2026-11-20T09:50:56.
+Run 2026-11-20T10:27:06.
 
 | Check | Result |
 |---|---|
@@ -47,7 +47,7 @@ Run 2026-11-20T09:50:56.
 
 ## Scenarios (simulation on one computer)
 
-Run 2026-11-20T09:46:38.
+Run 2026-11-20T10:07:09.
 
 | Scenario | Verdict | Reasons | Expected | Computers named | Result |
 |---|---|---|---|---|---|
@@ -82,7 +82,7 @@ Measured on template families the models never saw (`docs/evidence/ml/report.md`
 
 ## Browser tests
 
-6 passed, 0 failed. Screenshots in `docs/evidence/ui/e2e/`.
+13 passed, 0 failed. Screenshots in `docs/evidence/ui/e2e/`.
 
 ## Deviations from the plan
 

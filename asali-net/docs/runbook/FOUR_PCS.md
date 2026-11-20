@@ -99,18 +99,19 @@ one line `OK <organisation> <computer>` per organisation, then `directory lists 
 
 ## 7. Put data in
 
-From any computer:
+From PC-A (it holds the directory), with the staff password from `infra/out/PC-A/secrets.json` (or set `ASALI_STAFF_PASSWORD`):
 
 ```powershell
-python seed/seed_network.py --directory-url https://<PC-A ip>:8400
-python seed/scenarios.py --directory-url https://<PC-A ip>:8400
-python ml/post_corpus.py --directory-url https://<PC-A ip>:8400
-python seed/scenarios.py --directory-url https://<PC-A ip>:8400 --text
+$dir = "https://<PC-A ip>:8400"; $ca = "infra/out/PC-A/certs/rootCA.pem"
+python seed/seed_network.py --directory-url $dir --ca $ca --password <staff password>
+python seed/scenarios.py --directory-url $dir --ca $ca --password <staff password>
+python ml/post_corpus.py --directory-url $dir --ca $ca --password <staff password>
+python seed/scenarios.py --directory-url $dir --ca $ca --password <staff password> --text
 ```
 
-The seed and scenario scripts currently take a `--simulation` flag that addresses `127.0.0.1`. Pointing them at the directory (reading
-each organisation's address from it) is not written yet. Until it is, run them with the addresses in a copy of `network.yaml`, or use the
-simulation. This is listed under "Not done" in the report.
+The scripts read each organisation's address from the directory, so every computer in section 6 must be running and listed first.
+They keep their progress in `infra/out/SIM/` on the computer you run them from, so run all four from the same place.
+This addressing has been tested against the local directory only; it has not yet been run across four computers.
 
 ## 8. Prove it is spread over four computers
 

@@ -24,5 +24,5 @@ def settings(tmp_path: Path) -> Settings:
         host_name="PC-D",
         asali_mode="simulation",
         data_dir=tmp_path,
-        shop_settings_json='{"area": "Andheri", "receipt_language": "mr", "drug_licence_no": "MH-1"}',
+        shop_settings_json='{"area": "Andheri", "receipt_language": "mr", "drug_licence_no": "MH-1", "salt": "shop-private-salt"}',
     )

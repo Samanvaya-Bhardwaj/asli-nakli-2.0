@@ -24,6 +24,7 @@ export async function login(page: Page, base: string) {
 }
 
 export async function noAxeViolations(page: Page, name: string) {
+  await page.waitForTimeout(300) // let the verdict's short fade-in finish, so the screenshot and the contrast check see the final colours
   mkdirSync(SHOTS, { recursive: true })
   await page.screenshot({ path: join(SHOTS, `${name}.png`), fullPage: true })
   const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()

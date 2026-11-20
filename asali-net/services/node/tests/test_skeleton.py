@@ -41,6 +41,7 @@ def test_config_describes_the_portal_without_secrets(client: TestClient, setting
     text = json.dumps(cfg)
     for secret in ("secret-pass", "meili-master-secret", "join-secret", "postgresql://", "vault:7700"):
         assert secret not in text
+    assert "shop-private-salt" not in text  # the phone-hash salt stays on the node
     assert "KEY" not in text.upper().replace("_", "")
     assert "TOKEN" not in text.upper()
 

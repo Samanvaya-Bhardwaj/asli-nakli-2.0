@@ -20,7 +20,9 @@ def public_config(s: Settings) -> dict[str, Any]:
         "gs1_prefix": s.gs1_prefix,
         "mode": s.asali_mode,
         "host_name": s.host_name,
-        "shop": s.shop_settings if s.org_type == "shop" else None,
+        "shop": {k: v for k, v in (s.shop_settings or {}).items() if k != "salt"}
+        if s.org_type == "shop"
+        else None,
     }
 
 
