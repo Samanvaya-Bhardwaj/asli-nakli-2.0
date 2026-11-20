@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-033
+title: Consumer complaint MCA-2026-G0078
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: July 10, 2026
+---
+
+Dear Sir/Madam,
+
+I bought Amoxilan 520mg with code MED-AMXLN-687 at Salt Lake City Pharmacy, Kolkata. I was overcharged. Charged more than the printed MRP for Amoxilan 250mg.
+
+Please look into this.
+
+Regards,
+Neha Kulkarni

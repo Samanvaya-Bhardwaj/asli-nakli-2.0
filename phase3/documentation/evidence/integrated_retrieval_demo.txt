@@ -1,0 +1,389 @@
+Phase 3 - context-aware document retrieval and the integrated answer: demonstration transcript
+Recorded 2026-11-18 20:14 on one machine (LOCAL SIMULATION). Each source searched its own documents; the coordinator built the search from the aggregated SCORE context and merged the results.
+
+========================================================================================================
+1. QUESTION: Find information about batch BATCH-A009 manufactured by Biocon and identify any quality or safety concerns
+   intents ['safety', 'manufacturing']; identifiers ['BATCH-A009']; terms ['information', 'biocon', 'identify', 'concerns']; databases queried ['db3', 'db4']
+========================================================================================================
+2. AGGREGATED CONTEXT  (anchors: BATCH-A009)
+   1.5     MFG-004                                            db3        in the result of the subquery itself; reached through 1 FK join(s): products(...
+   1.1004  PRD-00024                                          db3        reached through 1 FK join(s): products(product_uid) -> production_records(pro...
+   0.9101  GMP-IN-004                                         db3        reached through 1 FK join(s): products(manufacturer_id) -> manufacturers(manu...
+   0.809   company_name=Biocon Biologics Ltd                  db3        reached through 1 FK join(s): products(manufacturer_id) -> manufacturers(manu...
+   0.7074  MED-ASALI-009                                      db3        in the result of the subquery itself; reached through 1 FK join(s): products(...
+   0.641   biocon                                             db3        reached through 2 FK join(s): products(product_uid) -> production_records(pro...
+   0.5404  manufacture_date=2025-06                           db3        in the result of the subquery itself; matches the question's words or intent
+   0.524   CDSCO/MFG/009/2021                                 db3        in the result of the subquery itself; frequent in the result but rare in its ...
+   0.5055  gmp_cert_expiry=2025-06                            db3        reached through 1 FK join(s): products(manufacturer_id) -> manufacturers(manu...
+   0.4658  pack_size=Pen 3ml                                  db3        in the result of the subquery itself; frequent in the result but rare in its ...
+   0.4658  product_name=Basalog 100 IU/ml                     db3        in the result of the subquery itself; frequent in the result but rare in its ...
+   0.4658  strength=100 IU/ml                                 db3        in the result of the subquery itself; frequent in the result but rare in its ...
+========================================================================================================
+3. DOCUMENT SEARCH QUERY BUILT FROM THE CONTEXT
+   text: "Find information about batch BATCH-A009 manufactured by Biocon and identify any quality or safety concerns"
+     + context terms: Biocon Biologics Ltd^0.431, biocon^0.342, 2025-06^0.288, 2025-06^0.27, Pen 3ml^0.248, Basalog 100 IU/ml^0.248, 100 IU/ml^0.248
+     + identifiers:   batch_number=BATCH-A009^1.0, item_code=MED-ASALI-009^0.5, manufacturer_id=MFG-004^0.5
+     + names:         Basalog 100 IU/ml, Biocon Biologics Ltd, Insulin glargine
+     + intents:       safety, manufacturing
+========================================================================================================
+4. DOCUMENT STORES SEARCHED (each by its own source)
+   db1: ok, 37 documents / 37 chunks, 0 passed the relevance gate, 0 returned
+   db2: ok, 88 documents / 88 chunks, 2 passed the relevance gate, 2 returned
+   db3: ok, 104 documents / 140 chunks, 4 passed the relevance gate, 4 returned
+   db4: ok, 74 documents / 74 chunks, 0 passed the relevance gate, 0 returned
+========================================================================================================
+5. RANKING
+   #1 1.2646  DOC-DB3-PQR-004  Biocon Biologics Ltd product quality review H1 2025  [manufacturer_quality_report] 2025-07-20
+        parts: lexical 0.898  entity 2.0  type x1.25  recency x1.055  conflict x1.0   | owner db3 / DOC-DB3-PQR-004.md (chunk 1 of 1); Biocon Biologics Ltd quality unit
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions manufacturer id MFG-004; names Basalog 100 IU/ml; names Biocon Biologic...
+        evidence: manufacturer's own record
+        matching context: "**Biocon Biologics Ltd** product **quality** review H1 2025 **Biocon Biologics Ltd** - Product **Quality** Review, H1 2025 Scope This review covers 2 batch(es) released from **Biocon Biologics Ltd** - Bengal..."
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db3
+        link: manufacturer id MFG-004 - reliable (exact identifier); in the query context
+   #2 1.2416  DOC-DB3-BIR-009  Batch inspection report BATCH-A009 (Basalog 100 I... [batch_inspection_report] 2025-06-06
+        parts: lexical 0.881  entity 2.0  type x1.25  recency x1.043  conflict x1.0   | owner db3 / DOC-DB3-BIR-009.md (chunk 1 of 1); Biocon Biologics Ltd QA inspection
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions manufacturer id MFG-004; names Basalog 100 IU/ml; names Biocon Biologic...
+        evidence: manufacturer's own record
+        matching context: "Batch inspection report **BATCH-A009** (**Basalog 100 IU/ml**) Batch inspection report Product: **Basalog 100 IU/ml** (**Insulin glargine** 100 IU/ml) Pack code on label: **MED-ASALI-009** Batch: **BATCH-A00..."
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db3
+        link: manufacturer id MFG-004 - reliable (exact identifier); in the query context
+   #3 0.7686  DOC-DB2-CCI-001  Cold-chain excursion: DBATCH-010 (Basalog 100 IU/ml) [cold_chain_incident_report] 2025-06-07
+        parts: lexical 0.511  entity 1.775  type x1.0  recency x1.043  conflict x1.0   | owner db2 / DOC-DB2-CCI-001.md (chunk 1 of 1); Apollo Supply Chain Solutions Ltd quality desk
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions manufacturer id MFG-004; names Basalog 100 IU/ml; matches context terms...
+        evidence: distributor's operational record
+        matching context: "Cold-chain excursion: DBATCH-010 (**Basalog 100 IU/ml**) Cold-chain incident report Consignment DBATCH-010 of **Basalog 100 IU/ml** (batch **BATCH-A009**, pack code **MED-ASALI-009**) left the 2.0-8.0 C band..."
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db3
+        link: manufacturer id MFG-004 - reliable (exact identifier); in the query context
+   #4 0.505   DOC-DB3-PSI-025  Product safety information - Insulin glargine        [product_safety_document] 2025-01-15
+        parts: lexical 0.556  entity 0.6  type x1.25  recency x1.004  conflict x1.0   | owner db3 / DOC-DB3-PSI-025.md (chunk 1 of 1); Marketing authorisation holders (registry library)
+        why: names Basalog 100 IU/ml; names Insulin glargine; matches context terms: basalog; a product safety document suits a question about safety, manufactu...
+        evidence: reference information
+        matching context: "Product **safety** **information** - **Insulin glargine** Product **safety** **information**: **Insulin glargine** Therapeutic class: antidiabetic; ATC A10AE04; schedule H. Marketed as: **Basalog 100 IU/ml**..."
+        link: Basalog 100 IU/ml - weak (name only); named in the context
+        link: Insulin glargine - weak (name only); named in the context
+   #5 0.3041  DOC-DB2-SHP-003  Shipment note DBATCH-010                             [distributor_shipment_note] 2025-06-05
+        parts: lexical 0.129  entity 0.8  type x1.0  recency x1.042  conflict x1.0   | owner db2 / DOC-DB2-SHP-003.md (chunk 1 of 1); Apollo Supply Chain Solutions Ltd (DIST-001) dispatch desk
+        why: mentions medicine MED-ASALI-009; names Basalog 100 IU/ml; matches context terms: basalog
+        evidence: distributor's operational record
+        matching context: "Shipment note DBATCH-010 Dispatch note DBATCH-010 Consignment: **Basalog 100 IU/ml** pack code **MED-ASALI-009**, 50 units, from Mumbai Central DC to pharmacy VND-003 by air (AI-864). Dispatched 2025-06-05, ..."
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db3
+        link: Basalog 100 IU/ml - weak (name only); named in the context
+   #6 0.1899  DOC-DB3-PQR-005  Biocon Biologics Ltd product quality review H2 2025  [manufacturer_quality_report] 2026-01-20
+        parts: lexical 0.793  entity 0.775  type x1.25  recency x1.105  conflict x0.25   | owner db3 / DOC-DB3-PQR-005.md (chunk 1 of 2); Biocon Biologics Ltd quality unit
+        why: penalised: about a different medicine (EPV25689, EPV25690, GLR25678); mentions manufacturer id MFG-004; names Biocon Biologics Ltd; names Insulin g...
+        evidence: manufacturer's own record
+        matching context: "**Biocon Biologics Ltd** product **quality** review H2 2025 **Biocon Biologics Ltd** - Product **Quality** Review, H2 2025 Scope This review covers 4 batch(es) released from **Biocon Biologics Ltd** - Bengal..."
+        link: manufacturer id MFG-004 - reliable (exact identifier); in the query context
+        link: Biocon Biologics Ltd - weak (name only); named in the context
+        link: Insulin glargine - weak (name only); named in the context
+========================================================================================================
+6. INTEGRATED RESPONSE
+   VERIFIED (structured records):
+     - MED-ASALI-009 is registered: Basalog 100 IU/ml, batch BATCH-A009, manufacturer MFG-004   [db3.products]
+   REPORTED IN DOCUMENTS:
+     - Biocon Biologics Ltd product quality review H1 2025 (manufacturer's own record, db3): "**Biocon Biologics Ltd** product **quality** review H1 2025 **Biocon Biologics Ltd** - Product **Quality** ..."
+     - Batch inspection report BATCH-A009 (Basalog 100 IU/ml) (manufacturer's own record, db3): "Batch inspection report **BATCH-A009** (**Basalog 100 IU/ml**) Batch inspection report Product: **Basalog 1..."
+     - Cold-chain excursion: DBATCH-010 (Basalog 100 IU/ml) (distributor's operational record, db2): "Cold-chain excursion: DBATCH-010 (**Basalog 100 IU/ml**) Cold-chain incident report Consignment DBATCH-010 ..."
+     - Product safety information - Insulin glargine (reference information, db3): "Product **safety** **information** - **Insulin glargine** Product **safety** **information**: **Insulin gla..."
+     - Shipment note DBATCH-010 (distributor's operational record, db2): "Shipment note DBATCH-010 Dispatch note DBATCH-010 Consignment: **Basalog 100 IU/ml** pack code **MED-ASALI-..."
+     - Biocon Biologics Ltd product quality review H2 2025 (manufacturer's own record, db3): "**Biocon Biologics Ltd** product **quality** review H2 2025 **Biocon Biologics Ltd** - Product **Quality** ..."
+   POLICY: Verified facts come from the structured databases. Documents report information: an official notice or regulatory finding is authoritative text but is not a database record, and a consumer or pharmacy report is an unverified allegation. Documents never change the verdict.
+========================================================================================================
+
+
+========================================================================================================
+1. QUESTION: Is MED-NAKALI-001 counterfeit?
+   intents ['authenticity']; identifiers ['MED-NAKALI-001']; terms []; databases queried ['db1', 'db2', 'db3', 'db4']
+========================================================================================================
+2. AGGREGATED CONTEXT  (anchors: MED-NAKALI-001)
+   2.2784  antibiotic                                         db1/db4    in the result of the subquery itself; reached through 1 FK join(s): ministry_...
+   2.1147  VND-007                                            db1/db2    in the result of the subquery itself; reached through 1 FK join(s): retail_po...
+   1.7101  kiosk                                              db1/db4    in the result of the subquery itself; reached through 1 FK join(s): retail_po...
+   1.4046  counterfeit                                        db4        in the result of the subquery itself; matches the question's words or intent
+   1.372   unlicensed                                         db1/db2    reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendo...
+   1.0815  complaint_category=counterfeit                     db4        in the result of the subquery itself; matches the question's words or intent
+   1.0     DBATCH-012                                         db2        in the result of the subquery itself; reached through 1 FK join(s): distribut...
+   1.0     blister                                            db4        in the result of the subquery itself; frequent in the result but rare in its ...
+   1.0     capsules                                           db4        in the result of the subquery itself; frequent in the result but rare in its ...
+   1.0     cdsco                                              db4        in the result of the subquery itself; frequent in the result but rare in its ...
+   1.0     foil                                               db4        in the result of the subquery itself; frequent in the result but rare in its ...
+   1.0     identified                                         db4        in the result of the subquery itself; frequent in the result but rare in its ...
+========================================================================================================
+3. DOCUMENT SEARCH QUERY BUILT FROM THE CONTEXT
+   text: "Is MED-NAKALI-001 counterfeit?"
+     + context terms: antibiotic^0.8, kiosk^0.6, counterfeit^0.493, unlicensed^0.482, counterfeit^0.38, blister^0.351, capsules^0.351, cdsco^0.351, foil^0.351, identified^0.351, look^0.351, micro-text^0.351, missing^0.351, novamox^0.351, stalls^0.351
+     + identifiers:   item_code=MED-NAKALI-001^1.0, dispatch_ref=DBATCH-012^0.5, distributor_id=DIST-004^0.5, manufacturer_id=MFG-002^0.5, vendor_id=VND-007^0.5
+     + names:         Central Drugs Standard Control Organisation
+     + intents:       authenticity
+========================================================================================================
+4. DOCUMENT STORES SEARCHED (each by its own source)
+   db1: ok, 37 documents / 37 chunks, 1 passed the relevance gate, 1 returned
+   db2: ok, 88 documents / 88 chunks, 1 passed the relevance gate, 1 returned
+   db3: ok, 104 documents / 140 chunks, 1 passed the relevance gate, 1 returned
+   db4: ok, 74 documents / 74 chunks, 3 passed the relevance gate, 3 returned
+========================================================================================================
+5. RANKING
+   #1 0.7468  DOC-DB4-INV-001  Investigation report: MED-NAKALI-001                 [regulatory_investigation_report] 2025-03-20
+        parts: lexical 0.262  entity 1.6  type x1.25  recency x1.021  conflict x1.0   | owner db4 / DOC-DB4-INV-001.md (chunk 1 of 1); Ministry of Consumer Affairs enforcement wing
+        why: mentions medicine MED-NAKALI-001; mentions dispatch ref DBATCH-012; mentions distributor id DIST-004; mentions vendor id VND-007; matches context t...
+        evidence: regulatory finding
+        matching context: "Investigation report: **MED-NAKALI-001** Investigation report Subject: packs bearing code **MED-NAKALI-001** (no registered product). Basis Complaint MCA-2025-001; blacklist entry BL-001 (critical). Reason r..."
+        link: medicine MED-NAKALI-001 - reliable (exact code); matched in db1, db2, db4
+        link: dispatch ref DBATCH-012 - reliable (exact identifier); in the query context
+        link: distributor id DIST-004 - reliable (exact identifier); held by db1, db2
+   #2 0.66    DOC-DB4-CCL-001  Consumer complaint MCA-2025-001                      [consumer_complaint] 2025-01-20
+        parts: lexical 0.563  entity 1.0  type x1.25  recency x1.005  conflict x1.0   | owner db4 / DOC-DB4-CCL-001.txt (chunk 1 of 1); National Consumer Helpline (letters received)
+        why: mentions medicine MED-NAKALI-001; matches context terms: antibiotic, kiosk; a consumer complaint suits a question about authenticity
+        evidence: consumer allegation (not verified)
+        matching context: "Consumer complaint MCA-2025-001 Dear Sir/Madam, I bought the medicine with code **MED-NAKALI-001** at Kurla West **Kiosk**, Mumbai. I believe this is a fake. Patient reported severe nausea and no therapeutic..."
+        link: medicine MED-NAKALI-001 - reliable (exact code); matched in db1, db2, db4
+        CAUTION: An allegation in an unverified report, not proof of counterfeiting. Structured records: MED-NAKALI-001: blacklisted in DB4; verdict NAKALI
+   #3 0.6363  DOC-DB1-PIR-001  Pharmacy incident at Janata Medicos (Unlicensed K... [pharmacy_incident_report] 2025-03-10
+        parts: lexical 0.405  entity 1.125  type x1.25  recency x1.019  conflict x1.0   | owner db1 / DOC-DB1-PIR-001.md (chunk 1 of 1); Janata Medicos (Unlicensed Kiosk) store manager
+        why: mentions medicine MED-NAKALI-001; mentions vendor id VND-007; matches context terms: kiosk, unlicensed; a pharmacy incident report suits a question...
+        evidence: pharmacy's report (not verified)
+        matching context: "Pharmacy incident at Janata Medicos (**Unlicensed** **Kiosk**) Pharmacy incident report Pharmacy: Janata Medicos (**Unlicensed** **Kiosk**) (**VND-007**), Mumbai Terminal: POS-007-X Sale reference: PE-202503..."
+        link: medicine MED-NAKALI-001 - reliable (exact code); matched in db1, db2, db4
+        link: vendor id VND-007 - reliable (exact identifier); held by db1, db2
+        CAUTION: An allegation in an unverified report, not proof of counterfeiting. Structured records: MED-NAKALI-001: blacklisted in DB4; verdict NAKALI
+   #4 0.4286  DOC-DB2-SHP-004  Shipment note DBATCH-012                             [distributor_shipment_note] 2025-01-10
+        parts: lexical 0.0  entity 1.425  type x1.0  recency x1.002  conflict x1.0   | owner db2 / DOC-DB2-SHP-004.md (chunk 1 of 1); QuickMed Traders (DIST-004) dispatch desk
+        why: mentions medicine MED-NAKALI-001; mentions dispatch ref DBATCH-012; mentions vendor id VND-007
+        evidence: distributor's operational record
+        matching context: "Shipment note **DBATCH-012** Dispatch note **DBATCH-012** Consignment: item pack code **MED-NAKALI-001**, 500 units, from ? to pharmacy **VND-007** by road (Unmarked Van). Dispatched 2025-01-10, received 202..."
+        link: medicine MED-NAKALI-001 - reliable (exact code); matched in db1, db2, db4
+        link: dispatch ref DBATCH-012 - reliable (exact identifier); in the query context
+        link: vendor id VND-007 - reliable (exact identifier); held by db1, db2
+   #5 0.3968  DOC-DB4-NSQ-001  Drug alert bulletin 1                                [nsq_bulletin] 2025-08-01
+        parts: lexical 0.0  entity 1.0  type x1.25  recency x1.058  conflict x1.0   | owner db4 / DOC-DB4-NSQ-001.md (chunk 1 of 1); Central Drugs Standard Control Organisation
+        why: mentions medicine MED-NAKALI-001; a nsq bulletin suits a question about authenticity
+        evidence: official regulatory notice
+        matching context: "Drug alert bulletin 1 Monthly drug alert: not of standard quality / spurious The following pack codes were declared spurious or not of standard quality this month. Stockists must not sell them: **MED-NAKALI-..."
+        link: medicine MED-NAKALI-001 - reliable (exact code); matched in db1, db2, db4
+   #6 0.1956  DOC-DB3-PSI-003  Product safety information - Amoxycillin             [product_safety_document] 2025-01-15
+        parts: lexical 0.487  entity 0.0  type x1.0  recency x1.004  conflict x1.0   | owner db3 / DOC-DB3-PSI-003.md (chunk 1 of 1); Marketing authorisation holders (registry library)
+        why: matches context terms: antibiotic, novamox
+        evidence: reference information
+        matching context: "Product safety information - Amoxycillin Product safety information: Amoxycillin Therapeutic class: **antibiotic**; ATC J01CA04; schedule H1. Marketed as: Amoxilan 250mg, Amoxilan 500mg, Moxivera 250mg, Moxi..."
+========================================================================================================
+6. INTEGRATED RESPONSE
+   VERIFIED (structured records):
+     - MED-NAKALI-001: verdict NAKALI (trust 0, vetoes V1_PHANTOM_SERIAL, V2_MINISTRY_BLACKLIST)   [Phase 1 verification over DB1-DB4]
+     - shipment DBATCH-012 of MED-NAKALI-001 did not maintain the cold chain   [db2.distribution_batches]
+     - MED-NAKALI-001 is on the ministry blacklist (BL-001): Confirmed counterfeit - active ingredient absent. Not manufactured by Cipla.   [db4.ministry_blacklist]
+     - lab report LAB-002 on MED-NAKALI-001: fail   [db4.lab_reports]
+   REPORTED IN DOCUMENTS:
+     - Investigation report: MED-NAKALI-001 (regulatory finding, db4): "Investigation report: **MED-NAKALI-001** Investigation report Subject: packs bearing code **MED-NAKALI-001*..."
+     - Consumer complaint MCA-2025-001 (consumer allegation (not verified), db4): "Consumer complaint MCA-2025-001 Dear Sir/Madam, I bought the medicine with code **MED-NAKALI-001** at Kurla..."
+     - Pharmacy incident at Janata Medicos (Unlicensed Kiosk) (pharmacy's report (not verified), db1): "Pharmacy incident at Janata Medicos (**Unlicensed** **Kiosk**) Pharmacy incident report Pharmacy: Janata Me..."
+     - Shipment note DBATCH-012 (distributor's operational record, db2): "Shipment note **DBATCH-012** Dispatch note **DBATCH-012** Consignment: item pack code **MED-NAKALI-001**, 5..."
+     - Drug alert bulletin 1 (official regulatory notice, db4): "Drug alert bulletin 1 Monthly drug alert: not of standard quality / spurious The following pack codes were ..."
+     - Product safety information - Amoxycillin (reference information, db3): "Product safety information - Amoxycillin Product safety information: Amoxycillin Therapeutic class: **antib..."
+   POLICY: Verified facts come from the structured databases. Documents report information: an official notice or regulatory finding is authoritative text but is not a database record, and a consumer or pharmacy report is an unverified allegation. Documents never change the verdict.
+========================================================================================================
+
+
+========================================================================================================
+1. QUESTION: Has MED-RECALL-001 been recalled, and why?
+   intents ['recall']; identifiers ['MED-RECALL-001']; terms []; databases queried ['db3', 'db4']
+========================================================================================================
+2. AGGREGATED CONTEXT  (anchors: MED-RECALL-001)
+   2.6556  diethylene                                         db3/db4    in the result of the subquery itself; reached through 1 FK join(s): complaint...
+   2.6556  glycol                                             db3/db4    in the result of the subquery itself; reached through 1 FK join(s): complaint...
+   2.3492  limit                                              db3/db4    in the result of the subquery itself; reached through 1 FK join(s): complaint...
+   2.196   permissible                                        db3/db4    in the result of the subquery itself; reached through 1 FK join(s): recall_no...
+   1.3475  recall                                             db4        in the result of the subquery itself; reached through 1 FK join(s): complaint...
+   1.2345  above                                              db3        in the result of the subquery itself; matches the question's words or intent
+   1.1326  contamination                                      db3        in the result of the subquery itself; matches the question's words or intent
+   1.0603  central                                            db3        in the result of the subquery itself; matches the question's words or intent
+   1.0603  control                                            db3        in the result of the subquery itself; matches the question's words or intent
+   1.0603  organisation                                       db3        in the result of the subquery itself; matches the question's words or intent
+   1.0603  standard                                           db3        in the result of the subquery itself; matches the question's words or intent
+   1.0303  BL-004                                             db4        in the result of the subquery itself; reached through 1 FK join(s): complaint...
+========================================================================================================
+3. DOCUMENT SEARCH QUERY BUILT FROM THE CONTEXT
+   text: "Has MED-RECALL-001 been recalled, and why?"
+     + context terms: diethylene^0.8, glycol^0.8, limit^0.708, permissible^0.662, recall^0.406, above^0.372, contamination^0.341, central^0.319, control^0.319, organisation^0.319, standard^0.319, Coughcure Syrup 100ml [RECALLED]^0.298, OFF-004^0.276, 1^0.256, product_recalled^0.238
+     + identifiers:   item_code=MED-RECALL-001^1.0, batch_number=BATCH-R001^0.5, manufacturer_id=MFG-002^0.5
+     + names:         Coughcure Syrup 100ml [RECALLED]
+     + intents:       recall
+========================================================================================================
+4. DOCUMENT STORES SEARCHED (each by its own source)
+   db1: ok, 37 documents / 37 chunks, 0 passed the relevance gate, 0 returned
+   db2: ok, 88 documents / 88 chunks, 1 passed the relevance gate, 1 returned
+   db3: ok, 104 documents / 140 chunks, 3 passed the relevance gate, 3 returned
+   db4: ok, 74 documents / 74 chunks, 3 passed the relevance gate, 3 returned
+========================================================================================================
+5. RANKING
+   #1 1.2562  DOC-DB3-PQR-002  Sun Pharmaceutical Industries Ltd product quality... [manufacturer_quality_report] 2025-07-20
+        parts: lexical 0.976  entity 1.875  type x1.25  recency x1.055  conflict x1.0   | owner db3 / DOC-DB3-PQR-002.md (chunk 2 of 2); Sun Pharmaceutical Industries Ltd quality unit
+        why: mentions medicine MED-RECALL-001; mentions batch number BATCH-R001; mentions manufacturer id MFG-002; names Coughcure Syrup 100ml [RECALLED]; match...
+        evidence: manufacturer's own record
+        matching context: "Batch **BATCH-R001** of **Coughcure Syrup 100ml [RECALLED]** (**MED-RECALL-001**) is the subject of a regulatory **recall**: **Diethylene** **glycol** **contamination** **above** **permissible** **limit**. A..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+        link: batch number BATCH-R001 - reliable (exact identifier); held by db3, db4
+        link: manufacturer id MFG-002 - reliable (exact identifier); held by db3, db4
+   #2 1.2301  DOC-DB4-RCL-001  Recall notice RCL-2025-001: Coughcure Syrup 100ml... [recall_notice] 2025-05-20
+        parts: lexical 0.964  entity 1.875  type x1.25  recency x1.038  conflict x1.0   | owner db4 / DOC-DB4-RCL-001.html (chunk 1 of 1); Central Drugs Standard Control Organisation
+        why: mentions medicine MED-RECALL-001; mentions batch number BATCH-R001; mentions manufacturer id MFG-002; names Coughcure Syrup 100ml [RECALLED]; match...
+        evidence: official regulatory notice
+        matching context: "**Recall** notice RCL-2025-001: **Coughcure Syrup 100ml [RECALLED]** **Recall** notice RCL-2025-001: **Coughcure Syrup 100ml [RECALLED]** **Recall** notice RCL-2025-001 (Class I) The **Central** Drugs **Stan..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+        link: batch number BATCH-R001 - reliable (exact identifier); held by db3, db4
+        link: manufacturer id MFG-002 - reliable (exact identifier); held by db3, db4
+   #3 0.983   DOC-DB4-INV-004  Investigation report: MED-RECALL-001                 [regulatory_investigation_report] 2025-05-25
+        parts: lexical 0.916  entity 1.3  type x1.25  recency x1.039  conflict x1.0   | owner db4 / DOC-DB4-INV-004.md (chunk 1 of 1); Ministry of Consumer Affairs enforcement wing
+        why: mentions medicine MED-RECALL-001; names Coughcure Syrup 100ml [RECALLED]; matches context terms: central, contamination, coughcure, diethylene, gly...
+        evidence: regulatory finding
+        matching context: "Investigation report: **MED-RECALL-001** Investigation report Subject: packs bearing code **MED-RECALL-001** (**Coughcure Syrup 100ml [RECALLED]**). Basis Complaint MCA-2024-006; blacklist entry BL-004 (crit..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+        link: Coughcure Syrup 100ml [RECALLED] - weak (name only); named in the context
+   #4 0.9477  DOC-DB3-BIR-011  Batch inspection report BATCH-R001 (Coughcure Syr... [batch_inspection_report] 2024-08-06
+        parts: lexical 0.963  entity 1.875  type x1.0  recency x1.0  conflict x1.0   | owner db3 / DOC-DB3-BIR-011.md (chunk 1 of 1); Sun Pharmaceutical Industries Ltd QA inspection
+        why: mentions medicine MED-RECALL-001; mentions batch number BATCH-R001; mentions manufacturer id MFG-002; names Coughcure Syrup 100ml [RECALLED]; match...
+        evidence: manufacturer's own record
+        matching context: "Batch inspection report **BATCH-R001** (**Coughcure Syrup 100ml [RECALLED]**) Batch inspection report Product: **Coughcure Syrup 100ml [RECALLED]** (Dextromethorphan **Syrup** 10mg/5ml) Pack code on label: *..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+        link: batch number BATCH-R001 - reliable (exact identifier); held by db3, db4
+        link: manufacturer id MFG-002 - reliable (exact identifier); held by db3, db4
+   #5 0.7075  DOC-DB2-SHP-009  Shipment note DBATCH-017                             [distributor_shipment_note] 2024-09-01
+        parts: lexical 0.794  entity 1.3  type x1.0  recency x1.0  conflict x1.0   | owner db2 / DOC-DB2-SHP-009.md (chunk 1 of 1); Apollo Supply Chain Solutions Ltd (DIST-001) dispatch desk
+        why: mentions medicine MED-RECALL-001; names Coughcure Syrup 100ml [RECALLED]; matches context terms: central, coughcure, recall, recalled, syrup
+        evidence: distributor's operational record
+        matching context: "Shipment note DBATCH-017 Dispatch note DBATCH-017 Consignment: **Coughcure Syrup 100ml [RECALLED]** pack code **MED.RECALL.001**, 100 units, from Mumbai **Central** DC to pharmacy VND-001 by road (MH-04-AB-1..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+        link: Coughcure Syrup 100ml [RECALLED] - weak (name only); named in the context
+   #6 0.5898  DOC-DB4-NSQ-002  Drug alert bulletin 2                                [nsq_bulletin] 2025-09-01
+        parts: lexical 0.356  entity 1.0  type x1.25  recency x1.067  conflict x1.0   | owner db4 / DOC-DB4-NSQ-002.md (chunk 1 of 1); Central Drugs Standard Control Organisation
+        why: mentions medicine MED-RECALL-001; matches context terms: recall, standard; a nsq bulletin suits a question about recall
+        evidence: official regulatory notice
+        matching context: "Drug alert bulletin 2 Monthly drug alert: not of **standard** quality / spurious The following pack codes were declared spurious or not of **standard** quality this month. Stockists must not sell them: MED-N..."
+        link: medicine MED-RECALL-001 - reliable (exact code); matched in db3, db4
+   #7 0.3334  DOC-DB3-PSI-014  Product safety information - Dextromethorphan Syrup  [product_safety_document] 2025-01-15
+        parts: lexical 0.605  entity 0.3  type x1.0  recency x1.004  conflict x1.0   | owner db3 / DOC-DB3-PSI-014.md (chunk 1 of 1); Marketing authorisation holders (registry library)
+        why: names Coughcure Syrup 100ml [RECALLED]; matches context terms: coughcure, recalled, syrup
+        evidence: reference information
+        matching context: "Product safety information - Dextromethorphan **Syrup** Product safety information: Dextromethorphan **Syrup** Therapeutic class: cough; ATC R05DA09; schedule OTC. Marketed as: **Coughcure Syrup 100ml [RECAL..."
+        link: Coughcure Syrup 100ml [RECALLED] - weak (name only); named in the context
+========================================================================================================
+6. INTEGRATED RESPONSE
+   VERIFIED (structured records):
+     - MED-RECALL-001: verdict NAKALI (trust 0, vetoes V2_MINISTRY_BLACKLIST)   [Phase 1 verification over DB1-DB4]
+     - MED-RECALL-001 is registered: Coughcure Syrup 100ml [RECALLED], batch BATCH-R001, manufacturer MFG-002; RECALLED: Diethylene glycol conta...   [db3.products]
+     - MED-RECALL-001 is on the ministry blacklist (BL-004): Recalled - diethylene glycol solvent contamination.   [db4.ministry_blacklist]
+     - MED-RECALL-001 recalled (RCL-2025-001, class I): Diethylene glycol contamination above permissible limit   [db4.recall_notices]
+     - lab report LAB-003 on MED-RECALL-001: fail   [db4.lab_reports]
+   REPORTED IN DOCUMENTS:
+     - Sun Pharmaceutical Industries Ltd product quality review H1 2025 (manufacturer's own record, db3): "Batch **BATCH-R001** of **Coughcure Syrup 100ml [RECALLED]** (**MED-RECALL-001**) is the subject of a regul..."
+     - Recall notice RCL-2025-001: Coughcure Syrup 100ml [RECALLED] (official regulatory notice, db4): "**Recall** notice RCL-2025-001: **Coughcure Syrup 100ml [RECALLED]** **Recall** notice RCL-2025-001: **Coug..."
+     - Investigation report: MED-RECALL-001 (regulatory finding, db4): "Investigation report: **MED-RECALL-001** Investigation report Subject: packs bearing code **MED-RECALL-001*..."
+     - Batch inspection report BATCH-R001 (Coughcure Syrup 100ml [RECALLED]) (manufacturer's own record, db3): "Batch inspection report **BATCH-R001** (**Coughcure Syrup 100ml [RECALLED]**) Batch inspection report Produ..."
+     - Shipment note DBATCH-017 (distributor's operational record, db2): "Shipment note DBATCH-017 Dispatch note DBATCH-017 Consignment: **Coughcure Syrup 100ml [RECALLED]** pack co..."
+     - Drug alert bulletin 2 (official regulatory notice, db4): "Drug alert bulletin 2 Monthly drug alert: not of **standard** quality / spurious The following pack codes w..."
+   POLICY: Verified facts come from the structured databases. Documents report information: an official notice or regulatory finding is authoritative text but is not a database record, and a consumer or pharmacy report is an unverified allegation. Documents never change the verdict.
+========================================================================================================
+
+
+========================================================================================================
+1. QUESTION: Was the cold chain of MED-ASALI-009 maintained?
+   intents ['cold_chain']; identifiers ['MED-ASALI-009']; terms ['maintained']; databases queried ['db2', 'db3']
+========================================================================================================
+2. AGGREGATED CONTEXT  (anchors: MED-ASALI-009)
+   1.5     excursion                                          db2        in the result of the subquery itself; matches the question's words or intent
+   1.1926  requires_cold_chain=1                              db3        in the result of the subquery itself; matches the question's words or intent
+   1.1926  storage_temp_max=8.0                               db3        in the result of the subquery itself; matches the question's words or intent
+   1.1926  storage_temp_min=2.0                               db3        in the result of the subquery itself; matches the question's words or intent
+   1.1754  MFG-004                                            db2/db3    in the result of the subquery itself; reached through 1 FK join(s): products(...
+   1.0     BATCH-A009                                         db3        in the result of the subquery itself; reached through 1 FK join(s): products(...
+   0.862   cold_chain_required=1                              db3        reached through 1 FK join(s): products(generic_name) -> molecules(generic_nam...
+   0.7407  CDSCO/MFG/009/2021                                 db3        in the result of the subquery itself; frequent in the result but rare in its ...
+   0.7245  A10AE04                                            db3        in the result of the subquery itself; reached through 1 FK join(s): products(...
+   0.7245  Insulin glargine                                   db3        in the result of the subquery itself; reached through 1 FK join(s): products(...
+   0.6584  pack_size=Pen 3ml                                  db3        in the result of the subquery itself; frequent in the result but rare in its ...
+   0.6584  product_name=Basalog 100 IU/ml                     db3        in the result of the subquery itself; frequent in the result but rare in its ...
+========================================================================================================
+3. DOCUMENT SEARCH QUERY BUILT FROM THE CONTEXT
+   text: "Was the cold chain of MED-ASALI-009 maintained?"
+     + context terms: excursion^0.8, 1^0.636, 8.0^0.636, 2.0^0.636, 1^0.46, Pen 3ml^0.351, Basalog 100 IU/ml^0.351, 100 IU/ml^0.351, 0^0.286, exceeded^0.267, logged^0.267, thermal^0.267, threshold^0.267
+     + identifiers:   item_code=MED-ASALI-009^1.0, batch_number=BATCH-A009^0.5, dispatch_ref=DBATCH-010^0.5, manufacturer_id=MFG-004^0.5
+     + names:         Basalog 100 IU/ml, Insulin glargine
+     + intents:       cold_chain
+========================================================================================================
+4. DOCUMENT STORES SEARCHED (each by its own source)
+   db1: ok, 37 documents / 37 chunks, 0 passed the relevance gate, 0 returned
+   db2: ok, 88 documents / 88 chunks, 2 passed the relevance gate, 2 returned
+   db3: ok, 104 documents / 140 chunks, 3 passed the relevance gate, 3 returned
+   db4: ok, 74 documents / 74 chunks, 0 passed the relevance gate, 0 returned
+========================================================================================================
+5. RANKING
+   #1 1.2446  DOC-DB2-CCI-001  Cold-chain excursion: DBATCH-010 (Basalog 100 IU/ml) [cold_chain_incident_report] 2025-06-07
+        parts: lexical 0.887  entity 2.0  type x1.25  recency x1.043  conflict x1.0   | owner db2 / DOC-DB2-CCI-001.md (chunk 1 of 1); Apollo Supply Chain Solutions Ltd quality desk
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions dispatch ref DBATCH-010; mentions manufacturer id MFG-004; names Basalo...
+        evidence: distributor's operational record
+        matching context: "**Cold**-**chain** **excursion**: **DBATCH-010** (**Basalog 100 IU/ml**) **Cold**-**chain** incident report Consignment **DBATCH-010** of **Basalog 100 IU/ml** (batch **BATCH-A009**, pack code **MED-ASALI-00..."
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db2, db3
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: dispatch ref DBATCH-010 - reliable (exact identifier); in the query context
+   #2 1.0775  DOC-DB3-BIR-009  Batch inspection report BATCH-A009 (Basalog 100 I... [batch_inspection_report] 2025-06-06
+        parts: lexical 0.567  entity 2.0  type x1.25  recency x1.043  conflict x1.0   | owner db3 / DOC-DB3-BIR-009.md (chunk 1 of 1); Biocon Biologics Ltd QA inspection
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions manufacturer id MFG-004; names Basalog 100 IU/ml; names Insulin glargin...
+        evidence: manufacturer's own record
+        matching context: "Batch inspection report **BATCH-A009** (**Basalog 100 IU/ml**) Batch inspection report Product: **Basalog 100 IU/ml** (**Insulin glargine** 100 IU/ml) Pack code on label: **MED-ASALI-009** Batch: **BATCH-A00..."
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db2, db3
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: manufacturer id MFG-004 - reliable (exact identifier); held by db2, db3
+   #3 0.9904  DOC-DB2-SHP-003  Shipment note DBATCH-010                             [distributor_shipment_note] 2025-06-05
+        parts: lexical 0.7  entity 1.6  type x1.25  recency x1.042  conflict x1.0   | owner db2 / DOC-DB2-SHP-003.md (chunk 1 of 1); Apollo Supply Chain Solutions Ltd (DIST-001) dispatch desk
+        why: mentions medicine MED-ASALI-009; mentions dispatch ref DBATCH-010; names Basalog 100 IU/ml; matches context terms: basalog, exceeded, excursion, lo...
+        evidence: distributor's operational record
+        matching context: "Shipment note **DBATCH-010** Dispatch note **DBATCH-010** Consignment: **Basalog 100 IU/ml** pack code **MED-ASALI-009**, 50 units, from Mumbai Central DC to pharmacy VND-003 by air (AI-864). Dispatched 2025..."
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db2, db3
+        link: dispatch ref DBATCH-010 - reliable (exact identifier); in the query context
+        link: Basalog 100 IU/ml - weak (name only); named in the context
+   #4 0.7015  DOC-DB3-PQR-004  Biocon Biologics Ltd product quality review H1 2025  [manufacturer_quality_report] 2025-07-20
+        parts: lexical 0.163  entity 2.0  type x1.0  recency x1.055  conflict x1.0   | owner db3 / DOC-DB3-PQR-004.md (chunk 1 of 1); Biocon Biologics Ltd quality unit
+        why: mentions medicine MED-ASALI-009; mentions batch number BATCH-A009; mentions manufacturer id MFG-004; names Basalog 100 IU/ml; names Insulin glargin...
+        evidence: manufacturer's own record
+        matching context: "Biocon Biologics Ltd product quality review H1 2025 Biocon Biologics Ltd - Product Quality Review, H1 2025 Scope This review covers 2 batch(es) released from Biocon Biologics Ltd - Bengaluru Unit I, Biocon B..."
+        link: medicine MED-ASALI-009 - reliable (exact code); matched in db2, db3
+        link: batch number BATCH-A009 - reliable (exact identifier); in the query context
+        link: manufacturer id MFG-004 - reliable (exact identifier); held by db2, db3
+   #5 0.3301  DOC-DB3-PSI-025  Product safety information - Insulin glargine        [product_safety_document] 2025-01-15
+        parts: lexical 0.208  entity 0.6  type x1.25  recency x1.004  conflict x1.0   | owner db3 / DOC-DB3-PSI-025.md (chunk 1 of 1); Marketing authorisation holders (registry library)
+        why: names Basalog 100 IU/ml; names Insulin glargine; matches context terms: basalog; a product safety document suits a question about cold_chain
+        evidence: reference information
+        matching context: "Product safety information - **Insulin glargine** Product safety information: **Insulin glargine** Therapeutic class: antidiabetic; ATC A10AE04; schedule H. Marketed as: **Basalog 100 IU/ml**, Glarvia 100IU/..."
+        link: Basalog 100 IU/ml - weak (name only); named in the context
+        link: Insulin glargine - weak (name only); named in the context
+========================================================================================================
+6. INTEGRATED RESPONSE
+   VERIFIED (structured records):
+     - MED-ASALI-009: verdict SUSPICIOUS (trust 65)   [Phase 1 verification over DB1-DB4]
+     - shipment DBATCH-010 of MED-ASALI-009 did not maintain the cold chain   [db2.distribution_batches]
+     - MED-ASALI-009 is registered: Basalog 100 IU/ml, batch BATCH-A009, manufacturer MFG-004   [db3.products]
+   REPORTED IN DOCUMENTS:
+     - Cold-chain excursion: DBATCH-010 (Basalog 100 IU/ml) (distributor's operational record, db2): "**Cold**-**chain** **excursion**: **DBATCH-010** (**Basalog 100 IU/ml**) **Cold**-**chain** incident report..."
+     - Batch inspection report BATCH-A009 (Basalog 100 IU/ml) (manufacturer's own record, db3): "Batch inspection report **BATCH-A009** (**Basalog 100 IU/ml**) Batch inspection report Product: **Basalog 1..."
+     - Shipment note DBATCH-010 (distributor's operational record, db2): "Shipment note **DBATCH-010** Dispatch note **DBATCH-010** Consignment: **Basalog 100 IU/ml** pack code **ME..."
+     - Biocon Biologics Ltd product quality review H1 2025 (manufacturer's own record, db3): "Biocon Biologics Ltd product quality review H1 2025 Biocon Biologics Ltd - Product Quality Review, H1 2025 ..."
+     - Product safety information - Insulin glargine (reference information, db3): "Product safety information - **Insulin glargine** Product safety information: **Insulin glargine** Therapeu..."
+   POLICY: Verified facts come from the structured databases. Documents report information: an official notice or regulatory finding is authoritative text but is not a database record, and a consumer or pharmacy report is an unverified allegation. Documents never change the verdict.
+========================================================================================================
+
+
+Retrieval evaluation (scripts/eval_retrieval.py): context-driven search vs. the question alone, against data/documents/ground_truth.json
+question                                                       rel  | with context P@5  R@10  nDCG | question only P@5  R@10  nDCG
+Was the cold chain of MED-ASALI-009 maintained?                4    |       0.80  1.00  1.00 |        0.80  1.00  1.00
+Find information about batch BATCH-A009 manufactured by Biocon 4    |       0.80  1.00  0.98 |        0.60  0.75  0.83
+Has MED-RECALL-001 been recalled, and why?                     6    |       1.00  1.00  1.00 |        1.00  1.00  1.00
+Is MED-NAKALI-001 counterfeit?                                 4    |       0.80  1.00  1.00 |        0.80  1.00  0.90
+Any quality concerns about batch BATCH-R002?                   5    |       1.00  1.00  1.00 |        0.60  0.60  0.72
+Is MED-ASALI-005 genuine?                                      3    |       0.60  1.00  1.00 |        0.60  1.00  1.00
+Was MED-UNAUTH-001 shipped through an authorised distributor?  5    |       1.00  1.00  1.00 |        1.00  1.00  1.00
+verify med asal1 oo1                                           2    |       0.40  1.00  1.00 |        0.40  1.00  1.00
+Safety concerns about MED-RECALL-003                           5    |       1.00  1.00  1.00 |        1.00  1.00  1.00
+Was the cold chain of MED-UNAUTH-002 maintained?               5    |       1.00  1.00  1.00 |        1.00  1.00  1.00
+MEAN                                                                |       0.84  1.00  1.00 |        0.78  0.93  0.95

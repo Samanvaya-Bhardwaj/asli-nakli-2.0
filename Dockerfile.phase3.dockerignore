@@ -1,0 +1,27 @@
+# Build context for Dockerfile.phase3 (BuildKit reads <Dockerfile>.dockerignore).
+# The point: no database, document store or secret ends up in the image, so a
+# container can only ever see the data directory mounted into it.
+.git
+Project2_Asali_Nakali/
+databases/
+data/nosql_store/
+data/generated/
+data/documents/
+deploy/nodes/
+deploy/coordinator-state/
+deploy/*.env
+deploy/*.env.example
+reports/
+vibe_coding/
+dashboard/*
+!dashboard/phase3.html
+SS/
+TG/
+ref_art_images/
+fonts/
+scratch/
+**/__pycache__
+*.pdf
+*.webp
+*.sqlite
+*.sqlite-*

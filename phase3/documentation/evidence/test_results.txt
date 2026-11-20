@@ -1,0 +1,17 @@
+Test run 2026-11-18 20:28 on SHAGUNKALER, Python 3.11.9
+
+OK      28 tests    77.5s  Phase 2 uncertainty + replication (Phase 1/2 regression)  (tests.test_uncertainty tests.test_replication)
+OK      23 tests     5.5s  Phase 3 R1: related tables, keys, integrity  (tests.test_phase3_schema)
+OK      16 tests    30.8s  Phase 3 R2: distributed services, federation  (tests.test_phase3_federation)
+OK       3 tests     2.0s  Phase 3: subquery operators on both engines  (tests.test_phase3_operators)
+OK      12 tests     6.7s  Phase 3 R3: SCORE context discovery + aggregation  (tests.test_phase3_score)
+OK      13 tests     6.9s  Phase 3 R4: documents, retrieval, integration  (tests.test_phase3_documents)
+OK       9 tests     9.3s  Phase 3: end to end over HTTP (coordinator service)  (tests.test_phase3_end_to_end)
+OK       -        -     page render check against real responses (phase3/tools/check_page_render.mjs)
+       deployment panel: rendered (1418 chars)
+       scenario_1.json: 7/7 sections, 5/5 documents, 23074 chars of HTML - ok
+       scenario_2.json: 7/7 sections, 9/9 documents, 22782 chars of HTML - ok
+       scenario_3.json: 7/7 sections, 5/5 documents, 20136 chars of HTML - ok
+       OK
+
+TOTAL: 104 unit tests in 7 suites; all passed; page render check passed

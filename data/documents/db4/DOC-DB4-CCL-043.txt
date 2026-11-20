@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-043
+title: Consumer complaint MCA-2026-G0103
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 14/01/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED_THYRV_18Y at HAL Road Hospital Dispensary, Bengaluru. I had a bad reaction after taking it. Developed a skin rash after taking Thyrova 50mcg bought on 06 Jan.
+
+Please look into this.
+
+Regards,
+Fatima Singh

@@ -1,0 +1,993 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T18:43:23.665Z",
+  "title": "Design System: Asali",
+  "extensions": {
+    "colorMeta": {
+      "lime-signal": {
+        "role": "primary",
+        "displayName": "Lime Signal",
+        "canonical": "#D8FF3E",
+        "tonalRamp": [
+          "#36400C",
+          "#63780E",
+          "#94B70B",
+          "#C8FB01",
+          "#D1F540",
+          "#DAF17F",
+          "#E7F2B8",
+          "#F7FAEB"
+        ]
+      },
+      "lime-signal-hover": {
+        "role": "primary",
+        "displayName": "Lime Signal Hover",
+        "canonical": "#E4FF6B",
+        "tonalRamp": [
+          "#37400C",
+          "#65780E",
+          "#97B70B",
+          "#CDFB01",
+          "#D4F540",
+          "#DCF17F",
+          "#E8F2B8",
+          "#F7FAEB"
+        ]
+      },
+      "olive-ink": {
+        "role": "primary",
+        "displayName": "Olive Ink",
+        "canonical": "#4E6B00",
+        "tonalRamp": [
+          "#32400C",
+          "#5C780E",
+          "#88B70B",
+          "#B7FB01",
+          "#C4F540",
+          "#D2F17F",
+          "#E2F2B8",
+          "#F6FAEB"
+        ]
+      },
+      "on-lime": {
+        "role": "primary",
+        "displayName": "On Lime",
+        "canonical": "#0A0B0D",
+        "tonalRamp": [
+          "#23252A",
+          "#3C414A",
+          "#555D6C",
+          "#6D788E",
+          "#8F97A7",
+          "#B1B5BF",
+          "#D1D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "console-ground": {
+        "role": "neutral",
+        "displayName": "Console Ground",
+        "canonical": "#08090A",
+        "tonalRamp": [
+          "#232629",
+          "#3D4349",
+          "#57616A",
+          "#707E8C",
+          "#919BA5",
+          "#B2B8BE",
+          "#D2D5D8",
+          "#F1F2F3"
+        ]
+      },
+      "console-surface": {
+        "role": "neutral",
+        "displayName": "Console Surface",
+        "canonical": "#111316",
+        "tonalRamp": [
+          "#23262A",
+          "#3D424A",
+          "#565E6C",
+          "#6E7A8E",
+          "#8F99A6",
+          "#B1B7BF",
+          "#D1D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "console-surface-raised": {
+        "role": "neutral",
+        "displayName": "Console Surface Raised",
+        "canonical": "#16181C",
+        "tonalRamp": [
+          "#232529",
+          "#3D414A",
+          "#565D6B",
+          "#6F798D",
+          "#9097A6",
+          "#B1B6BF",
+          "#D2D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "console-sunken": {
+        "role": "neutral",
+        "displayName": "Console Sunken",
+        "canonical": "#1C1F24",
+        "tonalRamp": [
+          "#23252A",
+          "#3D424A",
+          "#565E6B",
+          "#6E7A8D",
+          "#9098A6",
+          "#B1B6BF",
+          "#D1D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "console-inset": {
+        "role": "neutral",
+        "displayName": "Console Inset",
+        "canonical": "#0A0B0D",
+        "tonalRamp": [
+          "#23252A",
+          "#3C414A",
+          "#555D6C",
+          "#6D788E",
+          "#8F97A7",
+          "#B1B5BF",
+          "#D1D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "console-rim": {
+        "role": "neutral",
+        "displayName": "Console Rim",
+        "canonical": "#24272B",
+        "tonalRamp": [
+          "#242629",
+          "#3F4348",
+          "#595F68",
+          "#737C89",
+          "#939AA3",
+          "#B3B7BD",
+          "#D3D5D8",
+          "#F2F2F3"
+        ]
+      },
+      "console-rim-strong": {
+        "role": "neutral",
+        "displayName": "Console Rim Strong",
+        "canonical": "#36393D",
+        "tonalRamp": [
+          "#252628",
+          "#404347",
+          "#5B6066",
+          "#767D85",
+          "#959AA0",
+          "#B5B7BB",
+          "#D3D5D7",
+          "#F2F2F3"
+        ]
+      },
+      "console-text": {
+        "role": "neutral",
+        "displayName": "Console Text",
+        "canonical": "#F4F4F5",
+        "tonalRamp": [
+          "#252527",
+          "#414146",
+          "#5C5C65",
+          "#787884",
+          "#97979F",
+          "#B5B5BB",
+          "#D4D4D6",
+          "#F2F2F3"
+        ]
+      },
+      "console-muted": {
+        "role": "neutral",
+        "displayName": "Console Muted",
+        "canonical": "#9C9DA0",
+        "tonalRamp": [
+          "#262627",
+          "#424344",
+          "#5F6062",
+          "#7B7C80",
+          "#999A9D",
+          "#B7B7B9",
+          "#D5D5D6",
+          "#F2F2F2"
+        ]
+      },
+      "console-meta": {
+        "role": "neutral",
+        "displayName": "Console Meta",
+        "canonical": "#8A8B8E",
+        "tonalRamp": [
+          "#262627",
+          "#424344",
+          "#5F6062",
+          "#7C7D80",
+          "#999A9C",
+          "#B7B7B9",
+          "#D5D5D6",
+          "#F2F2F2"
+        ]
+      },
+      "paper-ground": {
+        "role": "neutral",
+        "displayName": "Paper Ground",
+        "canonical": "#F1F0EC",
+        "tonalRamp": [
+          "#2A2922",
+          "#4B483B",
+          "#6E6854",
+          "#91896B",
+          "#A9A38D",
+          "#C1BDAF",
+          "#DAD8D1",
+          "#F3F3F1"
+        ]
+      },
+      "paper-surface": {
+        "role": "neutral",
+        "displayName": "Paper Surface",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#262626",
+          "#434343",
+          "#616161",
+          "#7E7E7E",
+          "#9B9B9B",
+          "#B8B8B8",
+          "#D5D5D5",
+          "#F2F2F2"
+        ]
+      },
+      "paper-surface-raised": {
+        "role": "neutral",
+        "displayName": "Paper Surface Raised",
+        "canonical": "#FAFAF7",
+        "tonalRamp": [
+          "#2C2C20",
+          "#505037",
+          "#74744D",
+          "#9A9A61",
+          "#B0B086",
+          "#C5C5AB",
+          "#DCDCCE",
+          "#F4F4F0"
+        ]
+      },
+      "paper-sunken": {
+        "role": "neutral",
+        "displayName": "Paper Sunken",
+        "canonical": "#EEEDE8",
+        "tonalRamp": [
+          "#2A2922",
+          "#4B493B",
+          "#6D6954",
+          "#908A6B",
+          "#A8A48D",
+          "#C0BEAF",
+          "#D9D8D1",
+          "#F3F3F1"
+        ]
+      },
+      "paper-inset": {
+        "role": "neutral",
+        "displayName": "Paper Inset",
+        "canonical": "#F4F3EF",
+        "tonalRamp": [
+          "#2B2921",
+          "#4D493A",
+          "#706A51",
+          "#958C67",
+          "#ACA58A",
+          "#C2BEAD",
+          "#DBD8D0",
+          "#F4F3F1"
+        ]
+      },
+      "paper-rim": {
+        "role": "neutral",
+        "displayName": "Paper Rim",
+        "canonical": "#E6E5E1",
+        "tonalRamp": [
+          "#292824",
+          "#48463F",
+          "#686559",
+          "#898472",
+          "#A3A093",
+          "#BDBBB3",
+          "#D8D7D2",
+          "#F3F3F2"
+        ]
+      },
+      "paper-rim-strong": {
+        "role": "neutral",
+        "displayName": "Paper Rim Strong",
+        "canonical": "#CFCDC8",
+        "tonalRamp": [
+          "#282724",
+          "#474540",
+          "#66635B",
+          "#868175",
+          "#A19D95",
+          "#BCBAB4",
+          "#D7D6D3",
+          "#F3F2F2"
+        ]
+      },
+      "paper-ink": {
+        "role": "neutral",
+        "displayName": "Paper Ink",
+        "canonical": "#171614",
+        "tonalRamp": [
+          "#282724",
+          "#474540",
+          "#67635B",
+          "#868175",
+          "#A19D95",
+          "#BCB9B4",
+          "#D7D6D3",
+          "#F3F2F2"
+        ]
+      },
+      "paper-muted": {
+        "role": "neutral",
+        "displayName": "Paper Muted",
+        "canonical": "#55544F",
+        "tonalRamp": [
+          "#272725",
+          "#454541",
+          "#64635D",
+          "#828179",
+          "#9E9D98",
+          "#BAB9B6",
+          "#D6D6D4",
+          "#F3F2F2"
+        ]
+      },
+      "paper-meta": {
+        "role": "neutral",
+        "displayName": "Paper Meta",
+        "canonical": "#686763",
+        "tonalRamp": [
+          "#272726",
+          "#454442",
+          "#63625E",
+          "#81807B",
+          "#9D9C99",
+          "#B9B9B7",
+          "#D6D6D4",
+          "#F2F2F2"
+        ]
+      },
+      "genuine-solid-paper": {
+        "role": "status",
+        "displayName": "Genuine Solid Paper",
+        "canonical": "#0F8B4C",
+        "tonalRamp": [
+          "#113B26",
+          "#196E43",
+          "#1BA65F",
+          "#19E27C",
+          "#52E49A",
+          "#8AE6B7",
+          "#BEEDD5",
+          "#ECF8F2"
+        ]
+      },
+      "genuine-ink-paper": {
+        "role": "status",
+        "displayName": "Genuine Ink Paper",
+        "canonical": "#0B6B3A",
+        "tonalRamp": [
+          "#113C26",
+          "#186F42",
+          "#1BA65F",
+          "#18E37C",
+          "#51E499",
+          "#8AE6B7",
+          "#BDEDD5",
+          "#ECF8F2"
+        ]
+      },
+      "genuine-fill-paper": {
+        "role": "status",
+        "displayName": "Genuine Fill Paper",
+        "canonical": "#E0F0E8",
+        "tonalRamp": [
+          "#1D2F26",
+          "#315643",
+          "#437E61",
+          "#52A97E",
+          "#7BBA9B",
+          "#A4CCB8",
+          "#CBDFD5",
+          "#F0F5F2"
+        ]
+      },
+      "genuine-solid-console": {
+        "role": "status",
+        "displayName": "Genuine Solid Console",
+        "canonical": "#3DDC84",
+        "tonalRamp": [
+          "#143824",
+          "#1F683F",
+          "#259C5A",
+          "#27D474",
+          "#5CDA94",
+          "#90DFB4",
+          "#C1E9D3",
+          "#EDF8F2"
+        ]
+      },
+      "genuine-ink-console": {
+        "role": "status",
+        "displayName": "Genuine Ink Console",
+        "canonical": "#6FE8A5",
+        "tonalRamp": [
+          "#133924",
+          "#1D6A3F",
+          "#229F5A",
+          "#23D874",
+          "#59DC94",
+          "#8FE1B4",
+          "#C0EAD3",
+          "#EDF8F2"
+        ]
+      },
+      "genuine-fill-console": {
+        "role": "status",
+        "displayName": "Genuine Fill Console",
+        "canonical": "#172F25",
+        "tonalRamp": [
+          "#1D2F28",
+          "#315646",
+          "#437E65",
+          "#53A885",
+          "#7CBAA0",
+          "#A4CBBB",
+          "#CBDFD7",
+          "#F0F5F3"
+        ]
+      },
+      "caution-solid-paper": {
+        "role": "status",
+        "displayName": "Caution Solid Paper",
+        "canonical": "#9A6100",
+        "tonalRamp": [
+          "#402D0C",
+          "#78510E",
+          "#B7770B",
+          "#FB9E01",
+          "#F5B240",
+          "#F1C77F",
+          "#F2DDB8",
+          "#FAF4EB"
+        ]
+      },
+      "caution-ink-paper": {
+        "role": "status",
+        "displayName": "Caution Ink Paper",
+        "canonical": "#7A4D00",
+        "tonalRamp": [
+          "#402D0C",
+          "#78510E",
+          "#B7770B",
+          "#FB9E01",
+          "#F5B340",
+          "#F1C77F",
+          "#F2DDB8",
+          "#FAF4EB"
+        ]
+      },
+      "caution-fill-paper": {
+        "role": "status",
+        "displayName": "Caution Fill Paper",
+        "canonical": "#F1E9DB",
+        "tonalRamp": [
+          "#32291B",
+          "#5B4A2C",
+          "#866B3B",
+          "#B58D47",
+          "#C3A673",
+          "#D1BF9F",
+          "#E2D9C8",
+          "#F6F3EF"
+        ]
+      },
+      "caution-solid-console": {
+        "role": "status",
+        "displayName": "Caution Solid Console",
+        "canonical": "#FFC53D",
+        "tonalRamp": [
+          "#40310C",
+          "#78590E",
+          "#B7830B",
+          "#FBB001",
+          "#F5BF40",
+          "#F1CF7F",
+          "#F2E1B8",
+          "#FAF5EB"
+        ]
+      },
+      "caution-ink-console": {
+        "role": "status",
+        "displayName": "Caution Ink Console",
+        "canonical": "#FFD67A",
+        "tonalRamp": [
+          "#40300C",
+          "#78580E",
+          "#B7820B",
+          "#FBAE01",
+          "#F5BE40",
+          "#F1CE7F",
+          "#F2E0B8",
+          "#FAF5EB"
+        ]
+      },
+      "caution-fill-console": {
+        "role": "status",
+        "displayName": "Caution Fill Console",
+        "canonical": "#322C1C",
+        "tonalRamp": [
+          "#2E2A1F",
+          "#524A34",
+          "#796C48",
+          "#A18E5A",
+          "#B4A681",
+          "#C8BFA8",
+          "#DDD9CD",
+          "#F4F3F0"
+        ]
+      },
+      "danger-solid-paper": {
+        "role": "status",
+        "displayName": "Danger Solid Paper",
+        "canonical": "#CF2A18",
+        "tonalRamp": [
+          "#3B1611",
+          "#6D2219",
+          "#A52A1C",
+          "#E12E1B",
+          "#E36153",
+          "#E5948B",
+          "#ECC3BE",
+          "#F8EDEC"
+        ]
+      },
+      "danger-ink-paper": {
+        "role": "status",
+        "displayName": "Danger Ink Paper",
+        "canonical": "#A81F10",
+        "tonalRamp": [
+          "#3C1511",
+          "#6F2018",
+          "#A8281A",
+          "#E52B17",
+          "#E65F50",
+          "#E79289",
+          "#EDC2BD",
+          "#F9EDEC"
+        ]
+      },
+      "danger-fill-paper": {
+        "role": "status",
+        "displayName": "Danger Fill Paper",
+        "canonical": "#FAE8E6",
+        "tonalRamp": [
+          "#381815",
+          "#672720",
+          "#9A3327",
+          "#D13B2A",
+          "#D76B5E",
+          "#DE9A92",
+          "#E9C6C2",
+          "#F7EEED"
+        ]
+      },
+      "danger-solid-console": {
+        "role": "status",
+        "displayName": "Danger Solid Console",
+        "canonical": "#FF4D3D",
+        "tonalRamp": [
+          "#40100C",
+          "#78170E",
+          "#B7190B",
+          "#FB1501",
+          "#F54F40",
+          "#F1887F",
+          "#F2BDB8",
+          "#FAECEB"
+        ]
+      },
+      "danger-ink-console": {
+        "role": "status",
+        "displayName": "Danger Ink Console",
+        "canonical": "#FF9186",
+        "tonalRamp": [
+          "#40110C",
+          "#78180E",
+          "#B71A0B",
+          "#FB1801",
+          "#F55140",
+          "#F1897F",
+          "#F2BDB8",
+          "#FAECEB"
+        ]
+      },
+      "danger-fill-console": {
+        "role": "status",
+        "displayName": "Danger Fill Console",
+        "canonical": "#351C1C",
+        "tonalRamp": [
+          "#2E1E1E",
+          "#543333",
+          "#7B4646",
+          "#A45757",
+          "#B77F7F",
+          "#CAA6A6",
+          "#DECCCC",
+          "#F5F0F0"
+        ]
+      },
+      "unknown-solid-paper": {
+        "role": "status",
+        "displayName": "Unknown Solid Paper",
+        "canonical": "#5B6573",
+        "tonalRamp": [
+          "#232629",
+          "#3D424A",
+          "#575F6B",
+          "#6F7B8C",
+          "#9099A5",
+          "#B1B7BF",
+          "#D2D5D9",
+          "#F1F2F3"
+        ]
+      },
+      "unknown-ink-paper": {
+        "role": "status",
+        "displayName": "Unknown Ink Paper",
+        "canonical": "#3F4651",
+        "tonalRamp": [
+          "#23262A",
+          "#3D424A",
+          "#565E6B",
+          "#6E7A8D",
+          "#9098A6",
+          "#B1B6BF",
+          "#D1D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "unknown-fill-paper": {
+        "role": "status",
+        "displayName": "Unknown Fill Paper",
+        "canonical": "#ECEEF1",
+        "tonalRamp": [
+          "#22252A",
+          "#3B424B",
+          "#545E6E",
+          "#6B7A91",
+          "#8D98A9",
+          "#AFB6C1",
+          "#D1D4DA",
+          "#F1F2F3"
+        ]
+      },
+      "unknown-solid-console": {
+        "role": "status",
+        "displayName": "Unknown Solid Console",
+        "canonical": "#8A93A0",
+        "tonalRamp": [
+          "#242629",
+          "#3E4249",
+          "#585F69",
+          "#717B8B",
+          "#9199A4",
+          "#B2B7BE",
+          "#D2D5D8",
+          "#F1F2F3"
+        ]
+      },
+      "unknown-ink-console": {
+        "role": "status",
+        "displayName": "Unknown Ink Console",
+        "canonical": "#C3C8D0",
+        "tonalRamp": [
+          "#232629",
+          "#3D424A",
+          "#565E6B",
+          "#6F7A8D",
+          "#9098A6",
+          "#B1B6BF",
+          "#D2D4D9",
+          "#F1F2F3"
+        ]
+      },
+      "unknown-fill-console": {
+        "role": "status",
+        "displayName": "Unknown Fill Console",
+        "canonical": "#1E2229",
+        "tonalRamp": [
+          "#22252A",
+          "#3B414C",
+          "#535D6E",
+          "#6A7891",
+          "#8D97A9",
+          "#AFB6C1",
+          "#D1D4DA",
+          "#F1F2F3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The 'Asali' wordmark beside the mark. Anton, uppercase. One of the two places Anton appears."
+      },
+      "verdict": {
+        "displayName": "Verdict",
+        "purpose": "The verdict word on the verdict card only. Anton, uppercase, in the status ink."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles (h1 via PageHeader). IBM Plex Sans Condensed 700."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings (h2), empty-state and sheet titles."
+      },
+      "title-small": {
+        "displayName": "Title Small",
+        "purpose": "Sub-section headings (h3)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text; prose capped at 72ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, buttons, nav items."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Table headers, hints, status chips, bottom-bar labels."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Serials, GTINs, lots and scanned input only. Iosevka, self-hosted subset. Never for words or placeholder sentences."
+      }
+    },
+    "shadows": [
+      {
+        "name": "console-card (dark)",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 32px -18px rgba(0,0,0,0.9)",
+        "purpose": "Cards, tables, verdict cards; always combined with inset 0 0 0 1px of the rim colour (or status line)."
+      },
+      {
+        "name": "console-card (paper)",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.9), 0 1px 2px rgba(23,22,20,0.05), 0 8px 24px -16px rgba(23,22,20,0.22)",
+        "purpose": "The same role on paper."
+      },
+      {
+        "name": "float (dark)",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.10), 0 24px 60px -28px rgba(0,0,0,1)",
+        "purpose": "Popovers and sheets above the page."
+      },
+      {
+        "name": "float (paper)",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.9), 0 20px 50px -24px rgba(23,22,20,0.38)",
+        "purpose": "The same role on paper."
+      },
+      {
+        "name": "rim",
+        "value": "inset 0 0 0 1px var(--border)",
+        "purpose": "Edge of every container and field; var(--border-strong) on hover, active and secondary buttons; var(--accent-ink) on focused fields."
+      },
+      {
+        "name": "status-halo",
+        "value": "0 0 0 3px var(--ok-wash)",
+        "purpose": "Halo around small status dots (ok or warn wash)."
+      },
+      {
+        "name": "overhead-glow",
+        "value": "radial-gradient(1100px 620px at 50% -12%, var(--glow-lime), transparent 62%), radial-gradient(900px 520px at 88% 4%, var(--glow-blue), transparent 60%)",
+        "purpose": "Fixed body background: a faint overhead light so the console reads as a lit object."
+      },
+      {
+        "name": "hatch",
+        "value": "repeating-linear-gradient(45deg, var(--hatch) 0 2px, transparent 2px 7px)",
+        "purpose": "The single texture of the unknown: loading, empty, cannot check, asking the network, simulation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-console",
+        "value": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+        "purpose": "Default easing for state transitions and the verdict entrance."
+      },
+      {
+        "name": "state",
+        "value": "150ms",
+        "purpose": "Hover, focus and active colour or rim changes; buttons translate 1px down on press."
+      },
+      {
+        "name": "verdict-enter",
+        "value": "280ms opacity 0 to 1, translateY 6px to 0",
+        "purpose": "Verdict card arrival. Respects reduced motion via MotionConfig reducedMotion='user'."
+      },
+      {
+        "name": "scan-row-enter",
+        "value": "140ms opacity, translateY -4px to 0, easeOut",
+        "purpose": "A new row in a scan session list."
+      },
+      {
+        "name": "progress",
+        "value": "500ms width, ease-console",
+        "purpose": "Organisations-asked progress bar."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Lime pill; one per view. Disabled goes flat neutral, never half-opacity lime.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Check medicine</button> <button class=\"ds-btn ds-btn-primary\" disabled>Check medicine</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 0; border-radius: 9999px; font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; cursor: pointer; transition: background-color 150ms cubic-bezier(0.22,0.61,0.36,1), color 150ms, translate 150ms; } .ds-btn:active:not(:disabled) { translate: 0 1px; } .ds-btn:focus-visible { outline: 2px solid var(--accent-ink, #D8FF3E); outline-offset: 2px; } .ds-btn-primary { background: var(--accent, #D8FF3E); color: var(--on-accent, #0A0B0D); } .ds-btn-primary:hover:not(:disabled) { background: var(--accent-hover, #E4FF6B); } .ds-btn-primary:disabled { background: var(--sunken, #1C1F24); color: var(--text-meta, #8A8B8E); box-shadow: none; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Transparent pill with a strong inset rim; the default button kind.",
+      "html": "<button class=\"ds-btn2\">Add code</button>",
+      "css": ".ds-btn2 { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 0; border-radius: 9999px; background: transparent; color: var(--text, #F4F4F5); box-shadow: inset 0 0 0 1px var(--border-strong, #36393D); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; cursor: pointer; transition: background-color 150ms cubic-bezier(0.22,0.61,0.36,1); } .ds-btn2:hover { background: var(--surface-2, #16181C); } .ds-btn2:active { translate: 0 1px; } .ds-btn2:focus-visible { outline: 2px solid var(--accent-ink, #D8FF3E); outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive action: danger fill and ink, danger line as rim.",
+      "html": "<button class=\"ds-btn-danger\">Issue recall</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 0; border-radius: 9999px; background: var(--bad-bg, #351C1C); color: var(--bad-fg, #FF9186); box-shadow: inset 0 0 0 1px var(--bad-line, #7A2E28); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: filter 150ms cubic-bezier(0.22,0.61,0.36,1); } .ds-btn-danger:hover { filter: brightness(1.1); } .ds-btn-danger:focus-visible { outline: 2px solid var(--accent-ink, #D8FF3E); outline-offset: 2px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Inset well at 16px radius; rim strengthens on hover and turns accent-ink on focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">City</span><input class=\"ds-input\" value=\"Mumbai\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; color: var(--text, #F4F4F5); } .ds-field-label { font-size: 15px; font-weight: 600; } .ds-input { min-height: 44px; width: 100%; padding: 0 16px; border: 0; border-radius: 16px; background: var(--inset, #0A0B0D); color: var(--text, #F4F4F5); font: inherit; font-size: 16px; box-shadow: inset 0 0 0 1px var(--border, #24272B); outline: none; caret-color: var(--accent-ink, #D8FF3E); transition: box-shadow 150ms; } .ds-input::placeholder { color: var(--text-meta, #8A8B8E); } .ds-input:hover { box-shadow: inset 0 0 0 1px var(--border-strong, #36393D); } .ds-input:focus { box-shadow: inset 0 0 0 1px var(--accent-ink, #D8FF3E); }"
+    },
+    {
+      "name": "Staff Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Rail pills: muted at rest, sunken with strong rim and accent-ink icon when active.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item is-active\" href=\"#\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10\"/></svg>Scan</a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\"><path d=\"M3 3v18h18M7 15l4-4 3 3 5-6\"/></svg>Stock</a></nav>",
+      "css": ".ds-nav { display: grid; gap: 4px; width: 224px; font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; } .ds-nav-item { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 16px; border-radius: 9999px; font-size: 15px; color: var(--text-muted, #9C9DA0); text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-nav-item:hover { background: var(--surface-2, #16181C); color: var(--text, #F4F4F5); } .ds-nav-item:focus-visible { outline: 2px solid var(--accent-ink, #D8FF3E); outline-offset: 2px; } .ds-nav-item.is-active { background: var(--sunken, #1C1F24); color: var(--text, #F4F4F5); font-weight: 600; box-shadow: inset 0 0 0 1px var(--border-strong, #36393D); } .ds-nav-item.is-active svg { color: var(--accent-ink, #D8FF3E); }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Pill in a status fill with status ink; always carries a word.",
+      "html": "<span class=\"ds-chip ds-chip-ok\">Received</span> <span class=\"ds-chip ds-chip-warn\">Late</span> <span class=\"ds-chip ds-chip-bad\">Recalled</span> <span class=\"ds-chip ds-chip-unk\">Not answering</span>",
+      "css": ".ds-chip { display: inline-block; padding: 2px 12px; border-radius: 9999px; font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; font-size: 13px; font-weight: 600; white-space: nowrap; } .ds-chip-ok { background: var(--ok-bg, #172F25); color: var(--ok-fg, #6FE8A5); } .ds-chip-warn { background: var(--warn-bg, #322C1C); color: var(--warn-fg, #FFD67A); } .ds-chip-bad { background: var(--bad-bg, #351C1C); color: var(--bad-fg, #FF9186); } .ds-chip-unk { background: var(--unknown-bg, #1E2229); color: var(--unknown-fg, #C3C8D0); }"
+    },
+    {
+      "name": "Console Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Raised surface at 22px radius, top-lit rim and soft drop instead of a border.",
+      "html": "<div class=\"ds-card\"><h2 class=\"ds-card-title\">Batch TPM9</h2><p class=\"ds-card-text\">Shipped to Northline Distributors, Mumbai.</p></div>",
+      "css": ".ds-card { padding: 20px; border-radius: 22px; background: var(--surface, #111316); color: var(--text, #F4F4F5); box-shadow: var(--shadow-card, inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 32px -18px rgba(0,0,0,0.9)), inset 0 0 0 1px var(--border, #24272B); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; } .ds-card-title { margin: 0; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.024em; line-height: 1.16; } .ds-card-text { margin: 6px 0 0; color: var(--text-muted, #9C9DA0); line-height: 1.55; }"
+    },
+    {
+      "name": "Verdict Card",
+      "kind": "custom",
+      "refersTo": "verdict-card",
+      "description": "Signature: status wash from the top-left, solid status chip with icon, verdict word in Anton caps.",
+      "html": "<div class=\"ds-verdict\"><div class=\"ds-verdict-head\"><span class=\"ds-verdict-chip\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></span><span class=\"ds-verdict-word\">Genuine</span></div><p class=\"ds-verdict-line\">This pack's route checks out across every organisation that handled it.</p><p class=\"ds-verdict-product\">Paracetamol 500 mg · Batch TPM9 · Expires Mar 2027</p></div>",
+      "css": ".ds-verdict { padding: 24px 20px; border-radius: 22px; color: var(--text, #F4F4F5); background: linear-gradient(168deg, var(--ok-wash, rgba(61,220,132,0.12)), transparent 58%), var(--surface, #111316); box-shadow: var(--shadow-card, inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 32px -18px rgba(0,0,0,0.9)), inset 0 0 0 1px var(--ok-line, #24583C); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; } .ds-verdict-head { display: flex; align-items: center; gap: 16px; } .ds-verdict-chip { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 9999px; background: var(--ok-solid, #3DDC84); color: var(--on-ok, #07130C); flex-shrink: 0; } .ds-verdict-word { font-family: Anton, 'Archivo Black', sans-serif; font-size: clamp(2.4rem, 7vw, 3.5rem); text-transform: uppercase; line-height: 0.95; letter-spacing: 0.005em; color: var(--ok-fg, #6FE8A5); } .ds-verdict-line { margin: 16px 0 0; max-width: 60ch; font-size: 1.125rem; line-height: 1.375; } .ds-verdict-product { margin: 20px 0 0; padding-top: 16px; border-top: 1px dashed var(--border-strong, #36393D); font-size: 15px; color: var(--text-muted, #9C9DA0); }"
+    },
+    {
+      "name": "Hatched Empty State",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "The texture of the unknown: hatched panel with a rim. The same hatch marks skeletons, Cannot check, asking-the-network and the simulation banner.",
+      "html": "<div class=\"ds-empty\"><h2 class=\"ds-empty-title\">No scans yet</h2><p class=\"ds-empty-text\">Scan a carton to start this session.</p></div>",
+      "css": ".ds-empty { max-width: 72ch; padding: 32px 24px; border-radius: 22px; color: var(--text, #F4F4F5); background-image: repeating-linear-gradient(45deg, var(--hatch, rgba(255,255,255,0.055)) 0 2px, transparent 2px 7px); box-shadow: inset 0 0 0 1px var(--border, #24272B); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; } .ds-empty-title { margin: 0; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.024em; } .ds-empty-text { margin: 6px 0 0; color: var(--text-muted, #9C9DA0); }"
+    },
+    {
+      "name": "Theme Switch",
+      "kind": "custom",
+      "refersTo": "theme-switch",
+      "description": "System / Light / Dark segmented radio in an inset pill well.",
+      "html": "<div class=\"ds-theme\" role=\"radiogroup\" aria-label=\"Colour theme\"><button class=\"ds-theme-seg is-on\" role=\"radio\" aria-checked=\"true\">System</button><button class=\"ds-theme-seg\" role=\"radio\" aria-checked=\"false\">Light</button><button class=\"ds-theme-seg\" role=\"radio\" aria-checked=\"false\">Dark</button></div>",
+      "css": ".ds-theme { display: inline-flex; gap: 4px; padding: 4px; border-radius: 9999px; background: var(--inset, #0A0B0D); box-shadow: inset 0 0 0 1px var(--border, #24272B); font-family: 'IBM Plex Sans Condensed', Inter, sans-serif; font-size: 14px; } .ds-theme-seg { min-height: 44px; padding: 0 16px; border: 0; border-radius: 9999px; background: transparent; color: var(--text-muted, #9C9DA0); font: inherit; cursor: pointer; transition: background-color 150ms, color 150ms; } .ds-theme-seg:hover { background: var(--surface-2, #16181C); color: var(--text, #F4F4F5); } .ds-theme-seg:focus-visible { outline: 2px solid var(--accent-ink, #D8FF3E); outline-offset: 2px; } .ds-theme-seg.is-on { background: var(--sunken, #1C1F24); color: var(--text, #F4F4F5); font-weight: 600; box-shadow: inset 0 0 0 1px var(--border-strong, #36393D); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Forensic Console",
+    "overview": "Asali's portals are a lit instrument on a dark bench. The world comes from the project's own earlier dashboard (the \"Forensic Console\" stylesheet on the `main` branch), adopted for the portals so the network's working screens and its explainer read as one product. The default dark theme is a near-black console whose surfaces are raised by faint top-lit rims, not drawn with borders; a faint lime and blue overhead light sits on the page so the console reads as an object, not a void. When the system asks for light, the same console is printed on warm paper.\n\nThe world is quiet and dense in the way a working tool is quiet: one condensed sans carries every spoken word, one accent marks what you can act on, and the only loud thing on any screen is the verdict. A poster face appears in exactly two places, the \"Asali\" wordmark and the verdict word, so that when it appears it means the answer. What the system does not know yet (loading, empty, cannot check, simulation) wears one texture, a 45 degree hatch, so uncertainty has a look of its own and is never smoothed over.\n\nThe same UI serves all five portal types (consumer, pharma, distributor, shop, regulator) with the same accent and the same components; only navigation and content change. The portals run on a local network, so every font is self-hosted and nothing loads from a CDN. The restyle that produced this system changed only the visual layer: routes, features, copy and logic were left as they were, and future visual work keeps that boundary.",
+    "keyCharacteristics": [
+      "Near-black console (default in dark) and warm paper (light), switched by the system preference or a System / Light / Dark control.",
+      "One accent, lime, identical in every portal; olive ink wherever the accent has to be read as text on paper.",
+      "Depth by inset rims and soft drop shadows, never by hard outlines.",
+      "Pills for buttons and navigation, 16px inset fields, 22px cards.",
+      "Anton only for the wordmark and the verdict word; IBM Plex Sans Condensed for all UI; Iosevka only for codes.",
+      "Hatch as the single texture of the unknown.",
+      "Status always carried by a word and an icon as well as a colour."
+    ],
+    "rules": [
+      {
+        "name": "The One Lime Rule",
+        "body": "Lime is the only accent, in every portal and both themes. It is a fill; wherever the accent has to be read as a line or a letter, use the accent-ink token instead, which turns olive on paper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status Means Status Rule",
+        "body": "Green, amber, red and slate are reserved for verdicts and system state. They are never decoration, never a category colour, and never the only carrier of meaning: every status also has a word, and verdicts and chips have an icon.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Shouts Rule",
+        "body": "Anton appears only as the \"Asali\" wordmark and the verdict word. Page titles, numbers, headings and banners are Plex Condensed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Codes Only Rule",
+        "body": "Iosevka is for characters a person must copy or compare: serials, GTINs, lots, scanned input. Never for words, labels, headings or placeholder sentences.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rim Not Border Rule",
+        "body": "Containers are edged by a 1px inset rim and a top highlight, not an outline. Hairline rules are kept for dividers inside a container: table row separators and the dashed line above the product line on the verdict card.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hatch Is the Unknown Rule",
+        "body": "The 45 degree hatch marks exactly what is not known yet: loading skeletons and the verdict-loading card, empty states, the \"Cannot check\" verdict, the network-status pill while it is asking, and the simulation banner. Do not extend it to decoration, headers or anything that is known.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do use lime as a fill on at most one primary button per view, and switch to the accent-ink token for any accent that is text, outline or icon.",
+      "Do edge every container with a 1px inset rim plus the console card shadow; float anything above the page with the float shadow.",
+      "Do set page titles in IBM Plex Sans Condensed 700 and keep Anton to the wordmark and the verdict word.",
+      "Do put every serial, GTIN and lot in Iosevka, grouped and copyable.",
+      "Do use the hatch for loading, empty, cannot-check, asking-the-network and simulation, and nowhere else.",
+      "Do pair every status colour with a word, and verdicts and chips with an icon.",
+      "Do keep every target at least 44px and every text pair passing `scripts/check_contrast.mjs` in both themes; add any new token pair to that script.",
+      "Do self-host every font and asset; the portals run on a LAN with no internet.",
+      "Do keep print on paper colours (white ground, ink text) whatever theme is on screen."
+    ],
+    "donts": [
+      "Don't give a portal its own accent colour; the user chose lime in every portal.",
+      "Don't fade a disabled primary button to half-opacity lime; it goes flat neutral.",
+      "Don't draw cards or fields with outer borders or heavy outlines.",
+      "Don't use the status colours for decoration, branding or categories.",
+      "Don't set placeholder text, labels or headings in Iosevka.",
+      "Don't load fonts or scripts from a CDN.",
+      "Don't change routes, features, copy or logic as part of visual work on these portals."
+    ]
+  }
+}

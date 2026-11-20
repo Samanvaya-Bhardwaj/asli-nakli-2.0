@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-013
+title: Consumer complaint MCA-2026-G0025
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: October 04, 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MFD-ONVDA-824 at Nightingale Pharmacy, Bengaluru. It did not work at all. Ondavia 8mg tablets crumble in the strip and had no effect after 2 days.
+
+Please look into this.
+
+Regards,
+Suresh Iyer

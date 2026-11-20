@@ -1,0 +1,14 @@
+data/generate_documents.py
+integration/federation/doc_store.py
+integration/federation/retrieval.py
+integration/federation/coordinator.py
+integration/federation/query_parser.py
+integration/schema_mapping.json
+api/node_db.py
+api/coordinator_service.py
+integration/mediator.py
+scripts/integrated_demo.py
+scripts/prepare_node_data.py
+scripts/run_federation.py
+Dockerfile.phase3
+Dockerfile.phase3.dockerignore

@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-046
+title: Consumer complaint MCA-2026-G0106
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-07-20
+---
+
+Dear Sir/Madam,
+
+I bought Glimora 2mg with code Med Glmri 395 at Saket City Hospital Pharmacy, New Delhi. Something is wrong with it. Pharmacist could not confirm the batch of Glimora 2mg.
+
+Please look into this.
+
+Regards,
+Venkat Shah

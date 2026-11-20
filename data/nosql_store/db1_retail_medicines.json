@@ -1,0 +1,4122 @@
+[
+ {
+  "_id": "MED-ALBNZ-840",
+  "brand_name": "Albenzo 400mg",
+  "generic_name": "Albendazole",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ALB25840",
+   "expiry_date": "2028-09-24"
+  },
+  "pricing": {
+   "mrp": 18.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-10-27"
+ },
+ {
+  "_id": "MED-ALBNZ-841",
+  "brand_name": "Albenzo 400mg",
+  "generic_name": "Albendazole",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ALB25841",
+   "expiry_date": "2028-11-14"
+  },
+  "pricing": {
+   "mrp": 18.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-01-02"
+ },
+ {
+  "_id": "MED-ALBNZ-842",
+  "brand_name": "Albenzo 400mg",
+  "generic_name": "Albendazole",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ALB26842",
+   "expiry_date": "2029-01-27"
+  },
+  "pricing": {
+   "mrp": 18.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-03-14"
+ },
+ {
+  "_id": "MED-AMLOV-804",
+  "brand_name": "AMLOVIA 5 MG",
+  "generic_name": "Amlodipine",
+  "strength": "5 mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AML25804",
+   "expiry_date": "2028-09-15"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-10-20"
+ },
+ {
+  "_id": "MED-AMLVO-803",
+  "brand_name": "Amlovia 5mg",
+  "generic_name": "Amlodipine",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AML25803",
+   "expiry_date": "2028-07-13"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-09-24"
+ },
+ {
+  "_id": "MED-AMLVO-804",
+  "brand_name": "Amlovia 5mg",
+  "generic_name": "Amlodipine",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AML25804",
+   "expiry_date": "2028-09-15"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-12-02"
+ },
+ {
+  "_id": "MED-AMLVO-854",
+  "brand_name": "Amlovia 10mg",
+  "generic_name": "Amlodipine",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AML25854",
+   "expiry_date": "2028-08-14"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-09-21"
+ },
+ {
+  "_id": "MED-AMLVO-855",
+  "brand_name": "Amlovia 10mg",
+  "generic_name": "Amlodipine",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AML25855",
+   "expiry_date": "2028-10-11"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-10-30"
+ },
+ {
+  "_id": "MED-AMXLN-201",
+  "brand_name": "Amoxilan 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX25201",
+   "expiry_date": "2027-08-22"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-11-07"
+ },
+ {
+  "_id": "MED-AMXLN-202",
+  "brand_name": "Amoxilan 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX25202",
+   "expiry_date": "2027-11-13"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-12-10"
+ },
+ {
+  "_id": "MED-AMXLN-203",
+  "brand_name": "Amoxilan 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX26203",
+   "expiry_date": "2028-02-04"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-09-27"
+ },
+ {
+  "_id": "MED-AMXLN-687",
+  "brand_name": "Amoxilan 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX25687",
+   "expiry_date": "2027-10-11"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-12-08"
+ },
+ {
+  "_id": "MED-AMXLN-688",
+  "brand_name": "Amoxilan 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX26688",
+   "expiry_date": "2028-01-07"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-02-13"
+ },
+ {
+  "_id": "MED-AMXLN-689",
+  "brand_name": "Amoxilan 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX26689",
+   "expiry_date": "2028-03-02"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-04-23"
+ },
+ {
+  "_id": "MED-AMXLN-690",
+  "brand_name": "Amoxilan 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AMX26690",
+   "expiry_date": "2028-05-20"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-06-24"
+ },
+ {
+  "_id": "MED-ASALI-001",
+  "brand_name": "Novamox 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "BATCH-A001",
+   "expiry_date": "2027-01-14"
+  },
+  "pricing": {
+   "mrp": 115.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-001"
+  },
+  "added_on": "2025-02-05"
+ },
+ {
+  "_id": "MED-ASALI-002",
+  "brand_name": "Pacimol 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 15",
+  "batch": {
+   "number": "BATCH-A002",
+   "expiry_date": "2027-02-09"
+  },
+  "pricing": {
+   "mrp": 32.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-002"
+  },
+  "added_on": "2025-02-15"
+ },
+ {
+  "_id": "MED-ASALI-003",
+  "brand_name": "Metsmall 850mg",
+  "generic_name": "Metformin",
+  "strength": "850mg",
+  "pack_size": "Bottle of 30",
+  "batch": {
+   "number": "BATCH-A003",
+   "expiry_date": "2027-03-04"
+  },
+  "pricing": {
+   "mrp": 140.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-003"
+  },
+  "added_on": "2025-03-20"
+ },
+ {
+  "_id": "MED-ASALI-004",
+  "brand_name": "Falcinil 80/480mg",
+  "generic_name": "Artemether+Lumefantrine",
+  "strength": "80mg+480mg",
+  "pack_size": "Pack of 24",
+  "batch": {
+   "number": "BATCH-A004",
+   "expiry_date": "2026-07-19"
+  },
+  "pricing": {
+   "mrp": 280.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-002"
+  },
+  "added_on": "2025-02-11"
+ },
+ {
+  "_id": "MED-ASALI-005",
+  "brand_name": "Atorva 40mg",
+  "generic_name": "Atorvastatin",
+  "strength": "40mg",
+  "pack_size": "Strip of 15",
+  "batch": {
+   "number": "BATCH-A005",
+   "expiry_date": "2027-03-31"
+  },
+  "pricing": {
+   "mrp": 180.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-001"
+  },
+  "added_on": "2025-04-14"
+ },
+ {
+  "_id": "MED-ASALI-006",
+  "brand_name": "Electral ORS",
+  "generic_name": "ORS Formula",
+  "strength": "WHO formula",
+  "pack_size": "Sachet 21.8g",
+  "batch": {
+   "number": "BATCH-A006",
+   "expiry_date": "2027-02-14"
+  },
+  "pricing": {
+   "mrp": 22.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-003"
+  },
+  "added_on": "2025-03-05"
+ },
+ {
+  "_id": "MED-ASALI-007",
+  "brand_name": "Ciplox 500mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "BATCH-A007",
+   "expiry_date": "2027-05-09"
+  },
+  "pricing": {
+   "mrp": 95.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-001"
+  },
+  "added_on": "2025-05-25"
+ },
+ {
+  "_id": "MED-ASALI-008",
+  "brand_name": "Omez 20mg",
+  "generic_name": "Omeprazole",
+  "strength": "20mg",
+  "pack_size": "Strip of 15",
+  "batch": {
+   "number": "BATCH-A008",
+   "expiry_date": "2027-03-19"
+  },
+  "pricing": {
+   "mrp": 85.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-003"
+  },
+  "added_on": "2025-04-08"
+ },
+ {
+  "_id": "MED-ASALI-009",
+  "brand_name": "Basalog 100 IU/ml",
+  "generic_name": "Insulin glargine",
+  "strength": "100 IU/ml",
+  "pack_size": "Pen 3ml",
+  "batch": {
+   "number": "BATCH-A009",
+   "expiry_date": "2026-06-01"
+  },
+  "pricing": {
+   "mrp": 850.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2025-06-07"
+ },
+ {
+  "_id": "MED-ASALI-010",
+  "brand_name": "Calcirol 1000 IU",
+  "generic_name": "Cholecalciferol",
+  "strength": "1000IU",
+  "pack_size": "Bottle of 60",
+  "batch": {
+   "number": "BATCH-A010",
+   "expiry_date": "2027-04-14"
+  },
+  "pricing": {
+   "mrp": 340.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-003"
+  },
+  "added_on": "2025-04-24"
+ },
+ {
+  "_id": "MED-ASPRI-801",
+  "brand_name": "Aspira 100IU/ml",
+  "generic_name": "Insulin aspart",
+  "strength": "100IU/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "ASP25801",
+   "expiry_date": "2027-05-08"
+  },
+  "pricing": {
+   "mrp": 744.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-03-01"
+ },
+ {
+  "_id": "MED-ASPRI-802",
+  "brand_name": "Aspira 100IU/ml",
+  "generic_name": "Insulin aspart",
+  "strength": "100IU/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "ASP25802",
+   "expiry_date": "2027-05-13"
+  },
+  "pricing": {
+   "mrp": 744.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-07-10"
+ },
+ {
+  "_id": "MED-ATRLN-159",
+  "brand_name": "Atorlane 40mg",
+  "generic_name": "Atorvastatin",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25159",
+   "expiry_date": "2028-02-22"
+  },
+  "pricing": {
+   "mrp": 196.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-03-31"
+ },
+ {
+  "_id": "MED-ATRLN-160",
+  "brand_name": "Atorlane 40mg",
+  "generic_name": "Atorvastatin",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25160",
+   "expiry_date": "2028-04-03"
+  },
+  "pricing": {
+   "mrp": 196.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-05-21"
+ },
+ {
+  "_id": "MED-ATRLN-266",
+  "brand_name": "Atorlane 20mg",
+  "generic_name": "Atorvastatin",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25266",
+   "expiry_date": "2028-05-16"
+  },
+  "pricing": {
+   "mrp": 128.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-06-13"
+ },
+ {
+  "_id": "MED-ATRLN-267",
+  "brand_name": "Atorlane 20mg",
+  "generic_name": "Atorvastatin",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25267",
+   "expiry_date": "2028-06-29"
+  },
+  "pricing": {
+   "mrp": 128.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-08-27"
+ },
+ {
+  "_id": "MED-ATRLN-268",
+  "brand_name": "Atorlane 20mg",
+  "generic_name": "Atorvastatin",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25268",
+   "expiry_date": "2028-09-03"
+  },
+  "pricing": {
+   "mrp": 128.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-11-14"
+ },
+ {
+  "_id": "MED-ATRLN-619",
+  "brand_name": "Atorlane 10mg",
+  "generic_name": "Atorvastatin",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25619",
+   "expiry_date": "2028-06-12"
+  },
+  "pricing": {
+   "mrp": 74.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-07-24"
+ },
+ {
+  "_id": "MED-ATRLN-620",
+  "brand_name": "Atorlane 10mg",
+  "generic_name": "Atorvastatin",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ATR25620",
+   "expiry_date": "2028-08-28"
+  },
+  "pricing": {
+   "mrp": 74.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-10-06"
+ },
+ {
+  "_id": "MED-AZVST-220",
+  "brand_name": "Azivista 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25220",
+   "expiry_date": "2028-08-08"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-09-14"
+ },
+ {
+  "_id": "MED-AZVST-221",
+  "brand_name": "Azivista 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25221",
+   "expiry_date": "2028-10-12"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-11-28"
+ },
+ {
+  "_id": "MED-AZVST-222",
+  "brand_name": "Azivista 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25222",
+   "expiry_date": "2028-12-17"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-02-05"
+ },
+ {
+  "_id": "MED-AZVST-223",
+  "brand_name": "Azivista 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV26223",
+   "expiry_date": "2029-02-27"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-04-02"
+ },
+ {
+  "_id": "MED-AZVST-233",
+  "brand_name": "Azivista 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25233",
+   "expiry_date": "2028-01-29"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-04-10"
+ },
+ {
+  "_id": "MED-AZVST-234",
+  "brand_name": "Azivista 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25234",
+   "expiry_date": "2028-04-23"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-06-03"
+ },
+ {
+  "_id": "MED-AZVST-235",
+  "brand_name": "Azivista 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "AZV25235",
+   "expiry_date": "2028-07-02"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-07-30"
+ },
+ {
+  "_id": "MED-CFRNE-772",
+  "brand_name": "Cefirana 200mg",
+  "generic_name": "Cefixime",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CFR25772",
+   "expiry_date": "2027-11-05"
+  },
+  "pricing": {
+   "mrp": 109.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-01-06"
+ },
+ {
+  "_id": "MED-CFRNE-773",
+  "brand_name": "Cefirana 200mg",
+  "generic_name": "Cefixime",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CFR26773",
+   "expiry_date": "2028-01-17"
+  },
+  "pricing": {
+   "mrp": 109.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-02-08"
+ },
+ {
+  "_id": "MED-CFRNE-774",
+  "brand_name": "Cefirana 200mg",
+  "generic_name": "Cefixime",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CFR26774",
+   "expiry_date": "2028-03-20"
+  },
+  "pricing": {
+   "mrp": 109.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-05-08"
+ },
+ {
+  "_id": "MED-CLCVN-210",
+  "brand_name": "Calcivane 60000IU",
+  "generic_name": "Cholecalciferol",
+  "strength": "60000IU",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLC25210",
+   "expiry_date": "2027-02-10"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-03-23"
+ },
+ {
+  "_id": "MED-CLCVN-211",
+  "brand_name": "Calcivane 60000IU",
+  "generic_name": "Cholecalciferol",
+  "strength": "60000IU",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLC25211",
+   "expiry_date": "2027-04-07"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-05-27"
+ },
+ {
+  "_id": "MED-CLCVN-212",
+  "brand_name": "Calcivane 60000IU",
+  "generic_name": "Cholecalciferol",
+  "strength": "60000IU",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLC25212",
+   "expiry_date": "2027-06-27"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-09-03"
+ },
+ {
+  "_id": "MED-CLCVN-213",
+  "brand_name": "Calcivane 60000IU",
+  "generic_name": "Cholecalciferol",
+  "strength": "60000IU",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLC25213",
+   "expiry_date": "2027-08-28"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-10-12"
+ },
+ {
+  "_id": "MED-CLPVN-117",
+  "brand_name": "Clopivane 75mg",
+  "generic_name": "Clopidogrel",
+  "strength": "75mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLP25117",
+   "expiry_date": "2027-05-25"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-07-24"
+ },
+ {
+  "_id": "MED-CLPVN-118",
+  "brand_name": "Clopivane 75mg",
+  "generic_name": "Clopidogrel",
+  "strength": "75mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CLP25118",
+   "expiry_date": "2027-07-30"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-10-16"
+ },
+ {
+  "_id": "MED-CPRVN-564",
+  "brand_name": "Ciprovane 500mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR25564",
+   "expiry_date": "2028-04-06"
+  },
+  "pricing": {
+   "mrp": 89.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-06-03"
+ },
+ {
+  "_id": "MED-CPRVN-565",
+  "brand_name": "Ciprovane 500mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR25565",
+   "expiry_date": "2028-07-01"
+  },
+  "pricing": {
+   "mrp": 89.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-09-08"
+ },
+ {
+  "_id": "MED-CPRVN-566",
+  "brand_name": "Ciprovane 500mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR25566",
+   "expiry_date": "2028-08-14"
+  },
+  "pricing": {
+   "mrp": 89.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-10-04"
+ },
+ {
+  "_id": "MED-CPRVN-578",
+  "brand_name": "Ciprovane 250mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR25578",
+   "expiry_date": "2028-09-21"
+  },
+  "pricing": {
+   "mrp": 48.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-10-14"
+ },
+ {
+  "_id": "MED-CPRVN-579",
+  "brand_name": "Ciprovane 250mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR25579",
+   "expiry_date": "2028-11-27"
+  },
+  "pricing": {
+   "mrp": 48.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-12-20"
+ },
+ {
+  "_id": "MED-CPRVN-580",
+  "brand_name": "Ciprovane 250mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR26580",
+   "expiry_date": "2029-01-24"
+  },
+  "pricing": {
+   "mrp": 48.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-03-22"
+ },
+ {
+  "_id": "MED-CPRVN-581",
+  "brand_name": "Ciprovane 250mg",
+  "generic_name": "Ciprofloxacin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CPR26581",
+   "expiry_date": "2029-04-03"
+  },
+  "pricing": {
+   "mrp": 48.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-04-24"
+ },
+ {
+  "_id": "MED-CTRVE-503",
+  "brand_name": "Cetrova 10mg",
+  "generic_name": "Cetirizine",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CTR25503",
+   "expiry_date": "2028-07-16"
+  },
+  "pricing": {
+   "mrp": 22.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-08-28"
+ },
+ {
+  "_id": "MED-CTRVE-504",
+  "brand_name": "Cetrova 10mg",
+  "generic_name": "Cetirizine",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "CTR25504",
+   "expiry_date": "2028-09-26"
+  },
+  "pricing": {
+   "mrp": 22.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-11-25"
+ },
+ {
+  "_id": "MED-DCLTN-127",
+  "brand_name": "Diclotane 50mg",
+  "generic_name": "Diclofenac",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DCL25127",
+   "expiry_date": "2028-01-17"
+  },
+  "pricing": {
+   "mrp": 42.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-02-12"
+ },
+ {
+  "_id": "MED-DCLTN-128",
+  "brand_name": "Diclotane 50mg",
+  "generic_name": "Diclofenac",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DCL25128",
+   "expiry_date": "2028-03-17"
+  },
+  "pricing": {
+   "mrp": 42.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-04-01"
+ },
+ {
+  "_id": "MED-DCLTN-129",
+  "brand_name": "Diclotane 50mg",
+  "generic_name": "Diclofenac",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DCL25129",
+   "expiry_date": "2028-05-24"
+  },
+  "pricing": {
+   "mrp": 42.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-07-25"
+ },
+ {
+  "_id": "MED-DXLYN-199",
+  "brand_name": "Doxalyn 100mg",
+  "generic_name": "Doxycycline",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DXL25199",
+   "expiry_date": "2027-04-13"
+  },
+  "pricing": {
+   "mrp": 71.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-06-02"
+ },
+ {
+  "_id": "MED-DXLYN-200",
+  "brand_name": "Doxalyn 100mg",
+  "generic_name": "Doxycycline",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DXL25200",
+   "expiry_date": "2027-06-01"
+  },
+  "pricing": {
+   "mrp": 71.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-06-17"
+ },
+ {
+  "_id": "MED-DXLYN-201",
+  "brand_name": "Doxalyn 100mg",
+  "generic_name": "Doxycycline",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "DXL25201",
+   "expiry_date": "2027-07-11"
+  },
+  "pricing": {
+   "mrp": 71.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-09-23"
+ },
+ {
+  "_id": "MED-EPVOI-689",
+  "brand_name": "Epovia 4000IU",
+  "generic_name": "Erythropoietin",
+  "strength": "4000IU",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "EPV25689",
+   "expiry_date": "2027-02-25"
+  },
+  "pricing": {
+   "mrp": 1490.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2025-09-25"
+ },
+ {
+  "_id": "MED-EPVOI-690",
+  "brand_name": "Epovia 4000IU",
+  "generic_name": "Erythropoietin",
+  "strength": "4000IU",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "EPV25690",
+   "expiry_date": "2027-05-01"
+  },
+  "pricing": {
+   "mrp": 1490.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2026-01-07"
+ },
+ {
+  "_id": "MED-EPVOI-691",
+  "brand_name": "Epovia 4000IU",
+  "generic_name": "Erythropoietin",
+  "strength": "4000IU",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "EPV26691",
+   "expiry_date": "2027-07-15"
+  },
+  "pricing": {
+   "mrp": 1490.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2026-03-05"
+ },
+ {
+  "_id": "MED-FMRAO-636",
+  "brand_name": "Famora 40mg",
+  "generic_name": "Famotidine",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR25636",
+   "expiry_date": "2028-07-31"
+  },
+  "pricing": {
+   "mrp": 44.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-10-06"
+ },
+ {
+  "_id": "MED-FMRAO-637",
+  "brand_name": "Famora 40mg",
+  "generic_name": "Famotidine",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR25637",
+   "expiry_date": "2028-10-19"
+  },
+  "pricing": {
+   "mrp": 44.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-11-27"
+ },
+ {
+  "_id": "MED-FMRAO-638",
+  "brand_name": "Famora 40mg",
+  "generic_name": "Famotidine",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR25638",
+   "expiry_date": "2028-12-03"
+  },
+  "pricing": {
+   "mrp": 44.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-01-26"
+ },
+ {
+  "_id": "MED-FMRAO-662",
+  "brand_name": "Famora 20mg",
+  "generic_name": "Famotidine",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR25662",
+   "expiry_date": "2028-09-02"
+  },
+  "pricing": {
+   "mrp": 28.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-11-20"
+ },
+ {
+  "_id": "MED-FMRAO-663",
+  "brand_name": "Famora 20mg",
+  "generic_name": "Famotidine",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR25663",
+   "expiry_date": "2028-10-24"
+  },
+  "pricing": {
+   "mrp": 28.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-11-29"
+ },
+ {
+  "_id": "MED-FMRAO-664",
+  "brand_name": "Famora 20mg",
+  "generic_name": "Famotidine",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR26664",
+   "expiry_date": "2029-01-12"
+  },
+  "pricing": {
+   "mrp": 28.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-03-02"
+ },
+ {
+  "_id": "MED-FMRAO-665",
+  "brand_name": "Famora 20mg",
+  "generic_name": "Famotidine",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FMR26665",
+   "expiry_date": "2029-03-02"
+  },
+  "pricing": {
+   "mrp": 28.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-03-08"
+ },
+ {
+  "_id": "MED-FVRLE-695",
+  "brand_name": "Feverol 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR25695",
+   "expiry_date": "2028-10-09"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-12-15"
+ },
+ {
+  "_id": "MED-FVRLE-696",
+  "brand_name": "Feverol 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR25696",
+   "expiry_date": "2028-12-27"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-16"
+ },
+ {
+  "_id": "MED-FVRLE-697",
+  "brand_name": "Feverol 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR26697",
+   "expiry_date": "2029-02-20"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-10"
+ },
+ {
+  "_id": "MED-FVRLE-698",
+  "brand_name": "Feverol 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR26698",
+   "expiry_date": "2029-05-10"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-06-17"
+ },
+ {
+  "_id": "MED-FVRLE-785",
+  "brand_name": "Feverol 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR25785",
+   "expiry_date": "2028-11-24"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-01-21"
+ },
+ {
+  "_id": "MED-FVRLE-786",
+  "brand_name": "Feverol 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR26786",
+   "expiry_date": "2029-01-12"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-06"
+ },
+ {
+  "_id": "MED-FVRLE-787",
+  "brand_name": "Feverol 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "FVR26787",
+   "expiry_date": "2029-03-13"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-29"
+ },
+ {
+  "_id": "MED-GLCVN-578",
+  "brand_name": "Glucovane 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC25578",
+   "expiry_date": "2028-10-22"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-12-01"
+ },
+ {
+  "_id": "MED-GLCVN-579",
+  "brand_name": "Glucovane 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC25579",
+   "expiry_date": "2028-12-10"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-03-19"
+ },
+ {
+  "_id": "MED-GLCVN-580",
+  "brand_name": "Glucovane 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC26580",
+   "expiry_date": "2029-02-15"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-03-05"
+ },
+ {
+  "_id": "MED-GLCVN-581",
+  "brand_name": "Glucovane 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC26581",
+   "expiry_date": "2029-04-25"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-05-28"
+ },
+ {
+  "_id": "MED-GLCVN-661",
+  "brand_name": "Glucovane 1000mg",
+  "generic_name": "Metformin",
+  "strength": "1000mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC25661",
+   "expiry_date": "2028-07-26"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-09-16"
+ },
+ {
+  "_id": "MED-GLCVN-662",
+  "brand_name": "Glucovane 1000mg",
+  "generic_name": "Metformin",
+  "strength": "1000mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLC25662",
+   "expiry_date": "2028-09-16"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-11-28"
+ },
+ {
+  "_id": "MED-GLMRI-181",
+  "brand_name": "Glimora 1mg",
+  "generic_name": "Glimepiride",
+  "strength": "1mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM25181",
+   "expiry_date": "2027-07-19"
+  },
+  "pricing": {
+   "mrp": 58.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-08-28"
+ },
+ {
+  "_id": "MED-GLMRI-182",
+  "brand_name": "Glimora 1mg",
+  "generic_name": "Glimepiride",
+  "strength": "1mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM25182",
+   "expiry_date": "2027-09-08"
+  },
+  "pricing": {
+   "mrp": 58.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-09-23"
+ },
+ {
+  "_id": "MED-GLMRI-183",
+  "brand_name": "Glimora 1mg",
+  "generic_name": "Glimepiride",
+  "strength": "1mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM25183",
+   "expiry_date": "2027-10-29"
+  },
+  "pricing": {
+   "mrp": 58.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-01-13"
+ },
+ {
+  "_id": "MED-GLMRI-184",
+  "brand_name": "Glimora 1mg",
+  "generic_name": "Glimepiride",
+  "strength": "1mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM26184",
+   "expiry_date": "2028-01-06"
+  },
+  "pricing": {
+   "mrp": 58.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-01-29"
+ },
+ {
+  "_id": "MED-GLMRI-395",
+  "brand_name": "Glimora 2mg",
+  "generic_name": "Glimepiride",
+  "strength": "2mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM25395",
+   "expiry_date": "2027-08-31"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-09-23"
+ },
+ {
+  "_id": "MED-GLMRI-396",
+  "brand_name": "Glimora 2mg",
+  "generic_name": "Glimepiride",
+  "strength": "2mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM25396",
+   "expiry_date": "2027-10-30"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-11-17"
+ },
+ {
+  "_id": "MED-GLMRI-397",
+  "brand_name": "Glimora 2mg",
+  "generic_name": "Glimepiride",
+  "strength": "2mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM26397",
+   "expiry_date": "2028-01-06"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-03-07"
+ },
+ {
+  "_id": "MED-GLMRI-398",
+  "brand_name": "Glimora 2mg",
+  "generic_name": "Glimepiride",
+  "strength": "2mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "GLM26398",
+   "expiry_date": "2028-03-19"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-04-21"
+ },
+ {
+  "_id": "MED-GLRVA-677",
+  "brand_name": "Glarvia 100IU/ml",
+  "generic_name": "Insulin glargine",
+  "strength": "100IU/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "GLR25677",
+   "expiry_date": "2027-04-26"
+  },
+  "pricing": {
+   "mrp": 812.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2025-06-09"
+ },
+ {
+  "_id": "MED-GLRVA-678",
+  "brand_name": "Glarvia 100IU/ml",
+  "generic_name": "Insulin glargine",
+  "strength": "100IU/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "GLR25678",
+   "expiry_date": "2027-05-11"
+  },
+  "pricing": {
+   "mrp": 812.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2025-09-09"
+ },
+ {
+  "_id": "MED-GLRVA-679",
+  "brand_name": "Glarvia 100IU/ml",
+  "generic_name": "Insulin glargine",
+  "strength": "100IU/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "GLR25679",
+   "expiry_date": "2027-02-20"
+  },
+  "pricing": {
+   "mrp": 812.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-004"
+  },
+  "added_on": "2025-10-19"
+ },
+ {
+  "_id": "MED-HPSHL-556",
+  "brand_name": "Hepashield 20mcg/ml",
+  "generic_name": "Hepatitis B vaccine",
+  "strength": "20mcg/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "HPS25556",
+   "expiry_date": "2027-02-18"
+  },
+  "pricing": {
+   "mrp": 286.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-06-01"
+ },
+ {
+  "_id": "MED-HPSHL-557",
+  "brand_name": "Hepashield 20mcg/ml",
+  "generic_name": "Hepatitis B vaccine",
+  "strength": "20mcg/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "HPS25557",
+   "expiry_date": "2027-03-14"
+  },
+  "pricing": {
+   "mrp": 286.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-08-22"
+ },
+ {
+  "_id": "MED-HPSHL-558",
+  "brand_name": "Hepashield 20mcg/ml",
+  "generic_name": "Hepatitis B vaccine",
+  "strength": "20mcg/ml",
+  "pack_size": "Vial 1 x 3ml",
+  "batch": {
+   "number": "HPS25558",
+   "expiry_date": "2027-03-26"
+  },
+  "pricing": {
+   "mrp": 286.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-12-02"
+ },
+ {
+  "_id": "MED-HYDRV-865",
+  "brand_name": "Hydrova 200mg",
+  "generic_name": "Hydroxychloroquine",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "HYD25865",
+   "expiry_date": "2028-11-21"
+  },
+  "pricing": {
+   "mrp": 92.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-01-22"
+ },
+ {
+  "_id": "MED-HYDRV-866",
+  "brand_name": "Hydrova 200mg",
+  "generic_name": "Hydroxychloroquine",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "HYD26866",
+   "expiry_date": "2029-02-07"
+  },
+  "pricing": {
+   "mrp": 92.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-02-27"
+ },
+ {
+  "_id": "MED-HYDRV-867",
+  "brand_name": "Hydrova 200mg",
+  "generic_name": "Hydroxychloroquine",
+  "strength": "200mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "HYD26867",
+   "expiry_date": "2029-04-15"
+  },
+  "pricing": {
+   "mrp": 92.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-06-07"
+ },
+ {
+  "_id": "MED-IBNVU-486",
+  "brand_name": "Ibunova 400mg",
+  "generic_name": "Ibuprofen",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "IBN25486",
+   "expiry_date": "2028-01-11"
+  },
+  "pricing": {
+   "mrp": 38.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-02-16"
+ },
+ {
+  "_id": "MED-IBNVU-487",
+  "brand_name": "Ibunova 400mg",
+  "generic_name": "Ibuprofen",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "IBN25487",
+   "expiry_date": "2028-03-15"
+  },
+  "pricing": {
+   "mrp": 38.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-05-17"
+ },
+ {
+  "_id": "MED-IBNVU-488",
+  "brand_name": "Ibunova 400mg",
+  "generic_name": "Ibuprofen",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "IBN25488",
+   "expiry_date": "2028-04-27"
+  },
+  "pricing": {
+   "mrp": 38.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-06-21"
+ },
+ {
+  "_id": "MED-LSVNO-229",
+  "brand_name": "Losavane 50mg",
+  "generic_name": "Losartan",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "LSV25229",
+   "expiry_date": "2028-09-27"
+  },
+  "pricing": {
+   "mrp": 68.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-11-12"
+ },
+ {
+  "_id": "MED-LSVNO-230",
+  "brand_name": "Losavane 50mg",
+  "generic_name": "Losartan",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "LSV25230",
+   "expiry_date": "2028-12-14"
+  },
+  "pricing": {
+   "mrp": 68.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-01-06"
+ },
+ {
+  "_id": "MED-LVCRE-851",
+  "brand_name": "Levocera 5mg",
+  "generic_name": "Levocetirizine",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "LVC25851",
+   "expiry_date": "2028-07-21"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-09-08"
+ },
+ {
+  "_id": "MED-LVCRE-852",
+  "brand_name": "Levocera 5mg",
+  "generic_name": "Levocetirizine",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "LVC25852",
+   "expiry_date": "2028-10-04"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-09-23"
+ },
+ {
+  "_id": "MED-LVCRE-853",
+  "brand_name": "Levocera 5mg",
+  "generic_name": "Levocetirizine",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "LVC25853",
+   "expiry_date": "2028-12-02"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-01-16"
+ },
+ {
+  "_id": "MED-MNTLN-242",
+  "brand_name": "Montelane 10mg",
+  "generic_name": "Montelukast",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MNT25242",
+   "expiry_date": "2027-02-24"
+  },
+  "pricing": {
+   "mrp": 176.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-05-01"
+ },
+ {
+  "_id": "MED-MNTLN-243",
+  "brand_name": "Montelane 10mg",
+  "generic_name": "Montelukast",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MNT25243",
+   "expiry_date": "2027-05-09"
+  },
+  "pricing": {
+   "mrp": 176.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-05-27"
+ },
+ {
+  "_id": "MED-MNTLN-244",
+  "brand_name": "Montelane 10mg",
+  "generic_name": "Montelukast",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MNT25244",
+   "expiry_date": "2027-08-01"
+  },
+  "pricing": {
+   "mrp": 176.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-10-14"
+ },
+ {
+  "_id": "MED-MTPRE-229",
+  "brand_name": "Metopra 50mg",
+  "generic_name": "Metoprolol",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25229",
+   "expiry_date": "2028-04-06"
+  },
+  "pricing": {
+   "mrp": 79.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-05-03"
+ },
+ {
+  "_id": "MED-MTPRE-230",
+  "brand_name": "Metopra 50mg",
+  "generic_name": "Metoprolol",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25230",
+   "expiry_date": "2028-06-27"
+  },
+  "pricing": {
+   "mrp": 79.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-08-09"
+ },
+ {
+  "_id": "MED-MTPRE-231",
+  "brand_name": "Metopra 50mg",
+  "generic_name": "Metoprolol",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25231",
+   "expiry_date": "2028-08-22"
+  },
+  "pricing": {
+   "mrp": 79.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-09-28"
+ },
+ {
+  "_id": "MED-MTPRE-693",
+  "brand_name": "Metopra 25mg",
+  "generic_name": "Metoprolol",
+  "strength": "25mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25693",
+   "expiry_date": "2028-03-08"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-04-22"
+ },
+ {
+  "_id": "MED-MTPRE-694",
+  "brand_name": "Metopra 25mg",
+  "generic_name": "Metoprolol",
+  "strength": "25mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25694",
+   "expiry_date": "2028-05-13"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-06-11"
+ },
+ {
+  "_id": "MED-MTPRE-695",
+  "brand_name": "Metopra 25mg",
+  "generic_name": "Metoprolol",
+  "strength": "25mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25695",
+   "expiry_date": "2028-07-16"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-08-31"
+ },
+ {
+  "_id": "MED-MTPRE-696",
+  "brand_name": "Metopra 25mg",
+  "generic_name": "Metoprolol",
+  "strength": "25mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTP25696",
+   "expiry_date": "2028-10-13"
+  },
+  "pricing": {
+   "mrp": 46.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-11-13"
+ },
+ {
+  "_id": "MED-MTRNE-563",
+  "brand_name": "Metorin 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTR25563",
+   "expiry_date": "2028-11-27"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-02-02"
+ },
+ {
+  "_id": "MED-MTRNE-564",
+  "brand_name": "Metorin 500mg",
+  "generic_name": "Metformin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTR26564",
+   "expiry_date": "2029-02-05"
+  },
+  "pricing": {
+   "mrp": 36.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-02-25"
+ },
+ {
+  "_id": "MED-MTRNE-630",
+  "brand_name": "Metorin 1000mg",
+  "generic_name": "Metformin",
+  "strength": "1000mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTR25630",
+   "expiry_date": "2028-03-14"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-05-09"
+ },
+ {
+  "_id": "MED-MTRNE-631",
+  "brand_name": "Metorin 1000mg",
+  "generic_name": "Metformin",
+  "strength": "1000mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTR25631",
+   "expiry_date": "2028-06-04"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-07-06"
+ },
+ {
+  "_id": "MED-MTRNE-632",
+  "brand_name": "Metorin 1000mg",
+  "generic_name": "Metformin",
+  "strength": "1000mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MTR25632",
+   "expiry_date": "2028-08-07"
+  },
+  "pricing": {
+   "mrp": 64.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-10-10"
+ },
+ {
+  "_id": "MED-MXVRO-245",
+  "brand_name": "Moxivera 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV25245",
+   "expiry_date": "2027-11-30"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-12-20"
+ },
+ {
+  "_id": "MED-MXVRO-246",
+  "brand_name": "Moxivera 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV26246",
+   "expiry_date": "2028-01-10"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-01-28"
+ },
+ {
+  "_id": "MED-MXVRO-247",
+  "brand_name": "Moxivera 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV26247",
+   "expiry_date": "2028-03-13"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-04-05"
+ },
+ {
+  "_id": "MED-MXVRO-248",
+  "brand_name": "Moxivera 500mg",
+  "generic_name": "Amoxycillin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV26248",
+   "expiry_date": "2028-05-19"
+  },
+  "pricing": {
+   "mrp": 118.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-07-26"
+ },
+ {
+  "_id": "MED-MXVRO-358",
+  "brand_name": "Moxivera 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV25358",
+   "expiry_date": "2027-07-01"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-09-13"
+ },
+ {
+  "_id": "MED-MXVRO-359",
+  "brand_name": "Moxivera 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV25359",
+   "expiry_date": "2027-09-03"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2025-09-27"
+ },
+ {
+  "_id": "MED-MXVRO-360",
+  "brand_name": "Moxivera 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV25360",
+   "expiry_date": "2027-11-28"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-02-13"
+ },
+ {
+  "_id": "MED-MXVRO-361",
+  "brand_name": "Moxivera 250mg",
+  "generic_name": "Amoxycillin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "MXV26361",
+   "expiry_date": "2028-01-12"
+  },
+  "pricing": {
+   "mrp": 62.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-008"
+  },
+  "added_on": "2026-03-02"
+ },
+ {
+  "_id": "MED-OMVNE-825",
+  "brand_name": "Omevane 20mg",
+  "generic_name": "Omeprazole",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OMV25825",
+   "expiry_date": "2027-07-07"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-09-07"
+ },
+ {
+  "_id": "MED-OMVNE-826",
+  "brand_name": "Omevane 20mg",
+  "generic_name": "Omeprazole",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OMV25826",
+   "expiry_date": "2027-09-20"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-11-17"
+ },
+ {
+  "_id": "MED-OMVNE-827",
+  "brand_name": "Omevane 20mg",
+  "generic_name": "Omeprazole",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OMV25827",
+   "expiry_date": "2027-11-20"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-01-18"
+ },
+ {
+  "_id": "MED-OMVNE-828",
+  "brand_name": "Omevane 20mg",
+  "generic_name": "Omeprazole",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OMV26828",
+   "expiry_date": "2028-01-22"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-03-31"
+ },
+ {
+  "_id": "MED-ONDVA-220",
+  "brand_name": "Ondavia 4mg",
+  "generic_name": "Ondansetron",
+  "strength": "4mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OND25220",
+   "expiry_date": "2027-09-24"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-11-16"
+ },
+ {
+  "_id": "MED-ONDVA-221",
+  "brand_name": "Ondavia 4mg",
+  "generic_name": "Ondansetron",
+  "strength": "4mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OND25221",
+   "expiry_date": "2027-11-26"
+  },
+  "pricing": {
+   "mrp": 54.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-12-19"
+ },
+ {
+  "_id": "MED-ONDVA-322",
+  "brand_name": "Ondavia 8mg",
+  "generic_name": "Ondansetron",
+  "strength": "8mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OND25322",
+   "expiry_date": "2027-10-03"
+  },
+  "pricing": {
+   "mrp": 86.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-12-10"
+ },
+ {
+  "_id": "MED-ONDVA-323",
+  "brand_name": "Ondavia 8mg",
+  "generic_name": "Ondansetron",
+  "strength": "8mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OND25323",
+   "expiry_date": "2027-12-20"
+  },
+  "pricing": {
+   "mrp": 86.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-03-05"
+ },
+ {
+  "_id": "MED-ONDVA-324",
+  "brand_name": "Ondavia 8mg",
+  "generic_name": "Ondansetron",
+  "strength": "8mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "OND26324",
+   "expiry_date": "2028-02-06"
+  },
+  "pricing": {
+   "mrp": 86.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-03-07"
+ },
+ {
+  "_id": "MED-PANTO-158",
+  "brand_name": "PANTOVIA 40 MG",
+  "generic_name": "Pantoprazole",
+  "strength": "40 mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25158",
+   "expiry_date": "2027-04-21"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-01-26"
+ },
+ {
+  "_id": "MED-PNTRA-742",
+  "brand_name": "Pantora 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25742",
+   "expiry_date": "2027-11-03"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-12-24"
+ },
+ {
+  "_id": "MED-PNTRA-743",
+  "brand_name": "Pantora 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25743",
+   "expiry_date": "2027-12-24"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-12"
+ },
+ {
+  "_id": "MED-PNTRA-744",
+  "brand_name": "Pantora 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT26744",
+   "expiry_date": "2028-03-14"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-05-03"
+ },
+ {
+  "_id": "MED-PNTVA-158",
+  "brand_name": "Pantovia 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25158",
+   "expiry_date": "2027-04-21"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-02-08"
+ },
+ {
+  "_id": "MED-PNTVA-159",
+  "brand_name": "Pantovia 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25159",
+   "expiry_date": "2027-03-20"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-05-04"
+ },
+ {
+  "_id": "MED-PNTVA-160",
+  "brand_name": "Pantovia 40mg",
+  "generic_name": "Pantoprazole",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PNT25160",
+   "expiry_date": "2027-05-13"
+  },
+  "pricing": {
+   "mrp": 112.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-06-14"
+ },
+ {
+  "_id": "MED-PRDVE-553",
+  "brand_name": "Predavia 10mg",
+  "generic_name": "Prednisolone",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD25553",
+   "expiry_date": "2028-10-20"
+  },
+  "pricing": {
+   "mrp": 27.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-11-12"
+ },
+ {
+  "_id": "MED-PRDVE-554",
+  "brand_name": "Predavia 10mg",
+  "generic_name": "Prednisolone",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD25554",
+   "expiry_date": "2028-12-26"
+  },
+  "pricing": {
+   "mrp": 27.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-01-15"
+ },
+ {
+  "_id": "MED-PRDVE-555",
+  "brand_name": "Predavia 10mg",
+  "generic_name": "Prednisolone",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD26555",
+   "expiry_date": "2029-02-25"
+  },
+  "pricing": {
+   "mrp": 27.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2026-04-03"
+ },
+ {
+  "_id": "MED-PRDVE-575",
+  "brand_name": "Predavia 5mg",
+  "generic_name": "Prednisolone",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD25575",
+   "expiry_date": "2028-04-25"
+  },
+  "pricing": {
+   "mrp": 16.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-05-31"
+ },
+ {
+  "_id": "MED-PRDVE-576",
+  "brand_name": "Predavia 5mg",
+  "generic_name": "Prednisolone",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD25576",
+   "expiry_date": "2028-07-22"
+  },
+  "pricing": {
+   "mrp": 16.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-09-13"
+ },
+ {
+  "_id": "MED-PRDVE-577",
+  "brand_name": "Predavia 5mg",
+  "generic_name": "Prednisolone",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRD25577",
+   "expiry_date": "2028-09-26"
+  },
+  "pricing": {
+   "mrp": 16.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-10-12"
+ },
+ {
+  "_id": "MED-PRNVA-659",
+  "brand_name": "Paranova 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25659",
+   "expiry_date": "2028-04-27"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-05-30"
+ },
+ {
+  "_id": "MED-PRNVA-660",
+  "brand_name": "Paranova 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25660",
+   "expiry_date": "2028-07-13"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-09-07"
+ },
+ {
+  "_id": "MED-PRNVA-661",
+  "brand_name": "Paranova 500mg",
+  "generic_name": "Paracetamol",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25661",
+   "expiry_date": "2028-09-29"
+  },
+  "pricing": {
+   "mrp": 24.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-10-21"
+ },
+ {
+  "_id": "MED-PRNVA-785",
+  "brand_name": "Paranova 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25785",
+   "expiry_date": "2028-03-25"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-06-02"
+ },
+ {
+  "_id": "MED-PRNVA-786",
+  "brand_name": "Paranova 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25786",
+   "expiry_date": "2028-06-23"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-07-30"
+ },
+ {
+  "_id": "MED-PRNVA-787",
+  "brand_name": "Paranova 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25787",
+   "expiry_date": "2028-09-03"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-10-04"
+ },
+ {
+  "_id": "MED-PRNVA-788",
+  "brand_name": "Paranova 650mg",
+  "generic_name": "Paracetamol",
+  "strength": "650mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "PRN25788",
+   "expiry_date": "2028-11-06"
+  },
+  "pricing": {
+   "mrp": 33.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-12-12"
+ },
+ {
+  "_id": "MED-RECALL-001",
+  "brand_name": "Coughcure Syrup 100ml [RECALLED]",
+  "generic_name": "Dextromethorphan Syrup",
+  "strength": "10mg/5ml",
+  "pack_size": "Bottle 100ml",
+  "batch": {
+   "number": "BATCH-R001",
+   "expiry_date": "2026-07-31"
+  },
+  "pricing": {
+   "mrp": 65.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "OTC",
+   "manufacturer_id": "MFG-002"
+  },
+  "added_on": "2024-09-05"
+ },
+ {
+  "_id": "MED-RECALL-002",
+  "brand_name": "Amoxiclav 250mg Suspension [RECALLED]",
+  "generic_name": "Amoxycillin+Clavulanate",
+  "strength": "250mg/5ml",
+  "pack_size": "Bottle 60ml",
+  "batch": {
+   "number": "BATCH-R002",
+   "expiry_date": "2026-05-31"
+  },
+  "pricing": {
+   "mrp": 55.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-001"
+  },
+  "added_on": "2024-07-14"
+ },
+ {
+  "_id": "MED-RECALL-003",
+  "brand_name": "Metrogyl 400mg [RECALLED]",
+  "generic_name": "Metronidazole",
+  "strength": "400mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "BATCH-R003",
+   "expiry_date": "2026-08-31"
+  },
+  "pricing": {
+   "mrp": 45.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-003"
+  },
+  "added_on": "2024-10-05"
+ },
+ {
+  "_id": "MED-RSVNO-514",
+  "brand_name": "Rosuvane 20mg",
+  "generic_name": "Rosuvastatin",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "RSV25514",
+   "expiry_date": "2028-06-13"
+  },
+  "pricing": {
+   "mrp": 236.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-08-26"
+ },
+ {
+  "_id": "MED-RSVNO-515",
+  "brand_name": "Rosuvane 20mg",
+  "generic_name": "Rosuvastatin",
+  "strength": "20mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "RSV25515",
+   "expiry_date": "2028-08-30"
+  },
+  "pricing": {
+   "mrp": 236.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-10-23"
+ },
+ {
+  "_id": "MED-RSVNO-803",
+  "brand_name": "Rosuvane 10mg",
+  "generic_name": "Rosuvastatin",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "RSV25803",
+   "expiry_date": "2028-10-17"
+  },
+  "pricing": {
+   "mrp": 142.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2025-11-24"
+ },
+ {
+  "_id": "MED-RSVNO-804",
+  "brand_name": "Rosuvane 10mg",
+  "generic_name": "Rosuvastatin",
+  "strength": "10mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "RSV25804",
+   "expiry_date": "2028-12-16"
+  },
+  "pricing": {
+   "mrp": 142.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-009"
+  },
+  "added_on": "2026-01-09"
+ },
+ {
+  "_id": "MED-SITAV-263",
+  "brand_name": "SITAVIA 100 MG",
+  "generic_name": "Sitagliptin",
+  "strength": "100 mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25263",
+   "expiry_date": "2027-11-02"
+  },
+  "pricing": {
+   "mrp": 348.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-12-31"
+ },
+ {
+  "_id": "MED-SLBVN-267",
+  "brand_name": "Salbuvane 100mcg",
+  "generic_name": "Salbutamol",
+  "strength": "100mcg",
+  "pack_size": "200 metered doses",
+  "batch": {
+   "number": "SLB25267",
+   "expiry_date": "2027-06-02"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-08-12"
+ },
+ {
+  "_id": "MED-SLBVN-268",
+  "brand_name": "Salbuvane 100mcg",
+  "generic_name": "Salbutamol",
+  "strength": "100mcg",
+  "pack_size": "200 metered doses",
+  "batch": {
+   "number": "SLB25268",
+   "expiry_date": "2027-08-15"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-08-31"
+ },
+ {
+  "_id": "MED-SLBVN-269",
+  "brand_name": "Salbuvane 100mcg",
+  "generic_name": "Salbutamol",
+  "strength": "100mcg",
+  "pack_size": "200 metered doses",
+  "batch": {
+   "number": "SLB25269",
+   "expiry_date": "2027-10-16"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-005"
+  },
+  "added_on": "2025-11-13"
+ },
+ {
+  "_id": "MED-STVIA-261",
+  "brand_name": "Sitavia 100mg",
+  "generic_name": "Sitagliptin",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25261",
+   "expiry_date": "2027-07-03"
+  },
+  "pricing": {
+   "mrp": 348.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-09-19"
+ },
+ {
+  "_id": "MED-STVIA-262",
+  "brand_name": "Sitavia 100mg",
+  "generic_name": "Sitagliptin",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25262",
+   "expiry_date": "2027-08-19"
+  },
+  "pricing": {
+   "mrp": 348.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-09-21"
+ },
+ {
+  "_id": "MED-STVIA-263",
+  "brand_name": "Sitavia 100mg",
+  "generic_name": "Sitagliptin",
+  "strength": "100mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25263",
+   "expiry_date": "2027-11-02"
+  },
+  "pricing": {
+   "mrp": 348.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2026-01-20"
+ },
+ {
+  "_id": "MED-STVIA-337",
+  "brand_name": "Sitavia 50mg",
+  "generic_name": "Sitagliptin",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25337",
+   "expiry_date": "2027-02-11"
+  },
+  "pricing": {
+   "mrp": 212.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-03-04"
+ },
+ {
+  "_id": "MED-STVIA-338",
+  "brand_name": "Sitavia 50mg",
+  "generic_name": "Sitagliptin",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25338",
+   "expiry_date": "2027-03-28"
+  },
+  "pricing": {
+   "mrp": 212.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-07-03"
+ },
+ {
+  "_id": "MED-STVIA-339",
+  "brand_name": "Sitavia 50mg",
+  "generic_name": "Sitagliptin",
+  "strength": "50mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "STV25339",
+   "expiry_date": "2027-06-02"
+  },
+  "pricing": {
+   "mrp": 212.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-006"
+  },
+  "added_on": "2025-12-28"
+ },
+ {
+  "_id": "MED-THYRO-545",
+  "brand_name": "THYROVA 100 MCG",
+  "generic_name": "Levothyroxine",
+  "strength": "100mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY26545",
+   "expiry_date": "2028-01-23"
+  },
+  "pricing": {
+   "mrp": 186.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-04-08"
+ },
+ {
+  "_id": "MED-THYRV-185",
+  "brand_name": "Thyrova 50mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "50mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25185",
+   "expiry_date": "2027-02-08"
+  },
+  "pricing": {
+   "mrp": 152.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-03-24"
+ },
+ {
+  "_id": "MED-THYRV-186",
+  "brand_name": "Thyrova 50mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "50mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25186",
+   "expiry_date": "2027-04-20"
+  },
+  "pricing": {
+   "mrp": 152.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-05-13"
+ },
+ {
+  "_id": "MED-THYRV-187",
+  "brand_name": "Thyrova 50mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "50mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25187",
+   "expiry_date": "2027-06-15"
+  },
+  "pricing": {
+   "mrp": 152.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-07-20"
+ },
+ {
+  "_id": "MED-THYRV-543",
+  "brand_name": "Thyrova 100mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "100mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25543",
+   "expiry_date": "2027-09-20"
+  },
+  "pricing": {
+   "mrp": 186.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-11-28"
+ },
+ {
+  "_id": "MED-THYRV-544",
+  "brand_name": "Thyrova 100mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "100mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25544",
+   "expiry_date": "2027-11-19"
+  },
+  "pricing": {
+   "mrp": 186.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-01-09"
+ },
+ {
+  "_id": "MED-THYRV-545",
+  "brand_name": "Thyrova 100mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "100mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY26545",
+   "expiry_date": "2028-01-23"
+  },
+  "pricing": {
+   "mrp": 186.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-03-13"
+ },
+ {
+  "_id": "MED-THYRV-669",
+  "brand_name": "Thyrova 25mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "25mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25669",
+   "expiry_date": "2027-09-26"
+  },
+  "pricing": {
+   "mrp": 128.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-11-25"
+ },
+ {
+  "_id": "MED-THYRV-670",
+  "brand_name": "Thyrova 25mcg",
+  "generic_name": "Levothyroxine",
+  "strength": "25mcg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "THY25670",
+   "expiry_date": "2027-11-27"
+  },
+  "pricing": {
+   "mrp": 128.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-12-23"
+ },
+ {
+  "_id": "MED-TLMRE-303",
+  "brand_name": "Telmora 80mg",
+  "generic_name": "Telmisartan",
+  "strength": "80mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "TLM25303",
+   "expiry_date": "2027-10-18"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-12-20"
+ },
+ {
+  "_id": "MED-TLMRE-304",
+  "brand_name": "Telmora 80mg",
+  "generic_name": "Telmisartan",
+  "strength": "80mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "TLM26304",
+   "expiry_date": "2028-01-12"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-03-11"
+ },
+ {
+  "_id": "MED-TLMRE-305",
+  "brand_name": "Telmora 80mg",
+  "generic_name": "Telmisartan",
+  "strength": "80mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "TLM26305",
+   "expiry_date": "2028-03-02"
+  },
+  "pricing": {
+   "mrp": 158.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-04-05"
+ },
+ {
+  "_id": "MED-TLMRE-405",
+  "brand_name": "Telmora 40mg",
+  "generic_name": "Telmisartan",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "TLM25405",
+   "expiry_date": "2027-08-05"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2025-08-26"
+ },
+ {
+  "_id": "MED-TLMRE-406",
+  "brand_name": "Telmora 40mg",
+  "generic_name": "Telmisartan",
+  "strength": "40mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "TLM25406",
+   "expiry_date": "2027-10-21"
+  },
+  "pricing": {
+   "mrp": 96.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H",
+   "manufacturer_id": "MFG-010"
+  },
+  "added_on": "2026-01-04"
+ },
+ {
+  "_id": "MED-UNAUTH-001",
+  "brand_name": "Valium 5mg",
+  "generic_name": "Diazepam",
+  "strength": "5mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "BATCH-U001",
+   "expiry_date": "2027-01-31"
+  },
+  "pricing": {
+   "mrp": 48.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "X",
+   "manufacturer_id": "MFG-002"
+  },
+  "added_on": "2025-03-05"
+ },
+ {
+  "_id": "MED-UNAUTH-002",
+  "brand_name": "Corex Cough Syrup",
+  "generic_name": "Codeine phosphate",
+  "strength": "10mg/5ml",
+  "pack_size": "Bottle 100ml",
+  "batch": {
+   "number": "BATCH-U002",
+   "expiry_date": "2027-02-28"
+  },
+  "pricing": {
+   "mrp": 52.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "X",
+   "manufacturer_id": "MFG-001"
+  },
+  "added_on": "2025-04-04"
+ },
+ {
+  "_id": "MED-ZITHR-227",
+  "brand_name": "ZITHROLANE 250 MG",
+  "generic_name": "Azithromycin",
+  "strength": "250 mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH26227",
+   "expiry_date": "2029-05-06"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-07-13"
+ },
+ {
+  "_id": "MED-ZTHRL-225",
+  "brand_name": "Zithrolane 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH25225",
+   "expiry_date": "2028-11-19"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-12-21"
+ },
+ {
+  "_id": "MED-ZTHRL-226",
+  "brand_name": "Zithrolane 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH26226",
+   "expiry_date": "2029-02-10"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-03-09"
+ },
+ {
+  "_id": "MED-ZTHRL-227",
+  "brand_name": "Zithrolane 250mg",
+  "generic_name": "Azithromycin",
+  "strength": "250mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH26227",
+   "expiry_date": "2029-05-06"
+  },
+  "pricing": {
+   "mrp": 78.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-06-29"
+ },
+ {
+  "_id": "MED-ZTHRL-786",
+  "brand_name": "Zithrolane 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH25786",
+   "expiry_date": "2028-06-09"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-08-07"
+ },
+ {
+  "_id": "MED-ZTHRL-787",
+  "brand_name": "Zithrolane 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH25787",
+   "expiry_date": "2028-08-13"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-09-01"
+ },
+ {
+  "_id": "MED-ZTHRL-788",
+  "brand_name": "Zithrolane 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH25788",
+   "expiry_date": "2028-10-04"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2025-11-02"
+ },
+ {
+  "_id": "MED-ZTHRL-789",
+  "brand_name": "Zithrolane 500mg",
+  "generic_name": "Azithromycin",
+  "strength": "500mg",
+  "pack_size": "Strip of 10",
+  "batch": {
+   "number": "ZTH25789",
+   "expiry_date": "2028-11-30"
+  },
+  "pricing": {
+   "mrp": 132.0,
+   "currency": "INR"
+  },
+  "regulatory": {
+   "schedule_class": "H1",
+   "manufacturer_id": "MFG-007"
+  },
+  "added_on": "2026-01-07"
+ }
+]

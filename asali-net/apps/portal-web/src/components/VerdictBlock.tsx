@@ -4,11 +4,13 @@ import { useEffect, useRef } from 'react'
 import type { VerifyResult } from '../api/types'
 import { fmtExpiry } from '../lib/format'
 
+// A verdict-tinted console card: the wash fades from the top-left corner into the surface, the chip carries the
+// status colour solid, and the word is set in the poster face. "Cannot check" wears the hatch of the unknown.
 const LOOK = {
-  genuine: { icon: Check, box: 'border-ok-line bg-ok-bg text-ok-fg' },
-  caution: { icon: TriangleAlert, box: 'border-warn-line bg-warn-bg text-warn-fg' },
-  do_not_use: { icon: Ban, box: 'border-bad-line bg-bad-bg text-bad-fg' },
-  cannot_check: { icon: CircleHelp, box: 'border-unk-line bg-unk-bg text-unk-fg' },
+  genuine: { icon: Check, box: 'tint-ok', word: 'text-ok-fg', chip: 'bg-ok text-on-ok' },
+  caution: { icon: TriangleAlert, box: 'tint-warn', word: 'text-warn-fg', chip: 'bg-warn text-on-warn' },
+  do_not_use: { icon: Ban, box: 'tint-bad', word: 'text-bad-fg', chip: 'bg-bad text-on-bad' },
+  cannot_check: { icon: CircleHelp, box: 'tint-unknown hatch', word: 'text-unk-fg', chip: 'bg-unk text-on-unk' },
 } as const
 
 // The answer first: a word, one sentence, what to do, then the product line. Never a score.
@@ -19,15 +21,17 @@ export function VerdictBlock({ result }: { result: VerifyResult }) {
   const Icon = look.icon
   const p = result.pack.product
   return (
-    <motion.div ref={ref} role="status" tabIndex={-1} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.16 }} className={`rounded-panel border px-4 py-4 ${look.box}`}>
-      <div className="flex items-center gap-2 text-[28px] font-bold leading-tight md:text-4xl">
-        <Icon size={28} strokeWidth={1.75} aria-hidden />
-        <span>{result.word}</span>
+    <motion.div ref={ref} role="status" tabIndex={-1} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28, ease: [0.22, 0.61, 0.36, 1] }} className={`rounded-panel px-5 py-6 text-ink outline-none md:px-7 md:py-7 ${look.box}`}>
+      <div className="flex items-center gap-4">
+        <span className={`grid size-12 shrink-0 place-items-center rounded-full md:size-14 ${look.chip}`}>
+          <Icon size={26} strokeWidth={2} aria-hidden />
+        </span>
+        <span className={`font-display text-[clamp(2.4rem,7vw,3.5rem)] uppercase leading-[0.95] tracking-[0.005em] ${look.word}`}>{result.word}</span>
       </div>
-      <p className="mt-2 max-w-[60ch] text-lg">{result.headline.replace(/^(Genuine|Do not use this pack|We could not check this pack|Be careful with this pack)\.\s*/, '') || result.headline}</p>
+      <p className="mt-4 max-w-[60ch] text-lg leading-snug">{result.headline.replace(/^(Genuine|Do not use this pack|We could not check this pack|Be careful with this pack)\.\s*/, '') || result.headline}</p>
       {result.action && <p className="mt-2 max-w-[60ch] font-semibold">{result.action}</p>}
       {(p || result.pack.lot) && (
-        <p className="mt-3 text-base">
+        <p className="mt-5 border-t border-dashed border-line-strong pt-4 text-[15px] text-muted">
           {p && `${p.brand} ${p.strength}`}
           {result.pack.lot && ` · Batch ${result.pack.lot}`}
           {result.pack.expiry && ` · Expires ${fmtExpiry(result.pack.expiry)}`}
@@ -39,11 +43,16 @@ export function VerdictBlock({ result }: { result: VerifyResult }) {
 
 export function VerdictLoading({ asked, total }: { asked: number; total: number }) {
   return (
-    <div role="status" aria-live="polite" className="rounded-panel border border-unk-line bg-unk-bg px-4 py-4 text-unk-fg">
+    <div role="status" aria-live="polite" className="card hatch px-5 py-6 md:px-7">
       <p className="text-lg font-semibold">{total > 0 ? `Asked ${asked} of ${total} organisations…` : 'Reading the code…'}</p>
-      <div className="mt-3 grid gap-2">
-        <div className="h-5 w-2/3 rounded-control bg-sunken" />
-        <div className="h-5 w-1/2 rounded-control bg-sunken" />
+      {total > 0 && (
+        <div aria-hidden className="mt-4 h-2 overflow-hidden rounded-full bg-sunken">
+          <div className="h-full rounded-full bg-accent transition-[width] duration-500 ease-console" style={{ width: `${Math.round((asked / total) * 100)}%` }} />
+        </div>
+      )}
+      <div className="mt-4 grid gap-2">
+        <div className="h-5 w-2/3 animate-pulse rounded-full bg-sunken motion-reduce:animate-none" />
+        <div className="h-5 w-1/2 animate-pulse rounded-full bg-sunken motion-reduce:animate-none" />
       </div>
     </div>
   )

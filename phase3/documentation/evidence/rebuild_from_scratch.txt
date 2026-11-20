@@ -1,0 +1,33 @@
+Full rebuild from scratch on a throwaway copy of the project (2026-11-18), compared with the project's data.
+
+$ python scripts/rebuild_data.py --no-train --no-images
+[1/6] Creating databases
+[2/6] Curated seeds
+[3/6] Uncertain dataset
+[3b/6] Phase 3 related tables
+  db3: molecules 42, manufacturing_sites 20, production_records 207, batch_release_certs 207
+  db2: warehouses 21, cold_chain_loggers 64, temperature_logs 884, excursion_readings 119
+  db1: pos_terminals 62, retail_medicines 206, stock_receipts 358, inventory 345
+  db4: regulatory_authorities 8, recall_notices 3
+[4/6] Label images
+[5/6] NoSQL mirror
+[5b/6] Phase 3 documents (data/documents/, one folder per owning source)
+  db1: pharmacy_incident_report 37
+  db2: cold_chain_incident_report 3, distributor_shipment_note 85
+  db3: batch_inspection_report 45, manufacturer_quality_report 17, product_safety_document 42
+  db4: consumer_complaint 60, nsq_bulletin 2, recall_notice 3, regulatory_investigation_report 9
+  303 documents -> <copy>/data/documents
+[6/6] Linkage model
+Done in 2.8 s.
+
+--- compare rebuilt Phase 3 data with the project's (which was produced by migrating the Phase 2 databases in place)
+db1_purchase_registry: 7 tables, identical except none
+db2_distributor_ledger: 7 tables, identical except none
+db3_manufacturer_registry: 7 tables, identical except none
+db4_ministry_reports: 7 tables, identical except none
+documents identical to the project's: 303 of 303
+
+Meaning: building from scratch (create_databases.py with the Phase 3 schema files) and migrating the
+Phase 2 databases in place (scripts/migrate_phase3.py) produce the same rows, and the corpus generator is
+deterministic. (--no-train / --no-images skipped only the Phase 2 model fit and label rendering, which
+Phase 3 does not change.)

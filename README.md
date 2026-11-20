@@ -6,6 +6,65 @@
 
 ---
 
+## Phase 3: federated, context-aware integration
+
+**Start here:** [PHASE3_FINAL_REPORT.md](PHASE3_FINAL_REPORT.md) maps each requirement to its
+evidence and lists what is still open. Documentation is in [phase3/documentation/](phase3/documentation/).
+
+```bash
+python scripts/run_federation.py --env-file deploy/local.env   # 4 database services + coordinator (one machine)
+# then open http://127.0.0.1:8030/  and ask a question
+python scripts/run_phase3_tests.py                              # every suite, results -> phase3/documentation/evidence/
+```
+
+Plan and progress: [PHASE3_IMPLEMENTATION_PLAN.md](PHASE3_IMPLEMENTATION_PLAN.md) (§O is the log).
+Requirement 1 is done. Each database now holds 7 related tables, with one medicine spread across
+them through primary and foreign keys. DB1 also mirrors its new entities as JSON collections
+linked by declared document references.
+
+```bash
+python scripts/migrate_phase3.py               # upgrade existing databases in place (keeps every row)
+python -m integration.federation.inspect       # tables, PK/FK, integrity check, one join per database
+python -m unittest tests.test_phase3_schema    # 23 checks on a throwaway copy
+```
+
+Requirement 2 is implemented: four database services and a federated query coordinator. Each
+database runs as its own service holding only its own data. Each service executes the subqueries
+it is sent and discovers context through its own keys. The coordinator plans each question over
+the GAV mapping and combines the answers. Deploying on two machines is described in
+[deploy/README.md](deploy/README.md). So far it has only been run as a one-machine simulation.
+
+```bash
+python scripts/run_federation.py --env-file deploy/local.env      # local simulation: 4 services + coordinator
+python scripts/federated_demo.py "Is MED-ASALI-009 genuine and was its cold chain maintained?"
+python -m unittest tests.test_phase3_federation                   # 16 checks; run on its own
+```
+
+Query context discovery follows SCORE. Each database keeps the full result of its subquery and
+weights its terms by tf x idf. It then joins only the most relevant neighbouring table through a
+real foreign key, step by step, up to MAX_AUGMENTATION, and returns its TOP_N context terms with
+their provenance. The mediator merges the four local contexts into one ranked query context. The
+algorithm is described in [phase3/documentation/PHASE3_CONTEXT_DISCOVERY.md](phase3/documentation/PHASE3_CONTEXT_DISCOVERY.md).
+
+```bash
+python scripts/score_demo.py "Was the cold chain of MED-ASALI-009 maintained?"   # needs the services running
+python -m unittest tests.test_phase3_score                                         # 12 checks
+```
+
+The query context is then used to search 303 documents: quality reviews, inspection reports, shipment
+notes, incident reports, recall notices, investigations and complaint letters. Each source keeps
+and searches its own documents. The answer keeps verified database facts apart from what documents
+report, and documents never change the verdict. The pipeline is described in
+[phase3/documentation/PHASE3_UNSTRUCTURED_RETRIEVAL.md](phase3/documentation/PHASE3_UNSTRUCTURED_RETRIEVAL.md).
+
+```bash
+python scripts/integrated_demo.py "Find information about batch BATCH-A009 manufactured by Biocon and identify any quality or safety concerns"
+python scripts/eval_retrieval.py                     # context-driven search vs the question alone
+python -m unittest tests.test_phase3_documents        # 13 checks
+```
+
+---
+
 ## Phase 2: integration under uncertainty
 
 The four silos record the same medicine pack imperfectly: a pharmacist types a smudged serial, a

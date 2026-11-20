@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-016
+title: Consumer complaint MCA-2026-G0031
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: March 27, 2026
+---
+
+Dear Sir/Madam,
+
+I bought Cetrova 10mg with code MED-G7RVE-504 at Banjara Care Pharmacy, Hyderabad. Something is wrong with it. Pharmacist could not confirm the batch of Cetrova 10mg.
+
+Please look into this.
+
+Regards,
+Neha Pillai

@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-003
+title: Consumer complaint MCA-2025-005
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2025-05-05
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-NAKALI-005 at Suburban Chemist, Thane. I believe this is a fake. Insulin cartridge liquid cloudy at room temperature. Patient blood glucose spiked dangerously. Counterfeit cartridge confirmed.
+
+Please look into this.
+
+Regards,
+Meera Iyer

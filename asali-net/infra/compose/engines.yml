@@ -1,0 +1,30 @@
+# The two database engines one computer needs for its organisations: PostgreSQL 16 and MongoDB 7.
+#   docker compose -f infra/compose/engines.yml up -d
+# Each computer runs its own pair; nothing in them is shared with another computer (the nodes share through their
+# read-only HTTP API). Ports are bound to 127.0.0.1 only: no other computer can reach a database directly.
+# Same users as local_engines.py: app_rw (writes, owns the databases) and share_ro (read only).
+name: asali-engines
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command: ["postgres", "-c", "shared_buffers=64MB"]
+    ports: ["127.0.0.1:55432:5432"]
+    volumes:
+      - ./init/test-roles.sql:/docker-entrypoint-initdb.d/10-roles.sql:ro
+      - pgdata:/var/lib/postgresql/data
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    command: ["mongod", "--auth", "--wiredTigerCacheSizeGB", "0.25"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin_pw
+    ports: ["127.0.0.1:57017:27017"]
+    volumes:
+      - mongodata:/data/db
+volumes:
+  pgdata:
+  mongodata:

@@ -17,7 +17,8 @@ from typing import Any, Dict, List, Optional
 from .base_wrapper import BaseWrapper, SourceMetadata
 
 BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-NOSQL_FILE = os.path.join(BASE, "data", "nosql_store", "db1_retail_pos.json")
+# ASALI_NOSQL_FILE (Phase 3): the DB1 service keeps its collections in its own data directory
+NOSQL_FILE = os.environ.get("ASALI_NOSQL_FILE") or os.path.join(BASE, "data", "nosql_store", "db1_retail_pos.json")
 
 
 class NoSqlDocumentWrapper(BaseWrapper):

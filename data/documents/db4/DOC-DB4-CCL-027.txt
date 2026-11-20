@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-027
+title: Consumer complaint MCA-2026-G0065
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-06-19
+---
+
+Dear Sir/Madam,
+
+I bought Ondavia 8mg with code MED-ONDVA-324 at Sri Venkateshwara Medicals, Bengaluru. I had a bad reaction after taking it. Developed a headache after taking Ondavvia 8mg bought on 13 Jun.
+
+Please look into this.
+
+Regards,
+Joseph Rao

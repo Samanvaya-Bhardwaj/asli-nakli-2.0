@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-057
+title: Consumer complaint MCA-2026-G0132
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: January 21, 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-GLCVN-672 at Railway Kiosk Chemist, Pune. I believe this is a fake. Glucovane 1000mg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Moumita Khan

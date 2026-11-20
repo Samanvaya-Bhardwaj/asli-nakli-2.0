@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-060
+title: Consumer complaint MCA-2026-G0138
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-04-10
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code med-cfrce-774 at Janata Medicos (Unlicensed Kiosk), Mumbai. I believe this is a fake. Cefirana 200mg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Deepa Kulkarni

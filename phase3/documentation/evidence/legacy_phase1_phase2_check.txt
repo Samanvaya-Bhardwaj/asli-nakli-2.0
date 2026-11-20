@@ -1,0 +1,22 @@
+Phase 1/2 legacy cluster (scripts/run_cluster.py --mode all) on a throwaway copy of the project, 2026-11-18 20:27
+Pages served by node PC1 (:8011) and PC2 (:8012):
+  GET :8011/index.html -> 200 31768B
+  GET :8012/index.html -> 200 31768B
+  GET :8011/verify.html -> 200 37105B
+  GET :8012/verify.html -> 200 37105B
+  GET :8011/explorer.html -> 200 35085B
+  GET :8012/explorer.html -> 200 35085B
+  GET :8011/uncertainty.html -> 200 28392B
+  GET :8012/uncertainty.html -> 200 28392B
+  GET :8011/vibe/index.html -> 200 5341434B
+  GET :8012/vibe/index.html -> 200 5341434B
+APIs:
+  health PC1: {  "status": "ONLINE",  "node_id": "PC1_RETAIL_LOGISTICS_NODE",  "storage_id": "8d0dcff7ed05",  "role": "Edge Retail
+  explorer schema db3 tables: ['authorized_distributors', 'batch_release_certs', 'manufacturers', 'manufacturing_sites', 'molecules', 'production_records', 'products']
+  FEDERATED_VIEW MED-ASALI-001 (Phase 1 pipeline: normaliser, GAV resolver, GlobalItemHistory, conflicts, vetoes, trust score, audit): ASALI 100 [] audit AUDIT-202611 resolved MED-ASALI-001
+  FEDERATED_VIEW MED-ASALI-009 (Phase 1 pipeline: normaliser, GAV resolver, GlobalItemHistory, conflicts, vetoes, trust score, audit): SUSPICIOUS 65 [] audit AUDIT-202611 resolved MED-ASALI-009
+  FEDERATED_VIEW MED-NAKALI-001 (Phase 1 pipeline: normaliser, GAV resolver, GlobalItemHistory, conflicts, vetoes, trust score, audit): NAKALI 0 ['V1_PHANTOM_SERIAL', 'V2_MINISTRY_BLACKLIST'] audit AUDIT-202611 resolved MED-NAKALI-001
+  FEDERATED_VIEW MED-RECALL-001 (Phase 1 pipeline: normaliser, GAV resolver, GlobalItemHistory, conflicts, vetoes, trust score, audit): NAKALI 0 ['V2_MINISTRY_BLACKLIST'] audit AUDIT-202611 resolved MED-RECALL-001
+  FEDERATED_VIEW MED-ASAL1-OO1 (Phase 1 pipeline: normaliser, GAV resolver, GlobalItemHistory, conflicts, vetoes, trust score, audit): ASALI 100 [] audit AUDIT-202611 resolved MED-ASALI-001
+  Phase 2 match MED-ASAL1-OO7: AUTO_LINK MED-ASALI-007 0.9926
+  audit chain: {  "success": true,  "chain_intact": true,  "total_blocks": 499,  "genesis_hash": "f8b69bc095ebe8ba...",  "latest_block_seq": 499,  "latest_hash": "ba29898eaf2a7c8442e2958f2dc4823626305b59acddc8

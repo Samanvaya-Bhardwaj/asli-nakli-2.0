@@ -1,0 +1,4142 @@
+[
+ {
+  "_id": "INV-001-0001",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-001",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-001-0002"
+ },
+ {
+  "_id": "INV-001-0002",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-002",
+  "stock": {
+   "on_hand": 298,
+   "reorder_level": 30,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-001-0003"
+ },
+ {
+  "_id": "INV-001-0003",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-008",
+  "stock": {
+   "on_hand": 176,
+   "reorder_level": 18,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-001-0004"
+ },
+ {
+  "_id": "INV-001-0004",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-RECALL-001",
+  "stock": {
+   "on_hand": 99,
+   "reorder_level": 10,
+   "shelf": "C-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-001-0001"
+ },
+ {
+  "_id": "INV-002-0005",
+  "vendor_ref": "VND-002",
+  "item_ref": "MED-ASALI-001",
+  "stock": {
+   "on_hand": 150,
+   "reorder_level": 15,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-002-0001"
+ },
+ {
+  "_id": "INV-002-0006",
+  "vendor_ref": "VND-002",
+  "item_ref": "MED-ASALI-005",
+  "stock": {
+   "on_hand": 79,
+   "reorder_level": 8,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-002-0002"
+ },
+ {
+  "_id": "INV-003-0007",
+  "vendor_ref": "VND-003",
+  "item_ref": "MED-ASALI-003",
+  "stock": {
+   "on_hand": 99,
+   "reorder_level": 10,
+   "shelf": "A-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-003-0001"
+ },
+ {
+  "_id": "INV-003-0008",
+  "vendor_ref": "VND-003",
+  "item_ref": "MED-ASALI-009",
+  "stock": {
+   "on_hand": 49,
+   "reorder_level": 5,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-003-0002"
+ },
+ {
+  "_id": "INV-004-0009",
+  "vendor_ref": "VND-004",
+  "item_ref": "MED-ASALI-004",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 24,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-004-0001"
+ },
+ {
+  "_id": "INV-005-0010",
+  "vendor_ref": "VND-005",
+  "item_ref": "MED-ASALI-007",
+  "stock": {
+   "on_hand": 119,
+   "reorder_level": 12,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-005-0002"
+ },
+ {
+  "_id": "INV-005-0011",
+  "vendor_ref": "VND-005",
+  "item_ref": "MED-RECALL-002",
+  "stock": {
+   "on_hand": 79,
+   "reorder_level": 8,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-005-0001"
+ },
+ {
+  "_id": "INV-006-0012",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-ASALI-006",
+  "stock": {
+   "on_hand": 398,
+   "reorder_level": 40,
+   "shelf": "D-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-006-0002"
+ },
+ {
+  "_id": "INV-006-0013",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-ASALI-010",
+  "stock": {
+   "on_hand": 199,
+   "reorder_level": 20,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-006-0003"
+ },
+ {
+  "_id": "INV-006-0014",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-RECALL-003",
+  "stock": {
+   "on_hand": 148,
+   "reorder_level": 15,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-006-0001"
+ },
+ {
+  "_id": "INV-007-0015",
+  "vendor_ref": "VND-007",
+  "item_ref": "MED-UNAUTH-001",
+  "stock": {
+   "on_hand": 59,
+   "reorder_level": 6,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-007-0001"
+ },
+ {
+  "_id": "INV-008-0016",
+  "vendor_ref": "VND-008",
+  "item_ref": "MED-UNAUTH-002",
+  "stock": {
+   "on_hand": 38,
+   "reorder_level": 5,
+   "shelf": "F-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-008-0001"
+ },
+ {
+  "_id": "INV-010-0017",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-ALBNZ-841",
+  "stock": {
+   "on_hand": 113,
+   "reorder_level": 12,
+   "shelf": "A-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0011"
+ },
+ {
+  "_id": "INV-010-0018",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-AZVST-221",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "E-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0009"
+ },
+ {
+  "_id": "INV-010-0019",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-AZVST-222",
+  "stock": {
+   "on_hand": 248,
+   "reorder_level": 25,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0016"
+ },
+ {
+  "_id": "INV-010-0020",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-CLCVN-213",
+  "stock": {
+   "on_hand": 245,
+   "reorder_level": 25,
+   "shelf": "C-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0006"
+ },
+ {
+  "_id": "INV-010-0021",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-EPVOI-691",
+  "stock": {
+   "on_hand": 291,
+   "reorder_level": 30,
+   "shelf": "D-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0021"
+ },
+ {
+  "_id": "INV-010-0022",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FMRAO-663",
+  "stock": {
+   "on_hand": 113,
+   "reorder_level": 12,
+   "shelf": "E-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0010"
+ },
+ {
+  "_id": "INV-010-0023",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FVRLE-696",
+  "stock": {
+   "on_hand": 57,
+   "reorder_level": 6,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0020"
+ },
+ {
+  "_id": "INV-010-0024",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FVRLE-787",
+  "stock": {
+   "on_hand": 69,
+   "reorder_level": 8,
+   "shelf": "F-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0022"
+ },
+ {
+  "_id": "INV-010-0025",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-GLCVN-580",
+  "stock": {
+   "on_hand": 230,
+   "reorder_level": 24,
+   "shelf": "F-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0019"
+ },
+ {
+  "_id": "INV-010-0026",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-GLMRI-183",
+  "stock": {
+   "on_hand": 174,
+   "reorder_level": 18,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0013"
+ },
+ {
+  "_id": "INV-010-0027",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HPSHL-556",
+  "stock": {
+   "on_hand": 111,
+   "reorder_level": 12,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0001"
+ },
+ {
+  "_id": "INV-010-0028",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HYDRV-865",
+  "stock": {
+   "on_hand": 53,
+   "reorder_level": 6,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0015"
+ },
+ {
+  "_id": "INV-010-0029",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HYDRV-866",
+  "stock": {
+   "on_hand": 290,
+   "reorder_level": 30,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0017"
+ },
+ {
+  "_id": "INV-010-0030",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-247",
+  "stock": {
+   "on_hand": 110,
+   "reorder_level": 12,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0024"
+ },
+ {
+  "_id": "INV-010-0031",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-358",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0004"
+ },
+ {
+  "_id": "INV-010-0032",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-359",
+  "stock": {
+   "on_hand": 149,
+   "reorder_level": 15,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0005"
+ },
+ {
+  "_id": "INV-010-0033",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-PRDVE-554",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "B-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0014"
+ },
+ {
+  "_id": "INV-010-0034",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-PRDVE-555",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0023"
+ },
+ {
+  "_id": "INV-010-0035",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-RSVNO-515",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0007"
+ },
+ {
+  "_id": "INV-010-0036",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-SLBVN-267",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0002"
+ },
+ {
+  "_id": "INV-010-0037",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-SLBVN-268",
+  "stock": {
+   "on_hand": 77,
+   "reorder_level": 8,
+   "shelf": "F-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0003"
+ },
+ {
+  "_id": "INV-010-0038",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-THYRO-545",
+  "stock": {
+   "on_hand": 200,
+   "reorder_level": 20,
+   "shelf": "E-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0025"
+ },
+ {
+  "_id": "INV-010-0039",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-THYRV-669",
+  "stock": {
+   "on_hand": 246,
+   "reorder_level": 25,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0008"
+ },
+ {
+  "_id": "INV-010-0040",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-ZTHRL-789",
+  "stock": {
+   "on_hand": 245,
+   "reorder_level": 25,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-010-0012"
+ },
+ {
+  "_id": "INV-011-0041",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-AZVST-221",
+  "stock": {
+   "on_hand": 52,
+   "reorder_level": 6,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0017"
+ },
+ {
+  "_id": "INV-011-0042",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-AZVST-222",
+  "stock": {
+   "on_hand": 144,
+   "reorder_level": 15,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0021"
+ },
+ {
+  "_id": "INV-011-0043",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-CLCVN-213",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "C-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0011"
+ },
+ {
+  "_id": "INV-011-0044",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-DCLTN-127",
+  "stock": {
+   "on_hand": 54,
+   "reorder_level": 6,
+   "shelf": "B-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0002"
+ },
+ {
+  "_id": "INV-011-0045",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-DCLTN-128",
+  "stock": {
+   "on_hand": 246,
+   "reorder_level": 25,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0003"
+ },
+ {
+  "_id": "INV-011-0046",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-EPVOI-691",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "D-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0022"
+ },
+ {
+  "_id": "INV-011-0047",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-FMRAO-663",
+  "stock": {
+   "on_hand": 52,
+   "reorder_level": 6,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0015"
+ },
+ {
+  "_id": "INV-011-0048",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-HPSHL-556",
+  "stock": {
+   "on_hand": 288,
+   "reorder_level": 30,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0006"
+ },
+ {
+  "_id": "INV-011-0049",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-HYDRV-866",
+  "stock": {
+   "on_hand": 297,
+   "reorder_level": 30,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0023"
+ },
+ {
+  "_id": "INV-011-0050",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MTPRE-231",
+  "stock": {
+   "on_hand": 112,
+   "reorder_level": 12,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0008"
+ },
+ {
+  "_id": "INV-011-0051",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MTPRE-694",
+  "stock": {
+   "on_hand": 140,
+   "reorder_level": 15,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0005"
+ },
+ {
+  "_id": "INV-011-0052",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MXVRO-359",
+  "stock": {
+   "on_hand": 97,
+   "reorder_level": 10,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0009"
+ },
+ {
+  "_id": "INV-011-0053",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PANTO-158",
+  "stock": {
+   "on_hand": 120,
+   "reorder_level": 12,
+   "shelf": "C-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0001"
+ },
+ {
+  "_id": "INV-011-0054",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRDVE-555",
+  "stock": {
+   "on_hand": 194,
+   "reorder_level": 20,
+   "shelf": "F-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0025"
+ },
+ {
+  "_id": "INV-011-0055",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-660",
+  "stock": {
+   "on_hand": 147,
+   "reorder_level": 15,
+   "shelf": "B-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0007"
+ },
+ {
+  "_id": "INV-011-0056",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-661",
+  "stock": {
+   "on_hand": 97,
+   "reorder_level": 10,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0012"
+ },
+ {
+  "_id": "INV-011-0057",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-788",
+  "stock": {
+   "on_hand": 244,
+   "reorder_level": 25,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0018"
+ },
+ {
+  "_id": "INV-011-0058",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-RSVNO-515",
+  "stock": {
+   "on_hand": 295,
+   "reorder_level": 30,
+   "shelf": "C-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0010"
+ },
+ {
+  "_id": "INV-011-0059",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-SLBVN-268",
+  "stock": {
+   "on_hand": 73,
+   "reorder_level": 8,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0013"
+ },
+ {
+  "_id": "INV-011-0060",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-186",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0004"
+ },
+ {
+  "_id": "INV-011-0061",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-545",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0024"
+ },
+ {
+  "_id": "INV-011-0062",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-669",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0016"
+ },
+ {
+  "_id": "INV-011-0063",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-TLMRE-406",
+  "stock": {
+   "on_hand": 99,
+   "reorder_level": 10,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0020"
+ },
+ {
+  "_id": "INV-011-0064",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-ZTHRL-788",
+  "stock": {
+   "on_hand": 248,
+   "reorder_level": 25,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0014"
+ },
+ {
+  "_id": "INV-011-0065",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-ZTHRL-789",
+  "stock": {
+   "on_hand": 142,
+   "reorder_level": 15,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-011-0019"
+ },
+ {
+  "_id": "INV-012-0066",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-ALBNZ-841",
+  "stock": {
+   "on_hand": 245,
+   "reorder_level": 25,
+   "shelf": "F-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0017"
+ },
+ {
+  "_id": "INV-012-0067",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-AZVST-221",
+  "stock": {
+   "on_hand": 73,
+   "reorder_level": 8,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0016"
+ },
+ {
+  "_id": "INV-012-0068",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-CLCVN-213",
+  "stock": {
+   "on_hand": 59,
+   "reorder_level": 6,
+   "shelf": "D-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0007"
+ },
+ {
+  "_id": "INV-012-0069",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-EPVOI-691",
+  "stock": {
+   "on_hand": 77,
+   "reorder_level": 8,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0022"
+ },
+ {
+  "_id": "INV-012-0070",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-FVRLE-696",
+  "stock": {
+   "on_hand": 245,
+   "reorder_level": 25,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0019"
+ },
+ {
+  "_id": "INV-012-0071",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-GLCVN-580",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0021"
+ },
+ {
+  "_id": "INV-012-0072",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-GLMRI-183",
+  "stock": {
+   "on_hand": 139,
+   "reorder_level": 15,
+   "shelf": "E-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0014"
+ },
+ {
+  "_id": "INV-012-0073",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MTPRE-231",
+  "stock": {
+   "on_hand": 58,
+   "reorder_level": 6,
+   "shelf": "B-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0010"
+ },
+ {
+  "_id": "INV-012-0074",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MTPRE-694",
+  "stock": {
+   "on_hand": 117,
+   "reorder_level": 12,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0002"
+ },
+ {
+  "_id": "INV-012-0075",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MXVRO-358",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "A-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0005"
+ },
+ {
+  "_id": "INV-012-0076",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MXVRO-359",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0012"
+ },
+ {
+  "_id": "INV-012-0077",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PNTVA-158",
+  "stock": {
+   "on_hand": 193,
+   "reorder_level": 20,
+   "shelf": "F-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0001"
+ },
+ {
+  "_id": "INV-012-0078",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRDVE-555",
+  "stock": {
+   "on_hand": 289,
+   "reorder_level": 30,
+   "shelf": "A-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0023"
+ },
+ {
+  "_id": "INV-012-0079",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-660",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "E-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0006"
+ },
+ {
+  "_id": "INV-012-0080",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-661",
+  "stock": {
+   "on_hand": 83,
+   "reorder_level": 9,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0011"
+ },
+ {
+  "_id": "INV-012-0081",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-787",
+  "stock": {
+   "on_hand": 117,
+   "reorder_level": 12,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0008"
+ },
+ {
+  "_id": "INV-012-0082",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-788",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0015"
+ },
+ {
+  "_id": "INV-012-0083",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-SLBVN-267",
+  "stock": {
+   "on_hand": 291,
+   "reorder_level": 30,
+   "shelf": "E-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0004"
+ },
+ {
+  "_id": "INV-012-0084",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-SLBVN-268",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0009"
+ },
+ {
+  "_id": "INV-012-0085",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRO-545",
+  "stock": {
+   "on_hand": 60,
+   "reorder_level": 6,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0020"
+ },
+ {
+  "_id": "INV-012-0086",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRV-186",
+  "stock": {
+   "on_hand": 200,
+   "reorder_level": 20,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0003"
+ },
+ {
+  "_id": "INV-012-0087",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRV-669",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0013"
+ },
+ {
+  "_id": "INV-012-0088",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-ZTHRL-789",
+  "stock": {
+   "on_hand": 299,
+   "reorder_level": 30,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-012-0018"
+ },
+ {
+  "_id": "INV-013-0089",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-ALBNZ-842",
+  "stock": {
+   "on_hand": 288,
+   "reorder_level": 30,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0016"
+ },
+ {
+  "_id": "INV-013-0090",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMLVO-804",
+  "stock": {
+   "on_hand": 145,
+   "reorder_level": 15,
+   "shelf": "E-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0010"
+ },
+ {
+  "_id": "INV-013-0091",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMXLN-688",
+  "stock": {
+   "on_hand": 92,
+   "reorder_level": 10,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0013"
+ },
+ {
+  "_id": "INV-013-0092",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMXLN-690",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0017"
+ },
+ {
+  "_id": "INV-013-0093",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CLPVN-118",
+  "stock": {
+   "on_hand": 91,
+   "reorder_level": 10,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0007"
+ },
+ {
+  "_id": "INV-013-0094",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CPRVN-564",
+  "stock": {
+   "on_hand": 244,
+   "reorder_level": 25,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0003"
+ },
+ {
+  "_id": "INV-013-0095",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CPRVN-579",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "C-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0012"
+ },
+ {
+  "_id": "INV-013-0096",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-EPVOI-691",
+  "stock": {
+   "on_hand": 300,
+   "reorder_level": 30,
+   "shelf": "E-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0009"
+ },
+ {
+  "_id": "INV-013-0097",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-FVRLE-695",
+  "stock": {
+   "on_hand": 107,
+   "reorder_level": 12,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0011"
+ },
+ {
+  "_id": "INV-013-0098",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-GLRVA-679",
+  "stock": {
+   "on_hand": 46,
+   "reorder_level": 6,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0008"
+ },
+ {
+  "_id": "INV-013-0099",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-IBNVU-488",
+  "stock": {
+   "on_hand": 55,
+   "reorder_level": 6,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0004"
+ },
+ {
+  "_id": "INV-013-0100",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-MNTLN-242",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "A-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0001"
+ },
+ {
+  "_id": "INV-013-0101",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-MXVRO-360",
+  "stock": {
+   "on_hand": 53,
+   "reorder_level": 6,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0014"
+ },
+ {
+  "_id": "INV-013-0102",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-ONDVA-323",
+  "stock": {
+   "on_hand": 71,
+   "reorder_level": 8,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0015"
+ },
+ {
+  "_id": "INV-013-0103",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-PRNVA-659",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "D-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0002"
+ },
+ {
+  "_id": "INV-013-0104",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-PRNVA-786",
+  "stock": {
+   "on_hand": 54,
+   "reorder_level": 6,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0005"
+ },
+ {
+  "_id": "INV-013-0105",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-RSVNO-514",
+  "stock": {
+   "on_hand": 247,
+   "reorder_level": 25,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-013-0006"
+ },
+ {
+  "_id": "INV-014-0106",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-ALBNZ-842",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0012"
+ },
+ {
+  "_id": "INV-014-0107",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-AMLVO-804",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0007"
+ },
+ {
+  "_id": "INV-014-0108",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-AMLVO-855",
+  "stock": {
+   "on_hand": 324,
+   "reorder_level": 33,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0008"
+ },
+ {
+  "_id": "INV-014-0109",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-CPRVN-564",
+  "stock": {
+   "on_hand": 109,
+   "reorder_level": 12,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0003"
+ },
+ {
+  "_id": "INV-014-0110",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-CPRVN-579",
+  "stock": {
+   "on_hand": 56,
+   "reorder_level": 6,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0011"
+ },
+ {
+  "_id": "INV-014-0111",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-EPVOI-690",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0010"
+ },
+ {
+  "_id": "INV-014-0112",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-FVRLE-695",
+  "stock": {
+   "on_hand": 241,
+   "reorder_level": 25,
+   "shelf": "B-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0009"
+ },
+ {
+  "_id": "INV-014-0113",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-IBNVU-488",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0002"
+ },
+ {
+  "_id": "INV-014-0114",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-MNTLN-242",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0001"
+ },
+ {
+  "_id": "INV-014-0115",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-OMVNE-825",
+  "stock": {
+   "on_hand": 145,
+   "reorder_level": 15,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0006"
+ },
+ {
+  "_id": "INV-014-0116",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-PRNVA-659",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0004"
+ },
+ {
+  "_id": "INV-014-0117",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-RSVNO-515",
+  "stock": {
+   "on_hand": 80,
+   "reorder_level": 8,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-014-0005"
+ },
+ {
+  "_id": "INV-015-0118",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-AMLOV-804",
+  "stock": {
+   "on_hand": 250,
+   "reorder_level": 25,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0007"
+ },
+ {
+  "_id": "INV-015-0119",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-AMXLN-688",
+  "stock": {
+   "on_hand": 95,
+   "reorder_level": 10,
+   "shelf": "F-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0011"
+ },
+ {
+  "_id": "INV-015-0120",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-CLPVN-118",
+  "stock": {
+   "on_hand": 118,
+   "reorder_level": 12,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0004"
+ },
+ {
+  "_id": "INV-015-0121",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-CPRVN-579",
+  "stock": {
+   "on_hand": 143,
+   "reorder_level": 15,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0009"
+ },
+ {
+  "_id": "INV-015-0122",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-GLRVA-679",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0008"
+ },
+ {
+  "_id": "INV-015-0123",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-IBNVU-486",
+  "stock": {
+   "on_hand": 289,
+   "reorder_level": 30,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0001"
+ },
+ {
+  "_id": "INV-015-0124",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-IBNVU-488",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0002"
+ },
+ {
+  "_id": "INV-015-0125",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-LVCRE-851",
+  "stock": {
+   "on_hand": 117,
+   "reorder_level": 12,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0006"
+ },
+ {
+  "_id": "INV-015-0126",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-OMVNE-825",
+  "stock": {
+   "on_hand": 145,
+   "reorder_level": 15,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0003"
+ },
+ {
+  "_id": "INV-015-0127",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-ONDVA-323",
+  "stock": {
+   "on_hand": 71,
+   "reorder_level": 8,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0010"
+ },
+ {
+  "_id": "INV-015-0128",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-RSVNO-514",
+  "stock": {
+   "on_hand": 287,
+   "reorder_level": 30,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-015-0005"
+ },
+ {
+  "_id": "INV-016-0129",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ATRLN-266",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "F-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0005"
+ },
+ {
+  "_id": "INV-016-0130",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-AZVST-235",
+  "stock": {
+   "on_hand": 111,
+   "reorder_level": 12,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0006"
+ },
+ {
+  "_id": "INV-016-0131",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FMRAO-664",
+  "stock": {
+   "on_hand": 113,
+   "reorder_level": 12,
+   "shelf": "D-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0017"
+ },
+ {
+  "_id": "INV-016-0132",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-697",
+  "stock": {
+   "on_hand": 93,
+   "reorder_level": 10,
+   "shelf": "A-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0014"
+ },
+ {
+  "_id": "INV-016-0133",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-785",
+  "stock": {
+   "on_hand": 285,
+   "reorder_level": 29,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0013"
+ },
+ {
+  "_id": "INV-016-0134",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-786",
+  "stock": {
+   "on_hand": 118,
+   "reorder_level": 12,
+   "shelf": "C-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0015"
+ },
+ {
+  "_id": "INV-016-0135",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-GLCVN-662",
+  "stock": {
+   "on_hand": 195,
+   "reorder_level": 20,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0009"
+ },
+ {
+  "_id": "INV-016-0136",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-IBNVU-487",
+  "stock": {
+   "on_hand": 189,
+   "reorder_level": 20,
+   "shelf": "E-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0004"
+ },
+ {
+  "_id": "INV-016-0137",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-LVCRE-852",
+  "stock": {
+   "on_hand": 91,
+   "reorder_level": 10,
+   "shelf": "C-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0008"
+ },
+ {
+  "_id": "INV-016-0138",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-MTPRE-693",
+  "stock": {
+   "on_hand": 141,
+   "reorder_level": 15,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0003"
+ },
+ {
+  "_id": "INV-016-0139",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-MTPRE-695",
+  "stock": {
+   "on_hand": 244,
+   "reorder_level": 25,
+   "shelf": "C-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0007"
+ },
+ {
+  "_id": "INV-016-0140",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ONDVA-324",
+  "stock": {
+   "on_hand": 299,
+   "reorder_level": 30,
+   "shelf": "D-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0016"
+ },
+ {
+  "_id": "INV-016-0141",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-PNTRA-742",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "D-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0011"
+ },
+ {
+  "_id": "INV-016-0142",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-PNTRA-744",
+  "stock": {
+   "on_hand": 117,
+   "reorder_level": 12,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0018"
+ },
+ {
+  "_id": "INV-016-0143",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-RSVNO-803",
+  "stock": {
+   "on_hand": 47,
+   "reorder_level": 6,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0010"
+ },
+ {
+  "_id": "INV-016-0144",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-STVIA-337",
+  "stock": {
+   "on_hand": 109,
+   "reorder_level": 12,
+   "shelf": "E-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0001"
+ },
+ {
+  "_id": "INV-016-0145",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-THYRV-185",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0002"
+ },
+ {
+  "_id": "INV-016-0146",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ZITHR-227",
+  "stock": {
+   "on_hand": 60,
+   "reorder_level": 6,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-016-0019"
+ },
+ {
+  "_id": "INV-017-0147",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AMLVO-803",
+  "stock": {
+   "on_hand": 288,
+   "reorder_level": 30,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0010"
+ },
+ {
+  "_id": "INV-017-0148",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ASPRI-801",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "F-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0001"
+ },
+ {
+  "_id": "INV-017-0149",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ATRLN-266",
+  "stock": {
+   "on_hand": 492,
+   "reorder_level": 50,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0008"
+ },
+ {
+  "_id": "INV-017-0150",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ATRLN-620",
+  "stock": {
+   "on_hand": 51,
+   "reorder_level": 6,
+   "shelf": "C-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0011"
+ },
+ {
+  "_id": "INV-017-0151",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-233",
+  "stock": {
+   "on_hand": 93,
+   "reorder_level": 10,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0004"
+ },
+ {
+  "_id": "INV-017-0152",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-234",
+  "stock": {
+   "on_hand": 241,
+   "reorder_level": 25,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0006"
+ },
+ {
+  "_id": "INV-017-0153",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-235",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "B-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0009"
+ },
+ {
+  "_id": "INV-017-0154",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-FMRAO-665",
+  "stock": {
+   "on_hand": 60,
+   "reorder_level": 6,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0018"
+ },
+ {
+  "_id": "INV-017-0155",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-FVRLE-786",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "D-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0017"
+ },
+ {
+  "_id": "INV-017-0156",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-GLMRI-396",
+  "stock": {
+   "on_hand": 90,
+   "reorder_level": 10,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0014"
+ },
+ {
+  "_id": "INV-017-0157",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-IBNVU-487",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "E-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0005"
+ },
+ {
+  "_id": "INV-017-0158",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-MTPRE-696",
+  "stock": {
+   "on_hand": 294,
+   "reorder_level": 30,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0013"
+ },
+ {
+  "_id": "INV-017-0159",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-PNTRA-742",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0016"
+ },
+ {
+  "_id": "INV-017-0160",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-PNTRA-744",
+  "stock": {
+   "on_hand": 194,
+   "reorder_level": 20,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0019"
+ },
+ {
+  "_id": "INV-017-0161",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-RSVNO-803",
+  "stock": {
+   "on_hand": 111,
+   "reorder_level": 12,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0012"
+ },
+ {
+  "_id": "INV-017-0162",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-RSVNO-804",
+  "stock": {
+   "on_hand": 58,
+   "reorder_level": 6,
+   "shelf": "E-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0015"
+ },
+ {
+  "_id": "INV-017-0163",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-THYRV-185",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "C-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-017-0003"
+ },
+ {
+  "_id": "INV-018-0164",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ASPRI-801",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "D-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0001"
+ },
+ {
+  "_id": "INV-018-0165",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-CPRVN-581",
+  "stock": {
+   "on_hand": 90,
+   "reorder_level": 10,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0013"
+ },
+ {
+  "_id": "INV-018-0166",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FMRAO-664",
+  "stock": {
+   "on_hand": 147,
+   "reorder_level": 15,
+   "shelf": "E-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0011"
+ },
+ {
+  "_id": "INV-018-0167",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FVRLE-697",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0014"
+ },
+ {
+  "_id": "INV-018-0168",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FVRLE-785",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0009"
+ },
+ {
+  "_id": "INV-018-0169",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-IBNVU-487",
+  "stock": {
+   "on_hand": 245,
+   "reorder_level": 25,
+   "shelf": "F-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0002"
+ },
+ {
+  "_id": "INV-018-0170",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-LVCRE-852",
+  "stock": {
+   "on_hand": 54,
+   "reorder_level": 6,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0006"
+ },
+ {
+  "_id": "INV-018-0171",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-MTPRE-693",
+  "stock": {
+   "on_hand": 55,
+   "reorder_level": 6,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0003"
+ },
+ {
+  "_id": "INV-018-0172",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ONDVA-221",
+  "stock": {
+   "on_hand": 93,
+   "reorder_level": 10,
+   "shelf": "A-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0008"
+ },
+ {
+  "_id": "INV-018-0173",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ONDVA-324",
+  "stock": {
+   "on_hand": 145,
+   "reorder_level": 15,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0012"
+ },
+ {
+  "_id": "INV-018-0174",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTRA-742",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0007"
+ },
+ {
+  "_id": "INV-018-0175",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTRA-744",
+  "stock": {
+   "on_hand": 109,
+   "reorder_level": 12,
+   "shelf": "B-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0015"
+ },
+ {
+  "_id": "INV-018-0176",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTVA-160",
+  "stock": {
+   "on_hand": 298,
+   "reorder_level": 30,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0004"
+ },
+ {
+  "_id": "INV-018-0177",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PRDVE-576",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0005"
+ },
+ {
+  "_id": "INV-018-0178",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-RSVNO-804",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0010"
+ },
+ {
+  "_id": "INV-018-0179",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ZTHRL-227",
+  "stock": {
+   "on_hand": 147,
+   "reorder_level": 15,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-018-0016"
+ },
+ {
+  "_id": "INV-019-0180",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-AMLVO-854",
+  "stock": {
+   "on_hand": 78,
+   "reorder_level": 8,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0010"
+ },
+ {
+  "_id": "INV-019-0181",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ASPRI-802",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "E-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0002"
+ },
+ {
+  "_id": "INV-019-0182",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ATRLN-619",
+  "stock": {
+   "on_hand": 243,
+   "reorder_level": 25,
+   "shelf": "C-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0003"
+ },
+ {
+  "_id": "INV-019-0183",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CFRNE-772",
+  "stock": {
+   "on_hand": 73,
+   "reorder_level": 8,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0015"
+ },
+ {
+  "_id": "INV-019-0184",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CLCVN-210",
+  "stock": {
+   "on_hand": 190,
+   "reorder_level": 20,
+   "shelf": "F-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0001"
+ },
+ {
+  "_id": "INV-019-0185",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CLPVN-117",
+  "stock": {
+   "on_hand": 287,
+   "reorder_level": 30,
+   "shelf": "E-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0004"
+ },
+ {
+  "_id": "INV-019-0186",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CPRVN-580",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0020"
+ },
+ {
+  "_id": "INV-019-0187",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-DXLYN-201",
+  "stock": {
+   "on_hand": 48,
+   "reorder_level": 6,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0007"
+ },
+ {
+  "_id": "INV-019-0188",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-636",
+  "stock": {
+   "on_hand": 246,
+   "reorder_level": 25,
+   "shelf": "D-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0011"
+ },
+ {
+  "_id": "INV-019-0189",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-637",
+  "stock": {
+   "on_hand": 297,
+   "reorder_level": 30,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0012"
+ },
+ {
+  "_id": "INV-019-0190",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-665",
+  "stock": {
+   "on_hand": 60,
+   "reorder_level": 6,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0009"
+ },
+ {
+  "_id": "INV-019-0191",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-GLMRI-395",
+  "stock": {
+   "on_hand": 91,
+   "reorder_level": 10,
+   "shelf": "C-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0008"
+ },
+ {
+  "_id": "INV-019-0192",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-LVCRE-853",
+  "stock": {
+   "on_hand": 113,
+   "reorder_level": 12,
+   "shelf": "D-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0016"
+ },
+ {
+  "_id": "INV-019-0193",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-MTRNE-564",
+  "stock": {
+   "on_hand": 191,
+   "reorder_level": 20,
+   "shelf": "C-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0018"
+ },
+ {
+  "_id": "INV-019-0194",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ONDVA-322",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0013"
+ },
+ {
+  "_id": "INV-019-0195",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-PNTRA-743",
+  "stock": {
+   "on_hand": 298,
+   "reorder_level": 30,
+   "shelf": "D-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0019"
+ },
+ {
+  "_id": "INV-019-0196",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-TLMRE-303",
+  "stock": {
+   "on_hand": 241,
+   "reorder_level": 25,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0014"
+ },
+ {
+  "_id": "INV-019-0197",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-TLMRE-405",
+  "stock": {
+   "on_hand": 74,
+   "reorder_level": 8,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0005"
+ },
+ {
+  "_id": "INV-019-0198",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ZTHRL-225",
+  "stock": {
+   "on_hand": 95,
+   "reorder_level": 10,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0017"
+ },
+ {
+  "_id": "INV-019-0199",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ZTHRL-787",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "F-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-019-0006"
+ },
+ {
+  "_id": "INV-020-0200",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-AMLVO-854",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0011"
+ },
+ {
+  "_id": "INV-020-0201",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ATRLN-619",
+  "stock": {
+   "on_hand": 53,
+   "reorder_level": 6,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0005"
+ },
+ {
+  "_id": "INV-020-0202",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-AZVST-220",
+  "stock": {
+   "on_hand": 70,
+   "reorder_level": 8,
+   "shelf": "C-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0008"
+ },
+ {
+  "_id": "INV-020-0203",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CFRNE-772",
+  "stock": {
+   "on_hand": 78,
+   "reorder_level": 8,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0019"
+ },
+ {
+  "_id": "INV-020-0204",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CFRNE-774",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0026"
+ },
+ {
+  "_id": "INV-020-0205",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CLCVN-210",
+  "stock": {
+   "on_hand": 143,
+   "reorder_level": 15,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0001"
+ },
+ {
+  "_id": "INV-020-0206",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CLCVN-212",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0007"
+ },
+ {
+  "_id": "INV-020-0207",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CPRVN-580",
+  "stock": {
+   "on_hand": 199,
+   "reorder_level": 20,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0024"
+ },
+ {
+  "_id": "INV-020-0208",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-FMRAO-637",
+  "stock": {
+   "on_hand": 298,
+   "reorder_level": 30,
+   "shelf": "E-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0017"
+ },
+ {
+  "_id": "INV-020-0209",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-FMRAO-662",
+  "stock": {
+   "on_hand": 66,
+   "reorder_level": 8,
+   "shelf": "D-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0014"
+ },
+ {
+  "_id": "INV-020-0210",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-181",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "F-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0006"
+ },
+ {
+  "_id": "INV-020-0211",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-184",
+  "stock": {
+   "on_hand": 239,
+   "reorder_level": 25,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0021"
+ },
+ {
+  "_id": "INV-020-0212",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-395",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0009"
+ },
+ {
+  "_id": "INV-020-0213",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-LSVNO-230",
+  "stock": {
+   "on_hand": 75,
+   "reorder_level": 8,
+   "shelf": "B-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0020"
+ },
+ {
+  "_id": "INV-020-0214",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-LVCRE-853",
+  "stock": {
+   "on_hand": 143,
+   "reorder_level": 15,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0022"
+ },
+ {
+  "_id": "INV-020-0215",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MNTLN-243",
+  "stock": {
+   "on_hand": 71,
+   "reorder_level": 8,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0004"
+ },
+ {
+  "_id": "INV-020-0216",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MTRNE-564",
+  "stock": {
+   "on_hand": 54,
+   "reorder_level": 6,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0025"
+ },
+ {
+  "_id": "INV-020-0217",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MTRNE-630",
+  "stock": {
+   "on_hand": 69,
+   "reorder_level": 8,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0002"
+ },
+ {
+  "_id": "INV-020-0218",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-OMVNE-826",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0013"
+ },
+ {
+  "_id": "INV-020-0219",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ONDVA-322",
+  "stock": {
+   "on_hand": 191,
+   "reorder_level": 20,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0015"
+ },
+ {
+  "_id": "INV-020-0220",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-PNTRA-743",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0023"
+ },
+ {
+  "_id": "INV-020-0221",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-PNTVA-159",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "C-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0003"
+ },
+ {
+  "_id": "INV-020-0222",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-SLBVN-269",
+  "stock": {
+   "on_hand": 75,
+   "reorder_level": 8,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0012"
+ },
+ {
+  "_id": "INV-020-0223",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-TLMRE-303",
+  "stock": {
+   "on_hand": 241,
+   "reorder_level": 25,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0016"
+ },
+ {
+  "_id": "INV-020-0224",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ZTHRL-225",
+  "stock": {
+   "on_hand": 292,
+   "reorder_level": 30,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0018"
+ },
+ {
+  "_id": "INV-020-0225",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ZTHRL-787",
+  "stock": {
+   "on_hand": 136,
+   "reorder_level": 15,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-020-0010"
+ },
+ {
+  "_id": "INV-021-0226",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-AMLVO-854",
+  "stock": {
+   "on_hand": 118,
+   "reorder_level": 12,
+   "shelf": "A-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0008"
+ },
+ {
+  "_id": "INV-021-0227",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ASPRI-802",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "C-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0004"
+ },
+ {
+  "_id": "INV-021-0228",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-AZVST-220",
+  "stock": {
+   "on_hand": 88,
+   "reorder_level": 10,
+   "shelf": "D-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0010"
+ },
+ {
+  "_id": "INV-021-0229",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CFRNE-773",
+  "stock": {
+   "on_hand": 296,
+   "reorder_level": 30,
+   "shelf": "F-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0020"
+ },
+ {
+  "_id": "INV-021-0230",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CLCVN-212",
+  "stock": {
+   "on_hand": 53,
+   "reorder_level": 6,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0005"
+ },
+ {
+  "_id": "INV-021-0231",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CLPVN-117",
+  "stock": {
+   "on_hand": 247,
+   "reorder_level": 25,
+   "shelf": "B-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0007"
+ },
+ {
+  "_id": "INV-021-0232",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-DCLTN-129",
+  "stock": {
+   "on_hand": 179,
+   "reorder_level": 19,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0006"
+ },
+ {
+  "_id": "INV-021-0233",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FMRAO-636",
+  "stock": {
+   "on_hand": 193,
+   "reorder_level": 20,
+   "shelf": "A-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0011"
+ },
+ {
+  "_id": "INV-021-0234",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FMRAO-637",
+  "stock": {
+   "on_hand": 495,
+   "reorder_level": 50,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0015"
+ },
+ {
+  "_id": "INV-021-0235",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FVRLE-698",
+  "stock": {
+   "on_hand": 300,
+   "reorder_level": 30,
+   "shelf": "F-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0023"
+ },
+ {
+  "_id": "INV-021-0236",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-GLMRI-184",
+  "stock": {
+   "on_hand": 56,
+   "reorder_level": 6,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0019"
+ },
+ {
+  "_id": "INV-021-0237",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-GLMRI-395",
+  "stock": {
+   "on_hand": 243,
+   "reorder_level": 25,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0013"
+ },
+ {
+  "_id": "INV-021-0238",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-LSVNO-230",
+  "stock": {
+   "on_hand": 74,
+   "reorder_level": 8,
+   "shelf": "E-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0018"
+ },
+ {
+  "_id": "INV-021-0239",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-MNTLN-243",
+  "stock": {
+   "on_hand": 75,
+   "reorder_level": 8,
+   "shelf": "B-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0003"
+ },
+ {
+  "_id": "INV-021-0240",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-MTRNE-564",
+  "stock": {
+   "on_hand": 391,
+   "reorder_level": 40,
+   "shelf": "D-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0022"
+ },
+ {
+  "_id": "INV-021-0241",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-OMVNE-826",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0012"
+ },
+ {
+  "_id": "INV-021-0242",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-PNTVA-159",
+  "stock": {
+   "on_hand": 248,
+   "reorder_level": 25,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0001"
+ },
+ {
+  "_id": "INV-021-0243",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-PRNVA-785",
+  "stock": {
+   "on_hand": 58,
+   "reorder_level": 6,
+   "shelf": "B-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0002"
+ },
+ {
+  "_id": "INV-021-0244",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-SLBVN-269",
+  "stock": {
+   "on_hand": 92,
+   "reorder_level": 10,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0016"
+ },
+ {
+  "_id": "INV-021-0245",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ZTHRL-225",
+  "stock": {
+   "on_hand": 79,
+   "reorder_level": 8,
+   "shelf": "C-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0017"
+ },
+ {
+  "_id": "INV-021-0246",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ZTHRL-787",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "C-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-021-0009"
+ },
+ {
+  "_id": "INV-022-0247",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-AMXLN-201",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "F-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0006"
+ },
+ {
+  "_id": "INV-022-0248",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-ATRLN-160",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0001"
+ },
+ {
+  "_id": "INV-022-0249",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-CLCVN-211",
+  "stock": {
+   "on_hand": 96,
+   "reorder_level": 10,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0002"
+ },
+ {
+  "_id": "INV-022-0250",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-MTRNE-631",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "E-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0003"
+ },
+ {
+  "_id": "INV-022-0251",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-MTRNE-632",
+  "stock": {
+   "on_hand": 112,
+   "reorder_level": 12,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0005"
+ },
+ {
+  "_id": "INV-022-0252",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-OMVNE-828",
+  "stock": {
+   "on_hand": 69,
+   "reorder_level": 8,
+   "shelf": "C-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0009"
+ },
+ {
+  "_id": "INV-022-0253",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-STVIA-262",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0004"
+ },
+ {
+  "_id": "INV-022-0254",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-TLMRE-304",
+  "stock": {
+   "on_hand": 142,
+   "reorder_level": 15,
+   "shelf": "B-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0008"
+ },
+ {
+  "_id": "INV-022-0255",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-TLMRE-305",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0010"
+ },
+ {
+  "_id": "INV-022-0256",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-ZTHRL-226",
+  "stock": {
+   "on_hand": 198,
+   "reorder_level": 20,
+   "shelf": "F-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-022-0007"
+ },
+ {
+  "_id": "INV-023-0257",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-ALBNZ-840",
+  "stock": {
+   "on_hand": 191,
+   "reorder_level": 20,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0010"
+ },
+ {
+  "_id": "INV-023-0258",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-AMXLN-202",
+  "stock": {
+   "on_hand": 110,
+   "reorder_level": 12,
+   "shelf": "B-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0012"
+ },
+ {
+  "_id": "INV-023-0259",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-AMXLN-203",
+  "stock": {
+   "on_hand": 120,
+   "reorder_level": 12,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0008"
+ },
+ {
+  "_id": "INV-023-0260",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-ATRLN-160",
+  "stock": {
+   "on_hand": 98,
+   "reorder_level": 10,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0003"
+ },
+ {
+  "_id": "INV-023-0261",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-CLCVN-211",
+  "stock": {
+   "on_hand": 52,
+   "reorder_level": 6,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0001"
+ },
+ {
+  "_id": "INV-023-0262",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-CTRVE-504",
+  "stock": {
+   "on_hand": 95,
+   "reorder_level": 10,
+   "shelf": "D-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0011"
+ },
+ {
+  "_id": "INV-023-0263",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTPRE-230",
+  "stock": {
+   "on_hand": 152,
+   "reorder_level": 16,
+   "shelf": "A-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0006"
+ },
+ {
+  "_id": "INV-023-0264",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTRNE-631",
+  "stock": {
+   "on_hand": 142,
+   "reorder_level": 15,
+   "shelf": "C-11",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0004"
+ },
+ {
+  "_id": "INV-023-0265",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTRNE-632",
+  "stock": {
+   "on_hand": 239,
+   "reorder_level": 25,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0007"
+ },
+ {
+  "_id": "INV-023-0266",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MXVRO-246",
+  "stock": {
+   "on_hand": 590,
+   "reorder_level": 60,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0014"
+ },
+ {
+  "_id": "INV-023-0267",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-PRDVE-575",
+  "stock": {
+   "on_hand": 97,
+   "reorder_level": 10,
+   "shelf": "E-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0002"
+ },
+ {
+  "_id": "INV-023-0268",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-STVIA-262",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0009"
+ },
+ {
+  "_id": "INV-023-0269",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-TLMRE-304",
+  "stock": {
+   "on_hand": 78,
+   "reorder_level": 8,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0015"
+ },
+ {
+  "_id": "INV-023-0270",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-TLMRE-305",
+  "stock": {
+   "on_hand": 95,
+   "reorder_level": 10,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-023-0016"
+ },
+ {
+  "_id": "INV-024-0271",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-ALBNZ-840",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0009"
+ },
+ {
+  "_id": "INV-024-0272",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-AMXLN-201",
+  "stock": {
+   "on_hand": 195,
+   "reorder_level": 20,
+   "shelf": "A-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0007"
+ },
+ {
+  "_id": "INV-024-0273",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-AMXLN-202",
+  "stock": {
+   "on_hand": 113,
+   "reorder_level": 12,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0010"
+ },
+ {
+  "_id": "INV-024-0274",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-CLCVN-211",
+  "stock": {
+   "on_hand": 300,
+   "reorder_level": 30,
+   "shelf": "B-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0001"
+ },
+ {
+  "_id": "INV-024-0275",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-CTRVE-504",
+  "stock": {
+   "on_hand": 238,
+   "reorder_level": 24,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0006"
+ },
+ {
+  "_id": "INV-024-0276",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-GLMRI-182",
+  "stock": {
+   "on_hand": 136,
+   "reorder_level": 15,
+   "shelf": "E-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0004"
+ },
+ {
+  "_id": "INV-024-0277",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-MTRNE-631",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0003"
+ },
+ {
+  "_id": "INV-024-0278",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-PRDVE-553",
+  "stock": {
+   "on_hand": 93,
+   "reorder_level": 10,
+   "shelf": "F-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0008"
+ },
+ {
+  "_id": "INV-024-0279",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-PRDVE-575",
+  "stock": {
+   "on_hand": 144,
+   "reorder_level": 15,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0002"
+ },
+ {
+  "_id": "INV-024-0280",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-TLMRE-305",
+  "stock": {
+   "on_hand": 193,
+   "reorder_level": 20,
+   "shelf": "C-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0011"
+ },
+ {
+  "_id": "INV-024-0281",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-ZTHRL-226",
+  "stock": {
+   "on_hand": 196,
+   "reorder_level": 20,
+   "shelf": "F-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-024-0012"
+ },
+ {
+  "_id": "INV-025-0282",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-ATRLN-267",
+  "stock": {
+   "on_hand": 48,
+   "reorder_level": 6,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0003"
+ },
+ {
+  "_id": "INV-025-0283",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-DXLYN-199",
+  "stock": {
+   "on_hand": 77,
+   "reorder_level": 8,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0001"
+ },
+ {
+  "_id": "INV-025-0284",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-FMRAO-665",
+  "stock": {
+   "on_hand": 297,
+   "reorder_level": 30,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0007"
+ },
+ {
+  "_id": "INV-025-0285",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-GLCVN-581",
+  "stock": {
+   "on_hand": 192,
+   "reorder_level": 20,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0008"
+ },
+ {
+  "_id": "INV-025-0286",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-GLRVA-677",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "F-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0002"
+ },
+ {
+  "_id": "INV-025-0287",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-HYDRV-867",
+  "stock": {
+   "on_hand": 118,
+   "reorder_level": 12,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0010"
+ },
+ {
+  "_id": "INV-025-0288",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-LSVNO-229",
+  "stock": {
+   "on_hand": 291,
+   "reorder_level": 30,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0004"
+ },
+ {
+  "_id": "INV-025-0289",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-MXVRO-361",
+  "stock": {
+   "on_hand": 54,
+   "reorder_level": 6,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0006"
+ },
+ {
+  "_id": "INV-025-0290",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-ONDVA-220",
+  "stock": {
+   "on_hand": 311,
+   "reorder_level": 32,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-025-0005"
+ },
+ {
+  "_id": "INV-026-0291",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-AMXLN-689",
+  "stock": {
+   "on_hand": 95,
+   "reorder_level": 10,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0008"
+ },
+ {
+  "_id": "INV-026-0292",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-AZVST-223",
+  "stock": {
+   "on_hand": 52,
+   "reorder_level": 6,
+   "shelf": "D-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0007"
+ },
+ {
+  "_id": "INV-026-0293",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-CPRVN-565",
+  "stock": {
+   "on_hand": 75,
+   "reorder_level": 8,
+   "shelf": "E-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0003"
+ },
+ {
+  "_id": "INV-026-0294",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-DXLYN-199",
+  "stock": {
+   "on_hand": 143,
+   "reorder_level": 15,
+   "shelf": "E-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0001"
+ },
+ {
+  "_id": "INV-026-0295",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-GLCVN-581",
+  "stock": {
+   "on_hand": 296,
+   "reorder_level": 30,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0009"
+ },
+ {
+  "_id": "INV-026-0296",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-MTRNE-563",
+  "stock": {
+   "on_hand": 142,
+   "reorder_level": 15,
+   "shelf": "B-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0005"
+ },
+ {
+  "_id": "INV-026-0297",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-MXVRO-361",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "E-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0006"
+ },
+ {
+  "_id": "INV-026-0298",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-ONDVA-220",
+  "stock": {
+   "on_hand": 112,
+   "reorder_level": 12,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0004"
+ },
+ {
+  "_id": "INV-026-0299",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-THYRV-187",
+  "stock": {
+   "on_hand": 195,
+   "reorder_level": 20,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-026-0002"
+ },
+ {
+  "_id": "INV-027-0300",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ATRLN-267",
+  "stock": {
+   "on_hand": 112,
+   "reorder_level": 12,
+   "shelf": "E-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0005"
+ },
+ {
+  "_id": "INV-027-0301",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-AZVST-223",
+  "stock": {
+   "on_hand": 114,
+   "reorder_level": 12,
+   "shelf": "C-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0011"
+ },
+ {
+  "_id": "INV-027-0302",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-CPRVN-565",
+  "stock": {
+   "on_hand": 197,
+   "reorder_level": 20,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0007"
+ },
+ {
+  "_id": "INV-027-0303",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-DXLYN-199",
+  "stock": {
+   "on_hand": 144,
+   "reorder_level": 15,
+   "shelf": "A-13",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0001"
+ },
+ {
+  "_id": "INV-027-0304",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-FMRAO-665",
+  "stock": {
+   "on_hand": 296,
+   "reorder_level": 30,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0012"
+ },
+ {
+  "_id": "INV-027-0305",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-GLCVN-581",
+  "stock": {
+   "on_hand": 246,
+   "reorder_level": 25,
+   "shelf": "C-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0013"
+ },
+ {
+  "_id": "INV-027-0306",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-GLRVA-677",
+  "stock": {
+   "on_hand": 112,
+   "reorder_level": 12,
+   "shelf": "B-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0002"
+ },
+ {
+  "_id": "INV-027-0307",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-LSVNO-229",
+  "stock": {
+   "on_hand": 90,
+   "reorder_level": 10,
+   "shelf": "E-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0009"
+ },
+ {
+  "_id": "INV-027-0308",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ONDVA-220",
+  "stock": {
+   "on_hand": 149,
+   "reorder_level": 15,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0008"
+ },
+ {
+  "_id": "INV-027-0309",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-SITAV-263",
+  "stock": {
+   "on_hand": 250,
+   "reorder_level": 25,
+   "shelf": "B-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0010"
+ },
+ {
+  "_id": "INV-027-0310",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-THYRV-187",
+  "stock": {
+   "on_hand": 111,
+   "reorder_level": 12,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0003"
+ },
+ {
+  "_id": "INV-027-0311",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ZTHRL-786",
+  "stock": {
+   "on_hand": 242,
+   "reorder_level": 25,
+   "shelf": "D-20",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-027-0006"
+ },
+ {
+  "_id": "INV-028-0312",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-AMXLN-687",
+  "stock": {
+   "on_hand": 142,
+   "reorder_level": 15,
+   "shelf": "C-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0005"
+ },
+ {
+  "_id": "INV-028-0313",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-ATRLN-268",
+  "stock": {
+   "on_hand": 111,
+   "reorder_level": 12,
+   "shelf": "B-02",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0004"
+ },
+ {
+  "_id": "INV-028-0314",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-CPRVN-566",
+  "stock": {
+   "on_hand": 115,
+   "reorder_level": 12,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0003"
+ },
+ {
+  "_id": "INV-028-0315",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-CTRVE-503",
+  "stock": {
+   "on_hand": 94,
+   "reorder_level": 10,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0001"
+ },
+ {
+  "_id": "INV-028-0316",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-MXVRO-248",
+  "stock": {
+   "on_hand": 74,
+   "reorder_level": 8,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0006"
+ },
+ {
+  "_id": "INV-028-0317",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-PRDVE-577",
+  "stock": {
+   "on_hand": 70,
+   "reorder_level": 8,
+   "shelf": "C-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-028-0002"
+ },
+ {
+  "_id": "INV-029-0318",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-AMXLN-687",
+  "stock": {
+   "on_hand": 76,
+   "reorder_level": 8,
+   "shelf": "B-10",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-029-0006"
+ },
+ {
+  "_id": "INV-029-0319",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-ATRLN-268",
+  "stock": {
+   "on_hand": 494,
+   "reorder_level": 50,
+   "shelf": "E-17",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-029-0004"
+ },
+ {
+  "_id": "INV-029-0320",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-CTRVE-503",
+  "stock": {
+   "on_hand": 92,
+   "reorder_level": 10,
+   "shelf": "A-05",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-029-0002"
+ },
+ {
+  "_id": "INV-029-0321",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-MNTLN-244",
+  "stock": {
+   "on_hand": 240,
+   "reorder_level": 25,
+   "shelf": "D-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-029-0005"
+ },
+ {
+  "_id": "INV-029-0322",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-STVIA-261",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "D-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-029-0001"
+ },
+ {
+  "_id": "INV-030-0323",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-AMXLN-687",
+  "stock": {
+   "on_hand": 246,
+   "reorder_level": 25,
+   "shelf": "A-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0003"
+ },
+ {
+  "_id": "INV-030-0324",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-ATRLN-268",
+  "stock": {
+   "on_hand": 71,
+   "reorder_level": 8,
+   "shelf": "A-09",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0005"
+ },
+ {
+  "_id": "INV-030-0325",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-CPRVN-566",
+  "stock": {
+   "on_hand": 75,
+   "reorder_level": 8,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0002"
+ },
+ {
+  "_id": "INV-030-0326",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-MNTLN-244",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0001"
+ },
+ {
+  "_id": "INV-030-0327",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-MXVRO-248",
+  "stock": {
+   "on_hand": 194,
+   "reorder_level": 20,
+   "shelf": "C-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0006"
+ },
+ {
+  "_id": "INV-030-0328",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-PRDVE-577",
+  "stock": {
+   "on_hand": 293,
+   "reorder_level": 30,
+   "shelf": "D-18",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-030-0004"
+ },
+ {
+  "_id": "INV-031-0329",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-AMXLN-203",
+  "stock": {
+   "on_hand": 53,
+   "reorder_level": 6,
+   "shelf": "D-08",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0016"
+ },
+ {
+  "_id": "INV-031-0330",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-ATRLN-159",
+  "stock": {
+   "on_hand": 116,
+   "reorder_level": 12,
+   "shelf": "C-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0001"
+ },
+ {
+  "_id": "INV-031-0331",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-CPRVN-578",
+  "stock": {
+   "on_hand": 191,
+   "reorder_level": 20,
+   "shelf": "E-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0007"
+ },
+ {
+  "_id": "INV-031-0332",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-DXLYN-200",
+  "stock": {
+   "on_hand": 52,
+   "reorder_level": 6,
+   "shelf": "C-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0003"
+ },
+ {
+  "_id": "INV-031-0333",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-EPVOI-689",
+  "stock": {
+   "on_hand": 100,
+   "reorder_level": 10,
+   "shelf": "F-16",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0006"
+ },
+ {
+  "_id": "INV-031-0334",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLCVN-578",
+  "stock": {
+   "on_hand": 107,
+   "reorder_level": 12,
+   "shelf": "A-01",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0009"
+ },
+ {
+  "_id": "INV-031-0335",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLCVN-661",
+  "stock": {
+   "on_hand": 132,
+   "reorder_level": 14,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0005"
+ },
+ {
+  "_id": "INV-031-0336",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLMRI-397",
+  "stock": {
+   "on_hand": 72,
+   "reorder_level": 8,
+   "shelf": "D-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0015"
+ },
+ {
+  "_id": "INV-031-0337",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLMRI-398",
+  "stock": {
+   "on_hand": 150,
+   "reorder_level": 16,
+   "shelf": "F-12",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0018"
+ },
+ {
+  "_id": "INV-031-0338",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLRVA-678",
+  "stock": {
+   "on_hand": 145,
+   "reorder_level": 15,
+   "shelf": "B-14",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0004"
+ },
+ {
+  "_id": "INV-031-0339",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-HPSHL-558",
+  "stock": {
+   "on_hand": 77,
+   "reorder_level": 8,
+   "shelf": "A-03",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0010"
+ },
+ {
+  "_id": "INV-031-0340",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-MTPRE-229",
+  "stock": {
+   "on_hand": 55,
+   "reorder_level": 6,
+   "shelf": "F-04",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0002"
+ },
+ {
+  "_id": "INV-031-0341",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-MXVRO-245",
+  "stock": {
+   "on_hand": 91,
+   "reorder_level": 10,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0011"
+ },
+ {
+  "_id": "INV-031-0342",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-OMVNE-827",
+  "stock": {
+   "on_hand": 143,
+   "reorder_level": 15,
+   "shelf": "E-19",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0014"
+ },
+ {
+  "_id": "INV-031-0343",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-543",
+  "stock": {
+   "on_hand": 195,
+   "reorder_level": 20,
+   "shelf": "A-15",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0008"
+ },
+ {
+  "_id": "INV-031-0344",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-544",
+  "stock": {
+   "on_hand": 100,
+   "reorder_level": 10,
+   "shelf": "F-06",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0013"
+ },
+ {
+  "_id": "INV-031-0345",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-670",
+  "stock": {
+   "on_hand": 147,
+   "reorder_level": 15,
+   "shelf": "E-07",
+   "last_stock_take": "2026-10-31"
+  },
+  "last_receipt_ref": "GRN-031-0012"
+ }
+]

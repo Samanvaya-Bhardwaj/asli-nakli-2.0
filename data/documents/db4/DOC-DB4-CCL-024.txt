@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-024
+title: Consumer complaint MCA-2026-G0057
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-09-22
+---
+
+Dear Sir/Madam,
+
+I bought Glucovane 500mg with code MED-GLGVN-5B0 at healthfirst pharmacy, mumbai. It did not work at all. Glucovane 500mg tablets crumble in the strip and had no effect after 2 days.
+
+Please look into this.
+
+Regards,
+Priya Patel

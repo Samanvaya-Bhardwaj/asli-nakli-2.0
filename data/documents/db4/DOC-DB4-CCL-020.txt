@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-020
+title: Consumer complaint MCA-2026-G0045
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 16 Sep 2026
+---
+
+Dear Sir/Madam,
+
+I bought Thyrova 100mcg with code MED-THYRV-545 at HealthFirst Pharmacy, Mumbai. I had a bad reaction after taking it. Developed a headache after taking Thyrova 100mcg bought on 04 Sep. Code on the strip: MED-THYRV-545.
+
+Please look into this.
+
+Regards,
+Suresh Banerjee

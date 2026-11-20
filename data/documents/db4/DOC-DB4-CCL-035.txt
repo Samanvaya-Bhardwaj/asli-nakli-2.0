@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-035
+title: Consumer complaint MCA-2026-G0082
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-01-09
+---
+
+Dear Sir/Madam,
+
+I bought Amlovia 5mg with code MED-AMLVO-804 at Sahyadri Hospital Pharmacy, Pune. I was overcharged. Charged more than the printed MRP for Amlovia 5mg.
+
+Please look into this.
+
+Regards,
+Deepa Das

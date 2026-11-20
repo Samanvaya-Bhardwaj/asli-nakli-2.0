@@ -1,0 +1,41 @@
+# Phase 3, MACHINE 1 of 2: DB1 Retail POS, DB2 Distributor ERP, and the coordinator.
+#
+#   cp deploy/machine1.env.example deploy/machine1.env    (fill in IPs, tokens, ASALI_PHYSICAL_HOST)
+#   python scripts/prepare_node_data.py --db db1 --db db2
+#   docker compose -f deploy/docker-compose.machine1.yml up --build -d
+#
+# The coordinator reaches DB3/DB4 at Machine 2's LAN address (ASALI_DB3_URL /
+# ASALI_DB4_URL in machine1.env); DB1/DB2 at this machine's published ports.
+name: asali-phase3-machine1
+
+x-node: &node
+  build:
+    context: ..
+    dockerfile: Dockerfile.phase3
+  image: asali-phase3:latest
+  restart: unless-stopped
+  env_file: [machine1.env]
+
+services:
+  db1:
+    <<: *node
+    command: ["python", "api/node_db.py", "--db", "db1"]
+    environment: {ASALI_DB_DIR: /data/databases, ASALI_NOSQL_FILE: /data/nosql_store/db1_retail_pos.json}
+    volumes: ["./nodes/db1:/data:ro"]
+    ports: ["8021:8021"]
+  db2:
+    <<: *node
+    command: ["python", "api/node_db.py", "--db", "db2"]
+    environment: {ASALI_DB_DIR: /data/databases, ASALI_NOSQL_FILE: /data/nosql_store/db1_retail_pos.json}
+    volumes: ["./nodes/db2:/data:ro"]
+    ports: ["8022:8022"]
+  coordinator:
+    <<: *node
+    command: ["python", "api/coordinator_service.py"]
+    environment: {ASALI_DB_DIR: /state, ASALI_NOSQL_FILE: /state/no_database_here.json}
+    volumes: ["coordinator-state:/state"]
+    ports: ["8030:8030"]
+    depends_on: [db1, db2]
+
+volumes:
+  coordinator-state:

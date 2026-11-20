@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-031
+title: Consumer complaint MCA-2026-G0071
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 24/01/2026
+---
+
+Dear Sir/Madam,
+
+I bought Azivsita 250mg with code MED-A2VST-Z21 at Sai Krupa Medical, Mumbai. I had a bad reaction after taking it. Developed dizziness after taking Azivista 250mg bought on 15 Jan. Code on the strip: MED-AZVST-221.
+
+Please look into this.
+
+Regards,
+Deepa Khan

@@ -102,10 +102,24 @@ class ItemRecord:
 
 # --- Singleton Wrapper Instances for High-Performance Reuse -------------------
 
-WRAPPER_DB1 = NoSqlDocumentWrapper()
-WRAPPER_DB2 = SqliteRelationalWrapper("db2_distributor", "db2_distributor_ledger.sqlite", "Distributor Logistics ERP", "batch_serial")
-WRAPPER_DB3 = SqliteRelationalWrapper("db3_manufacturer", "db3_manufacturer_registry.sqlite", "CDSCO Manufacturer Master Registry", "product_uid")
-WRAPPER_DB4 = RestApiMicroserviceWrapper()
+# Phase 3: with ASALI_FEDERATION=remote each wrapper's query runs on the machine that
+# holds that database (integration/federation/remote.py); the rest of this module,
+# and everything downstream of it, is the same in both modes.
+from .federation import runtime as _federation_runtime
+
+FEDERATION_MODE = "remote" if _federation_runtime.remote_mode() else "local"
+
+if FEDERATION_MODE == "remote":
+    from .federation.remote import RemoteSourceWrapper
+    WRAPPER_DB1 = RemoteSourceWrapper("db1")
+    WRAPPER_DB2 = RemoteSourceWrapper("db2")
+    WRAPPER_DB3 = RemoteSourceWrapper("db3")
+    WRAPPER_DB4 = RemoteSourceWrapper("db4")
+else:
+    WRAPPER_DB1 = NoSqlDocumentWrapper()
+    WRAPPER_DB2 = SqliteRelationalWrapper("db2_distributor", "db2_distributor_ledger.sqlite", "Distributor Logistics ERP", "batch_serial")
+    WRAPPER_DB3 = SqliteRelationalWrapper("db3_manufacturer", "db3_manufacturer_registry.sqlite", "CDSCO Manufacturer Master Registry", "product_uid")
+    WRAPPER_DB4 = RestApiMicroserviceWrapper()
 
 
 # --- Wrapper Dispatchers ------------------------------------------------------

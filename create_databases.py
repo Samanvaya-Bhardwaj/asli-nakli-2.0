@@ -39,8 +39,10 @@ def create_db(db_filename: str, schema_filename: str) -> None:
     conn = sqlite3.connect(db_path)
     conn.executescript(sql)
     conn.commit()
+    tables = conn.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' "
+                          "AND name NOT LIKE 'sqlite_%'").fetchone()[0]
     conn.close()
-    print(f"  {db_filename}")
+    print(f"  {db_filename} ({tables} tables)")
 
 def main():
     os.makedirs(DB_DIR, exist_ok=True)

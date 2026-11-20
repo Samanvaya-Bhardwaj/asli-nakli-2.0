@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-030
+title: Consumer complaint MCA-2026-G0068
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-08-30
+---
+
+Dear Sir/Madam,
+
+I bought Thyrova1 00mcg with code MED.THYRV-5A3 at Cyber City Pharmacy, Gurugram. Something is wrong with it. Pharmacist could not confirm the batch of Thyrova 100mcg.
+
+Please look into this.
+
+Regards,
+Diya Menon

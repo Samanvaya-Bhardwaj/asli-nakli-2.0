@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-048
+title: Consumer complaint MCA-2026-G0110
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 11/11/2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MBD-THYRD-185 at nightingale pharmacy, bengaluru. I had a bad reaction after taking it. Developed severe itching after taking Thyroca 50mcg bought on 01 Nov.
+
+Please look into this.
+
+Regards,
+Deepa Patel

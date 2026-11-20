@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-022
+title: Consumer complaint MCA-2026-G0055
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 18/10/2026
+---
+
+Dear Sir/Madam,
+
+I bought Omevane 20mg with code med_omvne_828 at charminar medical hall, hyderabad. I had a bad reaction after taking it. Developed nausea after taking Omevane 20mg bought on 10 Oct. Code on the strip: MED-OMVNE-828.
+
+Please look into this.
+
+Regards,
+Suresh Nair

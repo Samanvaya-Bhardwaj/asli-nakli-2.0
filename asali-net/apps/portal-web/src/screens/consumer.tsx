@@ -69,19 +69,23 @@ export function Check({ config }: { config: Config }) {
     <div className="grid gap-6">
       <div>
         <h1>Check a medicine</h1>
-        <p className="mt-1 max-w-[60ch] text-muted">Type the 11-character code printed after SN, or scan the QR code.</p>
+        <p className="mt-2 max-w-[60ch] text-[17px] text-muted">Type the 11-character code printed after SN, or scan the QR code.</p>
       </div>
-      <form className="grid gap-3" onSubmit={(e) => { e.preventDefault(); run(raw) }}>
-        <Field label="Code on the pack"><Input value={raw} onChange={(e) => setRaw(e.target.value)} className="font-mono text-lg" autoComplete="off" spellCheck={false} placeholder="For example TPM9-S346-Q37" /></Field>
-        <div className="flex flex-wrap items-center gap-3">
-          <Button kind="primary" type="submit" disabled={busy || raw.trim().length < 3}>Check medicine</Button>
+      <div className="card grid gap-6 p-5 md:p-7">
+        <form className="grid gap-4" onSubmit={(e) => { e.preventDefault(); run(raw) }}>
+          <Field label="Code on the pack"><Input value={raw} onChange={(e) => setRaw(e.target.value)} className="min-h-13 font-mono text-lg tracking-[0.02em] placeholder:font-sans placeholder:tracking-normal" autoComplete="off" spellCheck={false} placeholder="For example TPM9-S346-Q37" /></Field>
+          <div className="flex flex-wrap items-center gap-3">
+            <Button kind="primary" type="submit" disabled={busy || raw.trim().length < 3} className="min-h-12 px-7">Check medicine</Button>
+          </div>
+        </form>
+        <div className="border-t border-dashed border-line-strong pt-6">
+          <ScanBox onRead={(code) => { setRaw(code); run(code) }} disabled={busy} />
         </div>
-      </form>
-      <ScanBox onRead={(code) => { setRaw(code); run(code) }} disabled={busy} />
+      </div>
       <ProblemMessage error={error} />
       {busy && !reply && <VerdictLoading asked={progress.asked} total={progress.total} />}
       {reply?.status === 'needs_confirmation' && (
-        <div role="status" className="prose-narrow grid gap-3 rounded-panel border border-warn-line bg-warn-bg px-4 py-4 text-warn-fg">
+        <div role="status" className="prose-narrow grid gap-3 rounded-panel bg-warn-bg px-5 py-5 text-warn-fg shadow-[inset_0_0_0_1px_var(--warn-line)]">
           <p className="text-lg font-semibold">Does your pack show <Code value={reply.serial} />?</p>
           <p>We read a slightly different code and found one close match. Check it against the pack before we go on.</p>
           <div className="flex gap-3">

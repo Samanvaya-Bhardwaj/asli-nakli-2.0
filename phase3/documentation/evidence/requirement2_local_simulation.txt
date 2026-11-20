@@ -1,0 +1,213 @@
+Phase 3 Requirement 2 - demonstration transcript
+Recorded 2026-11-18 15:24 on ONE machine: LOCAL SIMULATION (loopback). See deploy/README.md for the two-machine run.
+
+
+  database   process  address                      machine          data directory
+  db1        pid 9704  127.0.0.1:8021               local-simulation C:\Users\shagu\OneDrive\Desktop\IIA\Project2_Asali_Nakali\deploy\nodes\db1  [up]
+  db2        pid 17144 127.0.0.1:8022               local-simulation C:\Users\shagu\OneDrive\Desktop\IIA\Project2_Asali_Nakali\deploy\nodes\db2  [up]
+  db3        pid 12844 127.0.0.1:8023               local-simulation C:\Users\shagu\OneDrive\Desktop\IIA\Project2_Asali_Nakali\deploy\nodes\db3  [up]
+  db4        pid 21580 127.0.0.1:8024               local-simulation C:\Users\shagu\OneDrive\Desktop\IIA\Project2_Asali_Nakali\deploy\nodes\db4  [up]
+  coordinator pid 14564 127.0.0.1:8030               holds no database  [up]
+
+  Try: python scripts/federated_demo.py --coordinator http://127.0.0.1:8030 "Is MED-ASALI-009 genuine and was its cold chain maintained?"
+
+  Ctrl+C stops everything started here.
+
+------------------------------------------------------------------------------------------------
+DEPLOYMENT: LOCAL_SIMULATION
+  Every database service is reached at a loopback address on this machine. This shows process and data isolation (separate processes, separate data directories, HTTP between them) - it does NOT show execution on different machines.
+  coordinator: host ShagunKaler (machine 'local-simulation'), http://127.0.0.1:8030
+------------------------------------------------------------------------------------------------
+1-2. DATABASE SERVICES AND THEIR ADDRESSES
+  db1  Retail POS             online       http://127.0.0.1:8021      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 9704, process), sees coordinator as 127.0.0.1
+  db2  Distributor ERP        online       http://127.0.0.1:8022      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 17144, process), sees coordinator as 127.0.0.1
+  db3  Manufacturer Registry  online       http://127.0.0.1:8023      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 12844, process), sees coordinator as 127.0.0.1
+  db4  Ministry Reports       online       http://127.0.0.1:8024      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 21580, process), sees coordinator as 127.0.0.1
+------------------------------------------------------------------------------------------------
+3. QUESTION: Is MED-ASALI-009 genuine and was its cold chain maintained?
+     - medicine code 'MED-ASALI-009' -> MED-ASALI-009
+     - intent authenticity: genuine
+     - intent cold_chain: cold chain
+     - terms for the databases to match locally: maintained
+   ROUTING:
+     db1: a verdict on a medicine code needs all four sources
+     db2: a verdict on a medicine code needs all four sources
+     db3: a verdict on a medicine code needs all four sources
+     db4: a verdict on a medicine code needs all four sources
+------------------------------------------------------------------------------------------------
+4. SUBQUERIES (GAV unfolding into each database's own tables and fields)
+  Q0343d1.db1.1  -> db1.retail_pos_scans  WHERE scan_code code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db1.2  -> db1.retail_medicines  WHERE _id code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db2.1  -> db2.distribution_batches  WHERE batch_serial code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db3.1  -> db3.products  WHERE product_uid code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db4.1  -> db4.complaints  WHERE complaint_item_ref code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db4.2  -> db4.ministry_blacklist  WHERE item_ref code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db4.3  -> db4.recall_notices  WHERE item_ref code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db4.4  -> db4.lab_reports  WHERE item_ref code MED-ASALI-009  (+ local context, 2 FK hops)
+  Q0343d1.db4.5  -> db4.public_alerts  WHERE item_ref code MED-ASALI-009  (+ local context, 2 FK hops)
+------------------------------------------------------------------------------------------------
+5-6. EXECUTION ON EACH DATABASE, AND WHAT IT RETURNED
+  [db1] status ok, 283.1 ms, executed by pid 9704 on ShagunKaler (127.0.0.1:8021)
+      Q0343d1.db1.1: native query: db.retail_pos_scans.find({"scan_code": {"$in": ["MED-ASALI-009"]}}).limit(25)
+        matched 1 row(s) [exact]; local context 9 row(s) {'vendors': 1, 'pos_terminals': 1, 'retail_medicines': 1, 'stock_receipts': 2, 'inventory': 2, 'retail_pos_scans': 2}; 13 local queries; {'subquery': 214.3, 'discovery': 2.91}
+          hop 1 score 0.6    vendors {"_id": "VND-003"} via retail_pos_scans.dispensary.vendor_id -> vendors._id
+          hop 1 score 0.6    pos_terminals {"_id": "POS-003-B"} via retail_pos_scans.pos_terminal.device_id -> pos_terminals._id
+          hop 1 score 0.48   retail_medicines {"_id": "MED-ASALI-009"} via retail_pos_scans.scan_code -> retail_medicines._id
+      Q0343d1.db1.2: native query: db.retail_medicines.find({"_id": {"$in": ["MED-ASALI-009"]}}).limit(25)
+        matched 1 row(s) [exact]; local context 5 row(s) {'stock_receipts': 1, 'inventory': 1, 'retail_pos_scans': 1, 'vendors': 1, 'pos_terminals': 1}; 13 local queries; {'subquery': 39.55, 'discovery': 2.5}
+          hop 1 score 0.6    stock_receipts {"_id": "GRN-003-0002"} via stock_receipts.item_ref -> retail_medicines._id
+          hop 1 score 0.6    inventory {"_id": "INV-003-0008"} via inventory.item_ref -> retail_medicines._id
+          hop 1 score 0.48   retail_pos_scans {"_id": "PE-20250615-0009"} via retail_pos_scans.scan_code -> retail_medicines._id
+  [db2] status ok, 106.21 ms, executed by pid 17144 on ShagunKaler (127.0.0.1:8022)
+      Q0343d1.db2.1: native query: SELECT * FROM "distribution_batches" WHERE "batch_serial" IN (?) LIMIT ?
+        matched 1 row(s) [exact]; local context 36 row(s) {'distributors': 1, 'warehouses': 3, 'cold_chain_loggers': 1, 'distribution_batches': 11, 'distributor_vendor_contracts': 9, 'temperature_logs': 11}; 11 local queries; {'subquery': 78.35, 'discovery': 18.97}
+          hop 1 score 0.6    distributors {"distributor_id": "DIST-001"} via distribution_batches(distributor_id) -> distributors(distributor_id)
+          hop 1 score 0.6    warehouses {"warehouse_id": "WH-001-01"} via distribution_batches(distributor_id, source_warehouse) -> warehouses(distributor_id, warehouse_name)
+          hop 1 score 0.6    cold_chain_loggers {"logger_id": "LOG-00001"} via cold_chain_loggers(batch_id) -> distribution_batches(batch_id)
+  [db3] status ok, 92.46 ms, executed by pid 12844 on ShagunKaler (127.0.0.1:8023)
+      Q0343d1.db3.1: native query: SELECT * FROM "products" WHERE "product_uid" IN (?) LIMIT ?
+        matched 1 row(s) [exact]; local context 20 row(s) {'batch_release_certs': 1, 'manufacturers': 1, 'molecules': 1, 'production_records': 1, 'manufacturing_sites': 2, 'products': 6, 'authorized_distributors': 8}; 12 local queries; {'subquery': 68.16, 'discovery': 16.72}
+          hop 1 score 0.6    batch_release_certs {"cert_id": "COA-00024"} via batch_release_certs(product_uid) -> products(product_uid)
+          hop 1 score 0.6    manufacturers {"manufacturer_id": "MFG-004"} via products(manufacturer_id) -> manufacturers(manufacturer_id)
+          hop 1 score 0.6    molecules {"molecule_id": "MOL-025"} via products(generic_name) -> molecules(generic_name)
+  [db4] status ok, 101.73 ms, executed by pid 21580 on ShagunKaler (127.0.0.1:8024)
+      Q0343d1.db4.1: native query: SELECT * FROM "complaints" WHERE "complaint_item_ref" IN (NULL) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 48.65, 'discovery': 0.01}
+      Q0343d1.db4.2: native query: SELECT * FROM "ministry_blacklist" WHERE "item_ref" IN (NULL) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 4.95, 'discovery': 0.01}
+      Q0343d1.db4.3: native query: SELECT * FROM "recall_notices" WHERE "item_ref" IN (NULL) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 2.75, 'discovery': 0.0}
+      Q0343d1.db4.4: native query: SELECT * FROM "lab_reports" WHERE "item_ref" IN (NULL) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 3.91, 'discovery': 0.01}
+      Q0343d1.db4.5: native query: SELECT * FROM "public_alerts" WHERE "item_ref" IN (NULL) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 5.54, 'discovery': 0.01}
+------------------------------------------------------------------------------------------------
+7. COMBINED FEDERATED RESULT
+  medicine MED-ASALI-009    matched in db1, db2, db3
+  15 other medicine code(s) appear only in discovered context, e.g. MED-ASALI-002 (db1/db2), MED-ASALI-003 (db1/db2), MED-AMXLN-688 (db2), MED-ASALI-001 (db2)
+  near miss (not used): db1.scan_code has MED-ASALI-001, MED-ASALI-002, MED-ASALI-003 one edit from MED-ASALI-009
+  near miss (not used): db1._id has MED-ASALI-001, MED-ASALI-002, MED-ASALI-003 one edit from MED-ASALI-009
+  near miss (not used): db2.batch_serial has MED-ASALI-001, MED-ASALI-002, MED-ASALI-003 one edit from MED-ASALI-009
+  near miss (not used): db3.product_uid has MED-ASALI-001, MED-ASALI-002, MED-ASALI-003 one edit from MED-ASALI-009
+  link distributor_id=DIST-001 shared by db1, db2, db3
+  link manufacturer_id=MFG-004 shared by db1, db2, db3
+  link batch_number=BATCH-A009 shared by db1, db3
+  link dispatch_ref=DBATCH-004 shared by db1, db2
+  link dispatch_ref=DBATCH-010 shared by db1, db2
+  link vendor_id=VND-003 shared by db1, db2
+  VERDICT MED-ASALI-009: SUSPICIOUS (trust 65, vetoes none, lifecycle DISPENSED) - Phase 1 pipeline (GAV resolver -> GlobalItemHistory -> hard vetoes -> trust engine) over remote wrappers
+  partial result: False   source status: {'db1': 'ok', 'db2': 'ok', 'db3': 'ok', 'db4': 'ok'}   time: {'federated_execution': 288.24, 'total': 635.56}
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+DEPLOYMENT: LOCAL_SIMULATION
+  Every database service is reached at a loopback address on this machine. This shows process and data isolation (separate processes, separate data directories, HTTP between them) - it does NOT show execution on different machines.
+  coordinator: host ShagunKaler (machine 'local-simulation'), http://127.0.0.1:8030
+------------------------------------------------------------------------------------------------
+1-2. DATABASE SERVICES AND THEIR ADDRESSES
+  db1  Retail POS             online       http://127.0.0.1:8021      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 9704, process), sees coordinator as 127.0.0.1
+  db2  Distributor ERP        online       http://127.0.0.1:8022      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 17144, process), sees coordinator as 127.0.0.1
+  db3  Manufacturer Registry  online       http://127.0.0.1:8023      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 12844, process), sees coordinator as 127.0.0.1
+  db4  Ministry Reports       online       http://127.0.0.1:8024      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 21580, process), sees coordinator as 127.0.0.1
+------------------------------------------------------------------------------------------------
+3. QUESTION: Which shipments did DIST-004 send to VND-012?
+     - vendor id 'VND-012' -> VND-012
+     - distributor id 'DIST-004' -> DIST-004
+     - intent shipment: ship
+   ROUTING:
+     db2: shipment: shipments, warehouses and routes are in the distributor ERP
+     db1: not queried (not relevant to shipment)
+     db3: not queried (not relevant to shipment)
+     db4: not queried (not relevant to shipment)
+------------------------------------------------------------------------------------------------
+4. SUBQUERIES (GAV unfolding into each database's own tables and fields)
+  Q3ab8c8.db2.1  -> db2.distribution_batches  WHERE destination_vendor_id eq VND-012 AND distributor_id eq DIST-004  (+ local context, 2 FK hops)
+  Q3ab8c8.db2.2  -> db2.distributor_vendor_contracts  WHERE vendor_id eq VND-012 AND distributor_id eq DIST-004  (+ local context, 2 FK hops)
+  Q3ab8c8.db2.3  -> db2.distributors  WHERE distributor_id eq DIST-004  (+ local context, 2 FK hops)
+------------------------------------------------------------------------------------------------
+5-6. EXECUTION ON EACH DATABASE, AND WHAT IT RETURNED
+  [db2] status ok, 110.1 ms, executed by pid 17144 on ShagunKaler (127.0.0.1:8022)
+      Q3ab8c8.db2.1: native query: SELECT * FROM "distribution_batches" WHERE "destination_vendor_id" = ? AND "distributor_id" = ? LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 2.75, 'discovery': 0.0}
+      Q3ab8c8.db2.2: native query: SELECT * FROM "distributor_vendor_contracts" WHERE "vendor_id" = ? AND "distributor_id" = ? LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 1.3, 'discovery': 0.0}
+      Q3ab8c8.db2.3: native query: SELECT * FROM "distributors" WHERE "distributor_id" = ? LIMIT ?
+        matched 1 row(s) [filter]; local context 27 row(s) {'warehouses': 3, 'distribution_batches': 12, 'cold_chain_loggers': 12}; 46 local queries; {'subquery': 1.49, 'discovery': 72.69}
+          hop 1 score 0.2321 warehouses {"warehouse_id": "WH-004-01"} via warehouses(distributor_id) -> distributors(distributor_id)
+          hop 1 score 0.2321 warehouses {"warehouse_id": "WH-004-02"} via warehouses(distributor_id) -> distributors(distributor_id)
+          hop 1 score 0.2321 warehouses {"warehouse_id": "WH-004-03"} via warehouses(distributor_id) -> distributors(distributor_id)
+------------------------------------------------------------------------------------------------
+7. COMBINED FEDERATED RESULT
+  12 other medicine code(s) appear only in discovered context, e.g. MED-DXLYN-212 (db2), MED-DYLTN-129 (db2), MED-GLCVN-672 (db2), MED-MXVRO-365 (db2)
+  partial result: False   source status: {'db1': 'not_queried', 'db2': 'ok', 'db3': 'not_queried', 'db4': 'not_queried'}   time: {'federated_execution': 113.24, 'total': 113.36}
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+DEPLOYMENT: LOCAL_SIMULATION
+  Every database service is reached at a loopback address on this machine. This shows process and data isolation (separate processes, separate data directories, HTTP between them) - it does NOT show execution on different machines.
+  coordinator: host ShagunKaler (machine 'local-simulation'), http://127.0.0.1:8030
+------------------------------------------------------------------------------------------------
+1-2. DATABASE SERVICES AND THEIR ADDRESSES
+  db1  Retail POS             online       http://127.0.0.1:8021      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 9704, process), sees coordinator as 127.0.0.1
+  db2  Distributor ERP        online       http://127.0.0.1:8022      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 17144, process), sees coordinator as 127.0.0.1
+  db3  Manufacturer Registry  online       http://127.0.0.1:8023      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 12844, process), sees coordinator as 127.0.0.1
+  db4  Ministry Reports       online       http://127.0.0.1:8024      ip 127.0.0.1       host ShagunKaler (label local-simulation, pid 21580, process), sees coordinator as 127.0.0.1
+------------------------------------------------------------------------------------------------
+3. QUESTION: Any complaints or recalls about Coughcure syrup?
+     - intent recall: recall
+     - intent complaint: complaint
+     - terms for the databases to match locally: coughcure, syrup
+   ROUTING:
+     db3: recall: DB3 flags recalled batches; DB4 holds recall notices and the blacklist
+     db4: recall: DB3 flags recalled batches; DB4 holds recall notices and the blacklist; complaint: complaints and lab reports are filed with the ministry
+     db1: not queried (not relevant to recall, complaint)
+     db2: not queried (not relevant to recall, complaint)
+------------------------------------------------------------------------------------------------
+4. SUBQUERIES (GAV unfolding into each database's own tables and fields)
+  Qa7a428.db3.1  -> db3.products  WHERE product_name contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db3.2  -> db3.molecules  WHERE generic_name contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db3.3  -> db3.manufacturers  WHERE company_name contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db4.1  -> db4.complaints  WHERE description contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db4.2  -> db4.complaints  WHERE purchase_location contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db4.3  -> db4.public_alerts  WHERE message contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+  Qa7a428.db4.4  -> db4.recall_notices  WHERE reason contains_any ["coughcure", "syrup"]  (+ local context, 2 FK hops)
+------------------------------------------------------------------------------------------------
+5-6. EXECUTION ON EACH DATABASE, AND WHAT IT RETURNED
+  [db3] status ok, 74.85 ms, executed by pid 12844 on ShagunKaler (127.0.0.1:8023)
+      Qa7a428.db3.1: native query: SELECT * FROM "products" WHERE (LOWER("product_name") LIKE ? OR LOWER("product_name") LIKE ?) LIMIT ?
+        matched 2 row(s) [filter]; local context 22 row(s) {'molecules': 2, 'batch_release_certs': 2, 'manufacturers': 2, 'production_records': 2, 'authorized_distributors': 3, 'manufacturing_sites': 4, 'products': 7}; 23 local queries; {'subquery': 2.69, 'discovery': 39.27}
+          hop 1 score 0.75   molecules {"molecule_id": "MOL-014"} via products(generic_name) -> molecules(generic_name)
+          hop 1 score 0.6    batch_release_certs {"cert_id": "COA-00167"} via batch_release_certs(product_uid) -> products(product_uid)
+          hop 1 score 0.6    manufacturers {"manufacturer_id": "MFG-002"} via products(manufacturer_id) -> manufacturers(manufacturer_id)
+      Qa7a428.db3.2: native query: SELECT * FROM "molecules" WHERE (LOWER("generic_name") LIKE ? OR LOWER("generic_name") LIKE ?) LIMIT ?
+        matched 1 row(s) [filter]; local context 4 row(s) {'products': 1, 'batch_release_certs': 1, 'manufacturers': 1, 'production_records': 1}; 6 local queries; {'subquery': 2.08, 'discovery': 8.72}
+          hop 1 score 0.75   products {"product_uid": "MED-RECALL-001"} via products(generic_name) -> molecules(generic_name)
+          hop 2 score 0.45   batch_release_certs {"cert_id": "COA-00167"} via products(generic_name) -> molecules(generic_name) > batch_release_certs(product_uid) -> products(product_uid)
+          hop 2 score 0.45   manufacturers {"manufacturer_id": "MFG-002"} via products(generic_name) -> molecules(generic_name) > products(manufacturer_id) -> manufacturers(manufacturer_id)
+      Qa7a428.db3.3: native query: SELECT * FROM "manufacturers" WHERE (LOWER("company_name") LIKE ? OR LOWER("company_name") LIKE ?) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 2.5, 'discovery': 0.01}
+  [db4] status ok, 112.47 ms, executed by pid 21580 on ShagunKaler (127.0.0.1:8024)
+      Qa7a428.db4.1: native query: SELECT * FROM "complaints" WHERE (LOWER("description") LIKE ? OR LOWER("description") LIKE ?) LIMIT ?
+        matched 2 row(s) [filter]; local context 21 row(s) {'ministry_officers': 3, 'ministry_blacklist': 1, 'lab_reports': 1, 'recall_notices': 1, 'public_alerts': 1, 'regulatory_authorities': 3, 'complaints': 11}; 23 local queries; {'subquery': 2.36, 'discovery': 36.76}
+          hop 1 score 0.6    ministry_officers {"officer_id": "OFF-004"} via complaints(assigned_officer_id) -> ministry_officers(officer_id)
+          hop 1 score 0.6    ministry_blacklist {"blacklist_id": "BL-004"} via ministry_blacklist(complaint_id) -> complaints(complaint_id)
+          hop 1 score 0.6    lab_reports {"lab_report_id": "LAB-003"} via lab_reports(complaint_id) -> complaints(complaint_id)
+      Qa7a428.db4.2: native query: SELECT * FROM "complaints" WHERE (LOWER("purchase_location") LIKE ? OR LOWER("purchase_location") LIKE ?) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 2.44, 'discovery': 0.01}
+      Qa7a428.db4.3: native query: SELECT * FROM "public_alerts" WHERE (LOWER("message") LIKE ? OR LOWER("message") LIKE ?) LIMIT ?
+        matched 1 row(s) [filter]; local context 6 row(s) {'regulatory_authorities': 2, 'recall_notices': 1, 'complaints': 1, 'lab_reports': 1, 'ministry_officers': 1}; 11 local queries; {'subquery': 2.05, 'discovery': 18.67}
+          hop 1 score 0.6    regulatory_authorities {"authority_id": "AUTH-MOCA"} via public_alerts(issued_by) -> regulatory_authorities(authority_name)
+          hop 1 score 0.6    recall_notices {"recall_id": "RCL-2025-001"} via recall_notices(alert_id) -> public_alerts(alert_id)
+          hop 2 score 0.45   complaints {"complaint_id": "MCA-2024-006"} via recall_notices(alert_id) -> public_alerts(alert_id) > recall_notices(complaint_id) -> complaints(complaint_id)
+      Qa7a428.db4.4: native query: SELECT * FROM "recall_notices" WHERE (LOWER("reason") LIKE ? OR LOWER("reason") LIKE ?) LIMIT ?
+        matched 0 row(s); local context 0 row(s) {}; 1 local queries; {'subquery': 2.47, 'discovery': 0.01}
+------------------------------------------------------------------------------------------------
+7. COMBINED FEDERATED RESULT
+  medicine MED-RECALL-001   matched in db3, db4
+  medicine MED-UNAUTH-002   matched in db3, db4
+  18 other medicine code(s) appear only in discovered context, e.g. EMO-ONDVA-322 (db4), MED-AMXLN-689 (db4), MED-ASALI-001 (db3), MED-ASALI-002 (db3)
+  link batch_number=BATCH-R001 shared by db3, db4
+  link manufacturer_id=MFG-002 shared by db3, db4
+  partial result: False   source status: {'db1': 'not_queried', 'db2': 'not_queried', 'db3': 'ok', 'db4': 'ok'}   time: {'federated_execution': 116.89, 'total': 117.23}
+------------------------------------------------------------------------------------------------
+

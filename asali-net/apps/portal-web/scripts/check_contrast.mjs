@@ -18,7 +18,6 @@ const vars = (text) => Object.fromEntries([...text.matchAll(/--([\w-]+):\s*(#[0-
 
 const light = vars(block(':root {'))
 const dark = { ...light, ...vars(block(":root[data-theme='dark']")) }
-const accents = ['pharma', 'distributor', 'shop', 'consumer', 'regulator']
 
 function lum(hex) {
   const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4))
@@ -40,11 +39,16 @@ const pairs = (t) => [
     [`${s} solid on surface (icons)`, t[`${s}-solid`], t.surface, UI],
     [`${s} solid on bg (icons)`, t[`${s}-solid`], t.bg, UI],
   ]),
-  ...accents.flatMap((a) => [
-    [`accent ${a} on surface (links, active nav)`, t[`accent-${a}`], t.surface, TEXT],
-    [`on-accent on accent ${a} (button)`, t['on-accent'], t[`accent-${a}`], TEXT],
-    [`accent ${a} on sunken (active nav)`, t[`accent-${a}`], t.sunken, TEXT],
-  ]),
+  // One accent in every portal: lime as a fill, accent-ink where the accent is text (olive on paper).
+  ['accent-ink on surface (links, active nav)', t['accent-ink'], t.surface, TEXT],
+  ['accent-ink on bg', t['accent-ink'], t.bg, TEXT],
+  ['accent-ink on sunken (active nav)', t['accent-ink'], t.sunken, TEXT],
+  ['on-accent on accent (button)', t['on-accent'], t.accent, TEXT],
+  ['on-accent on accent hover (button)', t['on-accent'], t['accent-hover'], TEXT],
+  ['muted on sunken', t['text-muted'], t.sunken, TEXT],
+  ['text on inset (fields)', t.text, t.inset, TEXT],
+  ['meta on inset (placeholders)', t['text-meta'], t.inset, TEXT],
+  ...['ok', 'warn', 'bad', 'unknown'].map((s) => [`icon on ${s} chip`, t[`on-${s}`], t[`${s}-solid`], UI]),
   ['border strong on surface (control edge)', t['border-strong'], t.surface, 1.5],
 ]
 

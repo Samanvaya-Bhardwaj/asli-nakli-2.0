@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-055
+title: Consumer complaint MCA-2026-G0128
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: November 12, 2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-DXLYN-212 at Suburban Chemist Stall, Thane. I believe this is a fake. Doxalyn 100mg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Ishaan Khan

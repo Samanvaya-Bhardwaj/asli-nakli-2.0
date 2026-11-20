@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-015
+title: Consumer complaint MCA-2026-G0030
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: October 18, 2026
+---
+
+Dear Sir/Madam,
+
+I bought Metorpa 25mg with code MED-MTPRE-695 at nightingale pharmacy, bengaluru. Something is wrong with it. Pharmacist could not confirm the batch of Mmetopra 25mg.
+
+Please look into this.
+
+Regards,
+Lakshmi Mehta

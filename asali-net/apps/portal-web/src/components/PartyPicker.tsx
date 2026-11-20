@@ -17,7 +17,7 @@ export function PartyPicker({ type, value, onChange }: { type: string; value: st
       {parties.data.parties.map((p) => {
         const up = online.get(p.org_id) ?? true
         return (
-          <label key={p.org_id} className={`flex min-h-11 items-center gap-3 rounded-control border px-3 ${value === p.org_id ? 'border-accent bg-sunken' : 'border-line'} ${up ? '' : 'opacity-60'}`}>
+          <label key={p.org_id} className={`flex min-h-12 items-center gap-3 rounded-control px-4 accent-[var(--accent-ink)] transition-colors duration-150 ${value === p.org_id ? 'bg-sunken shadow-[inset_0_0_0_1.5px_var(--accent-ink)]' : 'bg-surface shadow-[inset_0_0_0_1px_var(--border)] hover:bg-surface-2'} ${up ? '' : 'opacity-60'}`}>
             <input type="radio" name="party" checked={value === p.org_id} disabled={!up} onChange={() => onChange(p.org_id)} />
             <span>
               {p.name}, {p.city}

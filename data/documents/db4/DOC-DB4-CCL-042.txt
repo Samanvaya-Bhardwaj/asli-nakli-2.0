@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-042
+title: Consumer complaint MCA-2026-G0099
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 04 Oct 2026
+---
+
+Dear Sir/Madam,
+
+I bought Amlovia 5mg with code MED-4MLVO-804 at Sahyadri Hospital Pharmacy, Pune. I had a bad reaction after taking it. Developed nausea after taking Amlovia 5mg bought on 22 Sep.
+
+Please look into this.
+
+Regards,
+Gurpreet Gill

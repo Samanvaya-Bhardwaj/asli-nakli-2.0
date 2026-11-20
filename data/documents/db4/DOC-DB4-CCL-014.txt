@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-014
+title: Consumer complaint MCA-2026-G0029
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 18 Jun 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code FMO-ONDVA-3Z2 at saket city hospital pharmacy, new delhi. I was overcharged. Charged more than the printed MRP for Ondavia 8mg.
+
+Please look into this.
+
+Regards,
+Kavya Khan

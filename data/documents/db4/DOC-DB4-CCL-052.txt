@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-052
+title: Consumer complaint MCA-2026-G0121
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 20/09/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-LVCER-852 at sri venkateshwara medicals, bengaluru. Something is wrong with it. Pharmacist could not confirm the batch of Levocera 5mg.
+
+Please look into this.
+
+Regards,
+Arjun Joshi

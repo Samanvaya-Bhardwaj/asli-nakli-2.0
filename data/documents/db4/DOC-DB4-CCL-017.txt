@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-017
+title: Consumer complaint MCA-2026-G0035
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 18/10/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-PRDV-756 at Sri Venkateshwara Medicals, Bengaluru. The label does not match the contents. Strength printed on the Predavia box does not match the strip inside.
+
+Please look into this.
+
+Regards,
+Kavya Shah

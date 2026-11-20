@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-038
+title: Consumer complaint MCA-2026-G0086
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 02/05/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code  at Lifeline Chemists, Mumbai. Something is wrong with it. Pharmacist could not confirm the batch of Thyrova 25mcg. Code on the strip: med thyrv 669.
+
+Please look into this.
+
+Regards,
+Sneha Verma

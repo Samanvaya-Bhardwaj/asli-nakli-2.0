@@ -18,7 +18,8 @@ import sqlite3, hashlib, json, os
 from datetime import datetime
 
 BASE    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AUDIT_DB = os.path.join(BASE, "databases", "audit_chain.sqlite")
+# ASALI_DB_DIR (Phase 3): the coordinator keeps its own ledger in its state directory
+AUDIT_DB = os.path.join(os.environ.get("ASALI_DB_DIR") or os.path.join(BASE, "databases"), "audit_chain.sqlite")
 
 SCHEMA = """
 PRAGMA journal_mode=WAL;
@@ -56,6 +57,7 @@ class AuditChain:
         self._init_db()
 
     def _init_db(self):
+        os.makedirs(os.path.dirname(AUDIT_DB), exist_ok=True)
         conn = sqlite3.connect(AUDIT_DB)
         conn.executescript(SCHEMA)
         # Initialize meta if empty

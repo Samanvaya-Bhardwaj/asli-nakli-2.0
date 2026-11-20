@@ -37,7 +37,7 @@ export function PackHistory({ history, simulation }: { history: HistoryHop[]; si
                 <Td />
                 <Td className="text-unk-fg">Did not answer</Td>
                 <Td>{h.org_name}, {h.city}</Td>
-                <Td mono>{h.served_by?.host_name ?? 'not reached'}</Td>
+                <Td mono={h.served_by?.host_name != null} className={h.served_by?.host_name == null ? 'text-meta' : ''}>{h.served_by?.host_name ?? 'not reached'}</Td>
               </tr>
             ) : (
               h.events.map((e) => (

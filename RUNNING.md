@@ -7,6 +7,16 @@ Last verified: 20 October 2026 (phase 2: integration under uncertainty, see sect
 
 ---
 
+## 0. Phase 3: one service per database
+
+Phase 3 adds a separate deployment: four database services (ports 8021–8024), each holding only
+its own database, and a federated query coordinator (port 8030). Its instructions are in
+[deploy/README.md](deploy/README.md), covering local simulation, Docker, and two machines with or
+without Docker. Everything below (PC1/PC2 on ports 8011/8012) is the Phase 1/2 layout, and it is
+unchanged.
+
+---
+
 ## 1. Running on one machine
 
 ```bash

@@ -35,12 +35,13 @@ def build_silos():
     if os.path.exists(real_model):
         shutil.copy(real_model, paths.model_file())
     import create_databases
-    from data import generate_uncertain_data, seed_db1, seed_db2, seed_db3, seed_db4
+    from data import generate_uncertain_data, seed_db1, seed_db2, seed_db3, seed_db4, seed_phase3
     from data.seed_nosql_db1 import sync_collection
     create_databases.main()
     for seed in (seed_db3, seed_db2, seed_db1, seed_db4):
         seed.seed()
     generate_uncertain_data.main()
+    seed_phase3.main()          # Phase 3 tables, so Phase 2 is checked against the Phase 3 schema
     sync_collection(paths.db_path("db1"), paths.nosql_file())
 
 

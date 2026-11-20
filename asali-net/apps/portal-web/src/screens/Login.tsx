@@ -2,6 +2,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 import { api } from '../api/client'
 import type { Config } from '../api/types'
+import { Brand } from '../components/Mark'
 import { Button, Field, Input, ProblemMessage } from '../components/ui'
 
 export function Login({ config }: { config: Config }) {
@@ -24,16 +25,17 @@ export function Login({ config }: { config: Config }) {
     }
   }
   return (
-    <main className="mx-auto grid min-h-screen max-w-sm content-center gap-6 px-4 py-10">
-      <div className="border-t-[3px] border-accent pt-4">
+    <main className="mx-auto grid min-h-screen max-w-md content-center gap-6 px-4 py-10">
+      <Brand />
+      <div>
         <h1>{config.name}</h1>
-        <p className="text-muted">
+        <p className="mt-1.5 text-muted">
           {config.org_type[0]?.toUpperCase()}
           {config.org_type.slice(1)} · {config.city}
         </p>
       </div>
       {config.mode === 'simulation' && <p className="text-sm text-meta">Simulation: all organisations are running on this computer.</p>}
-      <form onSubmit={submit} className="grid gap-4">
+      <form onSubmit={submit} className="card grid gap-4 p-6 md:p-7">
         <Field label="Username">
           <Input value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="username" required />
         </Field>

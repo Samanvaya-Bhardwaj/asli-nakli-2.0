@@ -15,8 +15,10 @@
     "gen:types": "node scripts/gen_types.mjs"
   },
   "dependencies": {
+    "@fontsource/anton": "5.3.0",
     "@fontsource/atkinson-hyperlegible-mono": "5.3.0",
     "@fontsource/atkinson-hyperlegible-next": "5.3.0",
+    "@fontsource/ibm-plex-sans-condensed": "5.3.0",
     "@tailwindcss/vite": "4.3.5",
     "@tanstack/react-query": "5.108.1",
     "barcode-detector": "3.2.4",

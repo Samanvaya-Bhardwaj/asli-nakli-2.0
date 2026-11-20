@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-026
+title: Consumer complaint MCA-2026-G0063
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: October 02, 2025
+---
+
+Dear Sir/Madam,
+
+I bought Atorlane 1m0g with code MED-ATRLN-619 at Saket City Hospital Pharmacy, New Delhi. I was overcharged. Charged more than the printed MRP for Atorlane 10mg.
+
+Please look into this.
+
+Regards,
+Sanjay Banerjee

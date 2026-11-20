@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-001
+title: Consumer complaint MCA-2025-001
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 20/01/2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-NAKALI-001 at Kurla West Kiosk, Mumbai. I believe this is a fake. Patient reported severe nausea and no therapeutic effect after taking antibiotic purchased from street kiosk. Packaging fonts blurred.
+
+Please look into this.
+
+Regards,
+Rahul Deshmukh

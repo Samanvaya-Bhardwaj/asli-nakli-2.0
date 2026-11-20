@@ -1,47 +1,117 @@
 @import 'tailwindcss';
-@import '@fontsource/atkinson-hyperlegible-next/400.css';
-@import '@fontsource/atkinson-hyperlegible-next/600.css';
-@import '@fontsource/atkinson-hyperlegible-next/700.css';
-@import '@fontsource/atkinson-hyperlegible-mono/400.css';
-@import '@fontsource/atkinson-hyperlegible-mono/500.css';
+/* Self-hosted so the portals keep their type with no internet: Anton for the poster voice (brand, verdict word),
+   IBM Plex Sans Condensed for everything spoken, Iosevka for codes and serials only. */
+@import '@fontsource/anton/400.css';
+@import '@fontsource/ibm-plex-sans-condensed/400.css';
+@import '@fontsource/ibm-plex-sans-condensed/500.css';
+@import '@fontsource/ibm-plex-sans-condensed/600.css';
+@import '@fontsource/ibm-plex-sans-condensed/700.css';
 @import './styles/tokens.css';
 
+/* Iosevka is not on any font CDN; these are the dashboard's own subsets. SIL OFL, see assets/fonts. */
+@font-face { font-family: 'Iosevka Web'; src: url('./assets/fonts/iosevka-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Iosevka Web'; src: url('./assets/fonts/iosevka-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Iosevka Web'; src: url('./assets/fonts/iosevka-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+
 @theme inline {
-  --font-sans: 'Atkinson Hyperlegible Next', sans-serif;
-  --font-mono: 'Atkinson Hyperlegible Mono', monospace;
+  --font-sans: 'IBM Plex Sans Condensed', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Anton', 'Archivo Black', sans-serif;
+  --font-mono: 'Iosevka Web', 'Iosevka', ui-monospace, SFMono-Regular, Menlo, monospace;
   --color-bg: var(--bg);
   --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-sunken: var(--sunken);
+  --color-inset: var(--inset);
   --color-line: var(--border);
   --color-line-strong: var(--border-strong);
   --color-ink: var(--text);
   --color-muted: var(--text-muted);
   --color-meta: var(--text-meta);
+  --color-ghost: var(--text-ghost);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
   --color-on-accent: var(--on-accent);
   --color-ok-fg: var(--ok-fg); --color-ok-bg: var(--ok-bg); --color-ok-line: var(--ok-line); --color-ok: var(--ok-solid);
   --color-warn-fg: var(--warn-fg); --color-warn-bg: var(--warn-bg); --color-warn-line: var(--warn-line); --color-warn: var(--warn-solid);
   --color-bad-fg: var(--bad-fg); --color-bad-bg: var(--bad-bg); --color-bad-line: var(--bad-line); --color-bad: var(--bad-solid);
   --color-unk-fg: var(--unknown-fg); --color-unk-bg: var(--unknown-bg); --color-unk-line: var(--unknown-line); --color-unk: var(--unknown-solid);
-  --radius-control: 6px;
-  --radius-panel: 10px;
+  --color-on-ok: var(--on-ok); --color-on-warn: var(--on-warn); --color-on-bad: var(--on-bad); --color-on-unk: var(--on-unknown);
+  /* Fields 16 px, cards 22 px, buttons are pills (rounded-full). */
+  --radius-control: 16px;
+  --radius-panel: 22px;
+  /* shadow-console for cards and panels, shadow-pop for anything floating (popovers, sheets). */
+  --shadow-console: var(--shadow-card);
+  --shadow-pop: var(--shadow-float);
+  --ease-console: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 @layer base {
-  html { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 16px; line-height: 1.5; }
-  body { margin: 0; min-height: 100vh; background: var(--bg); }
-  h1, h2, h3 { line-height: 1.25; font-weight: 600; margin: 0; }
-  h1 { font-size: 22px; }
-  h2 { font-size: 18px; }
+  html {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: -0.006em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
+  }
+  :root[data-theme='dark'] { color-scheme: dark; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { color-scheme: dark; } }
+  /* A faint overhead light, so the console reads as a lit object rather than a flat void. */
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(1100px 620px at 50% -12%, var(--glow-lime), transparent 62%),
+      radial-gradient(900px 520px at 88% 4%, var(--glow-blue), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.024em; line-height: 1.16; text-wrap: balance; }
+  h1 { font-size: clamp(1.75rem, 3.2vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.08rem; }
   table { font-variant-numeric: tabular-nums; }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+  input, textarea { caret-color: var(--accent-ink); }
   button, input, select, textarea { font: inherit; color: inherit; }
   button { cursor: pointer; }
-  button:disabled { cursor: not-allowed; opacity: 0.55; }
+  button:disabled { cursor: not-allowed; opacity: 0.5; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 999px; border: 2px solid var(--bg); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hi); }
 }
+
+@layer components {
+  /* A console card: a raised surface with a faint top-lit rim instead of a hard border. */
+  .card { background: var(--surface); border-radius: var(--radius-panel); box-shadow: var(--shadow-card), inset 0 0 0 1px var(--border); }
+  /* Verdict fields: the status wash fades from the top-left corner into the surface, edged in the status line. */
+  .tint-ok { background: linear-gradient(168deg, var(--ok-wash), transparent 58%), var(--surface); box-shadow: var(--shadow-card), inset 0 0 0 1px var(--ok-line); }
+  .tint-warn { background: linear-gradient(168deg, var(--warn-wash), transparent 58%), var(--surface); box-shadow: var(--shadow-card), inset 0 0 0 1px var(--warn-line); }
+  .tint-bad { background: linear-gradient(168deg, var(--bad-wash), transparent 58%), var(--surface); box-shadow: var(--shadow-card), inset 0 0 0 1px var(--bad-line); }
+  .tint-unknown { background-color: var(--surface); box-shadow: var(--shadow-card), inset 0 0 0 1px var(--unknown-line); }
+  /* The dashboard's signature texture, used here for what is not known yet: loading, empty, cannot check. */
+  .hatch { background-image: repeating-linear-gradient(45deg, var(--hatch) 0 2px, transparent 2px 7px); }
+}
+
 .prose-narrow { max-width: 72ch; }
 
 @media print {
+  /* Paper is paper: a receipt printed from a dark screen still prints dark ink on white. */
+  :root:root, :root[data-theme] {
+    --bg: #ffffff; --surface: #ffffff; --surface-2: #ffffff; --sunken: #f4f3ef; --inset: #ffffff;
+    --border: #e6e5e1; --border-strong: #cfcdc8;
+    --text: #171614; --text-muted: #55544f; --text-meta: #686763;
+    color-scheme: light;
+  }
+  body { background: #fff; }
   body * { visibility: hidden; }
   .print-area, .print-area * { visibility: visible; }
   .print-area { position: absolute; left: 0; top: 0; width: 100%; }

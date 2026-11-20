@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-006
+title: Consumer complaint MCA-2026-G0008
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: August 04, 2026
+---
+
+Dear Sir/Madam,
+
+I bought Azivista 250mg with code MED-AZVST-221 at HealthFirst Pharmacy, Mumbai. Something is wrong with it. Pharmacist could not confirm the batch of Azivista 250mg. Code on the strip: MED-AZVST-221.
+
+Please look into this.
+
+Regards,
+Joseph Joshi

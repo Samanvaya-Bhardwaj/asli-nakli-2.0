@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-051
+title: Consumer complaint MCA-2026-G0120
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 04 Dec 2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-PRNVSA-660 at Lifeline Chemists, Mumbai. I had a bad reaction after taking it. Developed nausea after taking Paranova 500mg bought on 26 Nov.
+
+Please look into this.
+
+Regards,
+Fatima Verma

@@ -14,7 +14,8 @@ from typing import Any, Dict, List, Optional
 from .base_wrapper import BaseWrapper, SourceMetadata
 
 BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_DIR = os.path.join(BASE, "databases")
+# ASALI_DB_DIR (Phase 3): a database service keeps its file in its own data directory
+DB_DIR = os.environ.get("ASALI_DB_DIR") or os.path.join(BASE, "databases")
 
 
 class SqliteRelationalWrapper(BaseWrapper):

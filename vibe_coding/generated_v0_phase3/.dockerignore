@@ -1,0 +1,13 @@
+# Build context for the Phase 1/2 Dockerfile (docker-compose.yml). It still copies
+# the project databases, as it always did; these are only things no image needs.
+.git
+Project2_Asali_Nakali/
+deploy/nodes/
+deploy/coordinator-state/
+deploy/*.env
+SS/
+TG/
+ref_art_images/
+scratch/
+**/__pycache__
+*.pdf

@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-009
+title: Consumer complaint MCA-2026-G0018
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 21 Jun 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code  at Karol Bagh Guardian Chemist, New Delhi. I had a bad reaction after taking it. Developed stomach pain after taking Losavane 50mg bought on 16 Jun. Code on the strip: med lsvno 230.
+
+Please look into this.
+
+Regards,
+Aarav Gill

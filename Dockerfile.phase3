@@ -1,0 +1,19 @@
+# Phase 3 image: one image for the four database services and the coordinator.
+# No database is baked in (see Dockerfile.phase3.dockerignore): each container
+# mounts ONLY its own data directory at /data, prepared by
+# scripts/prepare_node_data.py. Which service a container runs is its command.
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY . /app
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=utf-8 \
+    ASALI_DB_DIR=/data/databases \
+    ASALI_NOSQL_FILE=/data/nosql_store/db1_retail_pos.json \
+    ASALI_DOCS_DIR=/data/documents \
+    ASALI_NODE_BIND=0.0.0.0 \
+    ASALI_STRICT_ISOLATION=1
+
+EXPOSE 8021 8022 8023 8024 8030
+CMD ["python", "api/node_db.py", "--help"]

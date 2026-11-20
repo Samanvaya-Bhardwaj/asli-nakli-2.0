@@ -30,9 +30,9 @@ from urllib.parse import urlparse, parse_qs
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE, "databases", "db4_ministry_reports.sqlite")
+DB_PATH = os.path.join(os.environ.get("ASALI_DB_DIR") or os.path.join(BASE, "databases"), "db4_ministry_reports.sqlite")
 DEFAULT_PORT = 8001
-AUTH_TOKEN = "CDSCO-MCA-2026-KEY"
+AUTH_TOKEN = os.environ.get("ASALI_DB4_LEGACY_TOKEN") or "CDSCO-MCA-2026-KEY"
 
 
 class MinistryDataStore:
@@ -252,9 +252,10 @@ class MinistryApiHandler(BaseHTTPRequestHandler):
         pass
 
 
-def run_server(port: int = DEFAULT_PORT):
-    server = HTTPServer(("127.0.0.1", port), MinistryApiHandler)
-    print(f"  [DB4 REST Microservice] Running at http://127.0.0.1:{port}/api/v1/")
+def run_server(port: int = DEFAULT_PORT, host: str = "127.0.0.1"):
+    # Phase 3: --host 0.0.0.0 makes it reachable from another machine (default unchanged)
+    server = HTTPServer((host, port), MinistryApiHandler)
+    print(f"  [DB4 REST Microservice] Running at http://{host}:{port}/api/v1/")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
@@ -265,5 +266,6 @@ def run_server(port: int = DEFAULT_PORT):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ministry of Consumer Affairs REST Microservice")
     parser.add_argument("--port", type=int, default=DEFAULT_PORT, help="Port to bind (default: 8001)")
+    parser.add_argument("--host", default="127.0.0.1", help="Interface to bind (0.0.0.0 for the LAN)")
     args = parser.parse_args()
-    run_server(args.port)
+    run_server(args.port, args.host)

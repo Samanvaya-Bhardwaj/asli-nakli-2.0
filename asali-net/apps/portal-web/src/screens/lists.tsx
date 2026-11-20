@@ -60,7 +60,7 @@ export function StockList() {
               return (
                 <tr key={`${g.gtin}-${g.lot}`}>
                   <Td mono>{g.gtin}</Td>
-                  <Td mono>{g.lot ?? 'not recorded'}</Td>
+                  <Td mono={g.lot != null} className={g.lot == null ? 'text-meta' : ''}>{g.lot ?? 'not recorded'}</Td>
                   <Td>{g.expiry ? fmtExpiry(g.expiry) : ''} {near && <Status tone="warn">Under 90 days</Status>}</Td>
                   <Td>{g.count}</Td>
                 </tr>

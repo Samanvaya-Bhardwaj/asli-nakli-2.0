@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-049
+title: Consumer complaint MCA-2026-G0111
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 20 Aug 2025
+---
+
+Dear Sir/Madam,
+
+I bought Clopivane 75mg with code MED-CLPVN-117 at karol bagh guardian chemist, new delhi. I had a bad reaction after taking it. Developed a headache after taking Clopivane 75mg bought on 07 Aug.
+
+Please look into this.
+
+Regards,
+Suresh Fernandes

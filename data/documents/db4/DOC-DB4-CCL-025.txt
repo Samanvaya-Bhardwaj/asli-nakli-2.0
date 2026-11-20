@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-025
+title: Consumer complaint MCA-2026-G0059
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 20/06/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code JED-CPRVN-581 at sri venkateshwara medicals, bengaluru. It did not work at all. Ciprovane 250mg tablets crumble in the strip and had no effect after 3 days.
+
+Please look into this.
+
+Regards,
+Priya Joshi

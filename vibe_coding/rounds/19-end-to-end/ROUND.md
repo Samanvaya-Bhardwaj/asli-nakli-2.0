@@ -1,0 +1,23 @@
+# Round 19 — integration and end-to-end validation (prompt P3-5)
+
+The prompt, quoted exactly as typed:
+
+> Complete the Phase 3 implementation by integrating all previously implemented components and validating the entire workflow.
+>
+> OBJECTIVE: Demonstrate that the Asali/Nakali system satisfies all Phase 3 evaluation requirements through a working end-to-end implementation.
+>
+> STEP 1: END-TO-END WORKFLOW — Verify the following complete pipeline: 1. User submits a natural-language query. 2. The query is interpreted and converted into relevant database-specific subqueries. 3. The subqueries are federated to the four independent database instances running on different machines. 4. Each database executes its subquery locally. 5. Each database independently discovers context using its local FK-PK relationships. 6. Each database returns its structured results and ranked local context. 7. The GAV mediator aggregates the contexts from all participating databases. 8. The aggregated context is used to construct a context-aware unstructured document search query. 9. The unstructured retrieval system searches and ranks relevant documents. 10. Structured results and unstructured documents are integrated into the final response.
+>
+> STEP 2: INTEGRATION WITH EXISTING PROJECT — Verify that Phase 3 does not break: Phase 1 medicine verification. Phase 2 uncertainty-aware matching. GAV mediator. GlobalItemHistory. Identifier normalization. Conflict resolution. Hard-veto mechanism. Weighted scoring. Audit functionality. Existing dashboard. Do not replace existing components unnecessarily.
+>
+> STEP 3: TEST CASES — Create automated tests covering: 1. Every database has at least 4-5 related tables/entities. 2. FK-PK relationships are correctly established. 3. Each database can execute queries independently. 4. Federated queries reach the appropriate database instances. 5. Context discovery follows actual FK-PK relationships. 6. Context extraction includes information beyond the original SQL query results. 7. Context ranking prioritizes relevant terms. 8. The mediator correctly aggregates local contexts. 9. Unstructured retrieval uses the aggregated context. 10. Relevant documents are retrieved and ranked. 11. Document provenance is preserved. 12. Partial database failures are handled correctly. 13. Existing Phase 1 and Phase 2 functionality remains operational.
+>
+> STEP 4: DEMONSTRATION SCENARIOS — Prepare at least three complete demonstration scenarios: Scenario 1: A medicine and batch verification query. Scenario 2: A manufacturer and quality-related query. Scenario 3: A medicine-related regulatory or consumer complaint query. For each scenario, show: User's original query. Generated database-specific subqueries. Structured results from each database. FK-PK relationships explored. Context discovered by each database. Aggregated overall context. Generated unstructured search query. Retrieved documents and relevance scores. Final integrated response.
+>
+> STEP 5: PROMPT AND CODE DOCUMENTATION — Create a folder: phase3/documentation/ Include: 1. PHASE3_ARCHITECTURE.md - Overall architecture. Component interactions. Distributed deployment architecture. Structured and unstructured integration. 2. PHASE3_CONTEXT_DISCOVERY.md - SCORE-inspired algorithm. FK-PK exploration. Context extraction. Context weighting and ranking. Context aggregation. 3. PHASE3_UNSTRUCTURED_RETRIEVAL.md - Document ingestion. Indexing. Context-based search. Document ranking. 4. PHASE3_DEMONSTRATION.md - Three demonstration scenarios. Original prompts. Generated subqueries. Context discovery outputs. Retrieved documents. Final outputs. 5. PHASE3_CODE_CHANGES.md - Files created. Existing files modified. Original implementation. Modified implementation. Reason for every significant modification.
+>
+> STEP 6: FINAL VALIDATION REPORT — Create PHASE3_FINAL_REPORT.md. Map every professor's evaluation criterion to: Implemented functionality. Relevant source files. Execution evidence. Test results. Demonstration instructions. Do not fabricate successful tests, deployment results or execution screenshots. If any requirement is incomplete, explicitly identify it.
+>
+> FINAL REQUIREMENT: The complete application must run through one understandable user-facing workflow. Do not create disconnected modules that cannot communicate with each other. Do not claim Phase 3 is complete until the end-to-end workflow has been executed and validated.
+
+`generated/` holds the files this round created (FILES.txt), as first written; none was edited after it ran. The round's one post-run fix was to a file from P3-2 (`local_engine.py`, CHANGES_PHASE3.md item 20).

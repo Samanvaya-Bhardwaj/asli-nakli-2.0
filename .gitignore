@@ -34,3 +34,14 @@ data/network_topology.json
 /Welcome.md*.pdf
 /iia_project.md.pdf
 dashboard/_legacy/
+
+# Phase 3 deployment: per-machine data copies, coordinator state, and the real
+# per-machine env files (they hold tokens). The *.env.example templates are tracked.
+deploy/nodes/
+deploy/coordinator-state/
+deploy/machine*.env
+
+# An older clone of this repository kept beside the code (it has its own .git); not part of this project.
+/Project2_Asali_Nakali/
+# Local Claude Code tooling (design skill and agents); not project code.
+/.claude/

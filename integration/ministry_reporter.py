@@ -14,7 +14,7 @@ from datetime import datetime, date
 from dataclasses import dataclass
 
 BASE    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB4_PATH = os.path.join(BASE, "databases", "db4_ministry_reports.sqlite")
+DB4_PATH = os.path.join(os.environ.get("ASALI_DB_DIR") or os.path.join(BASE, "databases"), "db4_ministry_reports.sqlite")
 REPORT_DIR = os.path.join(BASE, "reports")
 
 

@@ -37,7 +37,8 @@ DB_METADATA = {
         "primary_key": "scan_code",
         "role": "Every checkout scan made at a pharmacy counter, with the payment method, the scanner that read it, and any duplicate scans the till flagged at the time.",
         "file": "data/nosql_store/db1_retail_pos.json",
-        "tables": ["purchase_events", "vendors", "scan_anomaly_log", "nosql_documents"]
+        "tables": ["purchase_events", "vendors", "scan_anomaly_log", "pos_terminals", "retail_medicines",
+                   "stock_receipts", "inventory", "nosql_documents"]
     },
     "db2": {
         "id": "db2",
@@ -48,7 +49,8 @@ DB_METADATA = {
         "primary_key": "batch_serial, batch_id",
         "role": "Shipments between warehouses and pharmacies, including the route taken, the vehicle used, and the temperature readings logged along the way.",
         "file": "databases/db2_distributor_ledger.sqlite",
-        "tables": ["distribution_batches", "distributors", "distributor_vendor_contracts", "return_log"]
+        "tables": ["distribution_batches", "distributors", "distributor_vendor_contracts", "return_log",
+                   "warehouses", "cold_chain_loggers", "temperature_logs"]
     },
     "db3": {
         "id": "db3",
@@ -59,7 +61,8 @@ DB_METADATA = {
         "primary_key": "product_uid",
         "role": "The authoritative record of what was legally manufactured: licensed makers, quality certificates, batch releases, and any recalls that have been gazetted.",
         "file": "databases/db3_manufacturer_registry.sqlite",
-        "tables": ["products", "manufacturers", "authorized_distributors", "batch_release_certs", "item_lifecycle"]
+        "tables": ["products", "manufacturers", "authorized_distributors", "batch_release_certs", "molecules",
+                   "manufacturing_sites", "production_records", "item_lifecycle"]
     },
     "db4": {
         "id": "db4",
@@ -70,7 +73,8 @@ DB_METADATA = {
         "primary_key": "complaint_item_ref, item_ref",
         "role": "Complaints filed by the public, adverse reactions reported by doctors, laboratory test results, and the statutory blacklist.",
         "file": "databases/db4_ministry_reports.sqlite",
-        "tables": ["complaints", "ministry_blacklist", "lab_reports", "public_alerts", "ministry_officers"]
+        "tables": ["complaints", "ministry_blacklist", "lab_reports", "public_alerts", "ministry_officers",
+                   "regulatory_authorities", "recall_notices"]
     },
     "audit": {
         "id": "audit",
@@ -1097,6 +1101,22 @@ def _get_column_description(table: str, col: str) -> str:
         ("lab_reports", "lab_name"): "Official government forensic testing laboratory institution",
         ("lab_reports", "active_ingredient_match"): "1 if chemical assay matched label; 0 if counterfeit chalk",
         ("lab_reports", "contaminants_found"): "Identified hazardous toxins, heavy metals, or adulterants",
+
+        # Phase 3 tables
+        ("pos_terminals", "device_id"): "Till or counter camera that read the pack (FK target of purchase_events.device_id)",
+        ("retail_medicines", "item_code"): "Serialised medicine id on the pack; same business id as DB3 product_uid",
+        ("retail_medicines", "schedule_class"): "Drugs and Cosmetics Rules schedule (OTC, H, H1, X)",
+        ("stock_receipts", "supplier_dispatch_ref"): "Distributor dispatch id (DB2 distribution_batches.batch_id)",
+        ("inventory", "quantity_on_hand"): "Packs on the shelf: received minus sold",
+        ("warehouses", "verification_status"): "registered, or unregistered when the dispatch note names an unlicensed location",
+        ("cold_chain_loggers", "setpoint_max_c"): "Upper limit of the storage band the shipment had to hold",
+        ("temperature_logs", "excursion"): "1 when the reading fell outside the logger's band",
+        ("molecules", "generic_name"): "Active ingredient (FK target of products.generic_name)",
+        ("manufacturing_sites", "gmp_status"): "Good Manufacturing Practice status of the plant",
+        ("production_records", "product_uid"): "Registered batch this production run made",
+        ("batch_release_certs", "release_date"): "Date QC released the batch for sale",
+        ("regulatory_authorities", "authority_name"): "Body an officer serves or an alert is issued by (FK target)",
+        ("recall_notices", "recall_class"): "I: may cause death or serious harm, II: temporary harm, III: unlikely harm",
 
         # Audit Chain
         ("audit_log", "seq"): "Strict monotonically increasing block index sequence number",

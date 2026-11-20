@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-029
+title: Consumer complaint MCA-2026-G0067
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: June 11, 2025
+---
+
+Dear Sir/Madam,
+
+I bought Calcivane 60000IU with code MED-CLCVN-211 at Banjara Care Pharmacy, Hyderabad. Something is wrong with it. Pharmacist could not confirm the batch of Calcivane 60000IU.
+
+Please look into this.
+
+Regards,
+Meera Shah

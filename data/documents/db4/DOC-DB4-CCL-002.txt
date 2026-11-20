@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-002
+title: Consumer complaint MCA-2025-004
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 10 Apr 2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED/NAKALI/004 at Chandni Chowk Kiosk, Delhi. The label does not match the contents. Tablet weight is 200mg instead of 500mg labeled strength. Chalk powder texture.
+
+Please look into this.
+
+Regards,
+Vikram Malhotra

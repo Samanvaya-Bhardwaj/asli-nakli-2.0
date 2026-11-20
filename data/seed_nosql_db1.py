@@ -16,9 +16,11 @@ the collection, and so never came from SQLite, are preserved across a sync.
 """
 
 from __future__ import annotations
-import os, json, sqlite3
+import os, sys, json, sqlite3
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE not in sys.path:      # run as a script, the package root is not on the path
+    sys.path.insert(0, BASE)
 NOSQL_DIR = os.path.join(BASE, "data", "nosql_store")
 SQLITE_DB1 = os.path.join(BASE, "databases", "db1_purchase_registry.sqlite")
 OUTPUT_JSON = os.path.join(NOSQL_DIR, "db1_retail_pos.json")
@@ -131,6 +133,10 @@ def sync_collection(db_path: str = SQLITE_DB1, out_path: str = OUTPUT_JSON) -> i
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(docs + native, f, indent=2)
+    # Phase 3: the other DB1 entities as their own collections, next to this one,
+    # with a manifest of the document references between them.
+    from integration.federation.nosql_store import write_collections
+    write_collections(db_path, os.path.dirname(out_path))
     return len(docs) + len(native)
 
 

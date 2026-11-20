@@ -1,0 +1,4926 @@
+{
+ "note": "Evaluation only. Document search never reads this file.",
+ "documents": {
+  "DOC-DB3-PQR-001": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Cipla Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ASALI-001",
+    "MED-ASALI-005",
+    "MED-ASALI-007",
+    "MED-RECALL-002",
+    "MED-UNAUTH-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A001",
+    "BATCH-A005",
+    "BATCH-A007",
+    "BATCH-U002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-002": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Sun Pharmaceutical Industries Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ASALI-002",
+    "MED-ASALI-004",
+    "MED-RECALL-001",
+    "MED-UNAUTH-001"
+   ],
+   "batch_numbers": [
+    "BATCH-A002",
+    "BATCH-A004",
+    "BATCH-U001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-003": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Dr. Reddy's Laboratories Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ASALI-003",
+    "MED-ASALI-006",
+    "MED-ASALI-008",
+    "MED-ASALI-010",
+    "MED-RECALL-003"
+   ],
+   "batch_numbers": [
+    "BATCH-A003",
+    "BATCH-A006",
+    "BATCH-A008",
+    "BATCH-A010"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-004": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Biocon Biologics Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ASALI-009",
+    "MED-GLRVA-677"
+   ],
+   "batch_numbers": [
+    "BATCH-A009",
+    "GLR25677"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-005": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Biocon Biologics Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-EPVOI-689",
+    "MED-EPVOI-690",
+    "MED-GLRVA-678",
+    "MED-GLRVA-679"
+   ],
+   "batch_numbers": [
+    "EPV25689",
+    "EPV25690",
+    "GLR25678",
+    "GLR25679"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-006": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Lupin Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-MTRNE-630",
+    "MED-MTRNE-631",
+    "MED-PRDVE-575",
+    "MED-SLBVN-267"
+   ],
+   "batch_numbers": [
+    "MTR25630",
+    "MTR25631",
+    "PRD25575",
+    "SLB25267"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-007": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Lupin Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-AMLVO-803",
+    "MED-AMLVO-804",
+    "MED-AMLVO-854",
+    "MED-AMLVO-855",
+    "MED-AMXLN-201",
+    "MED-AMXLN-202",
+    "MED-AMXLN-687",
+    "MED-CFRNE-772",
+    "MED-MTRNE-563",
+    "MED-MTRNE-632",
+    "MED-OMVNE-825",
+    "MED-OMVNE-826",
+    "MED-OMVNE-827",
+    "MED-SLBVN-268"
+   ],
+   "batch_numbers": [
+    "AML25803",
+    "AML25804",
+    "AML25854",
+    "AML25855",
+    "AMX25201",
+    "AMX25202",
+    "AMX25687",
+    "CFR25772",
+    "MTR25563",
+    "MTR25632",
+    "OMV25825",
+    "OMV25826",
+    "OMV25827",
+    "SLB25268"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-008": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Zydus Lifesciences Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ASPRI-801",
+    "MED-ASPRI-802",
+    "MED-HPSHL-556",
+    "MED-IBNVU-486",
+    "MED-IBNVU-487",
+    "MED-IBNVU-488",
+    "MED-PRNVA-659",
+    "MED-PRNVA-785",
+    "MED-PRNVA-786",
+    "MED-STVIA-337",
+    "MED-STVIA-338",
+    "MED-STVIA-339"
+   ],
+   "batch_numbers": [
+    "ASP25801",
+    "ASP25802",
+    "HPS25556",
+    "IBN25486",
+    "IBN25487",
+    "IBN25488",
+    "PRN25659",
+    "PRN25785",
+    "PRN25786",
+    "STV25337",
+    "STV25338",
+    "STV25339"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-009": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Zydus Lifesciences Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-FMRAO-636",
+    "MED-FMRAO-637",
+    "MED-FMRAO-638",
+    "MED-FMRAO-662",
+    "MED-FMRAO-663",
+    "MED-HPSHL-557",
+    "MED-HYDRV-865",
+    "MED-PRNVA-660",
+    "MED-PRNVA-661",
+    "MED-PRNVA-787",
+    "MED-PRNVA-788",
+    "MED-STVIA-261",
+    "MED-STVIA-262",
+    "MED-STVIA-263"
+   ],
+   "batch_numbers": [
+    "FMR25636",
+    "FMR25637",
+    "FMR25638",
+    "FMR25662",
+    "FMR25663",
+    "HPS25557",
+    "HYD25865",
+    "PRN25660",
+    "PRN25661",
+    "PRN25787",
+    "PRN25788",
+    "STV25261",
+    "STV25262",
+    "STV25263"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-010": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Mankind Pharma Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-CALCI-210",
+    "MED-CLCVN-210",
+    "MED-CLCVN-211",
+    "MED-CLCVN-212",
+    "MED-ZTHRL-786"
+   ],
+   "batch_numbers": [
+    "CLC25210",
+    "CLC25211",
+    "CLC25212",
+    "ZTH25786"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-011": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Mankind Pharma Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-CLCVN-213",
+    "MED-CTRVE-503",
+    "MED-CTRVE-504",
+    "MED-FVRLE-695",
+    "MED-FVRLE-696",
+    "MED-FVRLE-785",
+    "MED-LSVNO-229",
+    "MED-LSVNO-230",
+    "MED-PNTRA-742",
+    "MED-PNTRA-743",
+    "MED-ZTHRL-225",
+    "MED-ZTHRL-787",
+    "MED-ZTHRL-788",
+    "MED-ZTHRL-789"
+   ],
+   "batch_numbers": [
+    "CLC25213",
+    "CTR25503",
+    "CTR25504",
+    "FVR25695",
+    "FVR25696",
+    "FVR25785",
+    "LSV25229",
+    "LSV25230",
+    "PNT25742",
+    "PNT25743",
+    "ZTH25225",
+    "ZTH25787",
+    "ZTH25788",
+    "ZTH25789"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-012": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Alkem Laboratories Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-ATRLN-159",
+    "MED-ATRLN-160",
+    "MED-ATRLN-266",
+    "MED-ATRLN-619",
+    "MED-AZVST-233",
+    "MED-AZVST-234",
+    "MED-CLPVN-117"
+   ],
+   "batch_numbers": [
+    "ATR25159",
+    "ATR25160",
+    "ATR25266",
+    "ATR25619",
+    "AZV25233",
+    "AZV25234",
+    "CLP25117"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-013": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Alkem Laboratories Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-ATRLN-267",
+    "MED-ATRLN-268",
+    "MED-ATRLN-620",
+    "MED-AZVST-220",
+    "MED-AZVST-221",
+    "MED-AZVST-222",
+    "MED-AZVST-235",
+    "MED-CLPVN-118",
+    "MED-LVCRE-851",
+    "MED-LVCRE-852",
+    "MED-MXVRO-245",
+    "MED-MXVRO-358",
+    "MED-MXVRO-359",
+    "MED-MXVRO-360"
+   ],
+   "batch_numbers": [
+    "ATR25267",
+    "ATR25268",
+    "ATR25620",
+    "AZV25220",
+    "AZV25221",
+    "AZV25222",
+    "AZV25235",
+    "CLP25118",
+    "LVC25851",
+    "LVC25852",
+    "MXV25245",
+    "MXV25358",
+    "MXV25359",
+    "MXV25360"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-014": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Torrent Pharmaceuticals Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-CPRVN-564",
+    "MED-DCLTN-127",
+    "MED-DCLTN-128",
+    "MED-DCLTN-129",
+    "MED-MTPRE-229",
+    "MED-MTPRE-230",
+    "MED-MTPRE-693",
+    "MED-MTPRE-694",
+    "MED-RSVNO-514"
+   ],
+   "batch_numbers": [
+    "CPR25564",
+    "DCL25127",
+    "DCL25128",
+    "DCL25129",
+    "MTP25229",
+    "MTP25230",
+    "MTP25693",
+    "MTP25694",
+    "RSV25514"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-015": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Torrent Pharmaceuticals Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-CPRVN-565",
+    "MED-CPRVN-566",
+    "MED-CPRVN-578",
+    "MED-CPRVN-579",
+    "MED-GLCVN-578",
+    "MED-GLCVN-579",
+    "MED-GLCVN-661",
+    "MED-GLCVN-662",
+    "MED-MTPRE-231",
+    "MED-MTPRE-695",
+    "MED-MTPRE-696",
+    "MED-RSVNO-515",
+    "MED-RSVNO-803",
+    "MED-RSVNO-804"
+   ],
+   "batch_numbers": [
+    "CPR25565",
+    "CPR25566",
+    "CPR25578",
+    "CPR25579",
+    "GLC25578",
+    "GLC25579",
+    "GLC25661",
+    "GLC25662",
+    "MTP25231",
+    "MTP25695",
+    "MTP25696",
+    "RSV25515",
+    "RSV25803",
+    "RSV25804"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-016": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Glenmark Pharmaceuticals Ltd product quality review H1 2025",
+   "item_codes": [
+    "MED-DXLYN-199",
+    "MED-DXLYN-200",
+    "MED-MNTLN-242",
+    "MED-MNTLN-243",
+    "MED-PANTO-158",
+    "MED-PNTVA-158",
+    "MED-PNTVA-159",
+    "MED-PNTVA-160",
+    "MED-THYRV-185",
+    "MED-THYRV-186",
+    "MED-THYRV-187"
+   ],
+   "batch_numbers": [
+    "DXL25199",
+    "DXL25200",
+    "MNT25242",
+    "MNT25243",
+    "PNT25158",
+    "PNT25159",
+    "PNT25160",
+    "THY25185",
+    "THY25186",
+    "THY25187"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PQR-017": {
+   "owner": "db3",
+   "type": "manufacturer_quality_report",
+   "title": "Glenmark Pharmaceuticals Ltd product quality review H2 2025",
+   "item_codes": [
+    "MED-DXLYN-201",
+    "MED-GLMRI-181",
+    "MED-GLMRI-182",
+    "MED-GLMRI-183",
+    "MED-GLMRI-395",
+    "MED-GLMRI-396",
+    "MED-MNTLN-244",
+    "MED-THYRV-543",
+    "MED-THYRV-544",
+    "MED-THYRV-669",
+    "MED-THYRV-670",
+    "MED-TLMRE-303",
+    "MED-TLMRE-405",
+    "MED-TLMRE-406"
+   ],
+   "batch_numbers": [
+    "DXL25201",
+    "GLM25181",
+    "GLM25182",
+    "GLM25183",
+    "GLM25395",
+    "GLM25396",
+    "MNT25244",
+    "THY25543",
+    "THY25544",
+    "THY25669",
+    "THY25670",
+    "TLM25303",
+    "TLM25405",
+    "TLM25406"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-001": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A001 (Novamox 500mg)",
+   "item_codes": [
+    "MED-ASALI-001"
+   ],
+   "batch_numbers": [
+    "BATCH-A001"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-002": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A002 (Pacimol 500mg)",
+   "item_codes": [
+    "MED-ASALI-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A002"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-003": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A003 (Metsmall 850mg)",
+   "item_codes": [
+    "MED-ASALI-003"
+   ],
+   "batch_numbers": [
+    "BATCH-A003"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-004": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A004 (Falcinil 80/480mg)",
+   "item_codes": [
+    "MED-ASALI-004"
+   ],
+   "batch_numbers": [
+    "BATCH-A004"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-005": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A005 (Atorva 40mg)",
+   "item_codes": [
+    "MED-ASALI-005"
+   ],
+   "batch_numbers": [
+    "BATCH-A005"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-006": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A006 (Electral ORS)",
+   "item_codes": [
+    "MED-ASALI-006"
+   ],
+   "batch_numbers": [
+    "BATCH-A006"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-007": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A007 (Ciplox 500mg)",
+   "item_codes": [
+    "MED-ASALI-007"
+   ],
+   "batch_numbers": [
+    "BATCH-A007"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-008": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A008 (Omez 20mg)",
+   "item_codes": [
+    "MED-ASALI-008"
+   ],
+   "batch_numbers": [
+    "BATCH-A008"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-009": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A009 (Basalog 100 IU/ml)",
+   "item_codes": [
+    "MED-ASALI-009"
+   ],
+   "batch_numbers": [
+    "BATCH-A009"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-010": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-A010 (Calcirol 1000 IU)",
+   "item_codes": [
+    "MED-ASALI-010"
+   ],
+   "batch_numbers": [
+    "BATCH-A010"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-011": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-R001 (Coughcure Syrup 100ml [RECALLED])",
+   "item_codes": [
+    "MED-RECALL-001"
+   ],
+   "batch_numbers": [
+    "BATCH-R001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-012": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-R002 (Amoxiclav 250mg Suspension [RECALLED])",
+   "item_codes": [
+    "MED-RECALL-002"
+   ],
+   "batch_numbers": [
+    "BATCH-R002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-013": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-R003 (Metrogyl 400mg [RECALLED])",
+   "item_codes": [
+    "MED-RECALL-003"
+   ],
+   "batch_numbers": [
+    "BATCH-R003"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-014": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-U001 (Valium 5mg)",
+   "item_codes": [
+    "MED-UNAUTH-001"
+   ],
+   "batch_numbers": [
+    "BATCH-U001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-015": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report BATCH-U002 (Corex Cough Syrup)",
+   "item_codes": [
+    "MED-UNAUTH-002"
+   ],
+   "batch_numbers": [
+    "BATCH-U002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-016": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report RSV25514 (Rosuvane 20mg)",
+   "item_codes": [
+    "MED-RSVNO-514"
+   ],
+   "batch_numbers": [
+    "RSV25514"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-017": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ATR25266 (Atorlane 20mg)",
+   "item_codes": [
+    "MED-ATRLN-266"
+   ],
+   "batch_numbers": [
+    "ATR25266"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-018": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report LSV25230 (Losavane 50mg)",
+   "item_codes": [
+    "MED-LSVNO-230"
+   ],
+   "batch_numbers": [
+    "LSV25230"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-019": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report HPS25557 (Hepashield 20mcg/ml)",
+   "item_codes": [
+    "MED-HPSHL-557"
+   ],
+   "batch_numbers": [
+    "HPS25557"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-020": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report CPR25579 (Ciprovane 250mg)",
+   "item_codes": [
+    "MED-CPRVN-579"
+   ],
+   "batch_numbers": [
+    "CPR25579"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-021": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ZTH25786 (Zithrolane 500mg)",
+   "item_codes": [
+    "MED-ZTHRL-786"
+   ],
+   "batch_numbers": [
+    "ZTH25786"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-022": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report PRD25577 (Predavia 5mg)",
+   "item_codes": [
+    "MED-PRDVE-577"
+   ],
+   "batch_numbers": [
+    "PRD25577"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-023": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report CLC25210 (Calcivane 60000IU)",
+   "item_codes": [
+    "MED-CLCVN-210"
+   ],
+   "batch_numbers": [
+    "CLC25210"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-024": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ZTH25788 (Zithrolane 500mg)",
+   "item_codes": [
+    "MED-ZTHRL-788"
+   ],
+   "batch_numbers": [
+    "ZTH25788"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-025": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report PRN25786 (Paranova 650mg)",
+   "item_codes": [
+    "MED-PRNVA-786"
+   ],
+   "batch_numbers": [
+    "PRN25786"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-026": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report PNT25743 (Pantora 40mg)",
+   "item_codes": [
+    "MED-PNTRA-743"
+   ],
+   "batch_numbers": [
+    "PNT25743"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-027": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report CPR26581 (Ciprovane 250mg)",
+   "item_codes": [
+    "MED-CPRVN-581"
+   ],
+   "batch_numbers": [
+    "CPR26581"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-028": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report GLM26397 (Glimora 2mg)",
+   "item_codes": [
+    "MED-GLMRI-397"
+   ],
+   "batch_numbers": [
+    "GLM26397"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-029": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report GLC25661 (Glucovane 1000mg)",
+   "item_codes": [
+    "MED-GLCVN-661"
+   ],
+   "batch_numbers": [
+    "GLC25661"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-030": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report THY25670 (Thyrova 25mcg)",
+   "item_codes": [
+    "MED-THYRV-670"
+   ],
+   "batch_numbers": [
+    "THY25670"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-031": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report GLM25183 (Glimora 1mg)",
+   "item_codes": [
+    "MED-GLMRI-183"
+   ],
+   "batch_numbers": [
+    "GLM25183"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-032": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ZTH26226 (Zithrolane 250mg)",
+   "item_codes": [
+    "MED-ZTHRL-226"
+   ],
+   "batch_numbers": [
+    "ZTH26226"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-033": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ASP25801 (Aspira 100IU/ml)",
+   "item_codes": [
+    "MED-ASPRI-801"
+   ],
+   "batch_numbers": [
+    "ASP25801"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-034": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AMX25201 (Amoxilan 500mg)",
+   "item_codes": [
+    "MED-AMXLN-201"
+   ],
+   "batch_numbers": [
+    "AMX25201"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-035": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report FMR26665 (Famora 20mg)",
+   "item_codes": [
+    "MED-FMRAO-665"
+   ],
+   "batch_numbers": [
+    "FMR26665"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-036": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report ZTH25789 (Zithrolane 500mg)",
+   "item_codes": [
+    "MED-ZTHRL-789"
+   ],
+   "batch_numbers": [
+    "ZTH25789"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-037": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AMX26689 (Amoxilan 250mg)",
+   "item_codes": [
+    "MED-AMXLN-689"
+   ],
+   "batch_numbers": [
+    "AMX26689"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-038": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report THY26545 (THYROVA 100 MCG)",
+   "item_codes": [
+    "MED-THYRO-545"
+   ],
+   "batch_numbers": [
+    "THY26545"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-039": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AZV25234 (Azivista 500mg)",
+   "item_codes": [
+    "MED-AZVST-234"
+   ],
+   "batch_numbers": [
+    "AZV25234"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-040": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AZV26223 (Azivista 250mg)",
+   "item_codes": [
+    "MED-AZVST-223"
+   ],
+   "batch_numbers": [
+    "AZV26223"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-041": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report OMV25826 (Omevane 20mg)",
+   "item_codes": [
+    "MED-OMVNE-826"
+   ],
+   "batch_numbers": [
+    "OMV25826"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-042": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report MTP25695 (Metopra 25mg)",
+   "item_codes": [
+    "MED-MTPRE-695"
+   ],
+   "batch_numbers": [
+    "MTP25695"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-043": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AZV25233 (Azivista 500mg)",
+   "item_codes": [
+    "MED-AZVST-233"
+   ],
+   "batch_numbers": [
+    "AZV25233"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-044": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report AML25855 (Amlovia 10mg)",
+   "item_codes": [
+    "MED-AMLVO-855"
+   ],
+   "batch_numbers": [
+    "AML25855"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-BIR-045": {
+   "owner": "db3",
+   "type": "batch_inspection_report",
+   "title": "Batch inspection report PRN25785 (Paranova 650mg)",
+   "item_codes": [
+    "MED-PRNVA-785"
+   ],
+   "batch_numbers": [
+    "PRN25785"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-001": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Albendazole",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-002": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Amlodipine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-003": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Amoxycillin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-004": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Amoxycillin+Clavulanate",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-005": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Artemether+Lumefantrine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-006": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Atorvastatin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-007": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Azithromycin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-008": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Cefixime",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-009": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Cetirizine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-010": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Cholecalciferol",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-011": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Ciprofloxacin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-012": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Clopidogrel",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-013": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Codeine phosphate",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-014": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Dextromethorphan Syrup",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-015": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Diazepam",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-016": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Diclofenac",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-017": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Doxycycline",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-018": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Erythropoietin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-019": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Famotidine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-020": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Glimepiride",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-021": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Hepatitis B vaccine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-022": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Hydroxychloroquine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-023": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Ibuprofen",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-024": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Insulin aspart",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-025": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Insulin glargine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-026": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Levocetirizine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-027": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Levothyroxine",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-028": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Losartan",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-029": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Metformin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-030": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Metoprolol",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-031": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Metronidazole",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-032": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Montelukast",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-033": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - ORS Formula",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-034": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Omeprazole",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-035": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Ondansetron",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-036": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Pantoprazole",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-037": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Paracetamol",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-038": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Prednisolone",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-039": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Rosuvastatin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-040": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Salbutamol",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-041": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Sitagliptin",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB3-PSI-042": {
+   "owner": "db3",
+   "type": "product_safety_document",
+   "title": "Product safety information - Telmisartan",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB2-SHP-001": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-005",
+   "item_codes": [
+    "MED-ASALI-004"
+   ],
+   "batch_numbers": [
+    "BATCH-A004"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [
+    "DIST-002"
+   ],
+   "vendor_ids": [
+    "VND-004"
+   ]
+  },
+  "DOC-DB2-SHP-002": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-006",
+   "item_codes": [
+    "MED-ASALI-005"
+   ],
+   "batch_numbers": [
+    "BATCH-A005"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-002"
+   ]
+  },
+  "DOC-DB2-SHP-003": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-010",
+   "item_codes": [
+    "MED-ASALI-009"
+   ],
+   "batch_numbers": [
+    "BATCH-A009"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-003"
+   ]
+  },
+  "DOC-DB2-CCI-001": {
+   "owner": "db2",
+   "type": "cold_chain_incident_report",
+   "title": "Cold-chain excursion: DBATCH-010 (Basalog 100 IU/ml)",
+   "item_codes": [
+    "MED-ASALI-009"
+   ],
+   "batch_numbers": [
+    "BATCH-A009"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-003"
+   ]
+  },
+  "DOC-DB2-SHP-004": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-012",
+   "item_codes": [
+    "MED-NAKALI-001"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-SHP-005": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-013",
+   "item_codes": [
+    "MED-NAKALI-002"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-SHP-006": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-014",
+   "item_codes": [
+    "MED-NAKALI-003"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-007": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-015",
+   "item_codes": [
+    "MED-NAKALI-004"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-008": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-016",
+   "item_codes": [
+    "MED-NAKALI-005"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-009": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-017",
+   "item_codes": [
+    "MED-RECALL-001"
+   ],
+   "batch_numbers": [
+    "BATCH-R001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-001"
+   ]
+  },
+  "DOC-DB2-SHP-010": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-020",
+   "item_codes": [
+    "MED-UNAUTH-001"
+   ],
+   "batch_numbers": [
+    "BATCH-U001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-CCI-002": {
+   "owner": "db2",
+   "type": "cold_chain_incident_report",
+   "title": "Cold-chain excursion: DBATCH-020 (Valium 5mg)",
+   "item_codes": [
+    "MED-UNAUTH-001"
+   ],
+   "batch_numbers": [
+    "BATCH-U001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-SHP-011": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-021",
+   "item_codes": [
+    "MED-UNAUTH-002"
+   ],
+   "batch_numbers": [
+    "BATCH-U002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-CCI-003": {
+   "owner": "db2",
+   "type": "cold_chain_incident_report",
+   "title": "Cold-chain excursion: DBATCH-021 (Corex Cough Syrup)",
+   "item_codes": [
+    "MED-UNAUTH-002"
+   ],
+   "batch_numbers": [
+    "BATCH-U002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-012": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0012",
+   "item_codes": [
+    "MED-AMXLN-202"
+   ],
+   "batch_numbers": [
+    "AMX25202"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-002"
+   ],
+   "vendor_ids": [
+    "VND-023"
+   ]
+  },
+  "DOC-DB2-SHP-013": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0023",
+   "item_codes": [
+    "MED-MXVRO-245"
+   ],
+   "batch_numbers": [
+    "MXV25245"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-031"
+   ]
+  },
+  "DOC-DB2-SHP-014": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0050",
+   "item_codes": [
+    "MED-ZTHRL-227"
+   ],
+   "batch_numbers": [
+    "ZTH26227"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-002"
+   ],
+   "vendor_ids": [
+    "VND-018"
+   ]
+  },
+  "DOC-DB2-SHP-015": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0055",
+   "item_codes": [
+    "MED-ZTHRL-788"
+   ],
+   "batch_numbers": [
+    "ZTH25788"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-011"
+   ]
+  },
+  "DOC-DB2-SHP-016": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0095",
+   "item_codes": [
+    "MED-PRNVA-659"
+   ],
+   "batch_numbers": [
+    "PRN25659"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-014"
+   ]
+  },
+  "DOC-DB2-SHP-017": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0101",
+   "item_codes": [
+    "MED-PRNVA-785"
+   ],
+   "batch_numbers": [
+    "PRN25785"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-018": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0110",
+   "item_codes": [
+    "MED-IBNVU-487"
+   ],
+   "batch_numbers": [
+    "IBN25487"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-017"
+   ]
+  },
+  "DOC-DB2-SHP-019": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0111",
+   "item_codes": [
+    "MED-IBNVU-488"
+   ],
+   "batch_numbers": [
+    "IBN25488"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-015"
+   ]
+  },
+  "DOC-DB2-SHP-020": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0113",
+   "item_codes": [
+    "MED-IBNVU-488"
+   ],
+   "batch_numbers": [
+    "IBN25488"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-013"
+   ]
+  },
+  "DOC-DB2-SHP-021": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0119",
+   "item_codes": [
+    "MED-GLCVN-579"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    ""
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-012"
+   ]
+  },
+  "DOC-DB2-SHP-022": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0160",
+   "item_codes": [
+    "MED-GLRVA-677"
+   ],
+   "batch_numbers": [
+    "GLR25677"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-025"
+   ]
+  },
+  "DOC-DB2-SHP-023": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0167",
+   "item_codes": [
+    "MED-ASPRI-802"
+   ],
+   "batch_numbers": [
+    "ASP25802"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-008"
+   ],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB2-SHP-024": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0168",
+   "item_codes": [
+    "MED-ASPRI-802"
+   ],
+   "batch_numbers": [
+    "ASP25802"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-008"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-025": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0174",
+   "item_codes": [
+    "MED-ATRLN-266"
+   ],
+   "batch_numbers": [
+    "ATR25266"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-002"
+   ],
+   "vendor_ids": [
+    "VND-017"
+   ]
+  },
+  "DOC-DB2-SHP-026": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0185",
+   "item_codes": [
+    "MED-RSVNO-804"
+   ],
+   "batch_numbers": [
+    "RSV25804"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-018"
+   ]
+  },
+  "DOC-DB2-SHP-027": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0199",
+   "item_codes": [
+    "MED-AMLVO-854"
+   ],
+   "batch_numbers": [
+    "AML25854"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-008"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-028": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0203",
+   "item_codes": [
+    "MDE-TLMRE-406"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-012"
+   ]
+  },
+  "DOC-DB2-SHP-029": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0205",
+   "item_codes": [
+    "MED-TLMRE-303"
+   ],
+   "batch_numbers": [
+    "TLM25303"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB2-SHP-030": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0211",
+   "item_codes": [
+    "MED-LSVNO-229"
+   ],
+   "batch_numbers": [
+    "LSV25229"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-025"
+   ]
+  },
+  "DOC-DB2-SHP-031": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0217",
+   "item_codes": [
+    "MED-MTPRE-694"
+   ],
+   "batch_numbers": [
+    "MTP25694"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-011"
+   ]
+  },
+  "DOC-DB2-SHP-032": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0231",
+   "item_codes": [
+    "MED-PNTRA-742"
+   ],
+   "batch_numbers": [
+    "PNT25742"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-018"
+   ]
+  },
+  "DOC-DB2-SHP-033": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0241",
+   "item_codes": [
+    "MED-PNTVA-160"
+   ],
+   "batch_numbers": [
+    "PNT25160"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-018"
+   ]
+  },
+  "DOC-DB2-SHP-034": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0267",
+   "item_codes": [
+    "MED-MNTLN-243"
+   ],
+   "batch_numbers": [
+    "MNT25243"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-035": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0271",
+   "item_codes": [
+    "MED-CTRVE-503"
+   ],
+   "batch_numbers": [
+    "CTR25503"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-007"
+   ],
+   "vendor_ids": [
+    "VND-029"
+   ]
+  },
+  "DOC-DB2-SHP-036": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0272",
+   "item_codes": [
+    "MED-CTRVE-504"
+   ],
+   "batch_numbers": [
+    "CTR25504"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-023"
+   ]
+  },
+  "DOC-DB2-SHP-037": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0274",
+   "item_codes": [
+    "MED-LVCRE-851"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-013"
+   ]
+  },
+  "DOC-DB2-SHP-038": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0276",
+   "item_codes": [
+    "MED-LVCRE-851"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-014"
+   ]
+  },
+  "DOC-DB2-SHP-039": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0297",
+   "item_codes": [
+    "MED-ALBNZ-842"
+   ],
+   "batch_numbers": [
+    "ALB26842"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-013"
+   ]
+  },
+  "DOC-DB2-SHP-040": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0299",
+   "item_codes": [
+    "MED-ONDVA-220"
+   ],
+   "batch_numbers": [
+    "OND25220"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-026"
+   ]
+  },
+  "DOC-DB2-SHP-041": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0307",
+   "item_codes": [
+    "MED-ONDVA-323"
+   ],
+   "batch_numbers": [
+    "OND25323"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-013"
+   ]
+  },
+  "DOC-DB2-SHP-042": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0315",
+   "item_codes": [
+    "MED-CLCVN-212"
+   ],
+   "batch_numbers": [
+    "CLC25212"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-043": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0317",
+   "item_codes": [
+    "MED-CLCVN-213"
+   ],
+   "batch_numbers": [
+    "CLC25213"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-005"
+   ],
+   "vendor_ids": [
+    "VND-010"
+   ]
+  },
+  "DOC-DB2-SHP-044": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0325",
+   "item_codes": [
+    "MED-THYRV-185"
+   ],
+   "batch_numbers": [
+    "THY25185"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "vnd-17"
+   ]
+  },
+  "DOC-DB2-SHP-045": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0330",
+   "item_codes": [
+    "MED-THYRV-543"
+   ],
+   "batch_numbers": [
+    "THY25543"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-031"
+   ]
+  },
+  "DOC-DB2-SHP-046": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0352",
+   "item_codes": [
+    "MED-EPVOI-690"
+   ],
+   "batch_numbers": [
+    "EPV25690"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-014"
+   ]
+  },
+  "DOC-DB2-SHP-047": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0358",
+   "item_codes": [
+    "MED-FVRLE-785"
+   ],
+   "batch_numbers": [
+    "FVR25785"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-006"
+   ],
+   "vendor_ids": [
+    "VND-016"
+   ]
+  },
+  "DOC-DB2-SHP-048": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-G0366",
+   "item_codes": [
+    "MED-FMRAO-637"
+   ],
+   "batch_numbers": [
+    "FMR25637"
+   ],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-049": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X001",
+   "item_codes": [
+    "MED-ATRLN-168"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB2-SHP-050": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X002",
+   "item_codes": [
+    "MED-ALBNZ-853"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-051": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X003",
+   "item_codes": [
+    "MED-DXLYN-212"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-052": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X004",
+   "item_codes": [
+    "MED-DXLYN-212"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB2-SHP-053": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X005",
+   "item_codes": [
+    "MED-THYRV-193"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-054": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X006",
+   "item_codes": [
+    "MED-THYRV-193"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-016"
+   ]
+  },
+  "DOC-DB2-SHP-055": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X007",
+   "item_codes": [
+    "MED-MXVRO-365"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-056": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X008",
+   "item_codes": [
+    "MED-RSKNO-515"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB2-SHP-057": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X009",
+   "item_codes": [
+    "MED-MTRNB-630"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-058": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X010",
+   "item_codes": [
+    "MED-PNTRA-747"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-059": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X011",
+   "item_codes": [
+    "MED-CPRVN-590"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-060": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X012",
+   "item_codes": [
+    "MED-DYLTN-129"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-061": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X013",
+   "item_codes": [
+    "MED-GLCVN-672"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB2-SHP-062": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X014",
+   "item_codes": [
+    "MED-OGVNE-826"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-063": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X015",
+   "item_codes": [
+    "MED-AZVST-244"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-SHP-064": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X016",
+   "item_codes": [
+    "MED-ZTHRL-801"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-033"
+   ]
+  },
+  "DOC-DB2-SHP-065": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X017",
+   "item_codes": [
+    "MED-EPVOI-696"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-066": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X018",
+   "item_codes": [
+    "MED-AZVST-228"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-035"
+   ]
+  },
+  "DOC-DB2-SHP-067": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X019",
+   "item_codes": [
+    "MED-OWDVA-324"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-068": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X020",
+   "item_codes": [
+    "MED-CLCVN-222"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-069": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X021",
+   "item_codes": [
+    "MED-THYRK-186"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-070": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X022",
+   "item_codes": [
+    "MED-THYRK-186"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-012"
+   ]
+  },
+  "DOC-DB2-SHP-071": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X023",
+   "item_codes": [
+    "MED-PRNVA-670"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-006"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-035"
+   ]
+  },
+  "DOC-DB2-SHP-072": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X024",
+   "item_codes": [
+    "MED-GLMRG-182"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-073": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X025",
+   "item_codes": [
+    "MED-GLMRI-191"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-074": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X026",
+   "item_codes": [
+    "MED-GLMRI-191"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB2-SHP-075": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X027",
+   "item_codes": [
+    "MED-TRMRE-405"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-035"
+   ]
+  },
+  "DOC-DB2-SHP-076": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X028",
+   "item_codes": [
+    "MED-TRMRE-405"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB2-SHP-077": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X029",
+   "item_codes": [
+    "MED-CFRCE-774"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB2-SHP-078": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X030",
+   "item_codes": [
+    "MED-GXKLC-829"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB2-SHP-079": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X031",
+   "item_codes": [
+    "MED-GXKLC-829"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-016"
+   ]
+  },
+  "DOC-DB2-SHP-080": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X032",
+   "item_codes": [
+    "MED-DHPZV-897"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB2-SHP-081": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X033",
+   "item_codes": [
+    "MED-DHPZV-897"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-031"
+   ]
+  },
+  "DOC-DB2-SHP-082": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X034",
+   "item_codes": [
+    "MED-XCXXC-168"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-083": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X035",
+   "item_codes": [
+    "MED-XVBJW-982"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "UNKNOWN"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB2-SHP-084": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X036",
+   "item_codes": [
+    "MED-WWXHD-360"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-035"
+   ]
+  },
+  "DOC-DB2-SHP-085": {
+   "owner": "db2",
+   "type": "distributor_shipment_note",
+   "title": "Shipment note DBATCH-X037",
+   "item_codes": [
+    "MED-WCMXF-126"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB1-PIR-001": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Janata Medicos (Unlicensed Kiosk)",
+   "item_codes": [
+    "MED-NAKALI-001"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB1-PIR-002": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Janata Medicos (Unlicensed Kiosk)",
+   "item_codes": [
+    "MED-NAKALI-002"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB1-PIR-003": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at QuickRelief Kiosk",
+   "item_codes": [
+    "MED-NAKALI-003"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB1-PIR-004": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Janata Medicos (Unlicensed Kiosk)",
+   "item_codes": [
+    "MED-UNAUTH-001"
+   ],
+   "batch_numbers": [
+    "BATCH-U001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB1-PIR-005": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at QuickRelief Kiosk",
+   "item_codes": [
+    "MED-UNAUTH-002"
+   ],
+   "batch_numbers": [
+    "BATCH-U002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB1-PIR-006": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at MedPlus Pharmacy",
+   "item_codes": [
+    "MED-ASALI-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A002"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-002"
+   ]
+  },
+  "DOC-DB1-PIR-007": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at AIIMS Hospital Dispensary",
+   "item_codes": [
+    "MED-ASALI-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A002"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-003"
+   ]
+  },
+  "DOC-DB1-PIR-008": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Wellness Forever Chemist",
+   "item_codes": [
+    "MED-ASALI-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A002"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-004"
+   ]
+  },
+  "DOC-DB1-PIR-009": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Noble Chemist",
+   "item_codes": [
+    "MED-ASALI-002"
+   ],
+   "batch_numbers": [
+    "BATCH-A002"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-005"
+   ]
+  },
+  "DOC-DB1-PIR-010": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Salt Lake City Pharmacy",
+   "item_codes": [
+    "MED-AMXLN-6B7"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-029"
+   ]
+  },
+  "DOC-DB1-PIR-011": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Lifeline Chemists",
+   "item_codes": [
+    "MED-MVRO-359"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-012"
+   ]
+  },
+  "DOC-DB1-PIR-012": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Lifeline Chemist",
+   "item_codes": [
+    "MED-ZVST-221"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-038"
+   ]
+  },
+  "DOC-DB1-PIR-013": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Sai Krupa Medical",
+   "item_codes": [
+    "MED-A2VST-222"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-011"
+   ]
+  },
+  "DOC-DB1-PIR-014": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Marina Pharmacy",
+   "item_codes": [
+    "MED-AVST-232"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-025"
+   ]
+  },
+  "DOC-DB1-PIR-015": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Karol Bagh Guardian Chemist",
+   "item_codes": [
+    "MED-ZHRL-225"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB1-PIR-016": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Karol Bagh Guardian Chemist",
+   "item_codes": [
+    "MED-ZTHBL-737"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB1-PIR-017": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Karol Bagh Guardian Chemist",
+   "item_codes": [
+    "MED-CFRNE-77W"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB1-PIR-018": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Saket City Hospital Pharmacy",
+   "item_codes": [
+    "MED-CFNRE-774"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-020"
+   ]
+  },
+  "DOC-DB1-PIR-019": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Cyber City Pharmacy",
+   "item_codes": [
+    "MED-CCPRCN-578"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-031"
+   ]
+  },
+  "DOC-DB1-PIR-020": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Sai Krupa Medical",
+   "item_codes": [
+    "MED-DCLTN-W28"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-011"
+   ]
+  },
+  "DOC-DB1-PIR-021": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Charminar Medical Hall",
+   "item_codes": [
+    "MED-7LMRE-305"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-022"
+   ]
+  },
+  "DOC-DB1-PIR-022": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Karol Bagh Guardian Chemist",
+   "item_codes": [
+    "MED-FMRAO-626"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB1-PIR-023": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Pune Medico",
+   "item_codes": [
+    "MED-FNRAO-638"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-013"
+   ]
+  },
+  "DOC-DB1-PIR-024": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Nightingale Pharmacy",
+   "item_codes": [
+    "MED-THYRV-85"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-016"
+   ]
+  },
+  "DOC-DB1-PIR-025": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Jubilee Chemists",
+   "item_codes": [
+    "MED-PBBDVE-575"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-024"
+   ]
+  },
+  "DOC-DB1-PIR-026": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Lifeline Chemists",
+   "item_codes": [
+    "MED-PRDVE-5S5"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-012"
+   ]
+  },
+  "DOC-DB1-PIR-027": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Railway Kiosk Chemist",
+   "item_codes": [
+    "MED-ATRLN-168"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB1-PIR-028": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Footpath Medical Stall",
+   "item_codes": [
+    "MED-ALBNZ-853"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB1-PIR-029": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Suburban Chemist Stall",
+   "item_codes": [
+    "MED-DXLYN-212"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB1-PIR-030": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Lajpat Medicos",
+   "item_codes": [
+    "MED-DXLYN-212"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB1-PIR-031": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Railway Kiosk Chemist",
+   "item_codes": [
+    "MED-GLCVN-672"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-034"
+   ]
+  },
+  "DOC-DB1-PIR-032": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Cheap Medicine Corner",
+   "item_codes": [
+    "MED-AZVST-228"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-035"
+   ]
+  },
+  "DOC-DB1-PIR-033": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Suburban Chemist Stall",
+   "item_codes": [
+    "MED-OWDVA-324"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB1-PIR-034": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Suburban Chemist Stall",
+   "item_codes": [
+    "MED-OWDVA-324"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB1-PIR-035": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Karol Bagh Guardian Chemist",
+   "item_codes": [
+    "MED-GLMRI-191"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-021"
+   ]
+  },
+  "DOC-DB1-PIR-036": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Lajpat Medicos",
+   "item_codes": [
+    "MED-TRMRE-405"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-019"
+   ]
+  },
+  "DOC-DB1-PIR-037": {
+   "owner": "db1",
+   "type": "pharmacy_incident_report",
+   "title": "Pharmacy incident at Cyber City Pharmacy",
+   "item_codes": [
+    "MED-DHPZV-897"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": [
+    "VND-031"
+   ]
+  },
+  "DOC-DB4-RCL-001": {
+   "owner": "db4",
+   "type": "recall_notice",
+   "title": "Recall notice RCL-2025-001: Coughcure Syrup 100ml [RECALLED]",
+   "item_codes": [
+    "MED-RECALL-001"
+   ],
+   "batch_numbers": [
+    "BATCH-R001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-RCL-002": {
+   "owner": "db4",
+   "type": "recall_notice",
+   "title": "Recall notice RCL-2025-002: Amoxiclav 250mg Suspension [RECALLED]",
+   "item_codes": [
+    "MED-RECALL-002"
+   ],
+   "batch_numbers": [
+    "BATCH-R002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-RCL-003": {
+   "owner": "db4",
+   "type": "recall_notice",
+   "title": "Recall notice RCL-2025-003: Metrogyl 400mg [RECALLED]",
+   "item_codes": [
+    "MED-RECALL-003"
+   ],
+   "batch_numbers": [
+    "BATCH-R003"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-INV-001": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-NAKALI-001",
+   "item_codes": [
+    "MED-NAKALI-001"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB4-INV-002": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-NAKALI-002",
+   "item_codes": [
+    "MED-NAKALI-002"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-007"
+   ]
+  },
+  "DOC-DB4-INV-003": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-NAKALI-003",
+   "item_codes": [
+    "MED-NAKALI-003"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-008"
+   ]
+  },
+  "DOC-DB4-INV-004": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-RECALL-001",
+   "item_codes": [
+    "MED-RECALL-001"
+   ],
+   "batch_numbers": [
+    "BATCH-R001"
+   ],
+   "manufacturer_ids": [
+    "MFG-002"
+   ],
+   "distributor_ids": [
+    "DIST-001"
+   ],
+   "vendor_ids": [
+    "VND-001"
+   ]
+  },
+  "DOC-DB4-INV-005": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-RECALL-002",
+   "item_codes": [
+    "MED-RECALL-002"
+   ],
+   "batch_numbers": [
+    "BATCH-R002"
+   ],
+   "manufacturer_ids": [
+    "MFG-001"
+   ],
+   "distributor_ids": [
+    "DIST-002"
+   ],
+   "vendor_ids": [
+    "VND-005"
+   ]
+  },
+  "DOC-DB4-INV-006": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-RECALL-003",
+   "item_codes": [
+    "MED-RECALL-003"
+   ],
+   "batch_numbers": [
+    "BATCH-R003"
+   ],
+   "manufacturer_ids": [
+    "MFG-003"
+   ],
+   "distributor_ids": [
+    "DIST-003"
+   ],
+   "vendor_ids": [
+    "VND-006"
+   ]
+  },
+  "DOC-DB4-INV-007": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-EPVOI-696",
+   "item_codes": [
+    "MED-EPVOI-696"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [
+    "DIST-004"
+   ],
+   "vendor_ids": [
+    "VND-032"
+   ]
+  },
+  "DOC-DB4-INV-008": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: med cprvn 590",
+   "item_codes": [
+    "MED-CPRVN-590"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-INV-009": {
+   "owner": "db4",
+   "type": "regulatory_investigation_report",
+   "title": "Investigation report: MED-THYRK-186",
+   "item_codes": [
+    "MED-THYRK-186"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [
+    "DIST-004",
+    "DIST-009"
+   ],
+   "vendor_ids": [
+    "VND-009"
+   ]
+  },
+  "DOC-DB4-CCL-001": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2025-001",
+   "item_codes": [
+    "MED-NAKALI-001"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-002": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2025-004",
+   "item_codes": [
+    "MED-NAKALI-004"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-003": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2025-005",
+   "item_codes": [
+    "MED-NAKALI-005"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-004": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0001",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-005": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0006",
+   "item_codes": [
+    "MED-AYRLN-267"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-006": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0008",
+   "item_codes": [
+    "MED-AZVST-221"
+   ],
+   "batch_numbers": [
+    "AZV25221"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-007": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0009",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-008": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0015",
+   "item_codes": [
+    "MED-TLMRE-305"
+   ],
+   "batch_numbers": [
+    "TLM26305"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-009": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0018",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-010": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0019",
+   "item_codes": [
+    "MED-FVRLE-695"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-011": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0020",
+   "item_codes": [
+    "MED-ONVA-2320"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-012": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0021",
+   "item_codes": [
+    "MED-EPVOI-691"
+   ],
+   "batch_numbers": [
+    "EPV26691"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-013": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0025",
+   "item_codes": [
+    "MED-ONVDA-824"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-014": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0029",
+   "item_codes": [
+    "EMO-ONDVA-322"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-015": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0030",
+   "item_codes": [
+    "MED-MTPRE-695"
+   ],
+   "batch_numbers": [
+    "MTP25695"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-016": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0031",
+   "item_codes": [
+    "MED-CTRVE-504"
+   ],
+   "batch_numbers": [
+    "CTR25504"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-017": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0035",
+   "item_codes": [
+    "MED-PRDV-756"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-018": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0040",
+   "item_codes": [
+    "MED-GLCVN-581"
+   ],
+   "batch_numbers": [
+    "GLC26581"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-019": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0042",
+   "item_codes": [
+    "MED-LSVNO-329"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-020": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0045",
+   "item_codes": [
+    "MED-THYRV-545"
+   ],
+   "batch_numbers": [
+    "THY26545"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-021": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0047",
+   "item_codes": [
+    "EMD-OMVNE-825"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-022": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0055",
+   "item_codes": [
+    "MED-OMVNE-828"
+   ],
+   "batch_numbers": [
+    "OMV26828"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-023": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0056",
+   "item_codes": [
+    "MED-GLMRI-181"
+   ],
+   "batch_numbers": [
+    "GLM25181"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-024": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0057",
+   "item_codes": [
+    "MED-GLCVN-580"
+   ],
+   "batch_numbers": [
+    "GLC26580"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-025": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0059",
+   "item_codes": [
+    "JED-CPRVN-581"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-026": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0063",
+   "item_codes": [
+    "MED-ATRLN-619"
+   ],
+   "batch_numbers": [
+    "ATR25619"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-027": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0065",
+   "item_codes": [
+    "MED-ONDVA-324"
+   ],
+   "batch_numbers": [
+    "OND26324"
+   ],
+   "manufacturer_ids": [
+    "MFG-009"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-028": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0066",
+   "item_codes": [
+    "ME-EPVOI-691"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-029": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0067",
+   "item_codes": [
+    "MED-CLCVN-211"
+   ],
+   "batch_numbers": [
+    "CLC25211"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-030": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0068",
+   "item_codes": [
+    "MED-THYRV-543"
+   ],
+   "batch_numbers": [
+    "THY25543"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-031": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0071",
+   "item_codes": [
+    "MED-AZVST-221"
+   ],
+   "batch_numbers": [
+    "AZV25221"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-032": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0077",
+   "item_codes": [
+    "MED-GLMRI-396"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-033": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0078",
+   "item_codes": [
+    "MED-AMXLN-687"
+   ],
+   "batch_numbers": [
+    "AMX25687"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-034": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0079",
+   "item_codes": [
+    "MED-MTRNE-631"
+   ],
+   "batch_numbers": [
+    "MTR25631"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-035": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0082",
+   "item_codes": [
+    "MED-AMLVO-804"
+   ],
+   "batch_numbers": [
+    "AML25804"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-036": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0084",
+   "item_codes": [
+    "MED-DXLYN-199"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-037": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0085",
+   "item_codes": [
+    "MED-FVRLE-697"
+   ],
+   "batch_numbers": [
+    "FVR26697"
+   ],
+   "manufacturer_ids": [
+    "MFG-007"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-038": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0086",
+   "item_codes": [],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-039": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0089",
+   "item_codes": [
+    "MED-AXLN-203"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-040": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0092",
+   "item_codes": [
+    "MED-LVCRE-851"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-041": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0096",
+   "item_codes": [
+    "MED-MTRNE-631"
+   ],
+   "batch_numbers": [
+    "MTR25631"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-042": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0099",
+   "item_codes": [
+    "MED-AMLVO-804"
+   ],
+   "batch_numbers": [
+    "AML25804"
+   ],
+   "manufacturer_ids": [
+    "MFG-005"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-043": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0103",
+   "item_codes": [
+    "MED-THYRV-18Y"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-044": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0104",
+   "item_codes": [
+    "MED-ATRLN-266"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-045": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0105",
+   "item_codes": [
+    "MED-ATRLM-266"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-046": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0106",
+   "item_codes": [
+    "MED-GLMRI-395"
+   ],
+   "batch_numbers": [
+    "GLM25395"
+   ],
+   "manufacturer_ids": [
+    "MFG-010"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-047": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0107",
+   "item_codes": [
+    "MED-GMRI-395"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-048": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0110",
+   "item_codes": [
+    "MED-THYRD-185"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-049": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0111",
+   "item_codes": [
+    "MED-CLPVN-117"
+   ],
+   "batch_numbers": [
+    "CLP25117"
+   ],
+   "manufacturer_ids": [
+    "MFG-008"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-050": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0114",
+   "item_codes": [
+    "MED-EPVOI-691"
+   ],
+   "batch_numbers": [
+    "EPV26691"
+   ],
+   "manufacturer_ids": [
+    "MFG-004"
+   ],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-051": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0120",
+   "item_codes": [
+    "MED-PRNVSA-660"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-052": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0121",
+   "item_codes": [
+    "MED-LVCER-852"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-053": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0125",
+   "item_codes": [
+    "MED-WWXHD-360"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-054": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0127",
+   "item_codes": [
+    "MED-GLMRG-182"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-055": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0128",
+   "item_codes": [
+    "MED-DXLYN-212"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-056": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0129",
+   "item_codes": [
+    "MED-CPRVN-590"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-057": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0132",
+   "item_codes": [
+    "MED-GLCVN-672"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-058": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0136",
+   "item_codes": [
+    "M2D-THYRV-193"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-059": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0137",
+   "item_codes": [
+    "MDE-CLCVN-222"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-CCL-060": {
+   "owner": "db4",
+   "type": "consumer_complaint",
+   "title": "Consumer complaint MCA-2026-G0138",
+   "item_codes": [
+    "MED-CFRCE-774"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-NSQ-001": {
+   "owner": "db4",
+   "type": "nsq_bulletin",
+   "title": "Drug alert bulletin 1",
+   "item_codes": [
+    "MED-RECALL-002"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  },
+  "DOC-DB4-NSQ-002": {
+   "owner": "db4",
+   "type": "nsq_bulletin",
+   "title": "Drug alert bulletin 2",
+   "item_codes": [
+    "MED-RECALL-001",
+    "MED-RECALL-003"
+   ],
+   "batch_numbers": [],
+   "manufacturer_ids": [],
+   "distributor_ids": [],
+   "vendor_ids": []
+  }
+ }
+}

@@ -1,0 +1,560 @@
+[
+ {
+  "_id": "POS-001-A",
+  "vendor_ref": "VND-001",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-05-10",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-002-A",
+  "vendor_ref": "VND-002",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-09-04",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-003-B",
+  "vendor_ref": "VND-003",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-07-16",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-004-C",
+  "vendor_ref": "VND-004",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-06-01",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-005-B",
+  "vendor_ref": "VND-005",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-09-18",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-006-A",
+  "vendor_ref": "VND-006",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-08-16",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-007-X",
+  "vendor_ref": "VND-007",
+  "model": "Manual entry console",
+  "scanner_type": "keyboard",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-10-20",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-008-X",
+  "vendor_ref": "VND-008",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-10-24",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-009-X",
+  "vendor_ref": "VND-009",
+  "model": "Manual entry console",
+  "scanner_type": "keyboard",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-05-14",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-010-A",
+  "vendor_ref": "VND-010",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-09-05",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-010-B",
+  "vendor_ref": "VND-010",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-01",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-011-A",
+  "vendor_ref": "VND-011",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-29",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-011-B",
+  "vendor_ref": "VND-011",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-09-16",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-012-A",
+  "vendor_ref": "VND-012",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-05-03",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-012-B",
+  "vendor_ref": "VND-012",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-07-09",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-012-X",
+  "vendor_ref": "VND-012",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-23",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-013-A",
+  "vendor_ref": "VND-013",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-10",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-013-B",
+  "vendor_ref": "VND-013",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-02-07",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-014-A",
+  "vendor_ref": "VND-014",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-10-23",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-014-B",
+  "vendor_ref": "VND-014",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-05-22",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-015-A",
+  "vendor_ref": "VND-015",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-31",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-015-B",
+  "vendor_ref": "VND-015",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-20",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-016-A",
+  "vendor_ref": "VND-016",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-02-27",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-016-B",
+  "vendor_ref": "VND-016",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-17",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-016-X",
+  "vendor_ref": "VND-016",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-02-17",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-017-A",
+  "vendor_ref": "VND-017",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-10-03",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-017-B",
+  "vendor_ref": "VND-017",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-20",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-018-A",
+  "vendor_ref": "VND-018",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-07-11",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-018-B",
+  "vendor_ref": "VND-018",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-07-01",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-019-A",
+  "vendor_ref": "VND-019",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-02-27",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-019-B",
+  "vendor_ref": "VND-019",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-19",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-019-X",
+  "vendor_ref": "VND-019",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-06-09",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-020-A",
+  "vendor_ref": "VND-020",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-08-18",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-020-B",
+  "vendor_ref": "VND-020",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-06-13",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-021-A",
+  "vendor_ref": "VND-021",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-07-20",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-021-B",
+  "vendor_ref": "VND-021",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-04",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-021-X",
+  "vendor_ref": "VND-021",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2026-03-28",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-022-A",
+  "vendor_ref": "VND-022",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-02",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-022-B",
+  "vendor_ref": "VND-022",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-03-14",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-023-A",
+  "vendor_ref": "VND-023",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-08-15",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-023-B",
+  "vendor_ref": "VND-023",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-04-09",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-024-A",
+  "vendor_ref": "VND-024",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-06-29",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-024-B",
+  "vendor_ref": "VND-024",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-05-07",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-025-A",
+  "vendor_ref": "VND-025",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-04-27",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-025-B",
+  "vendor_ref": "VND-025",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-10",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-026-A",
+  "vendor_ref": "VND-026",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-05-12",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-026-B",
+  "vendor_ref": "VND-026",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-03-31",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-027-A",
+  "vendor_ref": "VND-027",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-09-29",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-027-B",
+  "vendor_ref": "VND-027",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-05-18",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-028-A",
+  "vendor_ref": "VND-028",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-21",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-028-B",
+  "vendor_ref": "VND-028",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-09-02",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-029-A",
+  "vendor_ref": "VND-029",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-01-11",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-029-B",
+  "vendor_ref": "VND-029",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-06-11",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-030-A",
+  "vendor_ref": "VND-030",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-07-03",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-030-B",
+  "vendor_ref": "VND-030",
+  "model": "CounterScan CS-300 2D",
+  "scanner_type": "imager_2d",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-09-01",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-031-A",
+  "vendor_ref": "VND-031",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-04-09",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-031-B",
+  "vendor_ref": "VND-031",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-02-25",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-031-X",
+  "vendor_ref": "VND-031",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2026-05-07",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-032-X",
+  "vendor_ref": "VND-032",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-03-08",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-033-X",
+  "vendor_ref": "VND-033",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-09-28",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-034-X",
+  "vendor_ref": "VND-034",
+  "model": "CounterScan CS-200",
+  "scanner_type": "laser",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2024-12-28",
+  "status": "registered"
+ },
+ {
+  "_id": "POS-035-X",
+  "vendor_ref": "VND-035",
+  "model": "Manual entry console",
+  "scanner_type": "keyboard",
+  "firmware_version": "v4.1.2-pos",
+  "installed_on": "2025-03-13",
+  "status": "registered"
+ }
+]

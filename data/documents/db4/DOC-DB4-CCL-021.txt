@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-021
+title: Consumer complaint MCA-2026-G0047
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 20/04/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code EMD-OMVNE-825 at Sahyadri Hospital Pharmacy, Pune. I was overcharged. Charged more than the printed MRP for Omevane 20mg.
+
+Please look into this.
+
+Regards,
+Vikram Pillai

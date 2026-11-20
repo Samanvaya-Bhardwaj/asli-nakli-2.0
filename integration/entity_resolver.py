@@ -25,7 +25,7 @@ from dataclasses import dataclass, field
 from typing import List, Tuple, Optional, Dict, Any
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATABASES_DIR = os.path.join(BASE_DIR, "databases")
+DATABASES_DIR = os.environ.get("ASALI_DB_DIR") or os.path.join(BASE_DIR, "databases")
 
 # Ground Truth Master Catalog of verified benchmark pharmaceutical entities
 CANONICAL_PRODUCT_CATALOG: Dict[str, Dict[str, Any]] = {
@@ -218,8 +218,37 @@ class EntityResolver:
         self._load_dynamic_db_records()
         self._build_indexes()
 
+    def _load_remote_records(self):
+        """Phase 3 (ASALI_FEDERATION=remote): the same rows, read by the DB3 and DB2 services."""
+        from integration.federation import remote
+        try:
+            products = remote.remote_catalog("db3")
+        except Exception:
+            products = []          # registry unreachable: no catalogue, so no fuzzy linking
+        for r in products:
+            uid = r["product_uid"]
+            if uid not in self.catalog:
+                self.catalog[uid] = {"product_name": r["product_name"], "generic_name": r["generic_name"],
+                                     "batch_number": r["batch_number"], "manufacturer": r["mfg_name"] or "",
+                                     "mfg_id": r["manufacturer_id"] or "", "dist_batches": []}
+            else:
+                for k in ("batch_number", "product_name", "generic_name"):
+                    if r[k]:
+                        self.catalog[uid][k] = r[k]
+        try:
+            batches = remote.remote_catalog("db2")
+        except Exception:
+            batches = []
+        for r in batches:
+            if r["batch_serial"] in self.catalog and r["batch_id"] not in self.catalog[r["batch_serial"]].get("dist_batches", []):
+                self.catalog[r["batch_serial"]].setdefault("dist_batches", []).append(r["batch_id"])
+        self.known_keys = list(self.catalog.keys())
+
     def _load_dynamic_db_records(self):
         """Dynamically ingests products and batches from SQLite DB3 and DB2 if present."""
+        from integration.federation import runtime as _rt
+        if _rt.remote_mode():
+            return self._load_remote_records()
         db3_path = os.path.join(DATABASES_DIR, "db3_manufacturer_registry.sqlite")
         if os.path.exists(db3_path):
             try:
@@ -743,6 +772,10 @@ GLOBAL_RESOLVER = EntityResolver()
 
 
 def _registry_stamp() -> tuple:
+    from integration.federation import runtime as _rt
+    if _rt.remote_mode():   # Phase 3: the services report when their data last changed
+        from integration.federation import remote
+        return (remote.data_version("db3"), remote.data_version("db2"))
     out = []
     for name in ("db3_manufacturer_registry.sqlite", "db2_distributor_ledger.sqlite"):
         try:

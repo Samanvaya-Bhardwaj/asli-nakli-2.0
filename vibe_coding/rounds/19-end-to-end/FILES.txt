@@ -1,0 +1,8 @@
+dashboard/phase3.html
+api/coordinator_service.py
+tests/test_phase3_end_to_end.py
+tests/test_phase3_operators.py
+scripts/phase3_scenarios.py
+scripts/run_phase3_tests.py
+phase3/tools/check_page_render.mjs
+phase3/tools/code_changes.py

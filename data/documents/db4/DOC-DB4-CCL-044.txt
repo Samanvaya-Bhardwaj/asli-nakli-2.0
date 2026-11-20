@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-044
+title: Consumer complaint MCA-2026-G0104
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-07-22
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED_4TRLN_266 at Nightingale Pharmacy, Bengaluru. Something is wrong with it. Pharmacist could not confirm the batch of Atorlane 20mg.
+
+Please look into this.
+
+Regards,
+Neha Menon

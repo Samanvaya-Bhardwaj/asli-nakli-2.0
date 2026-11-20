@@ -1,0 +1,4298 @@
+[
+ {
+  "_id": "GRN-001-0001",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-RECALL-001",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-017",
+   "invoice_no": "INV/DIST-001/DBATCH-017"
+  },
+  "received_on": "2024-09-05",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-001-0002",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-001",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-001",
+   "invoice_no": "INV/DIST-001/DBATCH-001"
+  },
+  "received_on": "2025-02-05",
+  "quantity": 198
+ },
+ {
+  "_id": "GRN-001-0003",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-002",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-003",
+   "invoice_no": "INV/DIST-001/DBATCH-003"
+  },
+  "received_on": "2025-02-15",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-001-0004",
+  "vendor_ref": "VND-001",
+  "item_ref": "MED-ASALI-008",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-009",
+   "invoice_no": "INV/DIST-001/DBATCH-009"
+  },
+  "received_on": "2025-04-08",
+  "quantity": 178
+ },
+ {
+  "_id": "GRN-002-0001",
+  "vendor_ref": "VND-002",
+  "item_ref": "MED-ASALI-001",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-002",
+   "invoice_no": "INV/DIST-001/DBATCH-002"
+  },
+  "received_on": "2025-02-14",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-002-0002",
+  "vendor_ref": "VND-002",
+  "item_ref": "MED-ASALI-005",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-006",
+   "invoice_no": "INV/DIST-001/DBATCH-006"
+  },
+  "received_on": "2025-04-14",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-003-0001",
+  "vendor_ref": "VND-003",
+  "item_ref": "MED-ASALI-003",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-004",
+   "invoice_no": "INV/DIST-001/DBATCH-004"
+  },
+  "received_on": "2025-03-20",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-003-0002",
+  "vendor_ref": "VND-003",
+  "item_ref": "MED-ASALI-009",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-010",
+   "invoice_no": "INV/DIST-001/DBATCH-010"
+  },
+  "received_on": "2025-06-07",
+  "quantity": 50
+ },
+ {
+  "_id": "GRN-004-0001",
+  "vendor_ref": "VND-004",
+  "item_ref": "MED-ASALI-004",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-005",
+   "invoice_no": "INV/DIST-002/DBATCH-005"
+  },
+  "received_on": "2025-02-11",
+  "quantity": 245
+ },
+ {
+  "_id": "GRN-005-0001",
+  "vendor_ref": "VND-005",
+  "item_ref": "MED-RECALL-002",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-018",
+   "invoice_no": "INV/DIST-002/DBATCH-018"
+  },
+  "received_on": "2024-07-14",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-005-0002",
+  "vendor_ref": "VND-005",
+  "item_ref": "MED-ASALI-007",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-008",
+   "invoice_no": "INV/DIST-002/DBATCH-008"
+  },
+  "received_on": "2025-05-25",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-006-0001",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-RECALL-003",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-019",
+   "invoice_no": "INV/DIST-003/DBATCH-019"
+  },
+  "received_on": "2024-10-05",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-006-0002",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-ASALI-006",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-007",
+   "invoice_no": "INV/DIST-003/DBATCH-007"
+  },
+  "received_on": "2025-03-05",
+  "quantity": 400
+ },
+ {
+  "_id": "GRN-006-0003",
+  "vendor_ref": "VND-006",
+  "item_ref": "MED-ASALI-010",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-011",
+   "invoice_no": "INV/DIST-003/DBATCH-011"
+  },
+  "received_on": "2025-04-24",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-007-0001",
+  "vendor_ref": "VND-007",
+  "item_ref": "MED-UNAUTH-001",
+  "supplier": {
+   "distributor_id": "DIST-004",
+   "dispatch_ref": "DBATCH-020",
+   "invoice_no": "INV/DIST-004/DBATCH-020"
+  },
+  "received_on": "2025-03-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-008-0001",
+  "vendor_ref": "VND-008",
+  "item_ref": "MED-UNAUTH-002",
+  "supplier": {
+   "distributor_id": "DIST-004",
+   "dispatch_ref": "DBATCH-021",
+   "invoice_no": "INV/DIST-004/DBATCH-021"
+  },
+  "received_on": "2025-04-04",
+  "quantity": 40
+ },
+ {
+  "_id": "GRN-010-0001",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HPSHL-556",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0347",
+   "invoice_no": "INV/DIST-001/DBATCH-G0347"
+  },
+  "received_on": "2025-06-01",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0002",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-SLBVN-267",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0282",
+   "invoice_no": "INV/DIST-001/DBATCH-G0282"
+  },
+  "received_on": "2025-08-12",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-010-0003",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-SLBVN-268",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0286",
+   "invoice_no": "INV/DIST-001/DBATCH-G0286"
+  },
+  "received_on": "2025-08-31",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-010-0004",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-358",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0015",
+   "invoice_no": "INV/DIST-001/DBATCH-G0015"
+  },
+  "received_on": "2025-09-13",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-010-0005",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-359",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0017",
+   "invoice_no": "INV/DIST-001/DBATCH-G0017"
+  },
+  "received_on": "2025-09-27",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-010-0006",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-CLCVN-213",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0317",
+   "invoice_no": "INV/DIST-005/DBATCH-G0317"
+  },
+  "received_on": "2025-10-12",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-010-0007",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-RSVNO-515",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0190",
+   "invoice_no": "INV/DIST-005/DBATCH-G0190"
+  },
+  "received_on": "2025-11-18",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-010-0008",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-THYRV-669",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0320",
+   "invoice_no": "INV/DIST-001/DBATCH-G0320"
+  },
+  "received_on": "2025-11-25",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-010-0009",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-AZVST-221",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0032",
+   "invoice_no": "INV/DIST-005/DBATCH-G0032"
+  },
+  "received_on": "2025-11-28",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-010-0010",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FMRAO-663",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0250",
+   "invoice_no": "INV/DIST-001/DBATCH-G0250"
+  },
+  "received_on": "2025-11-29",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0011",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-ALBNZ-841",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0296",
+   "invoice_no": "INV/DIST-001/DBATCH-G0296"
+  },
+  "received_on": "2026-01-02",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0012",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-ZTHRL-789",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0057",
+   "invoice_no": "INV/DIST-001/DBATCH-G0057"
+  },
+  "received_on": "2026-01-07",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-010-0013",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-GLMRI-183",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0141",
+   "invoice_no": "INV/DIST-005/DBATCH-G0141"
+  },
+  "received_on": "2026-01-13",
+  "quantity": 180
+ },
+ {
+  "_id": "GRN-010-0014",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-PRDVE-554",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0342",
+   "invoice_no": "INV/DIST-001/DBATCH-G0342"
+  },
+  "received_on": "2026-01-15",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-010-0015",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HYDRV-865",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0289",
+   "invoice_no": "INV/DIST-001/DBATCH-G0289"
+  },
+  "received_on": "2026-01-22",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-010-0016",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-AZVST-222",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0033",
+   "invoice_no": "INV/DIST-001/DBATCH-G0033"
+  },
+  "received_on": "2026-02-06",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-010-0017",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-HYDRV-866",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0290",
+   "invoice_no": "INV/DIST-001/DBATCH-G0290"
+  },
+  "received_on": "2026-02-27",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-010-0018",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-GLCVN-580",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0120",
+   "invoice_no": "INV/DIST-001/DBATCH-G0120"
+  },
+  "received_on": "2026-03-05",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0019",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-GLCVN-580",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0359",
+   "invoice_no": "INV/DIST-001/DBATCH-G0359"
+  },
+  "received_on": "2026-03-05",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0020",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FVRLE-696",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0083",
+   "invoice_no": "INV/DIST-001/DBATCH-G0083"
+  },
+  "received_on": "2026-03-16",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-010-0021",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-EPVOI-691",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0354",
+   "invoice_no": "INV/DIST-001/DBATCH-G0354"
+  },
+  "received_on": "2026-03-27",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-010-0022",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-FVRLE-787",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0094",
+   "invoice_no": "INV/DIST-005/DBATCH-G0094"
+  },
+  "received_on": "2026-03-29",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-010-0023",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-PRDVE-555",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0344",
+   "invoice_no": "INV/DIST-001/DBATCH-G0344"
+  },
+  "received_on": "2026-04-03",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-010-0024",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-MXVRO-247",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0025",
+   "invoice_no": "INV/DIST-001/DBATCH-G0025"
+  },
+  "received_on": "2026-04-05",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-010-0025",
+  "vendor_ref": "VND-010",
+  "item_ref": "MED-THYRO-545",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0333",
+   "invoice_no": "INV/DIST-001/DBATCH-G0333"
+  },
+  "received_on": "2026-04-08",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-011-0001",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PANTO-158",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0237",
+   "invoice_no": "INV/DIST-005/DBATCH-G0237"
+  },
+  "received_on": "2025-01-26",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-011-0002",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-DCLTN-127",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0115",
+   "invoice_no": "INV/DIST-005/DBATCH-G0115"
+  },
+  "received_on": "2025-02-12",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-011-0003",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-DCLTN-128",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0116",
+   "invoice_no": "INV/DIST-001/DBATCH-G0116"
+  },
+  "received_on": "2025-04-01",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-011-0004",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-186",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0327",
+   "invoice_no": "INV/DIST-005/DBATCH-G0327"
+  },
+  "received_on": "2025-05-13",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-011-0005",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MTPRE-694",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0217",
+   "invoice_no": "INV/DIST-001/DBATCH-G0217"
+  },
+  "received_on": "2025-06-11",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-011-0006",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-HPSHL-556",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0346",
+   "invoice_no": "INV/DIST-001/DBATCH-G0346"
+  },
+  "received_on": "2025-06-29",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-011-0007",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-660",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0098",
+   "invoice_no": "INV/DIST-001/DBATCH-G0098"
+  },
+  "received_on": "2025-09-07",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-011-0008",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MTPRE-231",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0224",
+   "invoice_no": "INV/DIST-001/DBATCH-G0224"
+  },
+  "received_on": "2025-09-28",
+  "quantity": 118
+ },
+ {
+  "_id": "GRN-011-0009",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-MXVRO-359",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0018",
+   "invoice_no": "INV/DIST-005/DBATCH-G0018"
+  },
+  "received_on": "2025-10-02",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-011-0010",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-RSVNO-515",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0191",
+   "invoice_no": "INV/DIST-005/DBATCH-G0191"
+  },
+  "received_on": "2025-10-13",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-011-0011",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-CLCVN-213",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0318",
+   "invoice_no": "INV/DIST-001/DBATCH-G0318"
+  },
+  "received_on": "2025-10-14",
+  "quantity": 115
+ },
+ {
+  "_id": "GRN-011-0012",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-661",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0100",
+   "invoice_no": "INV/DIST-005/DBATCH-G0100"
+  },
+  "received_on": "2025-10-21",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-011-0013",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-SLBVN-268",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0284",
+   "invoice_no": "INV/DIST-005/DBATCH-G0284"
+  },
+  "received_on": "2025-10-23",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-011-0014",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-ZTHRL-788",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0055",
+   "invoice_no": "INV/DIST-001/DBATCH-G0055"
+  },
+  "received_on": "2025-11-02",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-011-0015",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-FMRAO-663",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0251",
+   "invoice_no": "INV/DIST-005/DBATCH-G0251"
+  },
+  "received_on": "2025-11-09",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-011-0016",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-669",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0322",
+   "invoice_no": "INV/DIST-005/DBATCH-G0322"
+  },
+  "received_on": "2025-11-15",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-011-0017",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-AZVST-221",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0031",
+   "invoice_no": "INV/DIST-001/DBATCH-G0031"
+  },
+  "received_on": "2025-11-18",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-011-0018",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRNVA-788",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0106",
+   "invoice_no": "INV/DIST-005/DBATCH-G0106"
+  },
+  "received_on": "2025-12-12",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-011-0019",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-ZTHRL-789",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0058",
+   "invoice_no": "INV/DIST-001/DBATCH-G0058"
+  },
+  "received_on": "2025-12-31",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-011-0020",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-TLMRE-406",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0202",
+   "invoice_no": "INV/DIST-001/DBATCH-G0202"
+  },
+  "received_on": "2026-01-04",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-011-0021",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-AZVST-222",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0034",
+   "invoice_no": "INV/DIST-005/DBATCH-G0034"
+  },
+  "received_on": "2026-01-10",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-011-0022",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-EPVOI-691",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0355",
+   "invoice_no": "INV/DIST-001/DBATCH-G0355"
+  },
+  "received_on": "2026-02-28",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-011-0023",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-HYDRV-866",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0291",
+   "invoice_no": "INV/DIST-005/DBATCH-G0291"
+  },
+  "received_on": "2026-03-19",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-011-0024",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-THYRV-545",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0332",
+   "invoice_no": "INV/DIST-005/DBATCH-G0332"
+  },
+  "received_on": "2026-04-04",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-011-0025",
+  "vendor_ref": "VND-011",
+  "item_ref": "MED-PRDVE-555",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0343",
+   "invoice_no": "INV/DIST-005/DBATCH-G0343"
+  },
+  "received_on": "2026-04-12",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-012-0001",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PNTVA-158",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0238",
+   "invoice_no": "INV/DIST-005/DBATCH-G0238"
+  },
+  "received_on": "2025-03-27",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-012-0002",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MTPRE-694",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0218",
+   "invoice_no": "INV/DIST-005/DBATCH-G0218"
+  },
+  "received_on": "2025-05-30",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-012-0003",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRV-186",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0326",
+   "invoice_no": "INV/DIST-001/DBATCH-G0326"
+  },
+  "received_on": "2025-06-07",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-012-0004",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-SLBVN-267",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0283",
+   "invoice_no": "INV/DIST-005/DBATCH-G0283"
+  },
+  "received_on": "2025-08-05",
+  "quantity": 297
+ },
+ {
+  "_id": "GRN-012-0005",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MXVRO-358",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0014",
+   "invoice_no": "INV/DIST-001/DBATCH-G0014"
+  },
+  "received_on": "2025-08-30",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-012-0006",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-660",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0097",
+   "invoice_no": "INV/DIST-001/DBATCH-G0097"
+  },
+  "received_on": "2025-09-15",
+  "quantity": 298
+ },
+ {
+  "_id": "GRN-012-0007",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-CLCVN-213",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0319",
+   "invoice_no": "INV/DIST-001/DBATCH-G0319"
+  },
+  "received_on": "2025-09-21",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-012-0008",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-787",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0103",
+   "invoice_no": "INV/DIST-005/DBATCH-G0103"
+  },
+  "received_on": "2025-10-04",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-012-0009",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-SLBVN-268",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0285",
+   "invoice_no": "INV/DIST-001/DBATCH-G0285"
+  },
+  "received_on": "2025-10-11",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-012-0010",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MTPRE-231",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0223",
+   "invoice_no": "INV/DIST-005/DBATCH-G0223"
+  },
+  "received_on": "2025-10-14",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-012-0011",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-661",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0099",
+   "invoice_no": "INV/DIST-005/DBATCH-G0099"
+  },
+  "received_on": "2025-10-27",
+  "quantity": 89
+ },
+ {
+  "_id": "GRN-012-0012",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-MXVRO-359",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0016",
+   "invoice_no": "INV/DIST-001/DBATCH-G0016"
+  },
+  "received_on": "2025-11-16",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-012-0013",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRV-669",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0321",
+   "invoice_no": "INV/DIST-005/DBATCH-G0321"
+  },
+  "received_on": "2025-12-07",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-012-0014",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-GLMRI-183",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0139",
+   "invoice_no": "INV/DIST-001/DBATCH-G0139"
+  },
+  "received_on": "2025-12-09",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-012-0015",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRNVA-788",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0105",
+   "invoice_no": "INV/DIST-005/DBATCH-G0105"
+  },
+  "received_on": "2025-12-18",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-012-0016",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-AZVST-221",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0030",
+   "invoice_no": "INV/DIST-001/DBATCH-G0030"
+  },
+  "received_on": "2025-12-31",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-012-0017",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-ALBNZ-841",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0295",
+   "invoice_no": "INV/DIST-001/DBATCH-G0295"
+  },
+  "received_on": "2026-01-10",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-012-0018",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-ZTHRL-789",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0056",
+   "invoice_no": "INV/DIST-001/DBATCH-G0056"
+  },
+  "received_on": "2026-02-05",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-012-0019",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-FVRLE-696",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0084",
+   "invoice_no": "INV/DIST-001/DBATCH-G0084"
+  },
+  "received_on": "2026-02-18",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-012-0020",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-THYRO-545",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0334",
+   "invoice_no": "INV/DIST-005/DBATCH-G0334"
+  },
+  "received_on": "2026-03-07",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-012-0021",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-GLCVN-580",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0121",
+   "invoice_no": "INV/DIST-001/DBATCH-G0121"
+  },
+  "received_on": "2026-03-21",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-012-0022",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-EPVOI-691",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0356",
+   "invoice_no": "INV/DIST-001/DBATCH-G0356"
+  },
+  "received_on": "2026-03-22",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-012-0023",
+  "vendor_ref": "VND-012",
+  "item_ref": "MED-PRDVE-555",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0345",
+   "invoice_no": "INV/DIST-005/DBATCH-G0345"
+  },
+  "received_on": "2026-04-15",
+  "quantity": 295
+ },
+ {
+  "_id": "GRN-013-0001",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-MNTLN-242",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0265",
+   "invoice_no": "INV/DIST-001/DBATCH-G0265"
+  },
+  "received_on": "2025-05-01",
+  "quantity": 246
+ },
+ {
+  "_id": "GRN-013-0002",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-PRNVA-659",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0096",
+   "invoice_no": "INV/DIST-005/DBATCH-G0096"
+  },
+  "received_on": "2025-05-30",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-013-0003",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CPRVN-564",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0071",
+   "invoice_no": "INV/DIST-005/DBATCH-G0071"
+  },
+  "received_on": "2025-06-03",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-013-0004",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-IBNVU-488",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0113",
+   "invoice_no": "INV/DIST-001/DBATCH-G0113"
+  },
+  "received_on": "2025-06-21",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-013-0005",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-PRNVA-786",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0102",
+   "invoice_no": "INV/DIST-005/DBATCH-G0102"
+  },
+  "received_on": "2025-07-30",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-013-0006",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-RSVNO-514",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0189",
+   "invoice_no": "INV/DIST-005/DBATCH-G0189"
+  },
+  "received_on": "2025-08-26",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-013-0007",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CLPVN-118",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0227",
+   "invoice_no": "INV/DIST-001/DBATCH-G0227"
+  },
+  "received_on": "2025-10-16",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-013-0008",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-GLRVA-679",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0163",
+   "invoice_no": "INV/DIST-001/DBATCH-G0163"
+  },
+  "received_on": "2025-10-19",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-013-0009",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-EPVOI-691",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0353",
+   "invoice_no": "INV/DIST-001/DBATCH-G0353"
+  },
+  "received_on": "2025-11-22",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-013-0010",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMLVO-804",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0195",
+   "invoice_no": "INV/DIST-001/DBATCH-G0195"
+  },
+  "received_on": "2025-12-04",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-013-0011",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-FVRLE-695",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0081",
+   "invoice_no": "INV/DIST-005/DBATCH-G0081"
+  },
+  "received_on": "2025-12-18",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-013-0012",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-CPRVN-579",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0065",
+   "invoice_no": "INV/DIST-005/DBATCH-G0065"
+  },
+  "received_on": "2025-12-20",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-013-0013",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMXLN-688",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0005",
+   "invoice_no": "INV/DIST-005/DBATCH-G0005"
+  },
+  "received_on": "2026-02-13",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-013-0014",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-MXVRO-360",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0020",
+   "invoice_no": "INV/DIST-001/DBATCH-G0020"
+  },
+  "received_on": "2026-02-13",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-013-0015",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-ONDVA-323",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0307",
+   "invoice_no": "INV/DIST-001/DBATCH-G0307"
+  },
+  "received_on": "2026-03-05",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-013-0016",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-ALBNZ-842",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0297",
+   "invoice_no": "INV/DIST-005/DBATCH-G0297"
+  },
+  "received_on": "2026-03-14",
+  "quantity": 296
+ },
+ {
+  "_id": "GRN-013-0017",
+  "vendor_ref": "VND-013",
+  "item_ref": "MED-AMXLN-690",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0007",
+   "invoice_no": "INV/DIST-005/DBATCH-G0007"
+  },
+  "received_on": "2026-06-24",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-014-0001",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-MNTLN-242",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0264",
+   "invoice_no": "INV/DIST-001/DBATCH-G0264"
+  },
+  "received_on": "2025-03-29",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-014-0002",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-IBNVU-488",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0112",
+   "invoice_no": "INV/DIST-001/DBATCH-G0112"
+  },
+  "received_on": "2025-05-13",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-014-0003",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-CPRVN-564",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0070",
+   "invoice_no": "INV/DIST-001/DBATCH-G0070"
+  },
+  "received_on": "2025-05-17",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-014-0004",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-PRNVA-659",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0095",
+   "invoice_no": "INV/DIST-001/DBATCH-G0095"
+  },
+  "received_on": "2025-07-02",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-014-0005",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-RSVNO-515",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0188",
+   "invoice_no": "INV/DIST-001/DBATCH-G0188"
+  },
+  "received_on": "2025-08-21",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-014-0006",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-OMVNE-825",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0243",
+   "invoice_no": "INV/DIST-001/DBATCH-G0243"
+  },
+  "received_on": "2025-09-07",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-014-0007",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-AMLVO-804",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0196",
+   "invoice_no": "INV/DIST-001/DBATCH-G0196"
+  },
+  "received_on": "2025-10-15",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-014-0008",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-AMLVO-855",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0200",
+   "invoice_no": "INV/DIST-001/DBATCH-G0200"
+  },
+  "received_on": "2025-10-30",
+  "quantity": 326
+ },
+ {
+  "_id": "GRN-014-0009",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-FVRLE-695",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0082",
+   "invoice_no": "INV/DIST-005/DBATCH-G0082"
+  },
+  "received_on": "2025-11-06",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-014-0010",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-EPVOI-690",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0352",
+   "invoice_no": "INV/DIST-001/DBATCH-G0352"
+  },
+  "received_on": "2026-01-07",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-014-0011",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-CPRVN-579",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0066",
+   "invoice_no": "INV/DIST-001/DBATCH-G0066"
+  },
+  "received_on": "2026-01-20",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-014-0012",
+  "vendor_ref": "VND-014",
+  "item_ref": "MED-ALBNZ-842",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0298",
+   "invoice_no": "INV/DIST-005/DBATCH-G0298"
+  },
+  "received_on": "2026-03-31",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-015-0001",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-IBNVU-486",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0107",
+   "invoice_no": "INV/DIST-001/DBATCH-G0107"
+  },
+  "received_on": "2025-02-16",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-015-0002",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-IBNVU-488",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0111",
+   "invoice_no": "INV/DIST-005/DBATCH-G0111"
+  },
+  "received_on": "2025-06-13",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-015-0003",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-OMVNE-825",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0242",
+   "invoice_no": "INV/DIST-005/DBATCH-G0242"
+  },
+  "received_on": "2025-08-01",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-015-0004",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-CLPVN-118",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0228",
+   "invoice_no": "INV/DIST-005/DBATCH-G0228"
+  },
+  "received_on": "2025-08-18",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-015-0005",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-RSVNO-514",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0187",
+   "invoice_no": "INV/DIST-005/DBATCH-G0187"
+  },
+  "received_on": "2025-08-23",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-015-0006",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-LVCRE-851",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0275",
+   "invoice_no": "INV/DIST-001/DBATCH-G0275"
+  },
+  "received_on": "2025-09-14",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-015-0007",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-AMLOV-804",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0194",
+   "invoice_no": "INV/DIST-005/DBATCH-G0194"
+  },
+  "received_on": "2025-10-20",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-015-0008",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-GLRVA-679",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0164",
+   "invoice_no": "INV/DIST-001/DBATCH-G0164"
+  },
+  "received_on": "2025-10-30",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-015-0009",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-CPRVN-579",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0064",
+   "invoice_no": "INV/DIST-001/DBATCH-G0064"
+  },
+  "received_on": "2026-01-18",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-015-0010",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-ONDVA-323",
+  "supplier": {
+   "distributor_id": "DIST-005",
+   "dispatch_ref": "DBATCH-G0306",
+   "invoice_no": "INV/DIST-005/DBATCH-G0306"
+  },
+  "received_on": "2026-02-16",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-015-0011",
+  "vendor_ref": "VND-015",
+  "item_ref": "MED-AMXLN-688",
+  "supplier": {
+   "distributor_id": "DIST-001",
+   "dispatch_ref": "DBATCH-G0004",
+   "invoice_no": "INV/DIST-001/DBATCH-G0004"
+  },
+  "received_on": "2026-02-25",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-016-0001",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-STVIA-337",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0151",
+   "invoice_no": "INV/DIST-006/DBATCH-G0151"
+  },
+  "received_on": "2025-03-04",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0002",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-THYRV-185",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0324",
+   "invoice_no": "INV/DIST-006/DBATCH-G0324"
+  },
+  "received_on": "2025-03-24",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0003",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-MTPRE-693",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0216",
+   "invoice_no": "INV/DIST-002/DBATCH-G0216"
+  },
+  "received_on": "2025-04-22",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-016-0004",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-IBNVU-487",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0108",
+   "invoice_no": "INV/DIST-006/DBATCH-G0108"
+  },
+  "received_on": "2025-05-17",
+  "quantity": 195
+ },
+ {
+  "_id": "GRN-016-0005",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ATRLN-266",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0173",
+   "invoice_no": "INV/DIST-002/DBATCH-G0173"
+  },
+  "received_on": "2025-06-13",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-016-0006",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-AZVST-235",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0043",
+   "invoice_no": "INV/DIST-006/DBATCH-G0043"
+  },
+  "received_on": "2025-07-30",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0007",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-MTPRE-695",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0219",
+   "invoice_no": "INV/DIST-006/DBATCH-G0219"
+  },
+  "received_on": "2025-08-31",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-016-0008",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-LVCRE-852",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0278",
+   "invoice_no": "INV/DIST-002/DBATCH-G0278"
+  },
+  "received_on": "2025-10-28",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-016-0009",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-GLCVN-662",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0126",
+   "invoice_no": "INV/DIST-002/DBATCH-G0126"
+  },
+  "received_on": "2025-11-28",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-016-0010",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-RSVNO-803",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0183",
+   "invoice_no": "INV/DIST-006/DBATCH-G0183"
+  },
+  "received_on": "2026-01-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-016-0011",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-PNTRA-742",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0230",
+   "invoice_no": "INV/DIST-006/DBATCH-G0230"
+  },
+  "received_on": "2026-01-19",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-016-0012",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-785",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0089",
+   "invoice_no": "INV/DIST-006/DBATCH-G0089"
+  },
+  "received_on": "2026-01-21",
+  "quantity": 146
+ },
+ {
+  "_id": "GRN-016-0013",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-785",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0358",
+   "invoice_no": "INV/DIST-006/DBATCH-G0358"
+  },
+  "received_on": "2026-01-21",
+  "quantity": 146
+ },
+ {
+  "_id": "GRN-016-0014",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-697",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0085",
+   "invoice_no": "INV/DIST-006/DBATCH-G0085"
+  },
+  "received_on": "2026-03-10",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-016-0015",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FVRLE-786",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0091",
+   "invoice_no": "INV/DIST-006/DBATCH-G0091"
+  },
+  "received_on": "2026-03-16",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0016",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ONDVA-324",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0309",
+   "invoice_no": "INV/DIST-006/DBATCH-G0309"
+  },
+  "received_on": "2026-03-17",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-016-0017",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-FMRAO-664",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0252",
+   "invoice_no": "INV/DIST-002/DBATCH-G0252"
+  },
+  "received_on": "2026-03-19",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0018",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-PNTRA-744",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0235",
+   "invoice_no": "INV/DIST-006/DBATCH-G0235"
+  },
+  "received_on": "2026-05-18",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-016-0019",
+  "vendor_ref": "VND-016",
+  "item_ref": "MED-ZITHR-227",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0049",
+   "invoice_no": "INV/DIST-006/DBATCH-G0049"
+  },
+  "received_on": "2026-07-13",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0001",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ASPRI-801",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0165",
+   "invoice_no": "INV/DIST-006/DBATCH-G0165"
+  },
+  "received_on": "2025-03-01",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-017-0002",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-THYRV-185",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0325",
+   "invoice_no": "INV/DIST-006/DBATCH-G0325"
+  },
+  "received_on": "2025-03-11",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0003",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-THYRV-185",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0369",
+   "invoice_no": "INV/DIST-006/DBATCH-G0369"
+  },
+  "received_on": "2025-03-11",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0004",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-233",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0038",
+   "invoice_no": "INV/DIST-006/DBATCH-G0038"
+  },
+  "received_on": "2025-04-10",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-017-0005",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-IBNVU-487",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0110",
+   "invoice_no": "INV/DIST-006/DBATCH-G0110"
+  },
+  "received_on": "2025-05-20",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-017-0006",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-234",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0040",
+   "invoice_no": "INV/DIST-006/DBATCH-G0040"
+  },
+  "received_on": "2025-06-03",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-017-0007",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ATRLN-266",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0174",
+   "invoice_no": "INV/DIST-002/DBATCH-G0174"
+  },
+  "received_on": "2025-07-14",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-017-0008",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ATRLN-266",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0362",
+   "invoice_no": "INV/DIST-002/DBATCH-G0362"
+  },
+  "received_on": "2025-07-14",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-017-0009",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AZVST-235",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0042",
+   "invoice_no": "INV/DIST-002/DBATCH-G0042"
+  },
+  "received_on": "2025-07-25",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-017-0010",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-AMLVO-803",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0193",
+   "invoice_no": "INV/DIST-006/DBATCH-G0193"
+  },
+  "received_on": "2025-09-24",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-017-0011",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-ATRLN-620",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0172",
+   "invoice_no": "INV/DIST-006/DBATCH-G0172"
+  },
+  "received_on": "2025-10-06",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0012",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-RSVNO-803",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0184",
+   "invoice_no": "INV/DIST-006/DBATCH-G0184"
+  },
+  "received_on": "2025-11-12",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-017-0013",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-MTPRE-696",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0220",
+   "invoice_no": "INV/DIST-006/DBATCH-G0220"
+  },
+  "received_on": "2025-11-13",
+  "quantity": 298
+ },
+ {
+  "_id": "GRN-017-0014",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-GLMRI-396",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0147",
+   "invoice_no": "INV/DIST-002/DBATCH-G0147"
+  },
+  "received_on": "2025-11-17",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-017-0015",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-RSVNO-804",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0186",
+   "invoice_no": "INV/DIST-002/DBATCH-G0186"
+  },
+  "received_on": "2026-01-09",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0016",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-PNTRA-742",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0229",
+   "invoice_no": "INV/DIST-006/DBATCH-G0229"
+  },
+  "received_on": "2026-01-16",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-017-0017",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-FVRLE-786",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0092",
+   "invoice_no": "INV/DIST-006/DBATCH-G0092"
+  },
+  "received_on": "2026-02-16",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-017-0018",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-FMRAO-665",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0253",
+   "invoice_no": "INV/DIST-002/DBATCH-G0253"
+  },
+  "received_on": "2026-03-08",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-017-0019",
+  "vendor_ref": "VND-017",
+  "item_ref": "MED-PNTRA-744",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0234",
+   "invoice_no": "INV/DIST-002/DBATCH-G0234"
+  },
+  "received_on": "2026-04-17",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-018-0001",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ASPRI-801",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0166",
+   "invoice_no": "INV/DIST-006/DBATCH-G0166"
+  },
+  "received_on": "2025-03-12",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-018-0002",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-IBNVU-487",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0109",
+   "invoice_no": "INV/DIST-006/DBATCH-G0109"
+  },
+  "received_on": "2025-04-05",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-018-0003",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-MTPRE-693",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0215",
+   "invoice_no": "INV/DIST-002/DBATCH-G0215"
+  },
+  "received_on": "2025-05-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-018-0004",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTVA-160",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0241",
+   "invoice_no": "INV/DIST-006/DBATCH-G0241"
+  },
+  "received_on": "2025-06-14",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-018-0005",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PRDVE-576",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0337",
+   "invoice_no": "INV/DIST-002/DBATCH-G0337"
+  },
+  "received_on": "2025-09-13",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-018-0006",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-LVCRE-852",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0279",
+   "invoice_no": "INV/DIST-006/DBATCH-G0279"
+  },
+  "received_on": "2025-12-15",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-018-0007",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTRA-742",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0231",
+   "invoice_no": "INV/DIST-006/DBATCH-G0231"
+  },
+  "received_on": "2025-12-19",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-018-0008",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ONDVA-221",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0303",
+   "invoice_no": "INV/DIST-002/DBATCH-G0303"
+  },
+  "received_on": "2025-12-19",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-018-0009",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FVRLE-785",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0088",
+   "invoice_no": "INV/DIST-006/DBATCH-G0088"
+  },
+  "received_on": "2025-12-28",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-018-0010",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-RSVNO-804",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0185",
+   "invoice_no": "INV/DIST-006/DBATCH-G0185"
+  },
+  "received_on": "2026-02-08",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-018-0011",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FMRAO-664",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0254",
+   "invoice_no": "INV/DIST-002/DBATCH-G0254"
+  },
+  "received_on": "2026-02-09",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-018-0012",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ONDVA-324",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0308",
+   "invoice_no": "INV/DIST-006/DBATCH-G0308"
+  },
+  "received_on": "2026-03-16",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-018-0013",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-CPRVN-581",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0069",
+   "invoice_no": "INV/DIST-006/DBATCH-G0069"
+  },
+  "received_on": "2026-04-24",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-018-0014",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-FVRLE-697",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0086",
+   "invoice_no": "INV/DIST-006/DBATCH-G0086"
+  },
+  "received_on": "2026-05-04",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-018-0015",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-PNTRA-744",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0236",
+   "invoice_no": "INV/DIST-006/DBATCH-G0236"
+  },
+  "received_on": "2026-05-12",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-018-0016",
+  "vendor_ref": "VND-018",
+  "item_ref": "MED-ZTHRL-227",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0050",
+   "invoice_no": "INV/DIST-002/DBATCH-G0050"
+  },
+  "received_on": "2026-06-29",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-019-0001",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CLCVN-210",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0310",
+   "invoice_no": "INV/DIST-003/DBATCH-G0310"
+  },
+  "received_on": "2025-03-23",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-019-0002",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ASPRI-802",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0167",
+   "invoice_no": "INV/DIST-008/DBATCH-G0167"
+  },
+  "received_on": "2025-07-10",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-019-0003",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ATRLN-619",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0171",
+   "invoice_no": "INV/DIST-008/DBATCH-G0171"
+  },
+  "received_on": "2025-07-24",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-019-0004",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CLPVN-117",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0226",
+   "invoice_no": "INV/DIST-008/DBATCH-G0226"
+  },
+  "received_on": "2025-07-24",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-019-0005",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-TLMRE-405",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0201",
+   "invoice_no": "INV/DIST-003/DBATCH-G0201"
+  },
+  "received_on": "2025-08-26",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-019-0006",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ZTHRL-787",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0053",
+   "invoice_no": "INV/DIST-008/DBATCH-G0053"
+  },
+  "received_on": "2025-09-01",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-019-0007",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-DXLYN-201",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0080",
+   "invoice_no": "INV/DIST-003/DBATCH-G0080"
+  },
+  "received_on": "2025-09-23",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-019-0008",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-GLMRI-395",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0146",
+   "invoice_no": "INV/DIST-008/DBATCH-G0146"
+  },
+  "received_on": "2025-09-23",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-019-0009",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-665",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0249",
+   "invoice_no": "INV/DIST-003/DBATCH-G0249"
+  },
+  "received_on": "2025-09-26",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-019-0010",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-AMLVO-854",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0197",
+   "invoice_no": "INV/DIST-008/DBATCH-G0197"
+  },
+  "received_on": "2025-10-03",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-019-0011",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-636",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0259",
+   "invoice_no": "INV/DIST-008/DBATCH-G0259"
+  },
+  "received_on": "2025-10-06",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-019-0012",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-FMRAO-637",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0260",
+   "invoice_no": "INV/DIST-008/DBATCH-G0260"
+  },
+  "received_on": "2025-11-27",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-019-0013",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ONDVA-322",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0305",
+   "invoice_no": "INV/DIST-008/DBATCH-G0305"
+  },
+  "received_on": "2025-12-10",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-019-0014",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-TLMRE-303",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0205",
+   "invoice_no": "INV/DIST-003/DBATCH-G0205"
+  },
+  "received_on": "2025-12-20",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-019-0015",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CFRNE-772",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0060",
+   "invoice_no": "INV/DIST-008/DBATCH-G0060"
+  },
+  "received_on": "2026-01-06",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-019-0016",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-LVCRE-853",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0281",
+   "invoice_no": "INV/DIST-003/DBATCH-G0281"
+  },
+  "received_on": "2026-01-16",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-019-0017",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-ZTHRL-225",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0044",
+   "invoice_no": "INV/DIST-003/DBATCH-G0044"
+  },
+  "received_on": "2026-02-04",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-019-0018",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-MTRNE-564",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0128",
+   "invoice_no": "INV/DIST-008/DBATCH-G0128"
+  },
+  "received_on": "2026-02-25",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-019-0019",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-PNTRA-743",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0233",
+   "invoice_no": "INV/DIST-003/DBATCH-G0233"
+  },
+  "received_on": "2026-03-12",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-019-0020",
+  "vendor_ref": "VND-019",
+  "item_ref": "MED-CPRVN-580",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0067",
+   "invoice_no": "INV/DIST-003/DBATCH-G0067"
+  },
+  "received_on": "2026-04-13",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-020-0001",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CLCVN-210",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0311",
+   "invoice_no": "INV/DIST-003/DBATCH-G0311"
+  },
+  "received_on": "2025-03-31",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-020-0002",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MTRNE-630",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0131",
+   "invoice_no": "INV/DIST-008/DBATCH-G0131"
+  },
+  "received_on": "2025-05-09",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0003",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-PNTVA-159",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0239",
+   "invoice_no": "INV/DIST-008/DBATCH-G0239"
+  },
+  "received_on": "2025-05-15",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-020-0004",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MNTLN-243",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0266",
+   "invoice_no": "INV/DIST-008/DBATCH-G0266"
+  },
+  "received_on": "2025-05-27",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0005",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ATRLN-619",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0170",
+   "invoice_no": "INV/DIST-003/DBATCH-G0170"
+  },
+  "received_on": "2025-08-25",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-020-0006",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-181",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0137",
+   "invoice_no": "INV/DIST-008/DBATCH-G0137"
+  },
+  "received_on": "2025-08-28",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-020-0007",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CLCVN-212",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0316",
+   "invoice_no": "INV/DIST-008/DBATCH-G0316"
+  },
+  "received_on": "2025-09-03",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-020-0008",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-AZVST-220",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0028",
+   "invoice_no": "INV/DIST-003/DBATCH-G0028"
+  },
+  "received_on": "2025-09-14",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0009",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-395",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0145",
+   "invoice_no": "INV/DIST-003/DBATCH-G0145"
+  },
+  "received_on": "2025-10-09",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-020-0010",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ZTHRL-787",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0052",
+   "invoice_no": "INV/DIST-008/DBATCH-G0052"
+  },
+  "received_on": "2025-10-16",
+  "quantity": 146
+ },
+ {
+  "_id": "GRN-020-0011",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-AMLVO-854",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0198",
+   "invoice_no": "INV/DIST-008/DBATCH-G0198"
+  },
+  "received_on": "2025-10-19",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0012",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-SLBVN-269",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0287",
+   "invoice_no": "INV/DIST-008/DBATCH-G0287"
+  },
+  "received_on": "2025-11-13",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0013",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-OMVNE-826",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0245",
+   "invoice_no": "INV/DIST-008/DBATCH-G0245"
+  },
+  "received_on": "2025-11-17",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-020-0014",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-FMRAO-662",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0248",
+   "invoice_no": "INV/DIST-003/DBATCH-G0248"
+  },
+  "received_on": "2025-11-22",
+  "quantity": 76
+ },
+ {
+  "_id": "GRN-020-0015",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ONDVA-322",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0304",
+   "invoice_no": "INV/DIST-003/DBATCH-G0304"
+  },
+  "received_on": "2025-11-25",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-020-0016",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-TLMRE-303",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0204",
+   "invoice_no": "INV/DIST-003/DBATCH-G0204"
+  },
+  "received_on": "2025-11-26",
+  "quantity": 249
+ },
+ {
+  "_id": "GRN-020-0017",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-FMRAO-637",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0261",
+   "invoice_no": "INV/DIST-008/DBATCH-G0261"
+  },
+  "received_on": "2025-12-03",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-020-0018",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-ZTHRL-225",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0046",
+   "invoice_no": "INV/DIST-008/DBATCH-G0046"
+  },
+  "received_on": "2025-12-12",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-020-0019",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CFRNE-772",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0059",
+   "invoice_no": "INV/DIST-003/DBATCH-G0059"
+  },
+  "received_on": "2025-12-24",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0020",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-LSVNO-230",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0214",
+   "invoice_no": "INV/DIST-003/DBATCH-G0214"
+  },
+  "received_on": "2026-01-06",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-020-0021",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-GLMRI-184",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0143",
+   "invoice_no": "INV/DIST-008/DBATCH-G0143"
+  },
+  "received_on": "2026-01-29",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-020-0022",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-LVCRE-853",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0280",
+   "invoice_no": "INV/DIST-008/DBATCH-G0280"
+  },
+  "received_on": "2026-01-29",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-020-0023",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-PNTRA-743",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0232",
+   "invoice_no": "INV/DIST-008/DBATCH-G0232"
+  },
+  "received_on": "2026-02-07",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-020-0024",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CPRVN-580",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0068",
+   "invoice_no": "INV/DIST-008/DBATCH-G0068"
+  },
+  "received_on": "2026-03-14",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-020-0025",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-MTRNE-564",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0130",
+   "invoice_no": "INV/DIST-003/DBATCH-G0130"
+  },
+  "received_on": "2026-04-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-020-0026",
+  "vendor_ref": "VND-020",
+  "item_ref": "MED-CFRNE-774",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0062",
+   "invoice_no": "INV/DIST-008/DBATCH-G0062"
+  },
+  "received_on": "2026-05-08",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-021-0001",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-PNTVA-159",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0240",
+   "invoice_no": "INV/DIST-003/DBATCH-G0240"
+  },
+  "received_on": "2025-04-25",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-021-0002",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-PRNVA-785",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0101",
+   "invoice_no": "INV/DIST-003/DBATCH-G0101"
+  },
+  "received_on": "2025-06-02",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-021-0003",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-MNTLN-243",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0267",
+   "invoice_no": "INV/DIST-003/DBATCH-G0267"
+  },
+  "received_on": "2025-06-23",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-021-0004",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ASPRI-802",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0168",
+   "invoice_no": "INV/DIST-008/DBATCH-G0168"
+  },
+  "received_on": "2025-07-03",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-021-0005",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CLCVN-212",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0315",
+   "invoice_no": "INV/DIST-003/DBATCH-G0315"
+  },
+  "received_on": "2025-07-17",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-021-0006",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-DCLTN-129",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0117",
+   "invoice_no": "INV/DIST-008/DBATCH-G0117"
+  },
+  "received_on": "2025-07-25",
+  "quantity": 189
+ },
+ {
+  "_id": "GRN-021-0007",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CLPVN-117",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0225",
+   "invoice_no": "INV/DIST-008/DBATCH-G0225"
+  },
+  "received_on": "2025-07-26",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-021-0008",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-AMLVO-854",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0199",
+   "invoice_no": "INV/DIST-008/DBATCH-G0199"
+  },
+  "received_on": "2025-09-10",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-021-0009",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ZTHRL-787",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0054",
+   "invoice_no": "INV/DIST-003/DBATCH-G0054"
+  },
+  "received_on": "2025-09-22",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-021-0010",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-AZVST-220",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0029",
+   "invoice_no": "INV/DIST-008/DBATCH-G0029"
+  },
+  "received_on": "2025-09-24",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-021-0011",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FMRAO-636",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0257",
+   "invoice_no": "INV/DIST-008/DBATCH-G0257"
+  },
+  "received_on": "2025-10-10",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-021-0012",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-OMVNE-826",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0244",
+   "invoice_no": "INV/DIST-003/DBATCH-G0244"
+  },
+  "received_on": "2025-11-06",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-021-0013",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-GLMRI-395",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0144",
+   "invoice_no": "INV/DIST-008/DBATCH-G0144"
+  },
+  "received_on": "2025-11-15",
+  "quantity": 247
+ },
+ {
+  "_id": "GRN-021-0014",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FMRAO-637",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0262",
+   "invoice_no": "INV/DIST-003/DBATCH-G0262"
+  },
+  "received_on": "2025-11-17",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-021-0015",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FMRAO-637",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0366",
+   "invoice_no": "INV/DIST-003/DBATCH-G0366"
+  },
+  "received_on": "2025-11-17",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-021-0016",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-SLBVN-269",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0288",
+   "invoice_no": "INV/DIST-008/DBATCH-G0288"
+  },
+  "received_on": "2025-11-30",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-021-0017",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-ZTHRL-225",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0045",
+   "invoice_no": "INV/DIST-003/DBATCH-G0045"
+  },
+  "received_on": "2026-01-26",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-021-0018",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-LSVNO-230",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0213",
+   "invoice_no": "INV/DIST-008/DBATCH-G0213"
+  },
+  "received_on": "2026-01-29",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-021-0019",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-GLMRI-184",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0142",
+   "invoice_no": "INV/DIST-003/DBATCH-G0142"
+  },
+  "received_on": "2026-02-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-021-0020",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-CFRNE-773",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0061",
+   "invoice_no": "INV/DIST-008/DBATCH-G0061"
+  },
+  "received_on": "2026-02-08",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-021-0021",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-MTRNE-564",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0129",
+   "invoice_no": "INV/DIST-003/DBATCH-G0129"
+  },
+  "received_on": "2026-04-07",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-021-0022",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-MTRNE-564",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0360",
+   "invoice_no": "INV/DIST-003/DBATCH-G0360"
+  },
+  "received_on": "2026-04-07",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-021-0023",
+  "vendor_ref": "VND-021",
+  "item_ref": "MED-FVRLE-698",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0087",
+   "invoice_no": "INV/DIST-003/DBATCH-G0087"
+  },
+  "received_on": "2026-06-17",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-022-0001",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-ATRLN-160",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0181",
+   "invoice_no": "INV/DIST-006/DBATCH-G0181"
+  },
+  "received_on": "2025-05-21",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-022-0002",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-CLCVN-211",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0312",
+   "invoice_no": "INV/DIST-006/DBATCH-G0312"
+  },
+  "received_on": "2025-06-16",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-022-0003",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-MTRNE-631",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0134",
+   "invoice_no": "INV/DIST-002/DBATCH-G0134"
+  },
+  "received_on": "2025-07-06",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-022-0004",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-STVIA-262",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0157",
+   "invoice_no": "INV/DIST-006/DBATCH-G0157"
+  },
+  "received_on": "2025-09-21",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-022-0005",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-MTRNE-632",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0135",
+   "invoice_no": "INV/DIST-002/DBATCH-G0135"
+  },
+  "received_on": "2025-10-10",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-022-0006",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-AMXLN-201",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0008",
+   "invoice_no": "INV/DIST-006/DBATCH-G0008"
+  },
+  "received_on": "2025-11-07",
+  "quantity": 297
+ },
+ {
+  "_id": "GRN-022-0007",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-ZTHRL-226",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0048",
+   "invoice_no": "INV/DIST-006/DBATCH-G0048"
+  },
+  "received_on": "2026-03-09",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-022-0008",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-TLMRE-304",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0207",
+   "invoice_no": "INV/DIST-006/DBATCH-G0207"
+  },
+  "received_on": "2026-03-11",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-022-0009",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-OMVNE-828",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0247",
+   "invoice_no": "INV/DIST-002/DBATCH-G0247"
+  },
+  "received_on": "2026-03-31",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-022-0010",
+  "vendor_ref": "VND-022",
+  "item_ref": "MED-TLMRE-305",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0209",
+   "invoice_no": "INV/DIST-006/DBATCH-G0209"
+  },
+  "received_on": "2026-04-05",
+  "quantity": 199
+ },
+ {
+  "_id": "GRN-023-0001",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-CLCVN-211",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0314",
+   "invoice_no": "INV/DIST-006/DBATCH-G0314"
+  },
+  "received_on": "2025-05-10",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-023-0002",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-PRDVE-575",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0336",
+   "invoice_no": "INV/DIST-002/DBATCH-G0336"
+  },
+  "received_on": "2025-05-31",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-023-0003",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-ATRLN-160",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0182",
+   "invoice_no": "INV/DIST-006/DBATCH-G0182"
+  },
+  "received_on": "2025-06-19",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-023-0004",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTRNE-631",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0133",
+   "invoice_no": "INV/DIST-006/DBATCH-G0133"
+  },
+  "received_on": "2025-08-02",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-023-0005",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTPRE-230",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0222",
+   "invoice_no": "INV/DIST-006/DBATCH-G0222"
+  },
+  "received_on": "2025-08-09",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-023-0006",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTPRE-230",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0365",
+   "invoice_no": "INV/DIST-006/DBATCH-G0365"
+  },
+  "received_on": "2025-08-09",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-023-0007",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MTRNE-632",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0136",
+   "invoice_no": "INV/DIST-006/DBATCH-G0136"
+  },
+  "received_on": "2025-09-12",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-023-0008",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-AMXLN-203",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0009",
+   "invoice_no": "INV/DIST-006/DBATCH-G0009"
+  },
+  "received_on": "2025-09-27",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-023-0009",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-STVIA-262",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0158",
+   "invoice_no": "INV/DIST-002/DBATCH-G0158"
+  },
+  "received_on": "2025-10-17",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-023-0010",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-ALBNZ-840",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0293",
+   "invoice_no": "INV/DIST-002/DBATCH-G0293"
+  },
+  "received_on": "2025-10-27",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-023-0011",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-CTRVE-504",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0272",
+   "invoice_no": "INV/DIST-006/DBATCH-G0272"
+  },
+  "received_on": "2025-11-25",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-023-0012",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-AMXLN-202",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0012",
+   "invoice_no": "INV/DIST-002/DBATCH-G0012"
+  },
+  "received_on": "2025-12-10",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-023-0013",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MXVRO-246",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0024",
+   "invoice_no": "INV/DIST-006/DBATCH-G0024"
+  },
+  "received_on": "2026-01-28",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-023-0014",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-MXVRO-246",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0357",
+   "invoice_no": "INV/DIST-006/DBATCH-G0357"
+  },
+  "received_on": "2026-01-28",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-023-0015",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-TLMRE-304",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0206",
+   "invoice_no": "INV/DIST-002/DBATCH-G0206"
+  },
+  "received_on": "2026-03-28",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-023-0016",
+  "vendor_ref": "VND-023",
+  "item_ref": "MED-TLMRE-305",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0210",
+   "invoice_no": "INV/DIST-006/DBATCH-G0210"
+  },
+  "received_on": "2026-04-22",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-024-0001",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-CLCVN-211",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0313",
+   "invoice_no": "INV/DIST-006/DBATCH-G0313"
+  },
+  "received_on": "2025-05-12",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-024-0002",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-PRDVE-575",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0335",
+   "invoice_no": "INV/DIST-006/DBATCH-G0335"
+  },
+  "received_on": "2025-06-22",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-024-0003",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-MTRNE-631",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0132",
+   "invoice_no": "INV/DIST-002/DBATCH-G0132"
+  },
+  "received_on": "2025-08-13",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-024-0004",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-GLMRI-182",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0138",
+   "invoice_no": "INV/DIST-006/DBATCH-G0138"
+  },
+  "received_on": "2025-09-23",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-024-0005",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-CTRVE-504",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0273",
+   "invoice_no": "INV/DIST-002/DBATCH-G0273"
+  },
+  "received_on": "2025-10-22",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-024-0006",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-CTRVE-504",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0367",
+   "invoice_no": "INV/DIST-002/DBATCH-G0367"
+  },
+  "received_on": "2025-10-22",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-024-0007",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-AMXLN-201",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0010",
+   "invoice_no": "INV/DIST-006/DBATCH-G0010"
+  },
+  "received_on": "2025-11-06",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-024-0008",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-PRDVE-553",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0341",
+   "invoice_no": "INV/DIST-002/DBATCH-G0341"
+  },
+  "received_on": "2025-11-12",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-024-0009",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-ALBNZ-840",
+  "supplier": {
+   "distributor_id": "DIST-002",
+   "dispatch_ref": "DBATCH-G0294",
+   "invoice_no": "INV/DIST-002/DBATCH-G0294"
+  },
+  "received_on": "2025-12-05",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-024-0010",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-AMXLN-202",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0011",
+   "invoice_no": "INV/DIST-006/DBATCH-G0011"
+  },
+  "received_on": "2026-01-25",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-024-0011",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-TLMRE-305",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0208",
+   "invoice_no": "INV/DIST-006/DBATCH-G0208"
+  },
+  "received_on": "2026-04-11",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-024-0012",
+  "vendor_ref": "VND-024",
+  "item_ref": "MED-ZTHRL-226",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0047",
+   "invoice_no": "INV/DIST-006/DBATCH-G0047"
+  },
+  "received_on": "2026-04-18",
+  "quantity": 198
+ },
+ {
+  "_id": "GRN-025-0001",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-DXLYN-199",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0078",
+   "invoice_no": "INV/DIST-006/DBATCH-G0078"
+  },
+  "received_on": "2025-06-02",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-025-0002",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-GLRVA-677",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0160",
+   "invoice_no": "INV/DIST-006/DBATCH-G0160"
+  },
+  "received_on": "2025-06-09",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-025-0003",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-ATRLN-267",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0176",
+   "invoice_no": "INV/DIST-006/DBATCH-G0176"
+  },
+  "received_on": "2025-08-27",
+  "quantity": 56
+ },
+ {
+  "_id": "GRN-025-0004",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-LSVNO-229",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0211",
+   "invoice_no": "INV/DIST-006/DBATCH-G0211"
+  },
+  "received_on": "2025-11-12",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-025-0005",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-ONDVA-220",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0301",
+   "invoice_no": "INV/DIST-006/DBATCH-G0301"
+  },
+  "received_on": "2025-11-16",
+  "quantity": 317
+ },
+ {
+  "_id": "GRN-025-0006",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-MXVRO-361",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0021",
+   "invoice_no": "INV/DIST-006/DBATCH-G0021"
+  },
+  "received_on": "2026-03-02",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-025-0007",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-FMRAO-665",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0255",
+   "invoice_no": "INV/DIST-006/DBATCH-G0255"
+  },
+  "received_on": "2026-04-21",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-025-0008",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-GLCVN-581",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0122",
+   "invoice_no": "INV/DIST-006/DBATCH-G0122"
+  },
+  "received_on": "2026-05-28",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-025-0009",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-HYDRV-867",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0292",
+   "invoice_no": "INV/DIST-006/DBATCH-G0292"
+  },
+  "received_on": "2026-06-07",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-025-0010",
+  "vendor_ref": "VND-025",
+  "item_ref": "MED-HYDRV-867",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0368",
+   "invoice_no": "INV/DIST-006/DBATCH-G0368"
+  },
+  "received_on": "2026-06-07",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-026-0001",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-DXLYN-199",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0077",
+   "invoice_no": "INV/DIST-006/DBATCH-G0077"
+  },
+  "received_on": "2025-06-05",
+  "quantity": 147
+ },
+ {
+  "_id": "GRN-026-0002",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-THYRV-187",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0328",
+   "invoice_no": "INV/DIST-006/DBATCH-G0328"
+  },
+  "received_on": "2025-07-20",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-026-0003",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-CPRVN-565",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0072",
+   "invoice_no": "INV/DIST-006/DBATCH-G0072"
+  },
+  "received_on": "2025-09-08",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-026-0004",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-ONDVA-220",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0299",
+   "invoice_no": "INV/DIST-006/DBATCH-G0299"
+  },
+  "received_on": "2025-11-17",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-026-0005",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-MTRNE-563",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0127",
+   "invoice_no": "INV/DIST-006/DBATCH-G0127"
+  },
+  "received_on": "2026-02-02",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-026-0006",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-MXVRO-361",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0022",
+   "invoice_no": "INV/DIST-006/DBATCH-G0022"
+  },
+  "received_on": "2026-02-24",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-026-0007",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-AZVST-223",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0035",
+   "invoice_no": "INV/DIST-006/DBATCH-G0035"
+  },
+  "received_on": "2026-04-02",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-026-0008",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-AMXLN-689",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0006",
+   "invoice_no": "INV/DIST-006/DBATCH-G0006"
+  },
+  "received_on": "2026-04-23",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-026-0009",
+  "vendor_ref": "VND-026",
+  "item_ref": "MED-GLCVN-581",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0123",
+   "invoice_no": "INV/DIST-006/DBATCH-G0123"
+  },
+  "received_on": "2026-06-28",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-027-0001",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-DXLYN-199",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0076",
+   "invoice_no": "INV/DIST-006/DBATCH-G0076"
+  },
+  "received_on": "2025-05-06",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-027-0002",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-GLRVA-677",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0161",
+   "invoice_no": "INV/DIST-006/DBATCH-G0161"
+  },
+  "received_on": "2025-06-25",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-027-0003",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-THYRV-187",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0329",
+   "invoice_no": "INV/DIST-006/DBATCH-G0329"
+  },
+  "received_on": "2025-07-15",
+  "quantity": 115
+ },
+ {
+  "_id": "GRN-027-0004",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ATRLN-267",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0175",
+   "invoice_no": "INV/DIST-006/DBATCH-G0175"
+  },
+  "received_on": "2025-08-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-027-0005",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ATRLN-267",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0363",
+   "invoice_no": "INV/DIST-006/DBATCH-G0363"
+  },
+  "received_on": "2025-08-05",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-027-0006",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ZTHRL-786",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0051",
+   "invoice_no": "INV/DIST-006/DBATCH-G0051"
+  },
+  "received_on": "2025-08-07",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-027-0007",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-CPRVN-565",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0073",
+   "invoice_no": "INV/DIST-006/DBATCH-G0073"
+  },
+  "received_on": "2025-09-16",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-027-0008",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-ONDVA-220",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0300",
+   "invoice_no": "INV/DIST-006/DBATCH-G0300"
+  },
+  "received_on": "2025-11-01",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-027-0009",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-LSVNO-229",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0212",
+   "invoice_no": "INV/DIST-006/DBATCH-G0212"
+  },
+  "received_on": "2025-11-24",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-027-0010",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-SITAV-263",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0159",
+   "invoice_no": "INV/DIST-006/DBATCH-G0159"
+  },
+  "received_on": "2025-12-31",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-027-0011",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-AZVST-223",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0036",
+   "invoice_no": "INV/DIST-006/DBATCH-G0036"
+  },
+  "received_on": "2026-04-02",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-027-0012",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-FMRAO-665",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0256",
+   "invoice_no": "INV/DIST-006/DBATCH-G0256"
+  },
+  "received_on": "2026-05-19",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-027-0013",
+  "vendor_ref": "VND-027",
+  "item_ref": "MED-GLCVN-581",
+  "supplier": {
+   "distributor_id": "DIST-006",
+   "dispatch_ref": "DBATCH-G0124",
+   "invoice_no": "INV/DIST-006/DBATCH-G0124"
+  },
+  "received_on": "2026-06-19",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-028-0001",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-CTRVE-503",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0270",
+   "invoice_no": "INV/DIST-007/DBATCH-G0270"
+  },
+  "received_on": "2025-08-28",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-028-0002",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-PRDVE-577",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0340",
+   "invoice_no": "INV/DIST-007/DBATCH-G0340"
+  },
+  "received_on": "2025-10-12",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-028-0003",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-CPRVN-566",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0074",
+   "invoice_no": "INV/DIST-007/DBATCH-G0074"
+  },
+  "received_on": "2025-10-25",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-028-0004",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-ATRLN-268",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0179",
+   "invoice_no": "INV/DIST-007/DBATCH-G0179"
+  },
+  "received_on": "2025-11-14",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-028-0005",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-AMXLN-687",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0001",
+   "invoice_no": "INV/DIST-007/DBATCH-G0001"
+  },
+  "received_on": "2025-12-30",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-028-0006",
+  "vendor_ref": "VND-028",
+  "item_ref": "MED-MXVRO-248",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0027",
+   "invoice_no": "INV/DIST-007/DBATCH-G0027"
+  },
+  "received_on": "2026-07-26",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-029-0001",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-STVIA-261",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0155",
+   "invoice_no": "INV/DIST-007/DBATCH-G0155"
+  },
+  "received_on": "2025-09-19",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-029-0002",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-CTRVE-503",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0271",
+   "invoice_no": "INV/DIST-007/DBATCH-G0271"
+  },
+  "received_on": "2025-10-02",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-029-0003",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-ATRLN-268",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0178",
+   "invoice_no": "INV/DIST-007/DBATCH-G0178"
+  },
+  "received_on": "2025-10-03",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-029-0004",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-ATRLN-268",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0364",
+   "invoice_no": "INV/DIST-007/DBATCH-G0364"
+  },
+  "received_on": "2025-10-03",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-029-0005",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-MNTLN-244",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0268",
+   "invoice_no": "INV/DIST-007/DBATCH-G0268"
+  },
+  "received_on": "2025-10-14",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-029-0006",
+  "vendor_ref": "VND-029",
+  "item_ref": "MED-AMXLN-687",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0002",
+   "invoice_no": "INV/DIST-007/DBATCH-G0002"
+  },
+  "received_on": "2025-12-03",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-030-0001",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-MNTLN-244",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0269",
+   "invoice_no": "INV/DIST-007/DBATCH-G0269"
+  },
+  "received_on": "2025-08-17",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-030-0002",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-CPRVN-566",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0075",
+   "invoice_no": "INV/DIST-007/DBATCH-G0075"
+  },
+  "received_on": "2025-10-03",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-030-0003",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-AMXLN-687",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0003",
+   "invoice_no": "INV/DIST-007/DBATCH-G0003"
+  },
+  "received_on": "2025-11-16",
+  "quantity": 250
+ },
+ {
+  "_id": "GRN-030-0004",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-PRDVE-577",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0339",
+   "invoice_no": "INV/DIST-007/DBATCH-G0339"
+  },
+  "received_on": "2025-11-18",
+  "quantity": 300
+ },
+ {
+  "_id": "GRN-030-0005",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-ATRLN-268",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0177",
+   "invoice_no": "INV/DIST-007/DBATCH-G0177"
+  },
+  "received_on": "2025-11-21",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-030-0006",
+  "vendor_ref": "VND-030",
+  "item_ref": "MED-MXVRO-248",
+  "supplier": {
+   "distributor_id": "DIST-007",
+   "dispatch_ref": "DBATCH-G0026",
+   "invoice_no": "INV/DIST-007/DBATCH-G0026"
+  },
+  "received_on": "2026-08-03",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-031-0001",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-ATRLN-159",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0180",
+   "invoice_no": "INV/DIST-003/DBATCH-G0180"
+  },
+  "received_on": "2025-03-31",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-031-0002",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-MTPRE-229",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0221",
+   "invoice_no": "INV/DIST-003/DBATCH-G0221"
+  },
+  "received_on": "2025-05-03",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-031-0003",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-DXLYN-200",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0079",
+   "invoice_no": "INV/DIST-008/DBATCH-G0079"
+  },
+  "received_on": "2025-06-17",
+  "quantity": 59
+ },
+ {
+  "_id": "GRN-031-0004",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLRVA-678",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0162",
+   "invoice_no": "INV/DIST-008/DBATCH-G0162"
+  },
+  "received_on": "2025-09-09",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-031-0005",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLCVN-661",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0125",
+   "invoice_no": "INV/DIST-003/DBATCH-G0125"
+  },
+  "received_on": "2025-09-16",
+  "quantity": 145
+ },
+ {
+  "_id": "GRN-031-0006",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-EPVOI-689",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0351",
+   "invoice_no": "INV/DIST-008/DBATCH-G0351"
+  },
+  "received_on": "2025-09-25",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-031-0007",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-CPRVN-578",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0063",
+   "invoice_no": "INV/DIST-008/DBATCH-G0063"
+  },
+  "received_on": "2025-10-14",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-031-0008",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-543",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0330",
+   "invoice_no": "INV/DIST-003/DBATCH-G0330"
+  },
+  "received_on": "2025-11-28",
+  "quantity": 200
+ },
+ {
+  "_id": "GRN-031-0009",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLCVN-578",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0118",
+   "invoice_no": "INV/DIST-008/DBATCH-G0118"
+  },
+  "received_on": "2025-12-01",
+  "quantity": 120
+ },
+ {
+  "_id": "GRN-031-0010",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-HPSHL-558",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0350",
+   "invoice_no": "INV/DIST-008/DBATCH-G0350"
+  },
+  "received_on": "2025-12-02",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-031-0011",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-MXVRO-245",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0023",
+   "invoice_no": "INV/DIST-003/DBATCH-G0023"
+  },
+  "received_on": "2025-12-20",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-031-0012",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-670",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0323",
+   "invoice_no": "INV/DIST-003/DBATCH-G0323"
+  },
+  "received_on": "2025-12-23",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-031-0013",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-THYRV-544",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0331",
+   "invoice_no": "INV/DIST-003/DBATCH-G0331"
+  },
+  "received_on": "2026-01-09",
+  "quantity": 100
+ },
+ {
+  "_id": "GRN-031-0014",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-OMVNE-827",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0246",
+   "invoice_no": "INV/DIST-008/DBATCH-G0246"
+  },
+  "received_on": "2026-01-18",
+  "quantity": 150
+ },
+ {
+  "_id": "GRN-031-0015",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLMRI-397",
+  "supplier": {
+   "distributor_id": "DIST-008",
+   "dispatch_ref": "DBATCH-G0149",
+   "invoice_no": "INV/DIST-008/DBATCH-G0149"
+  },
+  "received_on": "2026-03-07",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-031-0016",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-AMXLN-203",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0013",
+   "invoice_no": "INV/DIST-003/DBATCH-G0013"
+  },
+  "received_on": "2026-04-06",
+  "quantity": 60
+ },
+ {
+  "_id": "GRN-031-0017",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLMRI-398",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0150",
+   "invoice_no": "INV/DIST-003/DBATCH-G0150"
+  },
+  "received_on": "2026-04-21",
+  "quantity": 80
+ },
+ {
+  "_id": "GRN-031-0018",
+  "vendor_ref": "VND-031",
+  "item_ref": "MED-GLMRI-398",
+  "supplier": {
+   "distributor_id": "DIST-003",
+   "dispatch_ref": "DBATCH-G0361",
+   "invoice_no": "INV/DIST-003/DBATCH-G0361"
+  },
+  "received_on": "2026-04-21",
+  "quantity": 80
+ }
+]

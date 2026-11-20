@@ -38,7 +38,7 @@ from typing import Optional
 from integration.resolver import ItemRecord
 
 BASE    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE, "databases", "db3_manufacturer_registry.sqlite")
+DB_PATH = os.path.join(os.environ.get("ASALI_DB_DIR") or os.path.join(BASE, "databases"), "db3_manufacturer_registry.sqlite")
 
 # Valid state transitions (FSM adjacency list)
 VALID_TRANSITIONS: dict[str, list[str]] = {
@@ -70,6 +70,18 @@ class StateEvent:
     violation:  Optional[str]  # e.g. "REPLAY_ATTACK"
 
 
+def _no_local_ledger() -> bool:
+    """
+    Phase 3: in federated mode (ASALI_FEDERATION=remote) DB3 lives on another
+    machine, so there is no local ledger to read or write; opening DB_PATH here
+    would silently create an empty registry file. The state is still inferred from
+    the four records on every call (infer_and_sync returns it either way), so the
+    verdict does not change; it is just not persisted by the coordinator.
+    """
+    from integration.federation import runtime
+    return runtime.remote_mode()
+
+
 class LifecycleTracker:
     """
     Tracks and transitions the lifecycle state of each serialized item.
@@ -81,6 +93,8 @@ class LifecycleTracker:
 
     def _ensure_table(self):
         """Create the lifecycle ledger table if not exists."""
+        if _no_local_ledger():
+            return
         try:
             with sqlite3.connect(DB_PATH) as conn:
                 conn.execute("""
@@ -96,6 +110,8 @@ class LifecycleTracker:
 
     def get_state(self, item_code: str) -> Optional[str]:
         """Return current lifecycle state, or None if untracked."""
+        if _no_local_ledger():
+            return None
         try:
             with sqlite3.connect(DB_PATH) as conn:
                 cur = conn.execute(
@@ -140,6 +156,8 @@ class LifecycleTracker:
 
     def _persist(self, item_code: str, state: str, ts: str,
                  event: StateEvent):
+        if _no_local_ledger():
+            return
         try:
             with sqlite3.connect(DB_PATH) as conn:
                 # Get existing history
@@ -201,6 +219,8 @@ class LifecycleTracker:
 
     def get_history(self, item_code: str) -> list[dict]:
         """Return full state history for an item."""
+        if _no_local_ledger():
+            return []
         try:
             with sqlite3.connect(DB_PATH) as conn:
                 cur = conn.execute(

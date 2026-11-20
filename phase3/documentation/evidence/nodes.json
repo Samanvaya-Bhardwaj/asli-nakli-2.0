@@ -1,0 +1,187 @@
+{
+ "coordinator": {
+  "hostname": "ShagunKaler",
+  "physical_host": "ShagunKaler",
+  "machine_label": "local-simulation"
+ },
+ "deployment": {
+  "mode": "LOCAL_SIMULATION",
+  "meaning": "Every database service is reached at a loopback address on this machine. This shows process and data isolation (separate processes, separate data directories, HTTP between them) - it does NOT show execution on different machines.",
+  "distinct_physical_hosts": [
+   "ShagunKaler"
+  ],
+  "distinct_addresses": [
+   "127.0.0.1"
+  ]
+ },
+ "nodes": {
+  "db1": {
+   "database": "db1",
+   "name": "Retail POS",
+   "configured_url": "http://127.0.0.1:8021",
+   "configured_machine": "local-simulation",
+   "resolved_ip": "127.0.0.1",
+   "status": "online",
+   "reported": {
+    "status": "online",
+    "database": "db1",
+    "name": "Retail POS",
+    "paradigm": "Document store (JSON collections; SQLite authoritative for writes)",
+    "machine_label": "local-simulation",
+    "physical_host": "ShagunKaler",
+    "os_hostname": "ShagunKaler",
+    "in_container": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pid": 21388,
+    "listening_on": "127.0.0.1:8021",
+    "seen_client": "127.0.0.1",
+    "data_version": 1794997992259604100,
+    "data_files": [
+     {
+      "file": "db1_purchase_registry.sqlite",
+      "present": true
+     },
+     {
+      "file": "db1_retail_pos.json",
+      "present": true
+     },
+     {
+      "file": "db1_vendors.json",
+      "present": true
+     },
+     {
+      "file": "db1_pos_terminals.json",
+      "present": true
+     },
+     {
+      "file": "db1_retail_medicines.json",
+      "present": true
+     },
+     {
+      "file": "db1_stock_receipts.json",
+      "present": true
+     },
+     {
+      "file": "db1_inventory.json",
+      "present": true
+     }
+    ],
+    "isolation": {
+     "strict": true,
+     "foreign_files_visible": 0
+    },
+    "uptime_sec": 89.4,
+    "_elapsed_ms": 9.76
+   },
+   "round_trip_ms": 9.76
+  },
+  "db2": {
+   "database": "db2",
+   "name": "Distributor ERP",
+   "configured_url": "http://127.0.0.1:8022",
+   "configured_machine": "local-simulation",
+   "resolved_ip": "127.0.0.1",
+   "status": "online",
+   "reported": {
+    "status": "online",
+    "database": "db2",
+    "name": "Distributor ERP",
+    "paradigm": "Relational (SQLite)",
+    "machine_label": "local-simulation",
+    "physical_host": "ShagunKaler",
+    "os_hostname": "ShagunKaler",
+    "in_container": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pid": 21016,
+    "listening_on": "127.0.0.1:8022",
+    "seen_client": "127.0.0.1",
+    "data_version": 1794997992353112300,
+    "data_files": [
+     {
+      "file": "db2_distributor_ledger.sqlite",
+      "present": true
+     }
+    ],
+    "isolation": {
+     "strict": true,
+     "foreign_files_visible": 0
+    },
+    "uptime_sec": 89.3,
+    "_elapsed_ms": 7.02
+   },
+   "round_trip_ms": 7.02
+  },
+  "db3": {
+   "database": "db3",
+   "name": "Manufacturer Registry",
+   "configured_url": "http://127.0.0.1:8023",
+   "configured_machine": "local-simulation",
+   "resolved_ip": "127.0.0.1",
+   "status": "online",
+   "reported": {
+    "status": "online",
+    "database": "db3",
+    "name": "Manufacturer Registry",
+    "paradigm": "Relational (SQLite)",
+    "machine_label": "local-simulation",
+    "physical_host": "ShagunKaler",
+    "os_hostname": "ShagunKaler",
+    "in_container": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pid": 2648,
+    "listening_on": "127.0.0.1:8023",
+    "seen_client": "127.0.0.1",
+    "data_version": 1794997992508205700,
+    "data_files": [
+     {
+      "file": "db3_manufacturer_registry.sqlite",
+      "present": true
+     }
+    ],
+    "isolation": {
+     "strict": true,
+     "foreign_files_visible": 0
+    },
+    "uptime_sec": 89.3,
+    "_elapsed_ms": 5.4
+   },
+   "round_trip_ms": 5.4
+  },
+  "db4": {
+   "database": "db4",
+   "name": "Ministry Reports",
+   "configured_url": "http://127.0.0.1:8024",
+   "configured_machine": "local-simulation",
+   "resolved_ip": "127.0.0.1",
+   "status": "online",
+   "reported": {
+    "status": "online",
+    "database": "db4",
+    "name": "Ministry Reports",
+    "paradigm": "REST microservice over SQLite",
+    "machine_label": "local-simulation",
+    "physical_host": "ShagunKaler",
+    "os_hostname": "ShagunKaler",
+    "in_container": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pid": 6236,
+    "listening_on": "127.0.0.1:8024",
+    "seen_client": "127.0.0.1",
+    "data_version": 1794997992693358200,
+    "data_files": [
+     {
+      "file": "db4_ministry_reports.sqlite",
+      "present": true
+     }
+    ],
+    "isolation": {
+     "strict": true,
+     "foreign_files_visible": 0
+    },
+    "uptime_sec": 89.3,
+    "_elapsed_ms": 4.28
+   },
+   "round_trip_ms": 4.28
+  }
+ }
+}

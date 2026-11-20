@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-050
+title: Consumer complaint MCA-2026-G0114
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-10-18
+---
+
+Dear Sir/Madam,
+
+I bought Epovia 4000IU with code MED-EPVOI-691 at sai krupa medical, mumbai. I had a bad reaction after taking it. Developed severe itching after taking Epovia 4000IU bought on 11 Oct.
+
+Please look into this.
+
+Regards,
+Sanjay Mehta

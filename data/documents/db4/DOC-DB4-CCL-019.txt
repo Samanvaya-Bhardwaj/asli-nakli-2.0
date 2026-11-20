@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-019
+title: Consumer complaint MCA-2026-G0042
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 17 Jan 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-LSVNO-329 at kapaleeshwarar medicals, chennai. The label does not match the contents. Strength printed on the Losavane box does not match the strip inside.
+
+Please look into this.
+
+Regards,
+Karthik Sharma

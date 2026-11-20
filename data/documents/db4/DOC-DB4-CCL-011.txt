@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-011
+title: Consumer complaint MCA-2026-G0020
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 23/06/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MED-ONVA-2320 at Greams Road Hospital Dispensary, Chennai. I was overcharged. Charged more than the printed MRP for Omdavia 4mg.
+
+Please look into this.
+
+Regards,
+Fatima Kulkarni

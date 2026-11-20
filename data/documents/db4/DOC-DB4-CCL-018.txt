@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-018
+title: Consumer complaint MCA-2026-G0040
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-08-26
+---
+
+Dear Sir/Madam,
+
+I bought Glucovane 500mg with code MED-GLCVN-581 at Marina Pharmacy, Chennai. It did not work at all. Glucovane 500mg tablets crumble in the strip and had no effect after 5 days.
+
+Please look into this.
+
+Regards,
+Rahul Chatterjee

@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-010
+title: Consumer complaint MCA-2026-G0019
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: August 26, 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code Ned-Fvrle-695 at deccan pharmacy, pune. Something is wrong with it. Pharmacist could not confirm the batch of Feverol 500mg.
+
+Please look into this.
+
+Regards,
+Aditya Kulkarni

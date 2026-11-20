@@ -1,0 +1,27 @@
+# Phase 3, MACHINE 2 of 2: DB3 Manufacturer Registry and DB4 Ministry Reports.
+#
+#   cp deploy/machine2.env.example deploy/machine2.env    (same tokens as Machine 1)
+#   python scripts/prepare_node_data.py --db db3 --db db4  (or copy deploy/nodes/db3, db4 from Machine 1)
+#   docker compose -f deploy/docker-compose.machine2.yml up --build -d
+name: asali-phase3-machine2
+
+x-node: &node
+  build:
+    context: ..
+    dockerfile: Dockerfile.phase3
+  image: asali-phase3:latest
+  restart: unless-stopped
+  env_file: [machine2.env]
+  environment: {ASALI_DB_DIR: /data/databases, ASALI_NOSQL_FILE: /data/nosql_store/db1_retail_pos.json}
+
+services:
+  db3:
+    <<: *node
+    command: ["python", "api/node_db.py", "--db", "db3"]
+    volumes: ["./nodes/db3:/data:ro"]
+    ports: ["8023:8023"]
+  db4:
+    <<: *node
+    command: ["python", "api/node_db.py", "--db", "db4"]
+    volumes: ["./nodes/db4:/data:ro"]
+    ports: ["8024:8024"]

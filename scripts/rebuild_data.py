@@ -7,8 +7,10 @@ Rebuilds every silo from scratch, in order:
   1. create the four SQLite databases from schema/
   2. curated phase-1 seeds (the 20 benchmark items)
   3. the phase-2 uncertain dataset and its ground truth
+  3b. the phase-3 related tables (data/seed_phase3.py)
   4. label images for the records captured by camera (needs Pillow; optional)
-  5. the DB1 NoSQL document mirror
+  5. the DB1 NoSQL document mirror (scans plus the phase-3 collections)
+  5b. the phase-3 unstructured documents (data/generate_documents.py)
   6. fit the linkage model and benchmark every algorithm
 
 The audit chain and the activity log are left alone. The cleansing lineage store
@@ -38,7 +40,7 @@ def main():
 
     import create_databases
     from data import seed_db1, seed_db2, seed_db3, seed_db4, seed_nosql_db1
-    from data import generate_uncertain_data, render_label_images
+    from data import generate_uncertain_data, render_label_images, seed_phase3
     from integration.uncertainty import paths
 
     print("[1/6] Creating databases")
@@ -50,6 +52,8 @@ def main():
     seed_db4.seed()
     print("[3/6] Uncertain dataset")
     generate_uncertain_data.main()
+    print("[3b/6] Phase 3 related tables")
+    seed_phase3.main()
     print("[4/6] Label images")
     if args.no_images:
         print("  skipped")
@@ -57,6 +61,9 @@ def main():
         render_label_images.main()
     print("[5/6] NoSQL mirror")
     seed_nosql_db1.generate_nosql_collection()
+    print("[5b/6] Phase 3 documents (data/documents/, one folder per owning source)")
+    from data import generate_documents
+    generate_documents.main()
     dq = paths.db_path("dq")
     if os.path.exists(dq):
         os.remove(dq)

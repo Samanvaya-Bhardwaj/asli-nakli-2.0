@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-008
+title: Consumer complaint MCA-2026-G0015
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: June 05, 2026
+---
+
+Dear Sir/Madam,
+
+I bought Telmora 80mg with code MED-TLMRE-305 at Charminar Medical Hall, Hyderabad. I was overcharged. Charged more than the printed MRP for Telmora 80mg.
+
+Please look into this.
+
+Regards,
+Moumita Singh

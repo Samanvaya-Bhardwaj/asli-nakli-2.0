@@ -18,8 +18,10 @@ from urllib.parse import quote_plus
 from typing import Any, Dict, List, Optional
 from .base_wrapper import BaseWrapper, SourceMetadata
 
-DEFAULT_BASE_URL = "http://127.0.0.1:8001/api/v1"
-AUTH_TOKEN = "CDSCO-MCA-2026-KEY"
+# Phase 3: address and token can be set without editing code (defaults: Phase 1 values).
+# ASALI_DB4_REST_URL=offline skips the HTTP attempt and uses the in-process store at once.
+DEFAULT_BASE_URL = os.environ.get("ASALI_DB4_REST_URL") or "http://127.0.0.1:8001/api/v1"
+AUTH_TOKEN = os.environ.get("ASALI_DB4_LEGACY_TOKEN") or "CDSCO-MCA-2026-KEY"
 
 
 class RestApiMicroserviceWrapper(BaseWrapper):
@@ -32,6 +34,8 @@ class RestApiMicroserviceWrapper(BaseWrapper):
 
     def _http_get(self, endpoint: str, params: Optional[Dict[str, str]] = None) -> Optional[Dict[str, Any]]:
         """Makes an HTTP GET request with Authorization header."""
+        if self.base_url == "offline":
+            return None
         query_str = ""
         if params:
             query_str = "?" + "&".join(f"{k}={quote_plus(str(v))}" for k, v in params.items() if v is not None)

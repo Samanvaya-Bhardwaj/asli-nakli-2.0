@@ -9,17 +9,18 @@ import { fmtDate } from '../lib/format'
 export function NetworkStatus() {
   const [open, setOpen] = useState(false)
   const q = useQuery({ queryKey: ['network'], queryFn: () => api<Network>('/api/network'), refetchInterval: 15000 })
-  if (q.isPending) return <span className="text-sm text-meta">Asking the network…</span>
+  if (q.isPending) return <span className="hatch inline-flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-full bg-surface-2 px-4 text-sm text-meta shadow-[inset_0_0_0_1px_var(--border)]">Asking the network…</span>
   if (q.isError || !q.data) return <span className="text-sm text-warn-fg">Network status unavailable</span>
   const down = q.data.orgs.filter((o) => !o.online)
   return (
     <div className="relative">
-      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="inline-flex min-h-11 items-center gap-2 rounded-control px-3 text-sm hover:bg-sunken">
-        <NetworkIcon size={16} strokeWidth={1.75} aria-hidden />
+      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="inline-flex min-h-11 shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full bg-surface-2 px-4 text-sm font-medium shadow-[inset_0_0_0_1px_var(--border)] transition-colors duration-150 hover:bg-sunken">
+        <span aria-hidden className={`size-2 rounded-full ${down.length === 0 ? 'bg-ok shadow-[0_0_0_3px_var(--ok-wash)]' : 'bg-warn shadow-[0_0_0_3px_var(--warn-wash)]'}`} />
+        <NetworkIcon size={16} strokeWidth={1.75} aria-hidden className="text-muted" />
         {q.data.online} of {q.data.total} online
       </button>
       {open && (
-        <div role="dialog" aria-label="Organisations not answering" className="absolute right-0 z-10 mt-1 w-72 rounded-panel border border-line-strong bg-surface p-3 text-sm" style={{ boxShadow: 'var(--shadow-float)' }}>
+        <div role="dialog" aria-label="Organisations not answering" className="absolute right-0 z-20 mt-2 w-76 rounded-panel bg-surface p-4 text-sm shadow-pop">
           {down.length === 0 ? (
             <p>Every organisation answered.</p>
           ) : (

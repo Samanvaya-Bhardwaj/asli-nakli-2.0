@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-012
+title: Consumer complaint MCA-2026-G0021
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-05-31
+---
+
+Dear Sir/Madam,
+
+I bought Epovia 4000IU with code NED-EPVOI-691 at HealthFirst Pharmacy, Mumbai. I had a bad reaction after taking it. Developed a headache after taking Eppovia 4000IU bought on 17 May. Code on the strip: MED-EPVOI-691.
+
+Please look into this.
+
+Regards,
+Ananya Khan

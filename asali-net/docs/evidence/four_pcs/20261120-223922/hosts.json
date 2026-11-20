@@ -1,0 +1,14 @@
+{
+ "consumer-delhi": "PC-A (ByteBandit)",
+ "consumer-mumbai": "PC-A (ByteBandit)",
+ "dist-north": "PC-C (ShagunKaler)",
+ "dist-south": "PC-C (ShagunKaler)",
+ "dist-west": "PC-C (ShagunKaler)",
+ "kesar": "PC-B (Sayans-MacBook-Air.local)",
+ "medivra": "PC-B (Sayans-MacBook-Air.local)",
+ "regulator": "PC-A (ByteBandit)",
+ "shop-bengaluru": "PC-D (Senjuti)",
+ "shop-delhi": "PC-D (Senjuti)",
+ "shop-mumbai": "PC-D (Senjuti)",
+ "tarang": "PC-B (Sayans-MacBook-Air.local)"
+}

@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-054
+title: Consumer complaint MCA-2026-G0127
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 08/12/2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code med-glmrg-13Z at QuickRelief Kiosk, New Delhi. I believe this is a fake. Glimora 1mg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Vikram Gupta

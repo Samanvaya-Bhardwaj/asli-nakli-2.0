@@ -22,6 +22,7 @@ PG_SUPER = f"postgresql://postgres@127.0.0.1:{PG_PORT}/postgres"
 MONGO_ADMIN = f"mongodb://admin:admin_pw@127.0.0.1:{MONGO_PORT}/admin?authSource=admin"
 RW_PW, RO_PW = "app_rw_pw", "share_ro_pw"
 WORK = Path(tempfile.gettempdir()) / "asali-test-engines"
+EXE = ".exe" if os.name == "nt" else ""  # the vendors' Windows zips and Homebrew on a Mac name the programs differently
 
 
 def port_open(port: int) -> bool:
@@ -42,7 +43,7 @@ def start_postgres(bin_dir: Path) -> None:
         data.parent.mkdir(parents=True, exist_ok=True)
         r = _run(
             [
-                str(bin_dir / "initdb.exe"),
+                str(bin_dir / f"initdb{EXE}"),
                 "-D",
                 str(data),
                 "-U",
@@ -58,7 +59,7 @@ def start_postgres(bin_dir: Path) -> None:
     # pg_ctl's child keeps inherited pipes open, so send its output to a file instead of capturing it
     r = subprocess.run(
         [
-            str(bin_dir / "pg_ctl.exe"),
+            str(bin_dir / f"pg_ctl{EXE}"),
             "start",
             "-D",
             str(data),
@@ -90,7 +91,7 @@ def start_mongo(bin_dir: Path) -> None:
     data.mkdir(parents=True, exist_ok=True)
     subprocess.Popen(
         [
-            str(bin_dir / "mongod.exe"),
+            str(bin_dir / f"mongod{EXE}"),
             "--dbpath",
             str(data),
             "--port",
@@ -127,7 +128,7 @@ def engines_from_env() -> tuple[Path | None, Path | None]:
 def stop() -> None:
     pg, _ = engines_from_env()
     if pg and (WORK / "pg").exists():
-        _run([str(pg / "pg_ctl.exe"), "stop", "-D", str(WORK / "pg"), "-m", "fast"])
+        _run([str(pg / f"pg_ctl{EXE}"), "stop", "-D", str(WORK / "pg"), "-m", "fast"])
     if port_open(MONGO_PORT):
         from pymongo import MongoClient
 
@@ -188,13 +189,24 @@ def provision_mongo(name: str) -> tuple[str, str]:
 
 
 def discover() -> None:
-    """Find the unpacked vendor zips in %TEMP%/asali-engines when the environment variables are not set."""
+    """Find PostgreSQL and MongoDB when the environment variables are not set: the unpacked vendor zips in
+    %TEMP%/asali-engines (Windows), or programs on the PATH (a Mac with Homebrew: postgresql@16, mongodb-community@7.0)."""
+    import shutil
+
     root = Path(os.environ.get("TEMP", tempfile.gettempdir())) / "asali-engines"
-    for var, exe in (("ASALI_PG_BIN", "postgres.exe"), ("ASALI_MONGO_BIN", "mongod.exe")):
-        if not os.environ.get(var) and root.exists():
+    for var, exe in (("ASALI_PG_BIN", f"postgres{EXE}"), ("ASALI_MONGO_BIN", f"mongod{EXE}")):
+        if os.environ.get(var):
+            continue
+        if root.exists():
             for p in root.rglob(exe):
                 os.environ[var] = str(p.parent)
                 break
+        if not os.environ.get(var):
+            for cand in ([exe] + (["/opt/homebrew/opt/postgresql@16/bin/postgres", "/usr/local/opt/postgresql@16/bin/postgres"] if "postgres" in exe else [])):
+                found = shutil.which(cand) or (cand if Path(cand).exists() else None)
+                if found:
+                    os.environ[var] = str(Path(found).parent)
+                    break
 
 
 def urls_pg(name: str) -> tuple[str, str]:

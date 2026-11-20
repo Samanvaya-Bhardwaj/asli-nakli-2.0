@@ -1,0 +1,93 @@
+{
+  "store": "DB1 retail POS document store (JSON collections)",
+  "paradigm": "document",
+  "note": "Links between collections are document references (a field holding another document's _id). They are not SQL foreign keys; check_references() verifies them. Collections are mirrored from DB1's authoritative SQLite tables on every write.",
+  "collections": {
+    "vendors": {
+      "file": "db1_vendors.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "vendors"
+    },
+    "pos_terminals": {
+      "file": "db1_pos_terminals.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "pos_terminals"
+    },
+    "retail_medicines": {
+      "file": "db1_retail_medicines.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "retail_medicines"
+    },
+    "stock_receipts": {
+      "file": "db1_stock_receipts.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "stock_receipts"
+    },
+    "inventory": {
+      "file": "db1_inventory.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "inventory"
+    },
+    "retail_pos_scans": {
+      "file": "db1_retail_pos.json",
+      "primary_key": "_id",
+      "mirrors_sqlite_table": "purchase_events (joined with vendors)"
+    }
+  },
+  "references": [
+    {
+      "collection": "pos_terminals",
+      "field": "vendor_ref",
+      "target": "vendors",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "stock_receipts",
+      "field": "vendor_ref",
+      "target": "vendors",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "stock_receipts",
+      "field": "item_ref",
+      "target": "retail_medicines",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "inventory",
+      "field": "vendor_ref",
+      "target": "vendors",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "inventory",
+      "field": "item_ref",
+      "target": "retail_medicines",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "inventory",
+      "field": "last_receipt_ref",
+      "target": "stock_receipts",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "retail_pos_scans",
+      "field": "dispensary.vendor_id",
+      "target": "vendors",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "retail_pos_scans",
+      "field": "pos_terminal.device_id",
+      "target": "pos_terminals",
+      "kind": "document_reference"
+    },
+    {
+      "collection": "retail_pos_scans",
+      "field": "scan_code",
+      "target": "retail_medicines",
+      "kind": "business_key_lookup"
+    }
+  ]
+}

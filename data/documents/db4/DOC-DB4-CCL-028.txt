@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-028
+title: Consumer complaint MCA-2026-G0066
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 23 Jul 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code ME-EPVOI-691 at sai krupa medical, mumbai. Something is wrong with it. Pharmacist could not confirm the batch of Epovia 4000IU.
+
+Please look into this.
+
+Regards,
+Joseph Pillai

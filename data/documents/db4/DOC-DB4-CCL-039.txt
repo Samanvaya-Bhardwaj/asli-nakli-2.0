@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-039
+title: Consumer complaint MCA-2026-G0089
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-09-19
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MBD-AXLN-203 at cyber city pharmacy, gurugram. The label does not match the contents. Strength printed on the Amoxilan box does not match the strip inside.
+
+Please look into this.
+
+Regards,
+Venkat Patel

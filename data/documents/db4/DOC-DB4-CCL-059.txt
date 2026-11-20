@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-059
+title: Consumer complaint MCA-2026-G0137
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: May 08, 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code MDE-CLCVN-222 at QuickRelief Kiosk, New Delhi. I believe this is a fake. Calcivane 60000IU looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Imran Sharma

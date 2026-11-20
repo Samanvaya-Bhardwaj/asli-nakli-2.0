@@ -1,0 +1,724 @@
+[
+ {
+  "_id": "VND-001",
+  "name": "Apollo Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/001/2019",
+   "expiry": "2028-06-30",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Hill Road, Bandra West"
+  },
+  "contact": {
+   "phone": "+91-22-26401111",
+   "email": "bandra@apollopharmacy.org"
+  },
+  "registered_on": "2019-06-01"
+ },
+ {
+  "_id": "VND-002",
+  "name": "MedPlus Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/KA/PH/002/2020",
+   "expiry": "2027-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Bengaluru",
+   "street": "100ft Road, Indiranagar"
+  },
+  "contact": {
+   "phone": "+91-80-25202222",
+   "email": "indiranagar@medplusindia.com"
+  },
+  "registered_on": "2020-01-15"
+ },
+ {
+  "_id": "VND-003",
+  "name": "AIIMS Hospital Dispensary",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/DL/PH/003/2018",
+   "expiry": "2029-03-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Ansari Nagar"
+  },
+  "contact": {
+   "phone": "+91-11-26593333",
+   "email": "dispensary@aiims.edu"
+  },
+  "registered_on": "2018-03-01"
+ },
+ {
+  "_id": "VND-004",
+  "name": "Wellness Forever Chemist",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/DL/PH/004/2021",
+   "expiry": "2027-06-30",
+   "is_active": true
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Connaught Place"
+  },
+  "contact": {
+   "phone": "+91-11-23304444",
+   "email": "cp@wellnessforever.in"
+  },
+  "registered_on": "2021-06-01"
+ },
+ {
+  "_id": "VND-005",
+  "name": "Noble Chemist",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/005/2019",
+   "expiry": "2028-09-30",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Dadar TT Circle"
+  },
+  "contact": {
+   "phone": "+91-22-24105555",
+   "email": "dadar@noblechemist.com"
+  },
+  "registered_on": "2019-09-01"
+ },
+ {
+  "_id": "VND-006",
+  "name": "Fortis Healthworld Pharmacy",
+  "type": "clinic",
+  "license": {
+   "number": "FDA/HR/PH/006/2022",
+   "expiry": "2027-08-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Gurugram",
+   "street": "Sector 44"
+  },
+  "contact": {
+   "phone": "+91-124-4906666",
+   "email": "pharmacy@fortishealthcare.com"
+  },
+  "registered_on": "2022-08-01"
+ },
+ {
+  "_id": "VND-007",
+  "name": "Janata Medicos (Unlicensed Kiosk)",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Kurla Station Road"
+  },
+  "contact": {
+   "phone": "+91-9820999007",
+   "email": "janata@nomail.com"
+  },
+  "registered_on": "2019-01-01"
+ },
+ {
+  "_id": "VND-008",
+  "name": "QuickRelief Kiosk",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Chandni Chowk Market"
+  },
+  "contact": {
+   "phone": "+91-9810999008",
+   "email": "quickrelief@nomail.com"
+  },
+  "registered_on": "2019-01-01"
+ },
+ {
+  "_id": "VND-009",
+  "name": "Suburban Chemist Stall",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Thane",
+   "street": "Thane West Station"
+  },
+  "contact": {
+   "phone": "+91-9833999009",
+   "email": "suburban@nomail.com"
+  },
+  "registered_on": "2019-01-01"
+ },
+ {
+  "_id": "VND-010",
+  "name": "HealthFirst Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/010/2021",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Andheri East"
+  },
+  "contact": {
+   "phone": "+91-9867441379",
+   "email": "healthfirst@example.in"
+  },
+  "registered_on": "2018-07-01"
+ },
+ {
+  "_id": "VND-011",
+  "name": "Sai Krupa Medical",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/011/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Ghatkopar West"
+  },
+  "contact": {
+   "phone": "+91-8512517579",
+   "email": "sai@example.in"
+  },
+  "registered_on": "2020-01-01"
+ },
+ {
+  "_id": "VND-012",
+  "name": "Lifeline Chemists",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/012/2022",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Powai"
+  },
+  "contact": {
+   "phone": "+91-8716971064",
+   "email": "lifeline@example.in"
+  },
+  "registered_on": "2017-01-01"
+ },
+ {
+  "_id": "VND-013",
+  "name": "Pune Medico",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/013/2019",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Pune",
+   "street": "Kothrud"
+  },
+  "contact": {
+   "phone": "+91-8146991877",
+   "email": "pune@example.in"
+  },
+  "registered_on": "2019-03-01"
+ },
+ {
+  "_id": "VND-014",
+  "name": "Deccan Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/MH/PH/014/2021",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Pune",
+   "street": "FC Road"
+  },
+  "contact": {
+   "phone": "+91-8434577858",
+   "email": "deccan@example.in"
+  },
+  "registered_on": "2021-08-01"
+ },
+ {
+  "_id": "VND-015",
+  "name": "Sahyadri Hospital Pharmacy",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/MH/PH/015/2018",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Pune",
+   "street": "Karve Road"
+  },
+  "contact": {
+   "phone": "+91-9074115801",
+   "email": "sahyadri@example.in"
+  },
+  "registered_on": "2020-01-01"
+ },
+ {
+  "_id": "VND-016",
+  "name": "Nightingale Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/KA/PH/016/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Bengaluru",
+   "street": "Koramangala"
+  },
+  "contact": {
+   "phone": "+91-7161042246",
+   "email": "nightingale@example.in"
+  },
+  "registered_on": "2018-02-01"
+ },
+ {
+  "_id": "VND-017",
+  "name": "HAL Road Hospital Dispensary",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/KA/PH/017/2019",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Bengaluru",
+   "street": "HAL Airport Road"
+  },
+  "contact": {
+   "phone": "+91-9837584142",
+   "email": "hal@example.in"
+  },
+  "registered_on": "2019-06-01"
+ },
+ {
+  "_id": "VND-018",
+  "name": "Sri Venkateshwara Medicals",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/KA/PH/018/2022",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Bengaluru",
+   "street": "Jayanagar"
+  },
+  "contact": {
+   "phone": "+91-7076399155",
+   "email": "sri@example.in"
+  },
+  "registered_on": "2018-08-01"
+ },
+ {
+  "_id": "VND-019",
+  "name": "Lajpat Medicos",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/DL/PH/019/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Lajpat Nagar"
+  },
+  "contact": {
+   "phone": "+91-9211657126",
+   "email": "lajpat@example.in"
+  },
+  "registered_on": "2019-06-01"
+ },
+ {
+  "_id": "VND-020",
+  "name": "Saket City Hospital Pharmacy",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/DL/PH/020/2019",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Saket"
+  },
+  "contact": {
+   "phone": "+91-7339250690",
+   "email": "saket@example.in"
+  },
+  "registered_on": "2018-09-01"
+ },
+ {
+  "_id": "VND-021",
+  "name": "Karol Bagh Guardian Chemist",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/DL/PH/021/2021",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "New Delhi",
+   "street": "Karol Bagh"
+  },
+  "contact": {
+   "phone": "+91-7048933144",
+   "email": "karol@example.in"
+  },
+  "registered_on": "2016-03-01"
+ },
+ {
+  "_id": "VND-022",
+  "name": "Charminar Medical Hall",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/TS/PH/022/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Hyderabad",
+   "street": "Old City"
+  },
+  "contact": {
+   "phone": "+91-8417268204",
+   "email": "charminar@example.in"
+  },
+  "registered_on": "2018-08-01"
+ },
+ {
+  "_id": "VND-023",
+  "name": "Banjara Care Pharmacy",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/TS/PH/023/2018",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Hyderabad",
+   "street": "Banjara Hills"
+  },
+  "contact": {
+   "phone": "+91-7886356380",
+   "email": "banjara@example.in"
+  },
+  "registered_on": "2017-05-01"
+ },
+ {
+  "_id": "VND-024",
+  "name": "Jubilee Chemists",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/TS/PH/024/2022",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Hyderabad",
+   "street": "Jubilee Hills"
+  },
+  "contact": {
+   "phone": "+91-7361989202",
+   "email": "jubilee@example.in"
+  },
+  "registered_on": "2021-09-01"
+ },
+ {
+  "_id": "VND-025",
+  "name": "Marina Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/TN/PH/025/2021",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Chennai",
+   "street": "T Nagar"
+  },
+  "contact": {
+   "phone": "+91-9925475402",
+   "email": "marina@example.in"
+  },
+  "registered_on": "2017-02-01"
+ },
+ {
+  "_id": "VND-026",
+  "name": "Greams Road Hospital Dispensary",
+  "type": "hospital",
+  "license": {
+   "number": "FDA/TN/PH/026/2019",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Chennai",
+   "street": "Greams Road"
+  },
+  "contact": {
+   "phone": "+91-7121566322",
+   "email": "greams@example.in"
+  },
+  "registered_on": "2019-07-01"
+ },
+ {
+  "_id": "VND-027",
+  "name": "Kapaleeshwarar Medicals",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/TN/PH/027/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Chennai",
+   "street": "Mylapore"
+  },
+  "contact": {
+   "phone": "+91-7191036165",
+   "email": "kapaleeshwarar@example.in"
+  },
+  "registered_on": "2017-09-01"
+ },
+ {
+  "_id": "VND-028",
+  "name": "Esplanade Medical Stores",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/WB/PH/028/2020",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Kolkata",
+   "street": "Esplanade"
+  },
+  "contact": {
+   "phone": "+91-9205148970",
+   "email": "esplanade@example.in"
+  },
+  "registered_on": "2018-08-01"
+ },
+ {
+  "_id": "VND-029",
+  "name": "Salt Lake City Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/WB/PH/029/2021",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Kolkata",
+   "street": "Salt Lake Sector V"
+  },
+  "contact": {
+   "phone": "+91-9825594731",
+   "email": "salt@example.in"
+  },
+  "registered_on": "2020-06-01"
+ },
+ {
+  "_id": "VND-030",
+  "name": "Howrah Chemists",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/WB/PH/030/2019",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Kolkata",
+   "street": "Howrah Maidan"
+  },
+  "contact": {
+   "phone": "+91-8492125696",
+   "email": "howrah@example.in"
+  },
+  "registered_on": "2020-08-01"
+ },
+ {
+  "_id": "VND-031",
+  "name": "Cyber City Pharmacy",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA/HR/PH/031/2022",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Gurugram",
+   "street": "DLF Cyber City"
+  },
+  "contact": {
+   "phone": "+91-8096718130",
+   "email": "cyber@example.in"
+  },
+  "registered_on": "2022-06-01"
+ },
+ {
+  "_id": "VND-032",
+  "name": "Footpath Medical Stall",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Kolkata",
+   "street": "Sealdah Station Road"
+  },
+  "contact": {
+   "phone": "+91-8074180788",
+   "email": null
+  },
+  "registered_on": "2021-01-01"
+ },
+ {
+  "_id": "VND-033",
+  "name": "Night Bazaar Medicines",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Hyderabad",
+   "street": "Begum Bazaar"
+  },
+  "contact": {
+   "phone": "+91-7157691705",
+   "email": null
+  },
+  "registered_on": "2021-01-01"
+ },
+ {
+  "_id": "VND-034",
+  "name": "Railway Kiosk Chemist",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Pune",
+   "street": "Pune Station"
+  },
+  "contact": {
+   "phone": "+91-9764229660",
+   "email": null
+  },
+  "registered_on": "2021-01-01"
+ },
+ {
+  "_id": "VND-035",
+  "name": "Cheap Medicine Corner",
+  "type": "kiosk",
+  "license": {
+   "number": null,
+   "expiry": "2020-01-01",
+   "is_active": false
+  },
+  "location": {
+   "city": "Chennai",
+   "street": "Parrys Corner"
+  },
+  "contact": {
+   "phone": "+91-9104554465",
+   "email": null
+  },
+  "registered_on": "2021-01-01"
+ },
+ {
+  "_id": "VND-036",
+  "name": "APOLLO PHARMACY - BANDRA W",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA-MH-PH-001-2019",
+   "expiry": "2028-06-30",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Hill Road, Bandra West"
+  },
+  "contact": {
+   "phone": "+91-22-26401111",
+   "email": "bandra@apollopharmacy.org"
+  },
+  "registered_on": "2024-11-15"
+ },
+ {
+  "_id": "VND-037",
+  "name": "Medplus Pharmacy Indiranagar",
+  "type": "pharmacy",
+  "license": {
+   "number": "fda/ka/ph/002/2020",
+   "expiry": "2027-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Bengaluru",
+   "street": "100ft Road, Indiranagar"
+  },
+  "contact": {
+   "phone": "+91-80-25202222",
+   "email": "indiranagar@medplusindia.com"
+  },
+  "registered_on": "2024-11-15"
+ },
+ {
+  "_id": "VND-038",
+  "name": "Lifeline Chemist",
+  "type": "pharmacy",
+  "license": {
+   "number": "FDA MH PH 012 2022",
+   "expiry": "2028-12-31",
+   "is_active": true
+  },
+  "location": {
+   "city": "Mumbai",
+   "street": "Powai"
+  },
+  "contact": {
+   "phone": "+91-8716971064",
+   "email": "lifeline@example.in"
+  },
+  "registered_on": "2024-11-15"
+ }
+]

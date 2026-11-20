@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-034
+title: Consumer complaint MCA-2026-G0079
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: November 27, 2025
+---
+
+Dear Sir/Madam,
+
+I bought Metorin 1000mg with code MED-MTRNE-631 at Jubilee Chemists, Hyderabad. It did not work at all. Metorin 1000mg tablets crumble in the strip and had no effect after 5 days.
+
+Please look into this.
+
+Regards,
+Aarav Iyer

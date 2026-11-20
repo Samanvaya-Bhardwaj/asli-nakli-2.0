@@ -300,7 +300,11 @@ def verify(item_code: str, generate_report: bool = False, silent: bool = False) 
 
     # Step 6: Auto-report if needed
     complaint_id = None
-    if result.auto_report:
+    # Phase 3: a federated query is read-only, and DB4 is on another machine, so the
+    # complaint is not filed from here; the result says one is due (auto_report_due).
+    from integration.federation import runtime as _federation_runtime
+    federated = _federation_runtime.remote_mode()
+    if result.auto_report and not federated:
         if not silent:
             print(f"          {yellow('Auto-drafting MCA complaint dossier ...')}")
         complaint = auto_file_complaint(
@@ -316,7 +320,8 @@ def verify(item_code: str, generate_report: bool = False, silent: bool = False) 
             print(f"          {status_txt}: {complaint_id}")
     else:
         if not silent:
-            print(f"          No Ministry report needed.")
+            print("          Ministry report due; not filed from a federated (read-only) query."
+                  if result.auto_report else "          No Ministry report needed.")
 
     # -- Print result -----------------------------------------------------------
     if not silent:
@@ -357,7 +362,10 @@ def verify(item_code: str, generate_report: bool = False, silent: bool = False) 
         "dossier":            _dossier(record, result, anomaly_report),
         "resolved_code":      record.item_code,
         "resolution":         _resolution(item_code, record),
-        "suggestion":         _suggestion(item_code, record),
+        # the Phase 2 suggestion reads all four silos from local files, so it is local-mode only
+        "suggestion":         None if federated else _suggestion(item_code, record),
+        "auto_report_due":    bool(result.auto_report),
+        "federation_mode":    "remote" if federated else "local",
     }
 
 

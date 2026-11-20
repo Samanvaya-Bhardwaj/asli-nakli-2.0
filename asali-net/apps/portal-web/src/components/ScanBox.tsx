@@ -27,10 +27,10 @@ export function ScanBox({ onRead, disabled = false }: { onRead: (raw: string, so
 
   return (
     <div className="grid gap-2">
-      <label htmlFor="scan-input" className="text-base font-semibold">
+      <label htmlFor="scan-input" className="text-[15px] font-semibold">
         Scan or type a code
       </label>
-      <div className="flex gap-2">
+      <div className="flex gap-2.5">
         <input
           id="scan-input"
           ref={ref}
@@ -47,17 +47,20 @@ export function ScanBox({ onRead, disabled = false }: { onRead: (raw: string, so
               send(value, 'typed')
             }
           }}
-          className="min-h-14 w-full rounded-control border border-line-strong bg-surface px-3 font-mono text-lg"
+          className="min-h-14 w-full min-w-0 rounded-control border-0 bg-inset px-4 font-mono text-lg tracking-[0.02em] shadow-[inset_0_0_0_1px_var(--border)] outline-none transition-shadow duration-150 hover:shadow-[inset_0_0_0_1px_var(--border-strong)] focus:shadow-[inset_0_0_0_1px_var(--accent-ink)]"
         />
-        <Button onClick={() => send(value, 'typed')} disabled={disabled || !value.trim()} kind="secondary">
+        <Button onClick={() => send(value, 'typed')} disabled={disabled || !value.trim()} kind="secondary" className="min-h-14">
           Add code
         </Button>
       </div>
-      <div className="flex items-center gap-3 text-[13px] text-meta">
-        <span aria-live="polite">{disabled ? 'Scanner paused' : 'Scanner ready'}</span>
+      <div className="flex flex-wrap items-center gap-3 text-[13px] text-meta">
+        <span aria-live="polite" className="inline-flex items-center gap-2">
+          <span aria-hidden className={`size-2 rounded-full ${disabled ? 'bg-unk' : 'bg-ok shadow-[0_0_0_3px_var(--ok-wash)]'}`} />
+          {disabled ? 'Scanner paused' : 'Scanner ready'}
+        </span>
         <span aria-hidden>·</span>
         {window.isSecureContext ? (
-          <button type="button" className="inline-flex items-center gap-1 underline" onClick={() => setCamera(true)}>
+          <button type="button" className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-surface-2 px-4 font-medium text-ink shadow-[inset_0_0_0_1px_var(--border)] transition-colors duration-150 hover:bg-sunken" onClick={() => setCamera(true)}>
             <Camera size={16} strokeWidth={1.75} /> Camera
           </button>
         ) : (
@@ -101,14 +104,14 @@ function CameraSheet({ onClose, onCode }: { onClose: () => void; onCode: (raw: s
     }
   }, [onCode])
   return (
-    <div role="dialog" aria-label="Camera" className="fixed inset-x-0 bottom-0 z-20 max-h-[80vh] border-t border-line-strong bg-surface p-4" style={{ boxShadow: 'var(--shadow-float)' }}>
+    <div role="dialog" aria-label="Camera" className="fixed inset-x-0 bottom-0 z-20 mx-auto max-h-[80vh] max-w-[640px] rounded-t-[28px] bg-surface p-5 shadow-pop">
       <div className="mb-2 flex items-center justify-between">
         <h2>Camera</h2>
         <Button kind="quiet" onClick={onClose} aria-label="Close camera">
           <X size={20} strokeWidth={1.75} />
         </Button>
       </div>
-      {problem ? <Notice tone="warn">{problem}</Notice> : <video ref={video} muted playsInline className="max-h-[60vh] w-full rounded-control bg-sunken" />}
+      {problem ? <Notice tone="warn">{problem}</Notice> : <video ref={video} muted playsInline className="max-h-[60vh] w-full rounded-control bg-inset" />}
     </div>
   )
 }

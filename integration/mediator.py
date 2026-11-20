@@ -335,6 +335,21 @@ class GavQueryMediator:
             "query_unfolding": unfolding
         }
 
+    def execute_federated_query(self, question: str, max_hops: int = 2, verify: bool = True,
+                                max_augmentation: Optional[int] = None, top_n: Optional[int] = None) -> Dict[str, Any]:
+        """
+        Phase 3: a natural-language question, unfolded over the same GAV mapping
+        (schema_mapping.json, section "phase3") into one subquery per database view,
+        executed by each database on its own machine, which also discovers its own
+        context through its FK-PK relationships (SCORE: integration/federation/score_context.py).
+        The local contexts are merged into result["query_context"] (context_aggregator.py), which
+        then drives the search of every source's documents; result["integrated"] is the combined
+        structured + unstructured answer (retrieval.py).
+        """
+        from integration.federation.coordinator import federated_query
+        return federated_query(question, max_hops=max_hops, verify=verify,
+                               max_augmentation=max_augmentation, top_n=top_n)
+
     def simulate_all_challenges(self) -> Dict[str, Any]:
         """
         Runs an academic simulation demonstrating all 7 Information Integration Challenges.

@@ -1,31 +1,39 @@
 import type { ButtonHTMLAttributes, InputHTMLAttributes, ReactNode, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { ApiError } from '../api/client'
 
-// Small, plain controls. Radii: 6 px for controls, 10 px for panels (DESIGN.md 3.3). One primary button per view.
+// Console controls from the project's dashboard: pill buttons, inset fields, rimmed cards. One primary (lime) button per view.
 
 type ButtonKind = 'primary' | 'secondary' | 'danger' | 'quiet'
 const KIND: Record<ButtonKind, string> = {
-  primary: 'bg-accent text-on-accent border border-accent',
-  secondary: 'bg-surface text-ink border border-line-strong hover:bg-sunken',
-  danger: 'bg-surface text-bad-fg border border-bad-line hover:bg-bad-bg',
-  quiet: 'bg-transparent text-ink border border-transparent hover:bg-sunken',
+  // Disabled lime at half opacity reads as mud; a disabled primary goes neutral and stays clearly a button.
+  primary: 'bg-accent text-on-accent hover:bg-accent-hover disabled:bg-sunken disabled:text-meta disabled:opacity-100 disabled:shadow-none disabled:hover:bg-sunken',
+  secondary: 'bg-transparent text-ink shadow-[inset_0_0_0_1px_var(--border-strong)] hover:bg-surface-2',
+  danger: 'bg-bad-bg text-bad-fg shadow-[inset_0_0_0_1px_var(--bad-line)] hover:brightness-110',
+  quiet: 'bg-transparent text-ink hover:bg-sunken',
 }
 
 export function Button({ kind = 'secondary', className = '', ...p }: ButtonHTMLAttributes<HTMLButtonElement> & { kind?: ButtonKind }) {
-  return <button type="button" {...p} className={`min-h-11 rounded-control px-4 text-base font-semibold ${KIND[kind]} ${className}`} />
+  return (
+    <button
+      type="button"
+      {...p}
+      className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-[15px] font-semibold tracking-[-0.01em] whitespace-nowrap transition-[background-color,color,filter,translate] duration-150 ease-console active:translate-y-px disabled:active:translate-y-0 ${KIND[kind]} ${className}`}
+    />
+  )
 }
 
 export function Field({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
   return (
-    <label className="grid gap-1">
-      <span className="text-base font-semibold">{label}</span>
+    <label className="grid gap-1.5">
+      <span className="text-[15px] font-semibold">{label}</span>
       {children}
       {hint && <span className="text-[13px] text-meta">{hint}</span>}
     </label>
   )
 }
 
-const CONTROL = 'min-h-11 w-full rounded-control border border-line-strong bg-surface px-3 text-base text-ink'
+const CONTROL =
+  'min-h-11 w-full rounded-control border-0 bg-inset px-4 text-base text-ink shadow-[inset_0_0_0_1px_var(--border)] outline-none transition-shadow duration-150 placeholder:text-meta hover:shadow-[inset_0_0_0_1px_var(--border-strong)] focus:shadow-[inset_0_0_0_1px_var(--accent-ink)] disabled:opacity-60'
 export function Input(p: InputHTMLAttributes<HTMLInputElement>) {
   return <input {...p} className={`${CONTROL} ${p.className ?? ''}`} />
 }
@@ -33,12 +41,12 @@ export function Select(p: SelectHTMLAttributes<HTMLSelectElement>) {
   return <select {...p} className={`${CONTROL} ${p.className ?? ''}`} />
 }
 export function Textarea(p: TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea {...p} className={`${CONTROL} min-h-32 py-2 ${p.className ?? ''}`} />
+  return <textarea {...p} className={`${CONTROL} min-h-32 py-3 ${p.className ?? ''}`} />
 }
 
 export function PageHeader({ title, children }: { title: string; children?: ReactNode }) {
   return (
-    <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-3">
+    <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
       <h1>{title}</h1>
       {children}
     </div>
@@ -47,10 +55,10 @@ export function PageHeader({ title, children }: { title: string; children?: Reac
 
 export function EmptyState({ title, text, action }: { title: string; text: string; action?: ReactNode }) {
   return (
-    <div className="prose-narrow py-8">
+    <div className="hatch prose-narrow rounded-panel px-6 py-8 shadow-[inset_0_0_0_1px_var(--border)]">
       <h2>{title}</h2>
-      <p className="mt-1 text-muted">{text}</p>
-      {action && <div className="mt-4">{action}</div>}
+      <p className="mt-1.5 text-muted">{text}</p>
+      {action && <div className="mt-5">{action}</div>}
     </div>
   )
 }
@@ -59,7 +67,7 @@ export function ProblemMessage({ error }: { error: unknown }) {
   if (!error) return null
   const p = error instanceof ApiError ? error.problem : null
   return (
-    <div role="alert" className="prose-narrow rounded-control border border-bad-line bg-bad-bg px-3 py-2 text-bad-fg">
+    <div role="alert" className="prose-narrow rounded-control bg-bad-bg px-4 py-3 text-bad-fg shadow-[inset_0_0_0_1px_var(--bad-line)]">
       <strong>{p?.title ?? 'Something went wrong'}</strong>
       <p>{p?.detail || (error instanceof Error ? error.message : 'Try again in a moment.')}</p>
     </div>
@@ -67,8 +75,13 @@ export function ProblemMessage({ error }: { error: unknown }) {
 }
 
 export function Notice({ tone = 'unknown', children }: { tone?: 'ok' | 'warn' | 'bad' | 'unknown'; children: ReactNode }) {
-  const c = { ok: 'border-ok-line bg-ok-bg text-ok-fg', warn: 'border-warn-line bg-warn-bg text-warn-fg', bad: 'border-bad-line bg-bad-bg text-bad-fg', unknown: 'border-unk-line bg-unk-bg text-unk-fg' }[tone]
-  return <div className={`prose-narrow rounded-control border px-3 py-2 ${c}`}>{children}</div>
+  const c = {
+    ok: 'bg-ok-bg text-ok-fg shadow-[inset_0_0_0_1px_var(--ok-line)]',
+    warn: 'bg-warn-bg text-warn-fg shadow-[inset_0_0_0_1px_var(--warn-line)]',
+    bad: 'bg-bad-bg text-bad-fg shadow-[inset_0_0_0_1px_var(--bad-line)]',
+    unknown: 'bg-unk-bg text-unk-fg shadow-[inset_0_0_0_1px_var(--unknown-line)]',
+  }[tone]
+  return <div className={`prose-narrow rounded-control px-4 py-3 ${c}`}>{children}</div>
 }
 
 export function Skeleton({ rows = 4, label }: { rows?: number; label?: string }) {
@@ -76,7 +89,7 @@ export function Skeleton({ rows = 4, label }: { rows?: number; label?: string })
     <div role="status" aria-live="polite" className="grid gap-2">
       {label && <p className="text-muted">{label}</p>}
       {Array.from({ length: rows }, (_, i) => (
-        <div key={i} className="h-9 rounded-control bg-sunken" />
+        <div key={i} className="hatch h-10 animate-pulse rounded-control bg-surface-2 motion-reduce:animate-none" />
       ))}
     </div>
   )
@@ -84,27 +97,27 @@ export function Skeleton({ rows = 4, label }: { rows?: number; label?: string })
 
 export function Table({ head, children }: { head: string[]; children: ReactNode }) {
   return (
-    <div className="overflow-x-auto" role="region" aria-label="Table, scrolls sideways" tabIndex={0}>
-      <table className="w-full border-collapse text-left text-sm">
+    <div className="card overflow-x-auto" role="region" aria-label="Table, scrolls sideways" tabIndex={0}>
+      <table className="w-full border-collapse text-left text-[15px]">
         <thead>
-          <tr className="border-b border-line-strong">
+          <tr>
             {head.map((h) => (
-              <th key={h} scope="col" className="whitespace-nowrap px-3 py-2.5 font-semibold">
+              <th key={h} scope="col" className="whitespace-nowrap bg-surface-2 px-4 py-3 text-[13px] font-medium text-meta first:rounded-tl-panel last:rounded-tr-panel">
                 {h}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody>{children}</tbody>
+        <tbody className="[&_tr:hover_td]:bg-surface-2">{children}</tbody>
       </table>
     </div>
   )
 }
 export const Td = ({ children, mono = false, className = '' }: { children?: ReactNode; mono?: boolean; className?: string }) => (
-  <td className={`border-b border-line px-3 py-2.5 align-top ${mono ? 'font-mono' : ''} ${className}`}>{children}</td>
+  <td className={`border-t border-line px-4 py-3 align-top transition-colors duration-150 ${mono ? 'font-mono text-[14px]' : ''} ${className}`}>{children}</td>
 )
 
 export function Status({ tone, children }: { tone: 'ok' | 'warn' | 'bad' | 'unknown'; children: ReactNode }) {
-  const c = { ok: 'text-ok-fg bg-ok-bg border-ok-line', warn: 'text-warn-fg bg-warn-bg border-warn-line', bad: 'text-bad-fg bg-bad-bg border-bad-line', unknown: 'text-unk-fg bg-unk-bg border-unk-line' }[tone]
-  return <span className={`inline-block shrink-0 self-start whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[13px] font-semibold ${c}`}>{children}</span>
+  const c = { ok: 'text-ok-fg bg-ok-bg', warn: 'text-warn-fg bg-warn-bg', bad: 'text-bad-fg bg-bad-bg', unknown: 'text-unk-fg bg-unk-bg' }[tone]
+  return <span className={`inline-block shrink-0 self-start whitespace-nowrap rounded-full px-3 py-0.5 text-[13px] font-semibold ${c}`}>{children}</span>
 }

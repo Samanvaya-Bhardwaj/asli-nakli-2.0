@@ -1,0 +1,18 @@
+# The four computers of the demonstration. Fill in this file on the day and copy the SAME file to all four.
+#
+# Address of each computer on the shared Wi-Fi:
+#   Windows: ipconfig   (the "IPv4 Address" of the Wi-Fi adapter, like 192.168.1.23)
+#   Mac:     ipconfig getifaddr en0
+#
+# team_secret: any phrase; all four must have the same one. The join token, the staff password and the directory's
+# admin token are all derived from it, so nothing secret has to be copied between computers.
+#
+# Which organisations run where is in infra/network.yaml (PC-A people, PC-B pharma, PC-C distributors, PC-D shops).
+
+team_secret: "asali-demo-2026"
+
+pcs:
+  PC-A: "192.168.52.152"   # directory, regulator, consumer-delhi, consumer-mumbai
+  PC-B: "192.168.52.111"   # tarang, medivra, kesar
+  PC-C: "192.168.39.77"    # dist-north, dist-west, dist-south
+  PC-D: "192.168.52.155"   # shop-delhi, shop-mumbai, shop-bengaluru

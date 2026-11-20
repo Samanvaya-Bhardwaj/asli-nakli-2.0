@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-040
+title: Consumer complaint MCA-2026-G0092
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 07 Jan 2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code Med_Lvcre_851 at deccan pharmacy, pune. Something is wrong with it. Pharmacist could not confirm the batch of Levocera 5mg.
+
+Please look into this.
+
+Regards,
+Pooja Rao

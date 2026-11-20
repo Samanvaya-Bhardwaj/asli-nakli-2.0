@@ -1,0 +1,667 @@
+Phase 3 - SCORE-inspired query context discovery: demonstration transcript
+Recorded 2026-11-18 15:47 on one machine (LOCAL SIMULATION: four database services as separate processes, loopback).
+Each [dbN] block is computed inside that database's own service; the coordinator only aggregates (block 6).
+
+====================================================================================================
+QUESTION: Was the cold chain of MED-ASALI-009 maintained?
+  intents ['cold_chain']  identifiers ['MED-ASALI-009']  terms ['maintained']
+  context keywords sent to every database: ['cold chain', 'maintained', 'cold-chain', 'temperature', 'refrigerat', 'excursion', 'storage', 'frozen']
+  databases: db2, db3   (not queried: db1, db4)
+====================================================================================================
+[db2] Qf033f6.db2.1  executed by pid 11704 on ShagunKaler (127.0.0.1:8022)
+  1. INITIAL RESULT: SELECT * FROM "distribution_batches" WHERE "batch_serial" IN (?) LIMIT ?   params ['MED-ASALI-009']
+     -> 1 row(s) of distribution_batches [exact]
+     all 18 columns kept: batch_id:identifier, batch_serial:identifier, distributor_id:identifier, manufacturer_ref:identifier, source_warehouse:identifier, destination_vendor_id:identifier, quantity_shipped:numeric, quantity_received:numeric, di
+  2. SCHEMA GRAPH: 7 tables, 6 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 3.66414  distribution_batches -> cold_chain_loggers         to referencing (FK) table  rows 1   new terms 7   affinity 1.0
+     step 1      3.03697  distribution_batches -> distributors               to referenced (PK) table   rows 1   new terms 8   affinity 0.5
+     step 1      2.7732   distribution_batches -> warehouses                 to referenced (PK) table   rows 1   new terms 6   affinity 0.5
+     step 2 JOIN 3.03697  distribution_batches -> distributors               to referenced (PK) table   rows 1   new terms 8   affinity 0.5
+     step 2      2.7732   distribution_batches -> warehouses                 to referenced (PK) table   rows 1   new terms 6   affinity 0.5
+     step 2      0.23985  cold_chain_loggers -> temperature_logs           to referencing (FK) table  rows 11  new terms 18  affinity 1.0
+     step 3 JOIN 2.7732   distribution_batches -> warehouses                 to referenced (PK) table   rows 1   new terms 6   affinity 0.5
+     step 3      0.509    distributors -> warehouses                 to referencing (FK) table  rows 3   new terms 13  affinity 0.5
+     step 3      0.23985  cold_chain_loggers -> temperature_logs           to referencing (FK) table  rows 11  new terms 18  affinity 1.0
+     step 3      0.051    distributors -> distributor_vendor_contracts to referencing (FK) table  rows 9   new terms 28  affinity 0.0
+     step 4 JOIN 0.23985  cold_chain_loggers -> temperature_logs           to referencing (FK) table  rows 11  new terms 18  affinity 1.0
+     step 4      0.051    distributors -> distributor_vendor_contracts to referencing (FK) table  rows 9   new terms 28  affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "distribution_batches" r JOIN "cold_chain_loggers" n ON n."batch_id" = r."batch_id" WHERE r."batch_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "distribution_batches" r JOIN "distributors" n ON n."distributor_id" = r."distributor_id" WHERE r."batch_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "distribution_batches" r JOIN "warehouses" n ON n."distributor_id" = r."distributor_id" AND n."warehouse_name" = r."source_warehouse" WHERE r....  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "cold_chain_loggers" r JOIN "temperature_logs" n ON n."logger_id" = r."logger_id" WHERE r."logger_id" IN (?)  -> 11 row(s)
+     explored ['distribution_batches', 'cold_chain_loggers', 'distributors', 'warehouses', 'temperature_logs']; not explored ['distributor_vendor_contracts', 'return_log']
+  4. TERMS FROM THE RESULT (tf x idf): excursion 1.87121; logged 0.9356; threshold 0.9356; exceeded 0.9356; thermal 0.9356; DBATCH-010 0.84204; MED-ASALI-009 0.84204; VND-003 0.78182
+  5. LOCAL CONTEXT returned by db2 (top 20):
+     1.87121  excursion                                                  distribution_batches.discrepancy_details      via (query result)  [query]
+     0.98126  DBATCH-010                                                 distribution_batches.batch_id                 via (query result)
+     0.9356   exceeded                                                   distribution_batches.discrepancy_details      via (query result)
+     0.9356   logged                                                     distribution_batches.discrepancy_details      via (query result)
+     0.9356   thermal                                                    distribution_batches.discrepancy_details      via (query result)
+     0.9356   threshold                                                  distribution_batches.discrepancy_details      via (query result)
+     0.84204  MED-ASALI-009                                              distribution_batches.batch_serial             via (query result)
+     0.78182  VND-003                                                    distribution_batches.destination_vendor_id    via (query result)
+     0.74869  Mumbai Central DC                                          distribution_batches.source_warehouse         via (query result)
+     0.74848  vehicle_reg=AI-864                                         distribution_batches.vehicle_reg              via (query result)
+====================================================================================================
+[db3] Qf033f6.db3.1  executed by pid 16436 on ShagunKaler (127.0.0.1:8023)
+  1. INITIAL RESULT: SELECT * FROM "products" WHERE "product_uid" IN (?) LIMIT ?   params ['MED-ASALI-009']
+     -> 1 row(s) of products [exact]
+     all 24 columns kept: product_uid:identifier, product_name:categorical, generic_name:identifier, manufacturer_id:identifier, category:categorical, dosage_form:categorical, strength:categorical, pack_size:categorical, manufacture_date:date, ex
+  2. SCHEMA GRAPH: 7 tables, 7 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 2.47785  products -> molecules                  to referenced (PK) table   rows 1   new terms 5   affinity 0.5
+     step 1      2.34719  products -> production_records         to referencing (FK) table  rows 1   new terms 8   affinity 0.0
+     step 1      2.23714  products -> manufacturers              to referenced (PK) table   rows 1   new terms 13  affinity 0.0
+     step 1      2.08273  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 15  affinity 0.0
+     step 2 JOIN 2.34719  products -> production_records         to referencing (FK) table  rows 1   new terms 8   affinity 0.0
+     step 2      2.23714  products -> manufacturers              to referenced (PK) table   rows 1   new terms 13  affinity 0.0
+     step 2      2.08273  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 15  affinity 0.0
+     step 3 JOIN 2.23714  products -> manufacturers              to referenced (PK) table   rows 1   new terms 13  affinity 0.0
+     step 3      2.08273  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 15  affinity 0.0
+     step 3      1.64584  production_records -> manufacturing_sites        to referenced (PK) table   rows 1   new terms 10  affinity 0.0
+     step 4 JOIN 2.08273  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 15  affinity 0.0
+     step 4      1.64584  production_records -> manufacturing_sites        to referenced (PK) table   rows 1   new terms 10  affinity 0.0
+     step 4      0.61973  manufacturers -> manufacturing_sites        to referencing (FK) table  rows 2   new terms 16  affinity 0.0
+     step 4      0.0702   manufacturers -> authorized_distributors    to referencing (FK) table  rows 8   new terms 22  affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "products" r JOIN "molecules" n ON n."generic_name" = r."generic_name" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "products" r JOIN "production_records" n ON n."product_uid" = r."product_uid" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "products" r JOIN "manufacturers" n ON n."manufacturer_id" = r."manufacturer_id" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "products" r JOIN "batch_release_certs" n ON n."product_uid" = r."product_uid" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     explored ['products', 'molecules', 'production_records', 'manufacturers', 'batch_release_certs']; not explored ['authorized_distributors', 'manufacturing_sites']
+  4. TERMS FROM THE RESULT (tf x idf): storage_temp_min=2.0 0.88891; storage_temp_max=8.0 0.88891; requires_cold_chain=1 0.88891; MED-ASALI-009 0.82812; BATCH-A009 0.82812; CDSCO/MFG/009/2021 0.82812; product_name=Basalog 100 IU/ml 0.73611; strength=100 IU/ml 0.73611
+  5. LOCAL CONTEXT returned by db3 (top 20):
+     1.11796  BATCH-A009                                                 products.batch_number             via (query result)
+     1.11796  MED-ASALI-009                                              products.product_uid              via (query result)
+     0.88891  requires_cold_chain=1                                      products.requires_cold_chain      via (query result)  [query]
+     0.88891  storage_temp_max=8.0                                       products.storage_temp_max         via (query result)  [query]
+     0.88891  storage_temp_min=2.0                                       products.storage_temp_min         via (query result)  [query]
+     0.82812  CDSCO/MFG/009/2021                                         products.registration_no          via (query result)
+     0.80997  A10AE04                                                    products.atc_code                 via (query result)
+     0.80997  Insulin glargine                                           products.generic_name             via (query result)
+     0.73611  pack_size=Pen 3ml                                          products.pack_size                via (query result)
+     0.73611  product_name=Basalog 100 IU/ml                             products.product_name             via (query result)
+====================================================================================================
+6. AGGREGATED QUERY CONTEXT: 37 distinct terms from db2, db3; top 25
+   1.5     excursion                                            db2          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.1926  requires_cold_chain=1                                db3          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.1926  storage_temp_max=8.0                                 db3          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.1926  storage_temp_min=2.0                                 db3          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.1754  MFG-004                                              db2/db3      identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): products(manufacturer_id) -> manufacturers(manufacturer_id); found independently by 2 databases (db2, db3); frequent in the result but rare in its column across the database (high tf x idf)
+   1.0     BATCH-A009                                           db3          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): products(product_uid) -> production_records(product_uid); frequent in the result but rare in its column across the database (high tf x idf)
+   0.862   cold_chain_required=1                                db3          categorical
+           7. why: reached through 1 FK join(s): products(generic_name) -> molecules(generic_name); matches the question's words or intent
+   0.7407  CDSCO/MFG/009/2021                                   db3          identifier
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.7245  A10AE04                                              db3          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): products(generic_name) -> molecules(generic_name); frequent in the result but rare in its column across the database (high tf x idf)
+   0.7245  Insulin glargine                                     db3          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): products(generic_name) -> molecules(generic_name); frequent in the result but rare in its column across the database (high tf x idf)
+   0.6584  pack_size=Pen 3ml                                    db3          categorical
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.6584  product_name=Basalog 100 IU/ml                       db3          categorical
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.6584  strength=100 IU/ml                                   db3          categorical
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.5635  msrp_kes=850 (table mean 133.9)                      db3          numeric
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.5635  unit_cost_kes=680 (table mean 104.6)                 db3          numeric
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.5363  cold_chain_maintained=0                              db2          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   0.5244  DBATCH-010                                           db2          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): distribution_batches(batch_id) -> cold_chain_loggers(batch_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5185  API-INS-2506-868                                     db3          identifier
+           7. why: reached through 1 FK join(s): products(product_uid) -> production_records(product_uid); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5185  COA-00024                                            db3          identifier
+           7. why: reached through 1 FK join(s): products(product_uid) -> batch_release_certs(product_uid); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5185  PRD-00024                                            db3          identifier
+           7. why: reached through 1 FK join(s): products(product_uid) -> production_records(product_uid); frequent in the result but rare in its column across the database (high tf x idf)
+====================================================================================================
+
+
+====================================================================================================
+QUESTION: Has MED-RECALL-001 been recalled, and why?
+  intents ['recall']  identifiers ['MED-RECALL-001']  terms []
+  context keywords sent to every database: ['recall', 'withdrawn', 'banned', 'blacklist', 'ban']
+  databases: db3, db4   (not queried: db1, db2)
+====================================================================================================
+[db3] Q836d30.db3.1  executed by pid 16436 on ShagunKaler (127.0.0.1:8023)
+  1. INITIAL RESULT: SELECT * FROM "products" WHERE "product_uid" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of products [exact]
+     all 24 columns kept: product_uid:identifier, product_name:categorical, generic_name:identifier, manufacturer_id:identifier, category:categorical, dosage_form:categorical, strength:categorical, pack_size:categorical, manufacture_date:date, ex
+  2. SCHEMA GRAPH: 7 tables, 7 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 2.39931  products -> production_records         to referencing (FK) table  rows 1   new terms 8   affinity 0.0
+     step 1      2.29041  products -> manufacturers              to referenced (PK) table   rows 1   new terms 14  affinity 0.0
+     step 1      2.01588  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 14  affinity 0.0
+     step 1      1.32263  products -> molecules                  to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 2 JOIN 2.29041  products -> manufacturers              to referenced (PK) table   rows 1   new terms 14  affinity 0.0
+     step 2      2.01588  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 14  affinity 0.0
+     step 2      1.71337  production_records -> manufacturing_sites        to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 2      1.32263  products -> molecules                  to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 3 JOIN 2.01588  products -> batch_release_certs        to referencing (FK) table  rows 1   new terms 14  affinity 0.0
+     step 3      1.71337  production_records -> manufacturing_sites        to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 3      1.32263  products -> molecules                  to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 3      1.29314  manufacturers -> authorized_distributors    to referencing (FK) table  rows 1   new terms 7   affinity 0.0
+     step 3      0.69791  manufacturers -> manufacturing_sites        to referencing (FK) table  rows 2   new terms 17  affinity 0.0
+     step 4 JOIN 1.71337  production_records -> manufacturing_sites        to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 4      1.32263  products -> molecules                  to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 4      1.29314  manufacturers -> authorized_distributors    to referencing (FK) table  rows 1   new terms 7   affinity 0.0
+     step 4      0.69791  manufacturers -> manufacturing_sites        to referencing (FK) table  rows 2   new terms 17  affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "products" r JOIN "production_records" n ON n."product_uid" = r."product_uid" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "products" r JOIN "manufacturers" n ON n."manufacturer_id" = r."manufacturer_id" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "products" r JOIN "batch_release_certs" n ON n."product_uid" = r."product_uid" WHERE r."product_uid" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "production_records" r JOIN "manufacturing_sites" n ON n."site_id" = r."site_id" WHERE r."production_id" IN (?)  -> 1 row(s)
+     explored ['products', 'production_records', 'manufacturers', 'batch_release_certs', 'manufacturing_sites']; not explored ['authorized_distributors', 'molecules']
+  4. TERMS FROM THE RESULT (tf x idf): permissible 1.84027; limit 1.84027; glycol 1.84027; diethylene 1.84027; above 1.84027; contamination 1.68834; MED-RECALL-001 1.65625; standard 1.58055
+  5. LOCAL CONTEXT returned by db3 (top 20):
+     2.23594  MED-RECALL-001                                             products.product_uid              via (query result)  [query]
+     1.84027  above                                                      products.recall_reason            via (query result)  [query]
+     1.84027  diethylene                                                 products.recall_reason            via (query result)  [query]
+     1.84027  glycol                                                     products.recall_reason            via (query result)  [query]
+     1.84027  limit                                                      products.recall_reason            via (query result)  [query]
+     1.84027  permissible                                                products.recall_reason            via (query result)  [query]
+     1.68834  contamination                                              products.recall_reason            via (query result)  [query]
+     1.58055  central                                                    products.recall_authority         via (query result)  [query]
+     1.58055  control                                                    products.recall_authority         via (query result)  [query]
+     1.58055  organisation                                               products.recall_authority         via (query result)  [query]
+====================================================================================================
+[db4] Q836d30.db4.1  executed by pid 13236 on ShagunKaler (127.0.0.1:8024)
+  1. INITIAL RESULT: SELECT * FROM "complaints" WHERE "complaint_item_ref" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of complaints [exact]
+     all 17 columns kept: complaint_id:identifier, complaint_item_ref:identifier, complaint_date:date, complainant_type:categorical, complainant_name:categorical, purchase_location:categorical, complaint_category:categorical, description:text, se
+  2. SCHEMA GRAPH: 7 tables, 11 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 6.70674  complaints -> ministry_blacklist         to referencing (FK) table  rows 1   new terms 10  affinity 1.0
+     step 1      4.851    complaints -> recall_notices             to referencing (FK) table  rows 1   new terms 13  affinity 1.0
+     step 1      1.925    complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 19  affinity 0.0
+     step 1      1.1885   complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 2 JOIN 4.851    complaints -> recall_notices             to referencing (FK) table  rows 1   new terms 12  affinity 1.0
+     step 2      1.925    complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 19  affinity 0.0
+     step 2      1.1605   complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3 JOIN 1.925    complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 3      1.3475   recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 3      1.3475   recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 3      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 3      1.1605   complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4 JOIN 1.3475   recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 4      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 4      1.1605   complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "complaints" r JOIN "ministry_blacklist" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "complaints" r JOIN "recall_notices" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "complaints" r JOIN "lab_reports" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "public_alerts" n ON n."alert_id" = r."alert_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     explored ['complaints', 'ministry_blacklist', 'recall_notices', 'lab_reports', 'public_alerts']; not explored ['ministry_officers', 'regulatory_authorities']
+  4. TERMS FROM THE RESULT (tf x idf): recall 1.66149; MED-RECALL-001 1.641; action_taken=product_recalled 1.23733; cough 0.91166; analyst 0.91166; solvent 0.91166; pediatric 0.91166; limit 0.91166
+  5. LOCAL CONTEXT returned by db4 (top 20):
+     2.3447   MED-RECALL-001                                             complaints.complaint_item_ref       via (query result)  [query]
+     1.98874  recall                                                     complaints.resolution_notes         via (query result)  [query]
+     1.33148  diethylene                                                 complaints.description              via (query result)
+     1.33148  glycol                                                     complaints.description              via (query result)
+     1.23733  action_taken=product_recalled                              complaints.action_taken             via (query result)  [query]
+     1.11171  MCA-2024-006                                               complaints.complaint_id             via (query result)
+     1.04273  solvent                                                    complaints.description              via (query result)
+     1.00791  exceeding                                                  complaints.description              via (query result)
+     1.00791  gazetted                                                   complaints.resolution_notes         via (query result)
+     1.00791  limit                                                      complaints.description              via (query result)
+====================================================================================================
+[db4] Q836d30.db4.2  executed by pid 13236 on ShagunKaler (127.0.0.1:8024)
+  1. INITIAL RESULT: SELECT * FROM "ministry_blacklist" WHERE "item_ref" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of ministry_blacklist [exact]
+     all 13 columns kept: blacklist_id:identifier, item_ref:identifier, complaint_id:identifier, blacklisted_on:date, blacklisted_by:categorical, reason:text, severity:categorical, health_risk:categorical, public_alert_issued:categorical, alert_d
+  2. SCHEMA GRAPH: 7 tables, 11 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 3.94368  ministry_blacklist -> complaints                 to referenced (PK) table   rows 1   new terms 29  affinity 0.0
+     step 2 JOIN 3.3957   complaints -> recall_notices             to referencing (FK) table  rows 1   new terms 12  affinity 1.0
+     step 2      1.3475   complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 19  affinity 0.0
+     step 2      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3 JOIN 1.3475   complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 3      0.94325  recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 3      0.94325  recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 3      0.8197   recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 3      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3      0.56865  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4 JOIN 0.94325  recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 4      0.8197   recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 4      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4      0.56865  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "ministry_blacklist" r JOIN "complaints" n ON n."complaint_id" = r."complaint_id" WHERE r."blacklist_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "complaints" r JOIN "recall_notices" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "complaints" r JOIN "lab_reports" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "public_alerts" n ON n."alert_id" = r."alert_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     explored ['ministry_blacklist', 'complaints', 'recall_notices', 'lab_reports', 'public_alerts']; not explored ['ministry_officers', 'regulatory_authorities']
+  4. TERMS FROM THE RESULT (tf x idf): BL-004 1.34815; MED-RECALL-001 1.34815; blacklisted_by=OFF-004 1.19835; recalled 0.89588; blacklisted_on=2025-05 0.74897; solvent 0.74897; diethylene 0.74897; glycol 0.74897
+  5. LOCAL CONTEXT returned by db4 (top 20):
+     1.96277  MED-RECALL-001                                             ministry_blacklist.item_ref                 via (query result)  [query]
+     1.39211  recall                                                     complaints.resolution_notes         via ministry_blacklist(complaint_id) -> complaints(complaint_id)  [query]
+     1.34815  BL-004                                                     ministry_blacklist.blacklist_id             via (query result)  [query]
+     1.19835  blacklisted_by=OFF-004                                     ministry_blacklist.blacklisted_by           via (query result)  [query]
+     1.11064  diethylene                                                 ministry_blacklist.reason                   via (query result)
+     1.11064  glycol                                                     ministry_blacklist.reason                   via (query result)
+     0.93893  MCA-2024-006                                               ministry_blacklist.complaint_id             via (query result)
+     0.90851  solvent                                                    ministry_blacklist.reason                   via (query result)
+     0.89588  recalled                                                   ministry_blacklist.reason                   via (query result)  [query]
+     0.86613  action_taken=product_recalled                              complaints.action_taken             via ministry_blacklist(complaint_id) -> complaints(complaint_id)  [query]
+====================================================================================================
+[db4] Q836d30.db4.3  executed by pid 13236 on ShagunKaler (127.0.0.1:8024)
+  1. INITIAL RESULT: SELECT * FROM "recall_notices" WHERE "item_ref" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of recall_notices [exact]
+     all 13 columns kept: recall_id:identifier, authority_id:identifier, issuing_officer_id:identifier, item_ref:identifier, batch_ref:identifier, manufacturer_ref:identifier, recall_class:categorical, reason:text, issued_on:date, status:categori
+  2. SCHEMA GRAPH: 7 tables, 11 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 3.94368  recall_notices -> complaints                 to referenced (PK) table   rows 1   new terms 29  affinity 0.0
+     step 1      2.31     recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 14  affinity 0.0
+     step 1      2.31     recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 21  affinity 0.0
+     step 1      1.67286  recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 1      1.1885   recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 2 JOIN 4.69472  complaints -> ministry_blacklist         to referencing (FK) table  rows 1   new terms 9   affinity 1.0
+     step 2      1.925    recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 12  affinity 0.0
+     step 2      1.925    recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 2      1.67286  recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 2      1.3475   complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 2      1.1885   recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 2      0.83195  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3 JOIN 1.925    recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 3      1.925    recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 3      1.67286  recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 3      1.3475   complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 3      1.1605   recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4 JOIN 1.925    recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 4      1.67286  recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 4      1.3475   complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 4      1.1605   recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4      0.86667  public_alerts -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 4      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "complaints" n ON n."complaint_id" = r."complaint_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "complaints" r JOIN "ministry_blacklist" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "public_alerts" n ON n."alert_id" = r."alert_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "lab_reports" n ON n."lab_report_id" = r."lab_report_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     explored ['recall_notices', 'complaints', 'ministry_blacklist', 'public_alerts', 'lab_reports']; not explored ['ministry_officers', 'regulatory_authorities']
+  4. TERMS FROM THE RESULT (tf x idf): RCL-2025-001 0.99; MED-RECALL-001 0.99; recall_class=I 0.88; permissible 0.55; limit 0.55; above 0.55; diethylene 0.55; glycol 0.55
+  5. LOCAL CONTEXT returned by db4 (top 20):
+     1.90785  MED-RECALL-001                                             complaints.complaint_item_ref       via recall_notices(complaint_id) -> complaints(complaint_id)  [query]
+     1.54804  recall                                                     complaints.resolution_notes         via recall_notices(complaint_id) -> complaints(complaint_id)  [query]
+     1.05992  diethylene                                                 complaints.description              via recall_notices(complaint_id) -> complaints(complaint_id)
+     1.05992  glycol                                                     complaints.description              via recall_notices(complaint_id) -> complaints(complaint_id)
+     0.99     RCL-2025-001                                               recall_notices.recall_id                via (query result)  [query]
+     0.88     recall_class=I                                             recall_notices.recall_class             via (query result)  [query]
+     0.8673   MCA-2024-006                                               complaints.complaint_id             via recall_notices(complaint_id) -> complaints(complaint_id)
+     0.86613  action_taken=product_recalled                              complaints.action_taken             via recall_notices(complaint_id) -> complaints(complaint_id)  [query]
+     0.77567  limit                                                      complaints.description              via recall_notices(complaint_id) -> complaints(complaint_id)
+     0.73442  exceeding                                                  complaints.description              via recall_notices(complaint_id) -> complaints(complaint_id)
+====================================================================================================
+[db4] Q836d30.db4.4  executed by pid 13236 on ShagunKaler (127.0.0.1:8024)
+  1. INITIAL RESULT: SELECT * FROM "lab_reports" WHERE "item_ref" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of lab_reports [exact]
+     all 13 columns kept: lab_report_id:identifier, complaint_id:identifier, item_ref:identifier, lab_name:text, lab_accreditation:categorical, sample_received_on:date, test_completed_on:date, parameters_tested:text, result:categorical, active_in
+  2. SCHEMA GRAPH: 7 tables, 11 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 4.851    lab_reports -> recall_notices             to referencing (FK) table  rows 1   new terms 12  affinity 1.0
+     step 1      3.41881  lab_reports -> complaints                 to referenced (PK) table   rows 1   new terms 26  affinity 0.0
+     step 2 JOIN 3.41881  lab_reports -> complaints                 to referenced (PK) table   rows 1   new terms 25  affinity 0.0
+     step 2      2.39317  recall_notices -> complaints                 to referenced (PK) table   rows 1   new terms 25  affinity 0.0
+     step 2      1.3475   recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 13  affinity 0.0
+     step 2      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 2      0.83195  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3 JOIN 4.69472  complaints -> ministry_blacklist         to referencing (FK) table  rows 1   new terms 9   affinity 1.0
+     step 3      1.3475   recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 12  affinity 0.0
+     step 3      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 3      0.83195  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3      0.83195  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 4 JOIN 1.3475   recall_notices -> public_alerts              to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 4      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 4      0.81235  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "lab_reports" r JOIN "recall_notices" n ON n."lab_report_id" = r."lab_report_id" WHERE r."lab_report_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "lab_reports" r JOIN "complaints" n ON n."complaint_id" = r."complaint_id" WHERE r."lab_report_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "complaints" r JOIN "ministry_blacklist" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "public_alerts" n ON n."alert_id" = r."alert_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     explored ['lab_reports', 'recall_notices', 'complaints', 'ministry_blacklist', 'public_alerts']; not explored ['ministry_officers', 'regulatory_authorities']
+  4. TERMS FROM THE RESULT (tf x idf): recall 1.1; MED-RECALL-001 0.99; chromatography 0.55; screen 0.55; gas 0.55; diethylene 0.55; glycol 0.55; threshold 0.55
+  5. LOCAL CONTEXT returned by db4 (top 20):
+     1.85587  MED-RECALL-001                                             complaints.complaint_item_ref       via lab_reports(complaint_id) -> complaints(complaint_id)  [query]
+     1.57279  recall                                                     complaints.resolution_notes         via lab_reports(complaint_id) -> complaints(complaint_id)  [query]
+     1.10117  diethylene                                                 complaints.description              via lab_reports(complaint_id) -> complaints(complaint_id)
+     1.10117  glycol                                                     complaints.description              via lab_reports(complaint_id) -> complaints(complaint_id)
+     0.8673   MCA-2024-006                                               complaints.complaint_id             via lab_reports(complaint_id) -> complaints(complaint_id)
+     0.86613  action_taken=product_recalled                              complaints.action_taken             via lab_reports(complaint_id) -> complaints(complaint_id)  [query]
+     0.77567  exceeding                                                  complaints.description              via lab_reports(complaint_id) -> complaints(complaint_id)
+     0.77567  gazetted                                                   complaints.resolution_notes         via lab_reports(complaint_id) -> complaints(complaint_id)
+     0.77567  nationwide                                                 complaints.resolution_notes         via lab_reports(complaint_id) -> complaints(complaint_id)
+     0.73442  limit                                                      complaints.description              via lab_reports(complaint_id) -> complaints(complaint_id)
+====================================================================================================
+[db4] Q836d30.db4.5  executed by pid 13236 on ShagunKaler (127.0.0.1:8024)
+  1. INITIAL RESULT: SELECT * FROM "public_alerts" WHERE "item_ref" IN (?) LIMIT ?   params ['MED-RECALL-001']
+     -> 1 row(s) of public_alerts [exact]
+     all 7 columns kept: alert_id:identifier, item_ref:identifier, issued_on:date, channel:categorical, message:text, issued_by:identifier, active:categorical
+  2. SCHEMA GRAPH: 7 tables, 11 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 4.928    public_alerts -> recall_notices             to referencing (FK) table  rows 1   new terms 15  affinity 1.0
+     step 1      1.2381   public_alerts -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 2 JOIN 2.39317  recall_notices -> complaints                 to referenced (PK) table   rows 1   new terms 27  affinity 0.0
+     step 2      1.3475   recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 20  affinity 0.0
+     step 2      1.2381   public_alerts -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 2      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 2      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3 JOIN 3.2863   complaints -> ministry_blacklist         to referencing (FK) table  rows 1   new terms 8   affinity 1.0
+     step 3      1.3475   recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 3      1.2381   public_alerts -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 3      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 3      0.94325  complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 3      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 3      0.56865  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4 JOIN 1.3475   recall_notices -> lab_reports                to referenced (PK) table   rows 1   new terms 17  affinity 0.0
+     step 4      1.2381   public_alerts -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 5   affinity 0.0
+     step 4      1.171    recall_notices -> regulatory_authorities     to referenced (PK) table   rows 1   new terms 6   affinity 0.0
+     step 4      0.94325  complaints -> lab_reports                to referencing (FK) table  rows 1   new terms 17  affinity 0.0
+     step 4      0.81235  recall_notices -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     step 4      0.56865  complaints -> ministry_officers          to referenced (PK) table   rows 1   new terms 3   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: SELECT DISTINCT n.* FROM "public_alerts" r JOIN "recall_notices" n ON n."alert_id" = r."alert_id" WHERE r."alert_id" IN (?)  -> 1 row(s)
+     join 2: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "complaints" n ON n."complaint_id" = r."complaint_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     join 3: SELECT DISTINCT n.* FROM "complaints" r JOIN "ministry_blacklist" n ON n."complaint_id" = r."complaint_id" WHERE r."complaint_id" IN (?)  -> 1 row(s)
+     join 4: SELECT DISTINCT n.* FROM "recall_notices" r JOIN "lab_reports" n ON n."lab_report_id" = r."lab_report_id" WHERE r."recall_id" IN (?)  -> 1 row(s)
+     explored ['public_alerts', 'recall_notices', 'complaints', 'ministry_blacklist', 'lab_reports']; not explored ['ministry_officers', 'regulatory_authorities']
+  4. TERMS FROM THE RESULT (tf x idf): recall 1.1; MED-RECALL-001 0.99; notice 0.55; immediately 0.55; safety 0.55; syrup 0.55; dispensation 0.55; halt 0.55
+  5. LOCAL CONTEXT returned by db4 (top 20):
+     1.60115  MED-RECALL-001                                             public_alerts.item_ref                 via (query result)  [query]
+     1.43828  recall                                                     public_alerts.message                  via (query result)  [query]
+     0.74195  diethylene                                                 complaints.description              via public_alerts(alert_id) -> recall_notices(alert_id) > rec...
+     0.74195  glycol                                                     complaints.description              via public_alerts(alert_id) -> recall_notices(alert_id) > rec...
+     0.693    RCL-2025-001                                               recall_notices.recall_id                via public_alerts(alert_id) -> recall_notices(alert_id)  [query]
+     0.65177  syrup                                                      public_alerts.message                  via (query result)
+     0.616    recall_class=I                                             recall_notices.recall_class             via public_alerts(alert_id) -> recall_notices(alert_id)  [query]
+     0.60711  MCA-2024-006                                               complaints.complaint_id             via public_alerts(alert_id) -> recall_notices(alert_id) > rec...
+     0.60629  action_taken=product_recalled                              complaints.action_taken             via public_alerts(alert_id) -> recall_notices(alert_id) > rec...  [query]
+     0.58162  ALERT-002                                                  public_alerts.alert_id                 via (query result)
+====================================================================================================
+6. AGGREGATED QUERY CONTEXT: 49 distinct terms from db3, db4; top 25
+   2.6556  diethylene                                           db3/db4      text
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): complaints(complaint_id) -> ministry_blacklist(complaint_id); found independently by 2 databases (db3, db4); matches the question's words or intent
+   2.6556  glycol                                               db3/db4      text
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): complaints(complaint_id) -> ministry_blacklist(complaint_id); found independently by 2 databases (db3, db4); matches the question's words or intent
+   2.3492  limit                                                db3/db4      text
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): complaints(complaint_id) -> recall_notices(complaint_id); found independently by 2 databases (db3, db4); matches the question's words or intent
+   2.196   permissible                                          db3/db4      text
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): recall_notices(lab_report_id) -> lab_reports(lab_report_id); found independently by 2 databases (db3, db4); matches the question's words or intent
+   1.3475  recall                                               db4          text
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): complaints(complaint_id) -> lab_reports(complaint_id); matches the question's words or intent
+   1.2345  above                                                db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.1326  contamination                                        db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.0603  central                                              db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.0603  control                                              db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.0603  organisation                                         db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.0603  standard                                             db3          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   1.0303  BL-004                                               db4          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): complaints(complaint_id) -> ministry_blacklist(complaint_id); matches the question's words or intent
+   0.9876  product_name=Coughcure Syrup 100ml [RECALLED]        db3          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   0.9158  blacklisted_by=OFF-004                               db4          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   0.8482  is_recalled=1                                        db3          categorical
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   0.7915  action_taken=product_recalled                        db4          categorical
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): ministry_blacklist(complaint_id) -> complaints(complaint_id); matches the question's words or intent
+   0.7784  RCL-2025-001                                         db4          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): lab_reports(lab_report_id) -> recall_notices(lab_report_id); matches the question's words or intent
+   0.6919  recall_class=I                                       db4          categorical
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): public_alerts(alert_id) -> recall_notices(alert_id); matches the question's words or intent
+   0.6846  recalled                                             db4          text
+           7. why: in the result of the subquery itself; matches the question's words or intent
+   0.6172  recall_date=2025-05                                  db3          date
+           7. why: in the result of the subquery itself; matches the question's words or intent
+====================================================================================================
+
+
+====================================================================================================
+QUESTION: Which pharmacy stock and sales do we have for MED-ASALI-001?
+  intents ['stock', 'sales']  identifiers ['MED-ASALI-001']  terms ['pharmacy']
+  context keywords sent to every database: ['stock', 'sale', 'sales', 'pharmacy', 'inventory', 'in stock', 'received', 'available', 'sold', 'checkout', 'purchased', 'dispensed', 'bought']
+  databases: db1   (not queried: db2, db3, db4)
+====================================================================================================
+[db1] Qc4eb7e.db1.1  executed by pid 2220 on ShagunKaler (127.0.0.1:8021)
+  1. INITIAL RESULT: db.retail_pos_scans.find({"scan_code": {"$in": ["MED-ASALI-001", "MED-ASALI-0O1"]}}).limit(25)   params []
+     -> 2 row(s) of retail_pos_scans [exact, lookalike]
+     all 32 columns kept: _id:identifier, anomaly_telemetry.flagged:categorical, anomaly_telemetry.notes:text, anomaly_telemetry.reason:categorical, dispensary.license.expiry:date, dispensary.license.is_active:categorical, dispensary.license.numb
+  2. SCHEMA GRAPH: 6 tables, 9 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 2.43789  retail_pos_scans -> vendors                    to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 1      2.13052  retail_pos_scans -> retail_medicines           to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 1      0.40037  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 2 JOIN 2.13052  retail_pos_scans -> retail_medicines           to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 2      0.45337  vendors -> inventory                  to referencing (FK) table  rows 4   new terms 18  affinity 1.0
+     step 2      0.42292  vendors -> stock_receipts             to referencing (FK) table  rows 4   new terms 20  affinity 1.0
+     step 2      0.40037  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 2      0.28024  vendors -> pos_terminals              to referencing (FK) table  rows 1   new terms 4   affinity 0.0
+     step 3 JOIN 1.17463  retail_medicines -> stock_receipts             to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 3      1.12417  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 3      0.45337  vendors -> inventory                  to referencing (FK) table  rows 4   new terms 18  affinity 1.0
+     step 3      0.42292  vendors -> stock_receipts             to referencing (FK) table  rows 4   new terms 20  affinity 1.0
+     step 3      0.40037  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3      0.28024  vendors -> pos_terminals              to referencing (FK) table  rows 1   new terms 4   affinity 0.0
+     step 4 JOIN 1.39576  stock_receipts -> inventory                  to referencing (FK) table  rows 2   new terms 7   affinity 1.0
+     step 4      0.99694  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 7   affinity 1.0
+     step 4      0.45337  vendors -> inventory                  to referencing (FK) table  rows 4   new terms 17  affinity 1.0
+     step 4      0.40037  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 4      0.28024  vendors -> pos_terminals              to referencing (FK) table  rows 1   new terms 4   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: db.retail_pos_scans.aggregate([{$match: {_id: {$in: <2 ids>}}}, {$lookup: {from: 'vendors', localField: 'dispensary.vendor_id', foreignField: '_id'}}])  -> 1 row(s)
+     join 2: db.retail_pos_scans.aggregate([{$match: {_id: {$in: <2 ids>}}}, {$lookup: {from: 'retail_medicines', localField: 'scan_code', foreignField: '_id'}}])  -> 1 row(s)
+     join 3: db.retail_medicines.aggregate([{$match: {_id: {$in: <1 ids>}}}, {$lookup: {from: 'stock_receipts', localField: '_id', foreignField: 'item_ref'}}])  -> 2 row(s)
+     join 4: db.stock_receipts.aggregate([{$match: {_id: {$in: <2 ids>}}}, {$lookup: {from: 'inventory', localField: '_id', foreignField: 'last_receipt_ref'}}])  -> 2 row(s)
+     explored ['retail_pos_scans', 'vendors', 'retail_medicines', 'stock_receipts', 'inventory']; not explored ['pos_terminals']
+  4. TERMS FROM THE RESULT (tf x idf): dispensary.vendor_name=Apollo Pharmacy 1.25968; FDA/MH/PH/001/2019 0.70857; VND-001 0.70857; POS-001-A 0.70857; dispensary.location.street=Hill Road, Bandra West 0.62984; read 0.47821; camera 0.47821; phone 0.47821
+  5. LOCAL CONTEXT returned by db1 (top 20):
+     1.25968  dispensary.vendor_name=Apollo Pharmacy                     retail_pos_scans.dispensary.vendor_name   via (query result)  [query]
+     0.91684  VND-001                                                    retail_pos_scans.dispensary.vendor_id     via (query result)
+     0.84891  MED-ASALI-001                                              retail_medicines._id                      via retail_pos_scans(scan_code) -> retail_medicines(_id)
+     0.84415  FDA/MH/PH/001/2019                                         retail_pos_scans.dispensary.license.number via (query result)
+     0.70857  POS-001-A                                                  retail_pos_scans.pos_terminal.device_id   via (query result)
+     0.62984  dispensary.location.street=Hill Road, Bandra West          retail_pos_scans.dispensary.location.street via (query result)
+     0.57961  BATCH-A001                                                 retail_medicines.batch.number             via retail_pos_scans(scan_code) -> retail_medicines(_id)
+     0.52509  apollo                                                     vendors.name                     via retail_pos_scans(dispensary.vendor_id) -> vendors(_id)
+     0.52509  bandra                                                     vendors.location.street          via retail_pos_scans(dispensary.vendor_id) -> vendors(_id)
+     0.52509  hill                                                       vendors.location.street          via retail_pos_scans(dispensary.vendor_id) -> vendors(_id)
+====================================================================================================
+[db1] Qc4eb7e.db1.2  executed by pid 2220 on ShagunKaler (127.0.0.1:8021)
+  1. INITIAL RESULT: db.retail_medicines.find({"_id": {"$in": ["MED-ASALI-001"]}}).limit(25)   params []
+     -> 1 row(s) of retail_medicines [exact]
+     all 12 columns kept: _id:identifier, added_on:date, batch.expiry_date:date, batch.number:identifier, brand_name:categorical, generic_name:categorical, pack_size:categorical, pricing.currency:categorical, pricing.mrp:numeric, regulatory.manuf
+  2. SCHEMA GRAPH: 6 tables, 9 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 3.01192  retail_medicines -> retail_pos_scans           to referencing (FK) table  rows 1   new terms 24  affinity 0.0
+     step 1      1.67803  retail_medicines -> stock_receipts             to referencing (FK) table  rows 2   new terms 11  affinity 1.0
+     step 1      1.60597  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 11  affinity 1.0
+     step 2 JOIN 1.70652  retail_pos_scans -> vendors                    to referenced (PK) table   rows 1   new terms 11  affinity 0.0
+     step 2      1.67803  retail_medicines -> stock_receipts             to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 2      1.60597  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 2      0.28024  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3 JOIN 1.67803  retail_medicines -> stock_receipts             to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 3      1.60597  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 10  affinity 1.0
+     step 3      0.31735  vendors -> inventory                  to referencing (FK) table  rows 4   new terms 18  affinity 1.0
+     step 3      0.29604  vendors -> stock_receipts             to referencing (FK) table  rows 4   new terms 20  affinity 1.0
+     step 3      0.28024  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 3      0.19618  vendors -> pos_terminals              to referencing (FK) table  rows 1   new terms 4   affinity 0.0
+     step 4 JOIN 1.99388  stock_receipts -> inventory                  to referencing (FK) table  rows 2   new terms 7   affinity 1.0
+     step 4      1.42422  retail_medicines -> inventory                  to referencing (FK) table  rows 2   new terms 7   affinity 1.0
+     step 4      0.31735  vendors -> inventory                  to referencing (FK) table  rows 4   new terms 17  affinity 1.0
+     step 4      0.28024  retail_pos_scans -> pos_terminals              to referenced (PK) table   rows 1   new terms 4   affinity 0.0
+     step 4      0.19618  vendors -> pos_terminals              to referencing (FK) table  rows 1   new terms 4   affinity 0.0
+     stop: reached MAX_AUGMENTATION = 4
+     join 1: db.retail_medicines.aggregate([{$match: {_id: {$in: <1 ids>}}}, {$lookup: {from: 'retail_pos_scans', localField: '_id', foreignField: 'scan_code'}}])  -> 1 row(s)
+     join 2: db.retail_pos_scans.aggregate([{$match: {_id: {$in: <1 ids>}}}, {$lookup: {from: 'vendors', localField: 'dispensary.vendor_id', foreignField: '_id'}}])  -> 1 row(s)
+     join 3: db.retail_medicines.aggregate([{$match: {_id: {$in: <1 ids>}}}, {$lookup: {from: 'stock_receipts', localField: '_id', foreignField: 'item_ref'}}])  -> 2 row(s)
+     join 4: db.stock_receipts.aggregate([{$match: {_id: {$in: <2 ids>}}}, {$lookup: {from: 'inventory', localField: '_id', foreignField: 'last_receipt_ref'}}])  -> 2 row(s)
+     explored ['retail_medicines', 'retail_pos_scans', 'vendors', 'stock_receipts', 'inventory']; not explored ['pos_terminals']
+  4. TERMS FROM THE RESULT (tf x idf): MED-ASALI-001 0.82802; BATCH-A001 0.82802; brand_name=Novamox 500mg 0.73602; MFG-001 0.64261; batch.expiry_date=2027-01 0.42199; generic_name=Amoxycillin 0.41497; added_on=2025-02 0.34255; strength=500mg 0.31098
+  5. LOCAL CONTEXT returned by db1 (top 20):
+     1.20967  MED-ASALI-001                                              retail_medicines._id                      via (query result)
+     0.88177  dispensary.vendor_name=Apollo Pharmacy                     retail_pos_scans.dispensary.vendor_name   via retail_medicines(_id) -> retail_pos_scans(scan_code)  [query]
+     0.82802  BATCH-A001                                                 retail_medicines.batch.number             via (query result)
+     0.73602  brand_name=Novamox 500mg                                   retail_medicines.brand_name               via (query result)
+     0.69475  VND-001                                                    retail_pos_scans.dispensary.vendor_id     via retail_medicines(_id) -> retail_pos_scans(scan_code)
+     0.64261  MFG-001                                                    retail_medicines.regulatory.manufacturer_id via (query result)
+     0.60255  PE-20250310-0001                                           retail_pos_scans._id                      via retail_medicines(_id) -> retail_pos_scans(scan_code)
+     0.5909   FDA/MH/PH/001/2019                                         retail_pos_scans.dispensary.license.number via retail_medicines(_id) -> retail_pos_scans(scan_code)
+     0.5356   item_identifier=MED-ASALI-001                              retail_pos_scans.item_identifier          via retail_medicines(_id) -> retail_pos_scans(scan_code)
+     0.50347  received_on=2025-02                                        stock_receipts.received_on              via retail_medicines(_id) -> stock_receipts(item_ref)  [query]
+====================================================================================================
+6. AGGREGATED QUERY CONTEXT: 27 distinct terms from db1; top 25
+   1.5     dispensary.vendor_name=Apollo Pharmacy               db1          categorical
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_medicines(_id) -> retail_pos_scans(scan_code); matches the question's words or intent
+   0.7278  VND-001                                              db1          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.6845  BATCH-A001                                           db1          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_pos_scans(scan_code) -> retail_medicines(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.6701  FDA/MH/PH/001/2019                                   db1          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.6243  received_on=2025-02                                  db1          date
+           7. why: reached through 1 FK join(s): retail_medicines(_id) -> stock_receipts(item_ref); matches the question's words or intent
+   0.6084  brand_name=Novamox 500mg                             db1          categorical
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_pos_scans(scan_code) -> retail_medicines(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5625  POS-001-A                                            db1          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_medicines(_id) -> retail_pos_scans(scan_code); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5312  MFG-001                                              db1          identifier
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_pos_scans(scan_code) -> retail_medicines(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.5181  pharmacy                                             db1          text
+           7. why: reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); matches the question's words or intent
+   0.5     dispensary.location.street=Hill Road, Bandra West    db1          categorical
+           7. why: in the result of the subquery itself; reached through 1 FK join(s): retail_medicines(_id) -> retail_pos_scans(scan_code); frequent in the result but rare in its column across the database (high tf x idf)
+   0.4981  PE-20250310-0001                                     db1          identifier
+           7. why: reached through 1 FK join(s): retail_medicines(_id) -> retail_pos_scans(scan_code); frequent in the result but rare in its column across the database (high tf x idf)
+   0.4428  item_identifier=MED-ASALI-001                        db1          categorical
+           7. why: reached through 1 FK join(s): retail_medicines(_id) -> retail_pos_scans(scan_code); frequent in the result but rare in its column across the database (high tf x idf)
+   0.4168  apollo                                               db1          text
+           7. why: reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.4168  bandra                                               db1          text
+           7. why: reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.4168  hill                                                 db1          text
+           7. why: reached through 1 FK join(s): retail_pos_scans(dispensary.vendor_id) -> vendors(_id); frequent in the result but rare in its column across the database (high tf x idf)
+   0.3796  batch-a001                                           db1          text
+           7. why: in the result of the subquery itself
+   0.3796  camera                                               db1          text
+           7. why: in the result of the subquery itself
+   0.3796  med-asali-0o1                                        db1          text
+           7. why: in the result of the subquery itself
+   0.3796  n0vamox                                              db1          text
+           7. why: in the result of the subquery itself
+   0.3796  phone                                                db1          text
+           7. why: in the result of the subquery itself
+====================================================================================================
+
+
+====================================================================================================
+QUESTION: Which shipments did DIST-004 send to VND-012?
+  intents ['shipment']  identifiers ['VND-012', 'DIST-004']  terms []
+  context keywords sent to every database: ['ship', 'dispatch', 'distributor', 'delivered', 'delivery', 'warehouse', 'logistics', 'transport']
+  databases: db2   (not queried: db1, db3, db4)
+====================================================================================================
+[db2] Q67219f.db2.1  executed by pid 11704 on ShagunKaler (127.0.0.1:8022)
+  1. INITIAL RESULT: SELECT * FROM "distribution_batches" WHERE "destination_vendor_id" = ? AND "distributor_id" = ? LIMIT ?   params ['VND-012', 'DIST-004']
+     -> 0 row(s) of distribution_batches
+     (no rows, so no context to discover)
+====================================================================================================
+[db2] Q67219f.db2.2  executed by pid 11704 on ShagunKaler (127.0.0.1:8022)
+  1. INITIAL RESULT: SELECT * FROM "distributor_vendor_contracts" WHERE "vendor_id" = ? AND "distributor_id" = ? LIMIT ?   params ['VND-012', 'DIST-004']
+     -> 0 row(s) of distributor_vendor_contracts
+     (no rows, so no context to discover)
+====================================================================================================
+[db2] Q67219f.db2.3  executed by pid 11704 on ShagunKaler (127.0.0.1:8022)
+  1. INITIAL RESULT: SELECT * FROM "distributors" WHERE "distributor_id" = ? LIMIT ?   params ['DIST-004']
+     -> 1 row(s) of distributors [filter]
+     all 13 columns kept: distributor_id:identifier, company_name:categorical, license_no:identifier, license_expiry:date, registration_date:date, region:categorical, hq_address:categorical, cold_chain_capable:categorical, is_authorized:categoric
+  2. SCHEMA GRAPH: 7 tables, 6 FK edges (read from the database). Parameters {'max_augmentation': 4, 'top_n': 20, 'decay': 0.7, 'min_fk_relevance': 0.05, 'join_cap': 200}
+  3. AUGMENTATION (greedy: join the most relevant FK, then re-evaluate)
+     step 1 JOIN 1.34168  distributors -> warehouses                 to referencing (FK) table  rows 3   new terms 8   affinity 1.0
+     step 1      0.34665  distributors -> distribution_batches       to referencing (FK) table  rows 24  new terms 120 affinity 0.5
+     step 1      0.0      distributors -> distributor_vendor_contracts to referencing (FK) table  rows 0   new terms 0   affinity 1.0
+     step 2 JOIN 0.25562  distributors -> distribution_batches       to referencing (FK) table  rows 24  new terms 116 affinity 0.5
+     step 2      0.24983  warehouses -> distribution_batches       to referencing (FK) table  rows 24  new terms 116 affinity 0.5
+     step 2      0.0      distributors -> distributor_vendor_contracts to referencing (FK) table  rows 0   new terms 0   affinity 1.0
+     step 3 JOIN 0.20637  distribution_batches -> cold_chain_loggers         to referencing (FK) table  rows 24  new terms 82  affinity 0.0
+     step 3      0.0      distributors -> distributor_vendor_contracts to referencing (FK) table  rows 0   new terms 0   affinity 1.0
+     step 4      0.03495  cold_chain_loggers -> temperature_logs           to referencing (FK) table  rows 200 new terms 215 affinity 0.0
+     step 4      0.0      distributors -> distributor_vendor_contracts to referencing (FK) table  rows 0   new terms 0   affinity 1.0
+     stop: no neighbouring table adds relevant context (best FK relevance 0.03495 < MIN_FK_RELEVANCE 0.05)
+     join 1: SELECT DISTINCT n.* FROM "distributors" r JOIN "warehouses" n ON n."distributor_id" = r."distributor_id" WHERE r."distributor_id" IN (?)  -> 3 row(s)
+     join 2: SELECT DISTINCT n.* FROM "distributors" r JOIN "distribution_batches" n ON n."distributor_id" = r."distributor_id" WHERE r."distributor_id" IN (?)  -> 24 row(s)
+     join 3: SELECT DISTINCT n.* FROM "distribution_batches" r JOIN "cold_chain_loggers" n ON n."batch_id" = r."batch_id" WHERE r."batch_id" IN (<24 keys of the current relation>)  -> 24 row(s)
+     explored ['distributors', 'warehouses', 'distribution_batches', 'cold_chain_loggers']; not explored ['distributor_vendor_contracts', 'return_log', 'temperature_logs']
+  4. TERMS FROM THE RESULT (tf x idf): DIST-004 1.34815; unlicensed 0.74897; wholesale 0.74897; broker 0.74897; blacklisted 0.74897; illegal 0.74897; DL/INVALID/TEMP 0.67407; company_name=QuickMed Traders 0.59918
+  5. LOCAL CONTEXT returned by db2 (top 20):
+     1.70104  DIST-004                                                   distributors.distributor_id           via (query result)  [query]
+     0.74897  blacklisted                                                distributors.revocation_reason        via (query result)
+     0.74897  broker                                                     distributors.revocation_reason        via (query result)
+     0.74897  illegal                                                    distributors.revocation_reason        via (query result)
+     0.74897  unlicensed                                                 distributors.revocation_reason        via (query result)
+     0.74897  wholesale                                                  distributors.revocation_reason        via (query result)
+     0.67407  DL/INVALID/TEMP                                            distributors.license_no               via (query result)
+     0.59918  company_name=QuickMed Traders                              distributors.company_name             via (query result)
+     0.59918  hq_address=Unknown Premises, Kurla                         distributors.hq_address               via (query result)
+     0.57288  diversion                                                  distributors.revocation_reason        via (query result)
+====================================================================================================
+6. AGGREGATED QUERY CONTEXT: 19 distinct terms from db2; top 19
+   0.4403  blacklisted                                          db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.4403  broker                                               db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.4403  illegal                                              db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.4403  unlicensed                                           db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.4403  wholesale                                            db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.4182  Unregistered godown                                  db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.3963  DL/INVALID/TEMP                                      db2          identifier
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.366   Unknown                                              db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.3522  company_name=QuickMed Traders                        db2          categorical
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.3522  hq_address=Unknown Premises, Kurla                   db2          categorical
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.3495  ?                                                    db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.3368  diversion                                            db2          text
+           7. why: in the result of the subquery itself; frequent in the result but rare in its column across the database (high tf x idf)
+   0.3059  WH-004-01                                            db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.3059  WH-004-02                                            db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.3059  WH-004-03                                            db2          identifier
+           7. why: reached through 1 FK join(s): distributors(distributor_id) -> warehouses(distributor_id); matches the question's words or intent
+   0.2694  is_authorized=0                                      db2          categorical
+           7. why: in the result of the subquery itself
+   0.2694  region=Unknown                                       db2          categorical
+           7. why: in the result of the subquery itself
+   0.2202  license_expiry=2020-01                               db2          date
+           7. why: in the result of the subquery itself
+   0.2202  registration_date=2019-06                            db2          date
+           7. why: in the result of the subquery itself
+====================================================================================================
+
+

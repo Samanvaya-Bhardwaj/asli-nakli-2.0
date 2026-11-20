@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-032
+title: Consumer complaint MCA-2026-G0077
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 21/04/2026
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code NEDGLMRI395 at Sri Venkateshwara Medicals, Bengaluru. Something is wrong with it. Pharmacist could not confirm the batch of Glimora 2mg.
+
+Please look into this.
+
+Regards,
+Diya Shah

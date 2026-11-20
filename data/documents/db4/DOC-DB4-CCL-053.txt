@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-053
+title: Consumer complaint MCA-2026-G0125
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-05-12
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code medwwxhd360 at Cheap Medicine Corner, Chennai. I believe this is a fake. Salbuvane 100mcg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Joseph Rao

@@ -1,49 +1,68 @@
-/* Colour tokens (DESIGN.md 3.1). Status colours mean a status and nothing else. One accent per portal type. */
+/* Colour tokens, from the project's "Forensic Console" design system (dashboard/style.css on main).
+   Dark is a near-black console; light is warm paper. One accent, lime, in every portal: as a fill it stays
+   lime in both themes, as text it turns olive on paper because bright lime fails contrast there.
+   Status colours mean a status and nothing else. Checked by scripts/check_contrast.mjs. */
 :root {
-  --bg: #f7f7f5; --surface: #ffffff; --sunken: #efefec;
-  --border: #dadad5; --border-strong: #b9b9b2;
-  --text: #1b1b19; --text-muted: #55554e; --text-meta: #66665e;
+  --bg: #f1f0ec; --surface: #ffffff; --surface-2: #fafaf7; --sunken: #eeede8; --inset: #f4f3ef;
+  --border: #e6e5e1; --border-strong: #cfcdc8;
+  --text: #171614; --text-muted: #55544f; --text-meta: #686763; --text-ghost: rgba(23, 22, 20, 0.28);
 
-  --ok-fg: #14532d; --ok-bg: #e7f4ea; --ok-line: #9bd3a9; --ok-solid: #1f7a3a;
-  --warn-fg: #7a4a00; --warn-bg: #fdf2dc; --warn-line: #f0c77a; --warn-solid: #9a5b00;
-  --bad-fg: #8a1c12; --bad-bg: #fbe7e4; --bad-line: #f0a79d; --bad-solid: #b42318;
+  --ok-fg: #0b6b3a; --ok-bg: #e0f0e8; --ok-line: #9ccdb3; --ok-solid: #0f8b4c;
+  --warn-fg: #7a4d00; --warn-bg: #f1e9db; --warn-line: #dcc08a; --warn-solid: #9a6100;
+  --bad-fg: #a81f10; --bad-bg: #fae8e6; --bad-line: #eba59c; --bad-solid: #cf2a18;
   --unknown-fg: #3f4651; --unknown-bg: #eceef1; --unknown-line: #c3c8d0; --unknown-solid: #5b6573;
+  --ok-wash: rgba(15, 139, 76, 0.10); --warn-wash: rgba(154, 97, 0, 0.10);
+  --bad-wash: rgba(207, 42, 24, 0.09); --unknown-wash: rgba(91, 101, 115, 0.08);
+  --on-ok: #ffffff; --on-warn: #ffffff; --on-bad: #ffffff; --on-unknown: #ffffff;
 
-  --accent-pharma: #24569e; --accent-distributor: #6a3d9a; --accent-shop: #0b6a80;
-  --accent-consumer: #1b1b19; --accent-regulator: #2f3e5c;
-  --accent: var(--accent-pharma);
-  --on-accent: #ffffff;
-  --shadow-float: 0 8px 24px rgb(0 0 0 / 0.12);
+  --accent: #d8ff3e; --accent-hover: #e4ff6b; --accent-ink: #4e6b00; --on-accent: #0a0b0d;
+
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 2px rgba(23, 22, 20, 0.05), 0 8px 24px -16px rgba(23, 22, 20, 0.22);
+  --shadow-float: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 20px 50px -24px rgba(23, 22, 20, 0.38);
+  --nav-bg: rgba(241, 240, 236, 0.85);
+  --hatch: rgba(23, 22, 20, 0.07);
+  --glow-lime: rgba(216, 255, 62, 0.10); --glow-blue: rgba(35, 71, 216, 0.05);
+  --scrollbar: #d3d1ca; --scrollbar-hi: #b9b7af;
 }
 
 :root[data-theme='dark'] {
-  --bg: #141413; --surface: #1c1c1a; --sunken: #111110; --border: #34342f; --border-strong: #4a4a43;
-  --text: #ededE8; --text-muted: #b4b4ac; --text-meta: #a2a29a;
-  --ok-fg: #9fdcb0; --ok-bg: #12301d; --ok-line: #2e6b41; --ok-solid: #3fa35e;
-  --warn-fg: #f3cb80; --warn-bg: #33250c; --warn-line: #7a5a1e; --warn-solid: #d08a1c;
-  --bad-fg: #f5a99f; --bad-bg: #3a1512; --bad-line: #7e2e25; --bad-solid: #e0523f;
-  --unknown-fg: #c3c8d0; --unknown-bg: #22262c; --unknown-line: #454c56; --unknown-solid: #8a93a0;
-  --accent-pharma: #7fa6e0; --accent-distributor: #b593db; --accent-shop: #5db3c7;
-  --accent-consumer: #ededE8; --accent-regulator: #9daed0; --on-accent: #111110;
-  --shadow-float: none;
+  --bg: #08090a; --surface: #111316; --surface-2: #16181c; --sunken: #1c1f24; --inset: #0a0b0d;
+  --border: #24272b; --border-strong: #36393d;
+  --text: #f4f4f5; --text-muted: #9c9da0; --text-meta: #8a8b8e; --text-ghost: rgba(244, 244, 245, 0.22);
+  --ok-fg: #6fe8a5; --ok-bg: #172f25; --ok-line: #24583c; --ok-solid: #3ddc84;
+  --warn-fg: #ffd67a; --warn-bg: #322c1c; --warn-line: #6b5523; --warn-solid: #ffc53d;
+  --bad-fg: #ff9186; --bad-bg: #351c1c; --bad-line: #7a2e28; --bad-solid: #ff4d3d;
+  --unknown-fg: #c3c8d0; --unknown-bg: #1e2229; --unknown-line: #3a414c; --unknown-solid: #8a93a0;
+  --ok-wash: rgba(61, 220, 132, 0.12); --warn-wash: rgba(255, 197, 61, 0.12);
+  --bad-wash: rgba(255, 77, 61, 0.12); --unknown-wash: rgba(138, 147, 160, 0.10);
+  --on-ok: #07130c; --on-warn: #1a1204; --on-bad: #ffffff; --on-unknown: #0a0b0d;
+  --accent: #d8ff3e; --accent-hover: #e4ff6b; --accent-ink: #d8ff3e; --on-accent: #0a0b0d;
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 12px 32px -18px rgba(0, 0, 0, 0.9);
+  --shadow-float: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 24px 60px -28px rgba(0, 0, 0, 1);
+  --nav-bg: rgba(8, 9, 10, 0.82);
+  --hatch: rgba(255, 255, 255, 0.055);
+  --glow-lime: rgba(216, 255, 62, 0.055); --glow-blue: rgba(59, 109, 255, 0.05);
+  --scrollbar: #2a2e34; --scrollbar-hi: #3a3f47;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #141413; --surface: #1c1c1a; --sunken: #111110; --border: #34342f; --border-strong: #4a4a43;
-    --text: #ededE8; --text-muted: #b4b4ac; --text-meta: #a2a29a;
-    --ok-fg: #9fdcb0; --ok-bg: #12301d; --ok-line: #2e6b41; --ok-solid: #3fa35e;
-    --warn-fg: #f3cb80; --warn-bg: #33250c; --warn-line: #7a5a1e; --warn-solid: #d08a1c;
-    --bad-fg: #f5a99f; --bad-bg: #3a1512; --bad-line: #7e2e25; --bad-solid: #e0523f;
-    --unknown-fg: #c3c8d0; --unknown-bg: #22262c; --unknown-line: #454c56; --unknown-solid: #8a93a0;
-    --accent-pharma: #7fa6e0; --accent-distributor: #b593db; --accent-shop: #5db3c7;
-    --accent-consumer: #ededE8; --accent-regulator: #9daed0; --on-accent: #111110;
-    --shadow-float: none;
+    --bg: #08090a; --surface: #111316; --surface-2: #16181c; --sunken: #1c1f24; --inset: #0a0b0d;
+    --border: #24272b; --border-strong: #36393d;
+    --text: #f4f4f5; --text-muted: #9c9da0; --text-meta: #8a8b8e; --text-ghost: rgba(244, 244, 245, 0.22);
+    --ok-fg: #6fe8a5; --ok-bg: #172f25; --ok-line: #24583c; --ok-solid: #3ddc84;
+    --warn-fg: #ffd67a; --warn-bg: #322c1c; --warn-line: #6b5523; --warn-solid: #ffc53d;
+    --bad-fg: #ff9186; --bad-bg: #351c1c; --bad-line: #7a2e28; --bad-solid: #ff4d3d;
+    --unknown-fg: #c3c8d0; --unknown-bg: #1e2229; --unknown-line: #3a414c; --unknown-solid: #8a93a0;
+    --ok-wash: rgba(61, 220, 132, 0.12); --warn-wash: rgba(255, 197, 61, 0.12);
+    --bad-wash: rgba(255, 77, 61, 0.12); --unknown-wash: rgba(138, 147, 160, 0.10);
+    --on-ok: #07130c; --on-warn: #1a1204; --on-bad: #ffffff; --on-unknown: #0a0b0d;
+    --accent: #d8ff3e; --accent-hover: #e4ff6b; --accent-ink: #d8ff3e; --on-accent: #0a0b0d;
+    --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 12px 32px -18px rgba(0, 0, 0, 0.9);
+    --shadow-float: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 24px 60px -28px rgba(0, 0, 0, 1);
+    --nav-bg: rgba(8, 9, 10, 0.82);
+    --hatch: rgba(255, 255, 255, 0.055);
+    --glow-lime: rgba(216, 255, 62, 0.055); --glow-blue: rgba(59, 109, 255, 0.05);
+    --scrollbar: #2a2e34; --scrollbar-hi: #3a3f47;
   }
 }
-
-:root[data-portal='pharma'] { --accent: var(--accent-pharma); }
-:root[data-portal='distributor'] { --accent: var(--accent-distributor); }
-:root[data-portal='shop'] { --accent: var(--accent-shop); }
-:root[data-portal='consumer'] { --accent: var(--accent-consumer); }
-:root[data-portal='regulator'] { --accent: var(--accent-regulator); }

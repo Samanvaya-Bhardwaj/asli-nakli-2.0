@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-036
+title: Consumer complaint MCA-2026-G0084
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-09-28
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code med-dxlyn-199 at kapaleeshwarar medicals, chennai. It did not work at all. Doxalyn 100mg tablets crumble in the strip and had no effect after 6 days.
+
+Please look into this.
+
+Regards,
+Deepa Shah

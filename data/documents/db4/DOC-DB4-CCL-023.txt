@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-023
+title: Consumer complaint MCA-2026-G0056
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-07-01
+---
+
+Dear Sir/Madam,
+
+I bought Glimor a1mg with code MED-GLMRI-181 at Saket City Hospital Pharmacy, New Delhi. I had a bad reaction after taking it. Developed a skin rash after taking Glimora 1mg bought on 27 Jun.
+
+Please look into this.
+
+Regards,
+Aditya Verma

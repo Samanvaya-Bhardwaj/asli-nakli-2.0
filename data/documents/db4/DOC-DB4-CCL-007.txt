@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-007
+title: Consumer complaint MCA-2026-G0009
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 08/09/2025
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code  at HealthFirst Pharmacy, Mumbai. I had a bad reaction after taking it. Developed severe itching after taking Hepashield 20mcg/ml bought on 03 Sep. Code on the strip: med hpshl 556.
+
+Please look into this.
+
+Regards,
+Karthik Iyer

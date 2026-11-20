@@ -1,0 +1,153 @@
+{
+ "S1": {
+  "verdict": "genuine",
+  "reasons": [],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "genuine",
+   "reasons": []
+  },
+  "passed": true
+ },
+ "S2": {
+  "verdict": "do_not_use",
+  "reasons": [
+   "NOT_ISSUED"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)"
+  ],
+  "expected": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "NOT_ISSUED"
+   ]
+  },
+  "passed": true
+ },
+ "S3": {
+  "verdict": "do_not_use",
+  "reasons": [
+   "COPIED_CODE",
+   "CHAIN_BREAK",
+   "TEXT_CONTRADICTION"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "COPIED_CODE",
+    "CHAIN_BREAK",
+    "TEXT_CONTRADICTION"
+   ],
+   "note": "the planted copy also has a forged receipt; the Bengaluru complaint names a city with no sale on record"
+  },
+  "passed": true
+ },
+ "S4": {
+  "verdict": "do_not_use",
+  "reasons": [
+   "RECALLED"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "RECALLED"
+   ]
+  },
+  "passed": true
+ },
+ "S7": {
+  "verdict": "caution",
+  "reasons": [
+   "CHAIN_BREAK",
+   "COLD_CHAIN"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)"
+  ],
+  "expected": {
+   "verdict": "caution",
+   "reasons": [
+    "CHAIN_BREAK"
+   ]
+  },
+  "passed": true
+ },
+ "S8": {
+  "verdict": "genuine",
+  "reasons": [],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "cannot_check",
+   "reasons": [
+    "SOURCE_MISSING"
+   ],
+   "note": "while dist-west is stopped; genuine again afterwards"
+  },
+  "passed": false
+ },
+ "S5": {
+  "verdict": "do_not_use",
+  "reasons": [
+   "QUALITY_FAILED"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "QUALITY_FAILED"
+   ],
+   "note": "from a regulator notice that exists only as text"
+  },
+  "passed": true
+ },
+ "S6": {
+  "verdict": "caution",
+  "reasons": [
+   "COLD_CHAIN"
+  ],
+  "mode": "network",
+  "computers": [
+   "PC-B (Sayans-MacBook-Air.local)",
+   "PC-C (ShagunKaler)",
+   "PC-D (Senjuti)"
+  ],
+  "expected": {
+   "verdict": "caution",
+   "reasons": [
+    "COLD_CHAIN"
+   ]
+  },
+  "passed": true
+ }
+}

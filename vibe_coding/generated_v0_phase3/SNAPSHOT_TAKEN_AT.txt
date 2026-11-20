@@ -1,0 +1,3 @@
+Phase 3 Requirement 1 code exactly as first generated, before it was run. Snapshot taken 2026-11-18 14:33.
+P3-2 (Requirement 2) files added 2026-11-18 14:53, before first run.
+P3-2 Docker/compose files added 2026-11-18 15:28: never run (no Docker engine yet); only 'docker compose config' checked.

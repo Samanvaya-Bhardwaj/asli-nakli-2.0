@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asali/Nakali - Ask the federation</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2330; --muted:#5d6778; --line:#dfe3ea; --accent:#1f6feb;
+          --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e; --chip:#eef2f8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1218; --card:#171b23; --ink:#e6e9ef; --muted:#9aa4b5;
+          --line:#2a303c; --accent:#58a6ff; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --chip:#222835; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); }
+  main { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:16px; margin:0 0 10px; }
+  .sub { color:var(--muted); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; }
+  form { display:flex; gap:8px; flex-wrap:wrap; }
+  input[type=text] { flex:1 1 420px; padding:10px 12px; font-size:15px; border:1px solid var(--line); border-radius:8px;
+                     background:var(--card); color:var(--ink); }
+  button { padding:10px 16px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff;
+           font-size:14px; cursor:pointer; }
+  button.ghost { background:transparent; color:var(--accent); }
+  .examples { margin-top:8px; display:flex; gap:6px; flex-wrap:wrap; }
+  .chip { display:inline-block; background:var(--chip); border-radius:999px; padding:2px 10px; font-size:12.5px; margin:2px 4px 2px 0; }
+  .ok { color:var(--ok); } .warn { color:var(--warn); } .bad { color:var(--bad); } .muted { color:var(--muted); }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  code, .mono { font-family:ui-monospace,Consolas,monospace; font-size:12.5px; word-break:break-word; }
+  .step { display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff;
+          text-align:center; font-size:12px; line-height:22px; margin-right:6px; }
+  .doc { border-top:1px solid var(--line); padding:10px 0; } .doc:first-child { border-top:0; }
+  .caution { border-left:3px solid var(--warn); padding:4px 10px; margin:6px 0; }
+  .verdict { font-size:18px; font-weight:700; }
+  details summary { cursor:pointer; color:var(--accent); }
+  .scroll { overflow-x:auto; }
+  #status { min-height:20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ask the federation</h1>
+  <p class="sub">One question goes to four independent databases. Each runs its own subquery and discovers its own
+    context through its foreign keys; the mediator merges the contexts, searches every source's documents with them,
+    and returns one answer. Verified database facts are kept apart from what documents report.</p>
+
+  <div class="card">
+    <form id="ask">
+      <input id="q" type="text" placeholder="e.g. Is MED-ASALI-009 from batch BATCH-A009 genuine?" autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+    <div class="examples" id="examples"></div>
+    <div id="status" class="muted"></div>
+  </div>
+
+  <div class="card" id="deployment"><h2>Deployment</h2><div class="muted">Checking the four database services...</div></div>
+  <div id="out"></div>
+</main>
+<script>
+const EXAMPLES = [
+  "Is MED-ASALI-009 from batch BATCH-A009 genuine?",
+  "Any quality or safety concerns about products manufactured by MFG-002 (Sun Pharmaceutical)?",
+  "Are there consumer complaints or regulatory action against MED-NAKALI-001?",
+  "Was the cold chain of MED-ASALI-009 maintained?"
+];
+const $ = (s) => document.querySelector(s);
+const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const bold = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+const chips = (xs) => (xs || []).map(x => `<span class="chip">${esc(x)}</span>`).join("") || '<span class="muted">-</span>';
+
+async function api(path, body) {
+  const r = await fetch(path, body ? {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)} : {});
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+
+async function deployment() {
+  try {
+    const n = await api("/api/v3/federation/nodes");
+    const rows = Object.values(n.nodes).map(x => {
+      const r = x.reported || {};
+      const cls = x.status === "online" ? "ok" : "bad";
+      return `<tr><td>${esc(x.database)}</td><td>${esc(x.name || "")}</td><td class="${cls}">${esc(x.status)}</td>
+        <td class="mono">${esc(x.configured_url || "")}</td><td class="mono">${esc(x.resolved_ip || "")}</td>
+        <td>${esc(r.physical_host || "-")} <span class="muted">(${esc(r.machine_label || "-")}, pid ${esc(r.pid || "-")})</span></td></tr>`;
+    }).join("");
+    const mode = n.deployment.mode;
+    $("#deployment").innerHTML = `<h2>Deployment: <span class="${mode === "MULTI_MACHINE" ? "ok" : "warn"}">${esc(mode)}</span></h2>
+      <p class="muted">${esc(n.deployment.meaning)}</p>
+      <div class="scroll"><table><tr><th>DB</th><th>Source</th><th>Status</th><th>Address</th><th>IP</th><th>Host</th></tr>${rows}</table></div>`;
+  } catch (e) {
+    $("#deployment").innerHTML = `<h2>Deployment</h2><p class="bad">Could not reach the coordinator: ${esc(e.message)}</p>`;
+  }
+}
+
+function section(n, title, html) { return `<div class="card"><h2><span class="step">${n}</span>${esc(title)}</h2>${html}</div>`; }
+
+function render(res) {
+  const u = res.understanding, I = res.integrated, out = [];
+  out.push(section(1, "What the question asks", `
+    <p><b>${esc(res.question)}</b></p>
+    <p>Intents ${chips(u.intents)} Identifiers ${chips([].concat(u.item_codes, u.batch_numbers, u.vendor_ids, u.distributor_ids, u.manufacturer_ids))} Terms ${chips(u.terms)}</p>
+    <details><summary>How it was read</summary><ul>${u.explanation.map(e => `<li>${esc(e)}</li>`).join("")}</ul></details>
+    <p>Databases asked: ${Object.entries(res.routing.reasons).map(([d, w]) => `<span class="chip">${esc(d)}</span> <span class="muted">${esc(w.join("; "))}</span>`).join("<br>")}</p>
+    ${Object.keys(res.routing.not_queried).length ? `<p class="muted">Not asked: ${Object.entries(res.routing.not_queried).map(([d, w]) => esc(d + " (" + w + ")")).join(", ")}</p>` : ""}`));
+
+  const subq = Object.entries(res.sources).map(([d, s]) => s.subqueries.map(sq => {
+    const w = sq.sent.where.map(c => `${c.field} ${c.op} ${Array.isArray(c.value) ? c.value.join("|") : c.value}`).join(" AND ");
+    const sc = sq.score_context;
+    return `<tr><td>${esc(d)}</td><td class="mono">${esc(sq.sent.target)} WHERE ${esc(w)}</td>
+      <td class="mono">${esc(sq.native_query)}</td><td>${sq.matches.length}</td>
+      <td>${sc ? esc(sc.explored_tables.slice(1).join(", ") || "-") : "-"}</td></tr>`;
+  }).join("")).join("");
+  const status = Object.entries(res.source_status).map(([d, s]) => `<span class="chip ${s === "ok" ? "ok" : (s === "not_queried" ? "muted" : "bad")}">${esc(d)}: ${esc(s)}</span>`).join("");
+  out.push(section(2, "Subqueries, run by each database on its own machine", `<p>${status}</p>
+    <div class="scroll"><table><tr><th>DB</th><th>Subquery (GAV view)</th><th>Native query it ran</th><th>Rows</th><th>Tables joined for context</th></tr>${subq}</table></div>`));
+
+  const facts = I.B_structured_results.verified_facts;
+  const v = (res.verdicts || [])[0];
+  const vcls = v && v.verdict === "ASALI" ? "ok" : (v && v.verdict === "SUSPICIOUS" ? "warn" : "bad");
+  out.push(section(3, "Verified facts from the databases", `
+    ${v ? (v.status === "COMPUTED" ? `<p class="verdict ${vcls}">${esc(v.item_code)}: ${esc(v.verdict)} <span class="muted">(trust ${esc(v.trust_score)}${v.veto_codes.length ? ", vetoes " + esc(v.veto_codes.join(", ")) : ""})</span></p>
+      <p class="muted">${esc(v.computed_by)}</p>` : `<p class="warn">Verdict ${esc(v.status)}: ${esc(v.reason)}</p>`) : ""}
+    <ul>${facts.map(f => `<li>${esc(f.fact)} <span class="muted">[${esc(f.source)}]</span></li>`).join("") || "<li class='muted'>No structured record matched.</li>"}</ul>`));
+
+  const local = Object.entries(I.C_local_context).map(([d, list]) => list.map(l => `
+    <p><b>${esc(d)}</b> <span class="muted">${esc(l.subquery_id)} explored ${esc(l.explored_tables.join(" > "))}</span></p>
+    <table><tr><th>Term</th><th>Where</th><th>Score</th><th>FK path</th></tr>${l.top_terms.map(t => `<tr><td>${esc(t.term)}</td><td class="mono">${esc(t.where)}</td><td>${esc(t.score)}</td><td class="mono">${esc(t.path)}</td></tr>`).join("")}</table>`).join("")).join("");
+  out.push(section(4, "Context each database discovered (SCORE, through its own foreign keys)", local || "<p class='muted'>No rows, so no context.</p>"));
+
+  const agg = I.D_aggregated_context;
+  out.push(section(5, "Aggregated query context", `<p class="muted">Anchors: ${chips(agg.anchors.map(a => a.term))}</p>
+    <div class="scroll"><table><tr><th>Term</th><th>Score</th><th>Found by</th><th>Why relevant</th></tr>${agg.terms.map(t => `<tr><td>${esc(t.term)}</td><td>${esc(t.score)}</td><td>${esc(t.databases.join(", "))}</td><td class="muted">${esc(t.why.join("; "))}</td></tr>`).join("")}</table></div>`));
+
+  const ds = res.document_search;
+  out.push(section(6, "Document search built from that context", `<pre class="mono" style="white-space:pre-wrap">${esc(ds.request.display)}</pre>
+    <p>${Object.entries(ds.per_database).map(([d, p]) => `<span class="chip">${esc(d)}: ${esc(p.status)}, ${esc(p.documents_searched || 0)} docs, ${esc(p.returned)} returned</span>`).join("")}</p>`));
+
+  const docs = I.E_documents.map((d, i) => `<div class="doc">
+      <div><b>#${i + 1} ${esc(d.title)}</b> <span class="chip">${esc(d.type.replace(/_/g, " "))}</span> <span class="muted">${esc(d.date || "")}</span></div>
+      <div class="muted">score ${esc(d.score)} (lexical ${esc(d.score_parts.lexical)}, entity ${esc(d.score_parts.entity)}, type x${esc(d.score_parts.type)}, recency x${esc(d.score_parts.recency)}) |
+        ${esc(d.provenance.database)} / ${esc(d.provenance.file)}, chunk ${esc(d.provenance.chunk)} | ${esc(d.source)}</div>
+      <div><b>Evidence:</b> ${esc(d.evidence_status)}</div>
+      <div><b>Why:</b> ${esc(d.why_retrieved.join("; "))}</div>
+      <div class="muted">"${bold(d.matching_context.slice(0, 420))}"</div>
+      ${d.linked_structured_entities.length ? `<div class="muted">Links: ${d.linked_structured_entities.map(l => esc(l.entity + " - " + l.reliability)).join("; ")}</div>` : ""}
+      ${d.caution ? `<div class="caution">${esc(d.caution)}</div>` : ""}
+    </div>`).join("");
+  out.push(section(7, "Documents retrieved, ranked (reported information)", docs || "<p class='muted'>No document passed the relevance threshold.</p>"));
+  out.push(`<div class="card muted">${esc(I.policy)}<br>Query ${esc(res.query_id)}, ${esc(res.timing_ms.total)} ms. Partial result: ${esc(res.partial)}.</div>`);
+  $("#out").innerHTML = out.join("");
+}
+
+async function ask(q) {
+  $("#q").value = q;
+  $("#status").textContent = "Asking the four databases...";
+  $("#out").innerHTML = "";
+  try {
+    const res = await api("/api/v3/federated/query", {query: q});
+    render(res);
+    $("#status").textContent = "";
+  } catch (e) {
+    $("#status").innerHTML = `<span class="bad">${esc(e.message)}</span>`;
+  }
+}
+
+EXAMPLES.forEach(x => {
+  const b = document.createElement("button");
+  b.className = "ghost"; b.type = "button"; b.textContent = x; b.onclick = () => ask(x);
+  $("#examples").appendChild(b);
+});
+$("#ask").addEventListener("submit", (e) => { e.preventDefault(); const q = $("#q").value.trim(); if (q) ask(q); });
+deployment();
+</script>
+</body>
+</html>

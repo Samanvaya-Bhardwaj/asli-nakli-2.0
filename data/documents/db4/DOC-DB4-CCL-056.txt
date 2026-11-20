@@ -1,0 +1,16 @@
+---
+doc_id: DOC-DB4-CCL-056
+title: Consumer complaint MCA-2026-G0129
+type: consumer_complaint
+source: National Consumer Helpline (letters received)
+date: 2026-04-25
+---
+
+Dear Sir/Madam,
+
+I bought the medicine with code med-cprvn-590 at QuickRelief Kiosk, New Delhi. I believe this is a fake. Ciprovane 250mg looked fake: blurred print, no hologram, sold very cheap.
+
+Please look into this.
+
+Regards,
+Divya Joshi
