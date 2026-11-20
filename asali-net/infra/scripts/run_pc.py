@@ -94,6 +94,23 @@ def kill(pid: int) -> None:
             pass
 
 
+def staff_login(port: int, sec: dict[str, str]) -> str:
+    """The password that actually logs in. Accounts loaded from a bundle keep the password of the simulation that made
+    the bundle (infra/out/SIM/secrets.json there); team_secret only sets it for accounts created on this computer."""
+    candidates = [sec["staff_password"]]
+    sim = ROOT / "infra" / "out" / "SIM" / "secrets.json"
+    if sim.exists():
+        candidates.append(json.loads(sim.read_text())["staff_password"])
+    for pw in dict.fromkeys(candidates):
+        try:
+            r = httpx.post(f"http://127.0.0.1:{port}/api/login", json={"username": "staff", "password": pw}, timeout=10)
+            if r.status_code == 200:
+                return pw
+        except httpx.HTTPError:
+            pass
+    return "not confirmed (the seeded accounts use the password in infra/out/SIM/secrets.json of the computer that made the bundles)"
+
+
 def wait_for(url: str, seconds: float, what: str) -> None:
     end, told = time.monotonic() + seconds, False
     while time.monotonic() < end:
@@ -223,7 +240,7 @@ def main() -> int:
         print(f"  {org.name:28} http://{ip}:{org.port}")
     listed = httpx.get(f"{dir_url}/directory/v1/orgs", timeout=10).json()
     print(f"The directory at {dir_url} lists {len(listed)} organisations, {sum(o['online'] for o in listed)} online.")
-    print(f"Staff login on every portal: staff / {sec['staff_password']}")
+    print(f"Staff login on every portal: staff / {staff_login(next(iter(mine.values())).port, sec)}")
     print("Leave this window open. Ctrl+C stops this computer's organisations.")
     try:
         while True:
