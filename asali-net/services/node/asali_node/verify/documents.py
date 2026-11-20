@@ -17,6 +17,7 @@ LABELS = {
     "official": "Official notice",
 }
 MAX_HITS, MAX_PER_TYPE, LIMIT_PER_VAULT = 10, 4, 20
+SPECIFIC = {"unit": 3, "batch": 2, "shipment": 2, "org": 1, "product": 1}
 
 
 def context_keys(trace: Trace) -> list[str]:
@@ -59,10 +60,14 @@ async def retrieve(
             links = [x for x in hit["links"] if x["entity_key"] in keys and x["confidence"] >= 0.6]
             if not links:
                 continue
-            best = max(links, key=lambda x: x["confidence"])
+            best = max(
+                links, key=lambda x: (SPECIFIC.get(x["entity_key"].split(":")[0], 0), x["confidence"])
+            )  # the most specific link
             age = max(0.0, (now.timestamp() - hit["created_at"]) / 86400)
+            sigs, checks = signals_for(hit, f, best["confidence"], maker, best["entity_key"])
             score = best["confidence"] * KIND_WEIGHT[hit["kind"]] * math.exp(-age / 365)
-            sigs, checks = signals_for(hit, f, best["confidence"], maker)
+            if sigs:  # a document that changed the verdict is always shown to the person
+                score += 10
             ranked.append((score, {**hit, "_best": best, "_org": org}, sigs, checks))
     ranked.sort(key=lambda r: -r[0])
     chosen, per_type, seen = [], {}, set()
@@ -72,7 +77,10 @@ async def retrieve(
         seen.add(hit["id"])
         per_type[hit["doc_type"]] = per_type.get(hit["doc_type"], 0) + 1
         chosen.append((hit, sigs, checks))
-    signals = [s for _, sigs, _ in chosen for s in sigs]
+    first_seen: dict[str, list[DocSignal]] = {}
+    for _score, hit, sigs, _checks in ranked:
+        first_seen.setdefault(hit["id"], sigs)
+    signals = [s for sigs in first_seen.values() for s in sigs]
     return signals, [_dochit(h, checks, trace) for h, _, checks in chosen]
 
 

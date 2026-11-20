@@ -1,15 +1,15 @@
 {
  "metrics": {
-  "m1_macro_f1": 0.9579275418776783,
-  "m2_micro_f1": 0.6614173228346457,
+  "m1_macro_f1": 0.9424156417533901,
+  "m2_micro_f1": 0.6426229508196721,
   "codes_precision": 1.0,
-  "codes_recall": 0.9955555555555556,
-  "names_precision": 0.9867963314358001,
-  "names_recall": 0.9959692407768794,
+  "codes_recall": 1.0,
+  "names_precision": 0.9828802956432691,
+  "names_recall": 1.0,
   "m3_precision": 1.0,
-  "m3_recall": 0.9029411764705882,
-  "m4_f1": 1.0,
-  "retrieval_recall_at_10": 0.9144965277777777,
+  "m3_recall": 0.9064327485380117,
+  "m4_f1": 0.888888888888889,
+  "retrieval_recall_at_10": 0.9860759493670886,
   "retrieval_unrelated_max": 0.0
  },
  "targets": {
@@ -27,26 +27,26 @@
  },
  "missed": {
   "m2_micro_f1": [
-   0.6614173228346457,
+   0.6426229508196721,
    0.8
   ]
  },
  "m3": {
   "precision": 1.0,
-  "recall": 0.9029411764705882,
-  "brier": 0.016998878524873126,
-  "baseline_precision": 0.9383886255924171,
-  "baseline_recall": 0.5823529411764706,
-  "true_links": 340,
-  "candidates": 605,
-  "noisy_code_links": 0,
+  "recall": 0.9064327485380117,
+  "brier": 0.017730189072302668,
+  "baseline_precision": 0.9425837320574163,
+  "baseline_recall": 0.5760233918128655,
+  "true_links": 342,
+  "candidates": 608,
+  "noisy_code_links": 1,
   "found_noisy_by_m3": 0,
   "found_noisy_by_baseline": 0
  },
  "mentions": {
   "serial": [
    1.0,
-   0.9866666666666667
+   1.0
   ],
   "lot": [
    1.0,
@@ -57,12 +57,12 @@
    1.0
   ],
   "product": [
-   0.9926470588235294,
-   0.9926470588235294
+   0.9855072463768116,
+   1.0
   ],
   "org": [
-   0.967741935483871,
-   0.995260663507109
+   0.9631336405529954,
+   1.0
   ],
   "city": [
    1.0,
@@ -70,23 +70,23 @@
   ]
  },
  "duplicates": {
-  "threshold_from_validation": 0.9,
-  "f1": 1.0
+  "threshold_from_validation": 0.72,
+  "f1": 0.888888888888889
  },
  "retrieval": {
-  "recall_at_10": 0.9144965277777777,
+  "recall_at_10": 0.9860759493670886,
   "unrelated_in_top_10": 0.0,
-  "queries": 96
+  "queries": 79
  },
  "per_label_f1": {
-  "suspected_fake": 0.6060606060606061,
-  "packaging_different": 0.6285714285714286,
-  "no_effect": 0.5185185185185185,
-  "side_effect": 0.7368421052631579,
-  "expired_or_near_expiry": 0.8461538461538461,
-  "overcharged": 0.95,
-  "damaged_pack": 0.47619047619047616,
-  "wrong_medicine": 0.4117647058823529,
+  "suspected_fake": 0.6071428571428571,
+  "packaging_different": 0.6666666666666666,
+  "no_effect": 0.36363636363636365,
+  "side_effect": 0.896551724137931,
+  "expired_or_near_expiry": 0.9,
+  "overcharged": 0.9523809523809523,
+  "damaged_pack": 0.3111111111111111,
+  "wrong_medicine": 0.5517241379310345,
   "other": 0.0
  }
 }

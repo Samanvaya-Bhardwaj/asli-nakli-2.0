@@ -109,7 +109,7 @@ def check_rows(claims: list[dict[str, Any]], f: Facts, maker_org: str | None) ->
 
 
 def signals_for(
-    hit: dict[str, Any], f: Facts, conf: float, maker_org: str | None
+    hit: dict[str, Any], f: Facts, conf: float, maker_org: str | None, entity_key: str = ""
 ) -> tuple[list[DocSignal], list[ClaimResult]]:
     """The DocSignals one linked document contributes, and the claim checks to show next to it."""
     t, doc_id, org = hit["doc_type"], hit["id"], hit["org_id"]
@@ -132,13 +132,17 @@ def signals_for(
     if t in ("consumer_complaint", "counter_note"):
         results = check_buying_claims(claims, f)
         meta = hit.get("meta", {})
+        # A complaint that names only the product says nothing about this batch, so it is shown but not counted.
+        specific = entity_key.split(":")[0] in ("unit", "batch", "shipment")
         sig = [DocSignal("complaint", doc_id, conf, org, quote=quote, labels=tuple(hit.get("issue_labels", [])),
-                         city=meta.get("city"), reporter_key=str(meta.get("reporter") or doc_id))]  # fmt: skip
+                         city=meta.get("city"), reporter_key=str(meta.get("reporter") or doc_id))] if specific else []  # fmt: skip
         bad = next(
             (r for r in results if r.check == "contradicts" and r.name in ("purchase_city", "purchase_shop")),
             None,
         )
-        if bad is not None:
+        if bad is not None and entity_key.startswith(
+            "unit:"
+        ):  # a batch-level complaint says nothing about this pack's sale
             says = {
                 "purchase_city": f"Says bought in {bad.value}",
                 "purchase_shop": "Names a different shop",

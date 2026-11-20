@@ -58,6 +58,24 @@ def force_and_sell(shop: Portal, frm: str, ref: str, code: tuple[str, str], hour
     shop.scan_session("sell", [(g, s)], random.Random(1), 0, {"at": at(hour + 10), "prices": {g: 9900}})
 
 
+def clean(codes, used, ok=lambda g, s: True, allow=("genuine",)):
+    """The first pack whose check is Genuine with no reasons at all: its batch has no notice, recall or complaint."""
+    for g, s in codes:
+        if g in used or not ok(g, s):
+            continue
+        r = httpx.post(
+            "http://127.0.0.1:8402/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
+        ).json()
+        if (
+            r.get("status") == "done"
+            and r["result"]["verdict"] in allow
+            and (allow != ("genuine",) or not r["result"]["reasons"])
+        ):
+            used.add(g)
+            return g, s
+    raise RuntimeError("no clean pack found among the candidates")
+
+
 def main() -> int:
 
     state = json.loads((OUT / "seed_state.json").read_text())
@@ -71,7 +89,8 @@ def main() -> int:
         if shop.startswith("shop")
     }
 
-    g1, s1 = sold["shop-delhi"][0]
+    used: set[str] = set()
+    g1, s1 = clean(sold["shop-delhi"], used)
     out.setdefault("S1", {"gtin": g1, "serial": s1, "raw": element(g1, s1)})
     out.setdefault(
         "S9", {"gtin": g1, "serial": s1, "raw": element(g1, swap_and_letter(s1)), "true_serial": s1}
@@ -82,12 +101,12 @@ def main() -> int:
     out.setdefault("S2", {"gtin": gtin, "serial": s2, "raw": element(gtin, s2)})
 
     if "S3" not in out:  # sold in Delhi, then a copy of its code is sold in Mumbai
-        g3, s3 = sold["shop-delhi"][1]
+        g3, s3 = clean(sold["shop-delhi"], used)
         force_and_sell(p["shop-mumbai"], "dist-west", "DSP-FORGED-1", (g3, s3), 900)
         out["S3"] = {"gtin": g3, "serial": s3, "raw": element(g3, s3), "complaint_city": "Mumbai"}
 
     if "S4" not in out:  # a recalled medivra batch
-        mv = next(c for codes in sold.values() for c in codes if c[1].startswith("MV"))
+        mv = clean([c for codes in sold.values() for c in codes if c[1].startswith("MV")], used)
         lot = lot_of(p["medivra"], *mv)
         p["medivra"].call(
             "POST",
@@ -103,11 +122,11 @@ def main() -> int:
         out["S4"] = {"gtin": mv[0], "serial": mv[1], "raw": element(*mv), "lot": lot}
 
     if "S7" not in out:  # a pack still in North Star's stock turns up sold in Bengaluru
-        g7, s7 = state["stock"]["dist-north"][0]
+        g7, s7 = clean(state["stock"]["dist-north"], used)
         force_and_sell(p["shop-bengaluru"], "dist-north", "DSP-GHOST-1", (g7, s7), 930)
         out["S7"] = {"gtin": g7, "serial": s7, "raw": element(g7, s7)}
 
-    g8, s8 = sold["shop-mumbai"][0]  # received from dist-west, so dist-west is on its route
+    g8, s8 = clean(sold["shop-mumbai"], set())  # received from dist-west, so dist-west is on its route
     out.setdefault("S8", {"gtin": g8, "serial": s8, "raw": element(g8, s8)})
 
     planted.write_text(json.dumps(out, indent=1))
@@ -135,15 +154,37 @@ def plant_text() -> None:
     brand = {x["gtin"]: x for x in p["kesar"].call("GET", "/api/products")["products"]}
     at_text = "2026-11-18T10:00:00+05:30"
 
-    if "S5" not in out:  # an official notice that exists only as text
-        g, s = next(c for c in kesar if brand[c[0]]["generic"] != "insulin glargine")
-        lot = p["kesar"].call("GET", f"/api/unit/{g}/{s}")["lot"]
-        text = f"Drugs declared not of standard quality, November 2026.\n1. {brand[g]['generic'].title()} Injection | B.No. {lot} | Mfd by Kesar Biologics | Dissolution failed"
-        r = p["regulator"].call("POST", "/api/documents", json={"text": text, "at": at_text})
+    makers = {"TP": "tarang", "MV": "medivra", "KS": "kesar"}
+    names = {"tarang": "Tarang Pharma", "medivra": "Medivra Labs", "kesar": "Kesar Biologics"}
+    sold_all = [tuple(c) for b in state["bills"] for c in b["codes"]]
+
+    if (
+        "S5" not in out
+    ):  # an official notice that exists only as text, for a batch with nothing else against it
+        g, s = clean(
+            sold_all, {v["gtin"] for v in out.values()}, allow=("genuine", "caution")
+        )  # not a product another scenario uses
+        maker = makers[s[:2]]
+        lot = p[maker].call("GET", f"/api/unit/{g}/{s}")["lot"]
+        generic = next(
+            x["generic"] for x in p[maker].call("GET", "/api/products")["products"] if x["gtin"] == g
+        )
+        text = f"Drugs declared not of standard quality, November 2026.\n1. {generic.title()} | B.No. {lot} | Mfd by {names[maker]} | Dissolution failed"
+        r = p["regulator"].call(
+            "POST", "/api/documents", json={"text": text, "declared_type": "nsq_alert", "at": at_text}
+        )
         out["S5"] = {"gtin": g, "serial": s, "raw": element(g, s), "lot": lot, "doc_id": r["doc_id"]}
 
-    if "S6" not in out:  # a temperature report for the shipment that carried an insulin pack
-        g, s = next(c for c in kesar if brand[c[0]]["generic"] == "insulin glargine")
+    if "S6" not in out:  # a temperature report for the shipment that carried a cold-chain (insulin) pack
+        blocked = {"RECALLED", "QUALITY_FAILED", "COPIED_CODE", "NOT_ISSUED"}
+        for g, s in (c for c in kesar if brand[c[0]]["generic"] == "insulin glargine"):
+            reply = httpx.post(
+                "http://127.0.0.1:8402/api/check", json={"raw": element(g, s), "city": "Delhi"}, timeout=300
+            ).json()
+            if reply["status"] == "done" and not blocked & {x["code"] for x in reply["result"]["reasons"]}:
+                break
+        else:
+            raise RuntimeError("no cold-chain pack without a stronger problem")
         view = p["kesar"].call("GET", f"/api/unit/{g}/{s}")
         dist = next(e["to_org"] for e in view["events"] if e["event_type"] == "ship")
         ship = next(

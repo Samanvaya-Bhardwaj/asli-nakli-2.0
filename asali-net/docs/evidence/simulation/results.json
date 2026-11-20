@@ -1,0 +1,212 @@
+{
+ "run_at": "2026-11-20T09:46:38",
+ "mode": "simulation on one computer",
+ "results": {
+  "S1": {
+   "verdict": "genuine",
+   "reasons": [],
+   "mode": "simulation",
+   "headline": "Genuine. Made by Tarang Pharma, sold by Sharma Medicos, Delhi on 9 Oct 2026.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "coa",
+    "batch_release_note",
+    "coa",
+    "coa",
+    "coa",
+    "batch_release_note",
+    "batch_release_note",
+    "deviation_report",
+    "batch_release_note",
+    "deviation_report"
+   ],
+   "expected": {
+    "verdict": "genuine",
+    "reasons": []
+   },
+   "passed": true
+  },
+  "S2": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "NOT_ISSUED"
+   ],
+   "mode": "simulation",
+   "headline": "Do not use this pack. Tarang Pharma has no pack with this code.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [],
+   "expected": {
+    "verdict": "do_not_use",
+    "reasons": [
+     "NOT_ISSUED"
+    ]
+   },
+   "passed": true
+  },
+  "S3": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "COPIED_CODE",
+    "CHAIN_BREAK",
+    "TEXT_CONTRADICTION"
+   ],
+   "mode": "simulation",
+   "headline": "Do not use this pack. This code was sold by Apna Chemist, Mumbai and Sharma Medicos, Delhi. At least one pack carrying it is a copy.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "counter_note",
+    "consumer_complaint",
+    "batch_release_note",
+    "coa",
+    "coa",
+    "deviation_report",
+    "coa",
+    "coa",
+    "batch_release_note",
+    "deviation_report"
+   ],
+   "expected": {
+    "verdict": "do_not_use",
+    "reasons": [
+     "COPIED_CODE",
+     "CHAIN_BREAK",
+     "TEXT_CONTRADICTION"
+    ],
+    "note": "the planted copy also has a forged receipt; the Bengaluru complaint names a city with no sale on record"
+   },
+   "passed": true
+  },
+  "S4": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "RECALLED"
+   ],
+   "mode": "simulation",
+   "headline": "Do not use this pack. Batch MV-2608-003 has been recalled.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "recall_notice",
+    "consumer_complaint",
+    "batch_release_note",
+    "deviation_report",
+    "batch_release_note",
+    "coa",
+    "batch_release_note",
+    "coa",
+    "coa",
+    "coa"
+   ],
+   "expected": {
+    "verdict": "do_not_use",
+    "reasons": [
+     "RECALLED"
+    ]
+   },
+   "passed": true
+  },
+  "S5": {
+   "verdict": "do_not_use",
+   "reasons": [
+    "QUALITY_FAILED"
+   ],
+   "mode": "simulation",
+   "headline": "Do not use this pack. The drug regulator reported that this batch is not of standard quality.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "nsq_alert",
+    "nsq_alert",
+    "nsq_alert",
+    "coa",
+    "ban_order",
+    "nsq_alert",
+    "coa",
+    "batch_release_note",
+    "batch_release_note",
+    "deviation_report"
+   ],
+   "expected": {
+    "verdict": "do_not_use",
+    "reasons": [
+     "QUALITY_FAILED"
+    ],
+    "note": "from a regulator notice that exists only as text"
+   },
+   "passed": true
+  },
+  "S6": {
+   "verdict": "caution",
+   "reasons": [
+    "COLD_CHAIN"
+   ],
+   "mode": "simulation",
+   "headline": "Be careful with this pack. A temperature report says this pack went above its storage limit in transit.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "temperature_report",
+    "temperature_report",
+    "temperature_report",
+    "temperature_report",
+    "consumer_complaint",
+    "consumer_complaint",
+    "consumer_complaint",
+    "coa",
+    "coa",
+    "coa"
+   ],
+   "expected": {
+    "verdict": "caution",
+    "reasons": [
+     "COLD_CHAIN"
+    ]
+   },
+   "passed": true
+  },
+  "S7": {
+   "verdict": "caution",
+   "reasons": [
+    "CHAIN_BREAK"
+   ],
+   "mode": "simulation",
+   "headline": "Be careful with this pack. Namma Pharmacy recorded a receipt from North Star Distributors that North Star Distributors has no matching dispatch for.",
+   "computers": [
+    "SIM-LOCAL"
+   ],
+   "documents": [
+    "batch_release_note",
+    "coa",
+    "batch_release_note",
+    "batch_release_note",
+    "coa",
+    "coa",
+    "deviation_report",
+    "coa",
+    "deviation_report",
+    "batch_release_note"
+   ],
+   "expected": {
+    "verdict": "caution",
+    "reasons": [
+     "CHAIN_BREAK"
+    ]
+   },
+   "passed": true
+  },
+  "S9": {
+   "status": "needs_confirmation",
+   "expected": "needs_confirmation",
+   "passed": true
+  }
+ }
+}

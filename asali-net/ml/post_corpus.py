@@ -44,7 +44,7 @@ def main() -> int:
         ).isoformat()
         if net.orgs[org].type == "consumer":
             r = consumer.post(f"http://127.0.0.1:{net.orgs[org].port}/api/report",
-                              json={"text": d["text"], "city": d["true_claims"].get("purchase_city") or net.orgs[org].city, "at": at})  # fmt: skip
+                              json={"text": d["text"], "city": net.orgs[org].city, "at": at})  # fmt: skip
         else:
             portals.setdefault(org, Portal(org, f"http://127.0.0.1:{net.orgs[org].port}", pw))
             r = portals[org].http.post("/api/documents", json={"text": d["text"], "at": at})

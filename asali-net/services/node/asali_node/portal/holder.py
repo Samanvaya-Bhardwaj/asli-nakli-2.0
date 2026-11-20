@@ -1,6 +1,5 @@
 """Distributor and shop portals: what is incoming, what is in stock, who to send to, local alerts."""
 
-import json
 from collections import defaultdict
 from typing import Any
 
@@ -63,17 +62,6 @@ def stock(request: Request) -> dict[str, Any]:
         for (g, lot, exp), n in sorted(groups.items(), key=str)
     ]
     return {"total": sum(r["count"] for r in rows), "groups": rows}
-
-
-@router.get("/parties")
-def parties(request: Request, type: str | None = None) -> dict[str, Any]:
-    """Organisations this portal can send to or receive from, with served states first for a distributor."""
-    cfg = deps.settings_of(request)
-    served = set(json.loads(cfg.served_states)) if cfg.served_states else set()
-    rows = [o for o in request.app.state.directory.known() if type is None or o["org_type"] == type]
-    rows.sort(key=lambda o: (o["state"] not in served, not o.get("online", False), o["org_id"]))
-    keep = ("org_id", "org_type", "name", "city", "state", "host_name", "base_url")
-    return {"parties": [{k: o[k] for k in keep} | {"serves_here": o["state"] in served} for o in rows]}
 
 
 @router.get("/alerts")

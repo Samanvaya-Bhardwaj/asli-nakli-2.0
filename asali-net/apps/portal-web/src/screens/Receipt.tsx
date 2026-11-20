@@ -46,7 +46,7 @@ export function Receipt({ config, sale }: { config: Config; sale: SaleSummary })
         </ul>
         <p className="font-semibold">{w.total}: {money(sale.total_paise)} ({sale.lines.length} {w.packs})</p>
         <div className="mt-3 flex items-center gap-3">
-          {qr && <div aria-label="QR code" dangerouslySetInnerHTML={{ __html: qr }} />}
+          {qr && <div role="img" aria-label="QR code that opens the consumer portal" dangerouslySetInnerHTML={{ __html: qr }} />}
           <p className="text-sm">{w.check}</p>
         </div>
         <p className="mt-2 text-sm">{w.helpline}: {config.shop?.helpline}</p>

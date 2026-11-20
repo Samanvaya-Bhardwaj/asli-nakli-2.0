@@ -79,7 +79,7 @@ export function Check({ config }: { config: Config }) {
       <ProblemMessage error={error} />
       {busy && !reply && <VerdictLoading asked={progress.asked} total={progress.total} />}
       {reply?.status === 'needs_confirmation' && (
-        <div role="status" className="prose-narrow grid gap-3 rounded-r-control border-l-4 border-warn bg-warn-bg px-4 py-4 text-warn-fg">
+        <div role="status" className="prose-narrow grid gap-3 rounded-panel border border-warn-line bg-warn-bg px-4 py-4 text-warn-fg">
           <p className="text-lg font-semibold">Does your pack show <Code value={reply.serial} />?</p>
           <p>We read a slightly different code and found one close match. Check it against the pack before we go on.</p>
           <div className="flex gap-3">

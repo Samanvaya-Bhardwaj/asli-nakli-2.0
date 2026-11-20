@@ -1,0 +1,108 @@
+{
+ "run_at": "2026-11-20T09:50:56",
+ "results": [
+  {
+   "check": "pytest (all, network tests skipped)",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "........................................................................ [ 62%]",
+    "........................................................................ [ 77%]",
+    "........................................................................ [ 93%]",
+    ".....................sssssssssss                                         [100%]"
+   ]
+  },
+  {
+   "check": "pytest scenarios against the running simulation",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "...........                                                              [100%]"
+   ]
+  },
+  {
+   "check": "ruff check",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "All checks passed!"
+   ]
+  },
+  {
+   "check": "ruff format check",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "192 files already formatted"
+   ]
+  },
+  {
+   "check": "mypy (strict, asali_codes)",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "Success: no issues found in 9 source files"
+   ]
+  },
+  {
+   "check": "vitest",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    " Test Files  2 passed (2)",
+    "      Tests  40 passed (40)",
+    "   Start at  09:50:35",
+    "   Duration  2.05s (environment 67%, setup 23%, import 4%, tests 3%, transform 3%, worker 1%)"
+   ]
+  },
+  {
+   "check": "eslint",
+   "passed": true,
+   "exit_code": 0,
+   "tail": []
+  },
+  {
+   "check": "typescript build",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "(!) Some chunks are larger than 500 kB after minification. Consider:",
+    "- Using dynamic import() to code-split the application",
+    "- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting",
+    "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\u001b[39m"
+   ]
+  },
+  {
+   "check": "contrast of every token pair",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "Contrast OK: 36 pairs in each of 2 themes"
+   ]
+  },
+  {
+   "check": "copy check (banned words, dashes, emoji)",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "Copy OK: no banned words, exclamation marks, em dashes, emoji or Title Case buttons"
+   ]
+  },
+  {
+   "check": "Impeccable detector on the portal source",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "[]"
+   ]
+  },
+  {
+   "check": "file sizes (400 lines)",
+   "passed": true,
+   "exit_code": 0,
+   "tail": [
+    "File sizes OK"
+   ]
+  }
+ ]
+}

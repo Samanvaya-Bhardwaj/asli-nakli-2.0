@@ -12,7 +12,7 @@ SIM_START = datetime.fromisoformat("2026-10-01T09:00:00+05:30")
 class Portal:
     def __init__(self, org_id: str, base_url: str, password: str, verify: Any = True) -> None:
         self.org_id, self.base = org_id, base_url.rstrip("/")
-        self.http = httpx.Client(base_url=self.base, timeout=30, verify=verify)
+        self.http = httpx.Client(base_url=self.base, timeout=300, verify=verify)
         r = self.http.post("/api/login", json={"username": "staff", "password": password})
         if r.status_code != 200:
             raise RuntimeError(f"{org_id}: sign-in failed ({r.status_code} {r.text})")
