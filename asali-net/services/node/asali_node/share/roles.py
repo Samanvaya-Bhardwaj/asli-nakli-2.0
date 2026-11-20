@@ -46,6 +46,15 @@ def scans(request: Request, gtin: str, serial: str) -> dict[str, Any]:
     return dict(deps.ro(request).scan_stat(gtin, serial).model_dump(mode="json"))
 
 
+@router.get("/scans/{gtin}/{serial}/inputs")
+def scan_inputs(request: Request, gtin: str, serial: str) -> dict[str, Any]:
+    """What was typed or scanned for a pack. Regulator only: slips in readings say who is mis-scanning what."""
+    deps.need_type(request, "consumer")
+    if caller_type(request) != "regulator":
+        raise Problem(403, "Not allowed", "regulator_only", "Only the regulator can list readings.")
+    return {"inputs": deps.ro(request).raw_inputs(gtin, serial)}
+
+
 @router.get("/reports")
 def reports(request: Request, since: datetime | None = None) -> dict[str, Any]:
     """The bulk list is for the regulator only."""

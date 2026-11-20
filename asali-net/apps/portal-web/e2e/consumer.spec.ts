@@ -38,6 +38,17 @@ test.describe('consumer portal', () => {
     await noAxeViolations(page, 'consumer-do-not-use')
   })
 
+  test('the result shows the context each organisation found through its own keys', async ({ page }) => {
+    await page.goto(NODE['consumer-delhi'] + '/')
+    await page.getByLabel('Code on the pack').fill(scenarios.S5!.raw)
+    await page.getByRole('button', { name: 'Check medicine' }).click()
+    await expect(page.getByRole('heading', { name: 'Context found across organisations' })).toBeVisible()
+    await expect(page.getByText(/organisations asked, \d+ found context/)).toBeVisible()
+    await page.getByText('How each organisation found it').click()
+    await expect(page.getByText(/foreign key|\(.*\) -> .*\(.*\)/).first()).toBeVisible()
+    await noAxeViolations(page, 'consumer-context')
+  })
+
   test('a notice that exists only as text makes a batch Do not use', async ({ page }) => {
     await page.goto(NODE['consumer-delhi'] + '/')
     await page.getByLabel('Code on the pack').fill(scenarios.S5!.raw)

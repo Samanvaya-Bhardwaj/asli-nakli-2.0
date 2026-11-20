@@ -15,7 +15,7 @@ from asali_node.canonical import (
 )
 from asali_node.stores.protocols import NotSupported
 from asali_node.stores.sqlbase import new_id, to_date, to_ist
-from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, view
+from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, party_kind, view
 
 # a pack is in stock when it was bought and no sale or return has been recorded since
 _IN_STOCK = (
@@ -26,6 +26,11 @@ _IN_STOCK = (
 
 class ShopDelhiStore(SqlStore):
     ORG = "shop-delhi"
+    CONTEXT_ROOTS = (
+        ("purchase_items", "sn", "serial"),
+        ("sale_items", "sn", "serial"),
+        ("returns", "sn", "serial"),
+    )
     STAFF = ("users", "username", "pw_hash", "user_role", "full_name")
     CORR = ("scan_fixes", "fixed_at", "raw", "which", "chosen", "cost", "by_user")
     DOCLNK = ("doc_links", "doc_id", "ent_type", "ent_key", "conf", "linked_at")
@@ -33,6 +38,11 @@ class ShopDelhiStore(SqlStore):
     def record_receipt(self, r: NewReceipt) -> None:
         pur = new_id("PUR")
         with self.db.tx() as tx:
+            tx.run(
+                "INSERT INTO parties (org_id, org_type) VALUES (?, ?) ON CONFLICT (org_id) DO NOTHING",
+                r.from_org,
+                party_kind(r.from_org),
+            )
             tx.run(
                 "INSERT INTO purchases (pur_id, distributor_org, bill_no, bill_date) VALUES (?, ?, ?, ?)",
                 pur, r.from_org, r.source_ref, r.at,

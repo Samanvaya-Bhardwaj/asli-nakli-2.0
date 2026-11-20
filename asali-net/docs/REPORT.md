@@ -10,8 +10,10 @@ Built 20 Nov 2026 from the files in `docs/evidence/`.
 - **The hand-written ML test set has not been provided** by the team. The ML report says so in its first line.
 - **Superpowers and Humanizer plugins were not installed** (they need the user's `/plugin` commands), so no humanizer pass was made on the prose. Impeccable's detector is at zero findings; its audit and critique were done as a pass by Claude, not by a second person (`docs/evidence/ui/impeccable-review.md`).
 - **The seed and scenario scripts address nodes through the directory** (`--directory-url`, `--ca`), but have only been run against the local directory, never against four computers.
+- **The Phase 1 to 3 code at the repository root is not connected to this system.** It still runs on its own (`scripts/run_federation.py`) and was not changed. This network re-implements what the three phases asked for: Phase 3's context discovery was ported into the nodes (`asali_node/context/`); Phase 1's integration is the per-organisation mapping to a canonical model; Phase 2's matching is `packages/asali_codes`. Phase 2's probabilistic entity-matching posterior, Phase 1's hash-chained audit log and Phase 2's replication were not carried over.
+- **Phase 3 "databases on different machines" is only simulated:** each database and its node ran as its own process on one computer. The context discovery has never run across machines.
 - **Hindi, Marathi and Kannada receipt text is unreviewed** and marked so in the files and on screen.
-- **ML target missed:** m2_micro_f1 is 0.643 against a target of 0.8 on the generated test families. Thresholds were not tuned on test data.
+- **ML target missed:** m2_micro_f1 is 0.653 against a target of 0.8 on the generated test families. Thresholds were not tuned on test data.
 
 ## What the professor asked for, and where it is
 
@@ -26,9 +28,43 @@ Built 20 Nov 2026 from the files in `docs/evidence/`.
 | Real orchestration across computers | `infra/network.yaml`, `make_stack.py`, runbook `docs/runbook/FOUR_PCS.md`; **run only as a one-computer simulation so far** |
 | The old UI looked machine-made | Tokens, banned patterns, `check_copy.mjs`, Impeccable detector at zero; see `docs/plan/DESIGN.md` |
 
+## The three phases' rubrics
+
+One project in three phases. Each line is a marking item, what answers it, and where.
+
+### Phase 1
+
+| Rubric item | Marks | Where |
+|---|---|---|
+| Scope of work | 1 | `docs/plan/PLAN.md` section 1 |
+| What is new | 1 | Per-organisation databases in three engines with different schemas; read-only sharing; text linked by ML to structured records; misread-code correction (`docs/vibe/CHANGES.md`) |
+| Database schema design | 2 | `schemas/<org>/schema.sql` and `validators.json`, each with a `MAPPING.md` |
+| Populating the tables | 2 | `seed/seed_network.py` through the portals' own APIs; `seed/catalogue.yaml` |
+| Schema matching / mapping, or APIs for fetching | 2 | Each store maps its native schema to the canonical model (`MAPPING.md`); the share API (`services/node/asali_node/share/`) is the fetching API |
+| Query decomposition and federation, or querying through APIs | 2 | `verify/trace.py`: a dependent join along the custody chain, side queries in parallel |
+| Communication between the sources | 2 | Signed HTTP between nodes, a directory of addresses and keys (`network/`, `auth/`); `tests/network/` |
+| Result integration and a simple GUI | 3 | Result page of the portal: verdict, reasons, history, documents, context (`apps/portal-web/`) |
+
+### Phase 2
+
+| Rubric item | Marks | Where |
+|---|---|---|
+| Approximate matching of a noisy code, and the reverse; why this algorithm | 5 | `packages/asali_codes` (weighted edit search, check character, issued set); `POST /api/similar` and the Investigate page; `docs/evidence/matching/report.md`: top 1 91.2% (plain edit distance) to 100.0% (weighted, check character, lot); decides alone 52.5% to 86.7%; wrong and decided alone 0.0% |
+| Cleansing recorded data with the other information on the label, so no anomalies remain | 5 | Label lot and expiry separate candidates (`asali_codes/read.py`); `/api/quality` audit, proposals and applied fixes with a trail; `docs/evidence/quality/report.md`: 15 planted, 15 found, 15 right proposals, 15 applied |
+| Prompt, generated code, and the changes | 5 | `docs/vibe/PROMPTS.md`, `docs/vibe/generated/`, `docs/vibe/CHANGES.md`, `docs/scripts/vibe_diffs.py` |
+
+### Phase 3
+
+| Rubric item | Marks | Where |
+|---|---|---|
+| Each database has four to five related tables, some joined by foreign keys | 2 | `services/node/tests/stores/test_phase3_shape.py` checks all twelve; `MAPPING.md` lists the related tables of each |
+| Context found through the keys, in each database on its own machine, accumulated and related to the query | 3 | `asali_node/context/` (per database), `share/context.py`, `verify/context.py` (merge); `docs/evidence/context/report.md`: 30 packs, 3.13 organisations found context per pack, 9.13 joins followed per pack over mongo, postgres, sqlite; documents naming the pack's product: 0.732 by context, 0.2 by the question's words alone. **Each database ran as its own process on one computer; not on different machines** |
+| The context searches the unstructured data, and the two are integrated | 3 | `verify/context.py` `context_documents`; the result page shows linked documents, context, and related documents apart; related documents never change a verdict |
+| Prompt, generated code, modified code | 2 | As Phase 2 |
+
 ## Automated checks
 
-Run 2026-11-20T10:27:06.
+Run 2026-11-20T12:54:05.
 
 | Check | Result |
 |---|---|
@@ -47,7 +83,7 @@ Run 2026-11-20T10:27:06.
 
 ## Scenarios (simulation on one computer)
 
-Run 2026-11-20T10:07:09.
+Run 2026-11-20T12:44:16.
 
 | Scenario | Verdict | Reasons | Expected | Computers named | Result |
 |---|---|---|---|---|---|
@@ -57,7 +93,7 @@ Run 2026-11-20T10:07:09.
 | S4 | do_not_use | RECALLED | do_not_use RECALLED | SIM-LOCAL | pass |
 | S5 | do_not_use | QUALITY_FAILED | do_not_use QUALITY_FAILED | SIM-LOCAL | pass |
 | S6 | caution | COLD_CHAIN | caution COLD_CHAIN | SIM-LOCAL | pass |
-| S7 | caution | CHAIN_BREAK | caution CHAIN_BREAK | SIM-LOCAL | pass |
+| S7 | caution | CHAIN_BREAK, COLD_CHAIN | caution CHAIN_BREAK | SIM-LOCAL | pass |
 | S9 | needs_confirmation | | needs_confirmation | | pass |
 
 Scenario S8 (a stopped organisation) is run by `tests/network/test_scenarios.py` because it stops and starts a node.
@@ -69,7 +105,7 @@ Measured on template families the models never saw (`docs/evidence/ml/report.md`
 | Metric | Result | Target |
 |---|---|---|
 | m1_macro_f1 | 0.942 | at least 0.9 |
-| m2_micro_f1 | 0.643 | at least 0.8 |
+| m2_micro_f1 | 0.653 | at least 0.8 |
 | codes_precision | 1.000 | at least 0.98 |
 | codes_recall | 1.000 | at least 0.95 |
 | names_precision | 0.983 | at least 0.9 |
@@ -82,7 +118,7 @@ Measured on template families the models never saw (`docs/evidence/ml/report.md`
 
 ## Browser tests
 
-13 passed, 0 failed. Screenshots in `docs/evidence/ui/e2e/`.
+15 passed, 0 failed. Screenshots in `docs/evidence/ui/e2e/`.
 
 ## Deviations from the plan
 

@@ -19,11 +19,13 @@ from asali_node.portal import common as portal_common
 from asali_node.portal import consumer, holder, pharma, regulator, scan, sim
 from asali_node.portal import documents as portal_documents
 from asali_node.portal import network as portal_network
+from asali_node.portal import quality as portal_quality
 from asali_node.problems import install_problem_handlers
 from asali_node.runtime import network_lifespan
 from asali_node.scan_sessions import SessionTable as ScanSessions
 from asali_node.settings import Settings
 from asali_node.share import common as share_common
+from asali_node.share import context as share_context
 from asali_node.share import documents as share_documents
 from asali_node.share import roles as share_roles
 from asali_node.share import units as share_units
@@ -117,11 +119,18 @@ def create_app(settings: Settings, rw: Any = None, ro: Any = None, with_text: bo
     app.include_router(config_api.router)
     app.include_router(portal_common.router)
     app.include_router(portal_network.router)
+    app.include_router(portal_quality.router)
     for module in PORTAL_BY_TYPE[settings.org_type]:
         app.include_router(module.router)
     if settings.org_type in STAFF_DOCUMENTS:
         app.include_router(portal_documents.router)
-    for r in (share_common.router, share_units.router, share_roles.router, share_documents.router):
+    for r in (
+        share_common.router,
+        share_units.router,
+        share_roles.router,
+        share_documents.router,
+        share_context.router,
+    ):
         app.include_router(r)
     app.include_router(debug_api.router)
     if settings.web_dir is not None and (settings.web_dir / "index.html").exists():

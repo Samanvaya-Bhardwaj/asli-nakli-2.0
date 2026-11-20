@@ -238,6 +238,327 @@
    "title": "Config",
    "type": "object"
   },
+  "ContextAnchor": {
+   "additionalProperties": false,
+   "properties": {
+    "organisations": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "term": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "term",
+    "organisations"
+   ],
+   "title": "ContextAnchor",
+   "type": "object"
+  },
+  "ContextBlock": {
+   "additionalProperties": false,
+   "properties": {
+    "anchors": {
+     "items": {
+      "$ref": "#/$defs/ContextAnchor"
+     },
+     "type": "array"
+    },
+    "distinct_terms": {
+     "type": "integer"
+    },
+    "method": {
+     "type": "string"
+    },
+    "organisations": {
+     "items": {
+      "$ref": "#/$defs/ContextOrg"
+     },
+     "type": "array"
+    },
+    "organisations_asked": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "organisations_contributing": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "question_words": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "terms": {
+     "items": {
+      "$ref": "#/$defs/ContextTerm"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "method",
+    "anchors",
+    "organisations_asked",
+    "organisations_contributing",
+    "distinct_terms",
+    "terms",
+    "organisations",
+    "question_words"
+   ],
+   "title": "ContextBlock",
+   "type": "object"
+  },
+  "ContextDocHit": {
+   "additionalProperties": false,
+   "properties": {
+    "claims": {
+     "items": {
+      "$ref": "#/$defs/ClaimRow"
+     },
+     "type": "array"
+    },
+    "context_score": {
+     "type": "number"
+    },
+    "created_at": {
+     "type": "string"
+    },
+    "doc_id": {
+     "type": "string"
+    },
+    "doc_type": {
+     "type": "string"
+    },
+    "found_by": {
+     "const": "context",
+     "type": "string"
+    },
+    "issue_labels": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "kind": {
+     "enum": [
+      "official",
+      "operational",
+      "allegation"
+     ],
+     "type": "string"
+    },
+    "label": {
+     "type": "string"
+    },
+    "linked_to": {
+     "items": {
+      "$ref": "#/$defs/DocLink"
+     },
+     "type": "array"
+    },
+    "matched_terms": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "org_name": {
+     "type": "string"
+    },
+    "snippet": {
+     "$ref": "#/$defs/Snippet"
+    },
+    "title": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "org_id",
+    "org_name",
+    "doc_type",
+    "kind",
+    "title",
+    "created_at",
+    "snippet",
+    "linked_to",
+    "claims",
+    "issue_labels",
+    "label",
+    "matched_terms",
+    "context_score",
+    "found_by"
+   ],
+   "title": "ContextDocHit",
+   "type": "object"
+  },
+  "ContextOrg": {
+   "additionalProperties": false,
+   "properties": {
+    "engine": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "explored_tables": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "joins": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "name": {
+     "type": "string"
+    },
+    "org_id": {
+     "type": "string"
+    },
+    "reason": {
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "answered",
+      "unreachable"
+     ],
+     "type": "string"
+    },
+    "stop_reason": {
+     "type": "string"
+    },
+    "terms": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "org_id",
+    "name",
+    "status",
+    "reason",
+    "explored_tables",
+    "joins",
+    "stop_reason",
+    "terms",
+    "engine"
+   ],
+   "title": "ContextOrg",
+   "type": "object"
+  },
+  "ContextProvenance": {
+   "additionalProperties": false,
+   "properties": {
+    "column": {
+     "type": "string"
+    },
+    "organisation": {
+     "type": "string"
+    },
+    "relationship_path": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "step": {
+     "type": "integer"
+    },
+    "table": {
+     "type": "string"
+    },
+    "weight": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "organisation",
+    "table",
+    "column",
+    "step",
+    "relationship_path",
+    "weight"
+   ],
+   "title": "ContextProvenance",
+   "type": "object"
+  },
+  "ContextTerm": {
+   "additionalProperties": false,
+   "properties": {
+    "key": {
+     "type": "string"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "local_scores": {
+     "additionalProperties": {
+      "type": "number"
+     },
+     "type": "object"
+    },
+    "organisations": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "provenance": {
+     "items": {
+      "$ref": "#/$defs/ContextProvenance"
+     },
+     "type": "array"
+    },
+    "query_match": {
+     "type": "boolean"
+    },
+    "score": {
+     "type": "number"
+    },
+    "term": {
+     "type": "string"
+    },
+    "why_relevant": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "term",
+    "key",
+    "kind",
+    "score",
+    "organisations",
+    "local_scores",
+    "query_match",
+    "why_relevant",
+    "provenance"
+   ],
+   "title": "ContextTerm",
+   "type": "object"
+  },
   "DocHit": {
    "additionalProperties": false,
    "properties": {
@@ -877,6 +1198,209 @@
    "title": "ShopSettings",
    "type": "object"
   },
+  "Similar": {
+   "additionalProperties": false,
+   "properties": {
+    "matches": {
+     "items": {
+      "$ref": "#/$defs/SimilarMatch"
+     },
+     "type": "array"
+    },
+    "read": {
+     "$ref": "#/$defs/SimilarRead"
+    },
+    "seen_as": {
+     "items": {
+      "$ref": "#/$defs/SimilarSeen"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "read",
+    "matches",
+    "seen_as"
+   ],
+   "title": "Similar",
+   "type": "object"
+  },
+  "SimilarMatch": {
+   "additionalProperties": false,
+   "properties": {
+    "cost": {
+     "type": "number"
+    },
+    "edits": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "expiry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "fits_label": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "gtin": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "lot": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "org_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "product": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "serial": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "serial",
+    "gtin",
+    "org_id",
+    "cost",
+    "edits",
+    "lot",
+    "expiry",
+    "product",
+    "fits_label"
+   ],
+   "title": "SimilarMatch",
+   "type": "object"
+  },
+  "SimilarRead": {
+   "additionalProperties": false,
+   "properties": {
+    "expiry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "lot": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "raw": {
+     "type": "string"
+    },
+    "serial": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "raw",
+    "serial",
+    "lot",
+    "expiry"
+   ],
+   "title": "SimilarRead",
+   "type": "object"
+  },
+  "SimilarSeen": {
+   "additionalProperties": false,
+   "properties": {
+    "at": {
+     "type": "string"
+    },
+    "city": {
+     "type": "string"
+    },
+    "cost": {
+     "type": "number"
+    },
+    "edits": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "portal": {
+     "type": "string"
+    },
+    "raw_input": {
+     "type": "string"
+    },
+    "serial_read": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "raw_input",
+    "serial_read",
+    "cost",
+    "edits",
+    "city",
+    "at",
+    "portal"
+   ],
+   "title": "SimilarSeen",
+   "type": "object"
+  },
   "Snippet": {
    "additionalProperties": false,
    "properties": {
@@ -939,6 +1463,22 @@
     },
     "checked_at": {
      "type": "string"
+    },
+    "context": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ContextBlock"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "context_documents": {
+     "items": {
+      "$ref": "#/$defs/ContextDocHit"
+     },
+     "type": "array"
     },
     "documents": {
      "items": {
@@ -1010,6 +1550,8 @@
     "read",
     "history",
     "documents",
+    "context",
+    "context_documents",
     "sources",
     "mode",
     "checked_at"
@@ -1033,6 +1575,9 @@
   "Config": {
    "$ref": "#/$defs/Config"
   },
+  "ContextBlock": {
+   "$ref": "#/$defs/ContextBlock"
+  },
   "Me": {
    "$ref": "#/$defs/Me"
   },
@@ -1042,6 +1587,9 @@
   "Parties": {
    "$ref": "#/$defs/Parties"
   },
+  "Similar": {
+   "$ref": "#/$defs/Similar"
+  },
   "VerifyResult": {
    "$ref": "#/$defs/VerifyResult"
   }
@@ -1049,7 +1597,9 @@
  "required": [
   "Config",
   "Me",
+  "Similar",
   "VerifyResult",
+  "ContextBlock",
   "CheckDone",
   "CheckNeedsConfirmation",
   "CheckNeedsChoice",

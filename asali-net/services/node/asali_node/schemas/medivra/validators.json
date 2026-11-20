@@ -2,55 +2,277 @@
   "collections": {
     "skus": {
       "bsonType": "object",
-      "required": ["_id", "brand", "molecule", "strength", "form", "packOf", "storage"],
+      "required": [
+        "_id",
+        "brand",
+        "molecule",
+        "strength",
+        "form",
+        "packOf",
+        "storage"
+      ],
       "properties": {
-        "_id": {"bsonType": "string"},
-        "brand": {"bsonType": "string"},
-        "molecule": {"bsonType": "string"},
-        "strength": {"bsonType": "object", "required": ["v", "u"]},
-        "form": {"enum": ["tablet", "capsule", "injection", "syrup", "other"]},
-        "packOf": {"bsonType": "int"},
-        "storage": {"bsonType": "object"}
+        "_id": {
+          "bsonType": "string"
+        },
+        "brand": {
+          "bsonType": "string"
+        },
+        "molecule": {
+          "bsonType": "string"
+        },
+        "strength": {
+          "bsonType": "object",
+          "required": [
+            "v",
+            "u"
+          ]
+        },
+        "form": {
+          "enum": [
+            "tablet",
+            "capsule",
+            "injection",
+            "syrup",
+            "other"
+          ]
+        },
+        "packOf": {
+          "bsonType": "int"
+        },
+        "storage": {
+          "bsonType": "object"
+        }
       }
     },
     "lots": {
       "bsonType": "object",
-      "required": ["_id", "sku", "made", "expires", "qty", "units"],
+      "required": [
+        "_id",
+        "sku",
+        "made",
+        "expires",
+        "qty",
+        "units"
+      ],
       "properties": {
-        "_id": {"bsonType": "string"},
-        "sku": {"bsonType": "string"},
-        "made": {"bsonType": "date"},
-        "expires": {"bsonType": "date"},
-        "qty": {"bsonType": "int"},
-        "recall": {"bsonType": ["object", "null"]},
+        "_id": {
+          "bsonType": "string"
+        },
+        "sku": {
+          "bsonType": "string"
+        },
+        "made": {
+          "bsonType": "date"
+        },
+        "expires": {
+          "bsonType": "date"
+        },
+        "qty": {
+          "bsonType": "int"
+        },
+        "recall": {
+          "bsonType": [
+            "object",
+            "null"
+          ]
+        },
         "units": {
           "bsonType": "array",
           "items": {
             "bsonType": "object",
-            "required": ["sn", "state"],
-            "properties": {"sn": {"bsonType": "string"}, "state": {"enum": ["C", "S", "D"]}}
+            "required": [
+              "sn",
+              "state"
+            ],
+            "properties": {
+              "sn": {
+                "bsonType": "string"
+              },
+              "state": {
+                "enum": [
+                  "C",
+                  "S",
+                  "D"
+                ]
+              }
+            }
           }
         }
       }
     },
     "consignments": {
       "bsonType": "object",
-      "required": ["_id", "consignee", "dispatchedAt", "lines"],
-      "properties": {"consignee": {"bsonType": "string"}, "dispatchedAt": {"bsonType": "date"}, "lines": {"bsonType": "array"}}
+      "required": [
+        "_id",
+        "consignee",
+        "dispatchedAt",
+        "lines"
+      ],
+      "properties": {
+        "consignee": {
+          "bsonType": "string"
+        },
+        "dispatchedAt": {
+          "bsonType": "date"
+        },
+        "lines": {
+          "bsonType": "array"
+        }
+      }
     },
     "staff": {
       "bsonType": "object",
-      "required": ["_id", "hash", "role", "name"]
+      "required": [
+        "_id",
+        "hash",
+        "role",
+        "name"
+      ]
     },
-    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
-    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+    "scanFixes": {
+      "bsonType": "object",
+      "required": [
+        "at",
+        "raw",
+        "field",
+        "chosen",
+        "cost",
+        "by"
+      ]
+    },
+    "docLinks": {
+      "bsonType": "object",
+      "required": [
+        "docId",
+        "entityType",
+        "entityKey",
+        "confidence",
+        "linkedAt"
+      ]
+    },
+    "parties": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "orgType"
+      ],
+      "properties": {
+        "orgType": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "consignmentLines": {
+      "bsonType": "object",
+      "required": [
+        "consignment",
+        "lot",
+        "sku",
+        "count"
+      ],
+      "properties": {
+        "consignment": {
+          "bsonType": "string"
+        },
+        "lot": {
+          "bsonType": "string"
+        },
+        "sku": {
+          "bsonType": "string"
+        },
+        "count": {
+          "bsonType": "int"
+        }
+      }
+    },
+    "recalls": {
+      "bsonType": "object",
+      "required": [
+        "lot",
+        "reason",
+        "level",
+        "at"
+      ],
+      "properties": {
+        "lot": {
+          "bsonType": "string"
+        },
+        "reason": {
+          "bsonType": "string"
+        },
+        "level": {
+          "bsonType": "string"
+        },
+        "at": {
+          "bsonType": "date"
+        }
+      }
+    }
   },
   "indexes": {
     "lots": [
-      {"keys": [["units.sn", 1]], "unique": true, "name": "units_sn_unique"},
-      {"keys": [["sku", 1]], "name": "sku"}
+      {
+        "keys": [
+          [
+            "units.sn",
+            1
+          ]
+        ],
+        "unique": true,
+        "name": "units_sn_unique"
+      },
+      {
+        "keys": [
+          [
+            "sku",
+            1
+          ]
+        ],
+        "name": "sku"
+      }
     ],
-    "consignments": [{"keys": [["consignee", 1]], "name": "consignee"}],
-    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+    "consignments": [
+      {
+        "keys": [
+          [
+            "consignee",
+            1
+          ]
+        ],
+        "name": "consignee"
+      }
+    ],
+    "docLinks": [
+      {
+        "keys": [
+          [
+            "entityKey",
+            1
+          ]
+        ],
+        "name": "entity_key"
+      }
+    ],
+    "consignmentLines": [
+      {
+        "keys": [
+          [
+            "consignment",
+            1
+          ]
+        ],
+        "name": "consignment"
+      },
+      {
+        "keys": [
+          [
+            "lot",
+            1
+          ]
+        ],
+        "name": "lot"
+      }
+    ]
   }
 }

@@ -15,16 +15,22 @@ from asali_node.canonical import (
 )
 from asali_node.stores.protocols import NotSupported
 from asali_node.stores.sqlbase import new_id, to_ist
-from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, view
+from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, party_kind, view
 
 
 class DistNorthStore(SqlStore):
     ENGINE = "pg"
     ORG = "dist-north"
+    CONTEXT_ROOTS = (("receipt_items", "serial", "serial"), ("dispatch_items", "serial", "serial"))
 
     def record_receipt(self, r: NewReceipt) -> None:
         rid = new_id("RCP")
         with self.db.tx() as tx:
+            tx.run(
+                "INSERT INTO parties (org_id, org_type) VALUES (?, ?) ON CONFLICT (org_id) DO NOTHING",
+                r.from_org,
+                party_kind(r.from_org),
+            )
             tx.run(
                 "INSERT INTO receipts (receipt_id, from_org_id, source_ref, received_at, received_by) "
                 "VALUES (?, ?, ?, ?, ?)", rid, r.from_org, r.source_ref, r.at, r.by,
@@ -53,6 +59,11 @@ class DistNorthStore(SqlStore):
                 }
             if set(serials) - have:
                 raise ValueError(f"not in stock: {sorted(set(serials) - have)[:3]}")
+            tx.run(
+                "INSERT INTO parties (org_id, org_type) VALUES (?, ?) ON CONFLICT (org_id) DO NOTHING",
+                d.to_org,
+                party_kind(d.to_org),
+            )
             tx.run("INSERT INTO dispatches (dispatch_id, to_org_id, dispatched_at, vehicle_no) VALUES (?, ?, ?, ?)",
                    d.shipment_id, d.to_org, d.at, d.vehicle_no)  # fmt: skip
             for u in d.units:

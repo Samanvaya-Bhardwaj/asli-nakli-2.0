@@ -3,7 +3,7 @@
 import type { CheckDone, CheckNeedsChoice, CheckNeedsConfirmation, Config } from './generated'
 
 export type {
-  CheckDone, CheckNeedsChoice, CheckNeedsConfirmation, Config, Me, Network, Pack, Parties, Party, Reason, ShopSettings, Source, VerifyResult,
+  CheckDone, CheckNeedsChoice, CheckNeedsConfirmation, ContextBlock, ContextDocHit, ContextOrg, ContextTerm, Config, Me, Network, Pack, Parties, Party, Reason, ShopSettings, Source, VerifyResult,
 } from './generated'
 export type { DocHit, HistoryEvent, HistoryHop, NetworkOrg } from './generated'
 

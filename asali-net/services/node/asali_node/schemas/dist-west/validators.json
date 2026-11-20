@@ -2,27 +2,182 @@
   "collections": {
     "movements": {
       "bsonType": "object",
-      "required": ["dir", "party", "at", "ref", "items"],
+      "required": [
+        "_id",
+        "dir",
+        "party",
+        "at",
+        "ref",
+        "items"
+      ],
       "properties": {
-        "dir": {"enum": ["IN", "OUT"]},
-        "party": {"bsonType": "string"},
-        "at": {"bsonType": "date"},
-        "ref": {"bsonType": "string"},
+        "dir": {
+          "enum": [
+            "IN",
+            "OUT"
+          ]
+        },
+        "party": {
+          "bsonType": "string"
+        },
+        "at": {
+          "bsonType": "date"
+        },
+        "ref": {
+          "bsonType": "string"
+        },
         "items": {
           "bsonType": "array",
-          "items": {"bsonType": "object", "required": ["g", "s"], "properties": {"g": {"bsonType": "string"}, "s": {"bsonType": "string"}}}
+          "items": {
+            "bsonType": "object",
+            "required": [
+              "g",
+              "s"
+            ],
+            "properties": {
+              "g": {
+                "bsonType": "string"
+              },
+              "s": {
+                "bsonType": "string"
+              }
+            }
+          }
+        },
+        "_id": {
+          "bsonType": "string"
         }
       }
     },
-    "staff": {"bsonType": "object", "required": ["_id", "hash", "role", "name"]},
-    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
-    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+    "staff": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "hash",
+        "role",
+        "name"
+      ]
+    },
+    "scanFixes": {
+      "bsonType": "object",
+      "required": [
+        "at",
+        "raw",
+        "field",
+        "chosen",
+        "cost",
+        "by"
+      ]
+    },
+    "docLinks": {
+      "bsonType": "object",
+      "required": [
+        "docId",
+        "entityType",
+        "entityKey",
+        "confidence",
+        "linkedAt"
+      ]
+    },
+    "partners": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "orgType"
+      ],
+      "properties": {
+        "orgType": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "directions": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "movementItems": {
+      "bsonType": "object",
+      "required": [
+        "movement",
+        "g",
+        "s"
+      ],
+      "properties": {
+        "movement": {
+          "bsonType": "string"
+        },
+        "g": {
+          "bsonType": "string"
+        },
+        "s": {
+          "bsonType": "string"
+        }
+      }
+    }
   },
   "indexes": {
     "movements": [
-      {"keys": [["items.s", 1]], "name": "items_s"},
-      {"keys": [["dir", 1], ["party", 1]], "name": "dir_party"}
+      {
+        "keys": [
+          [
+            "items.s",
+            1
+          ]
+        ],
+        "name": "items_s"
+      },
+      {
+        "keys": [
+          [
+            "dir",
+            1
+          ],
+          [
+            "party",
+            1
+          ]
+        ],
+        "name": "dir_party"
+      }
     ],
-    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+    "docLinks": [
+      {
+        "keys": [
+          [
+            "entityKey",
+            1
+          ]
+        ],
+        "name": "entity_key"
+      }
+    ],
+    "movementItems": [
+      {
+        "keys": [
+          [
+            "movement",
+            1
+          ]
+        ],
+        "name": "movement"
+      },
+      {
+        "keys": [
+          [
+            "s",
+            1
+          ]
+        ],
+        "name": "s"
+      }
+    ]
   }
 }

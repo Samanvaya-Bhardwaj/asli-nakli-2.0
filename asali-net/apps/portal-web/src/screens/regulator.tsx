@@ -1,7 +1,10 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 import { api } from '../api/client'
+import type { Similar } from '../api/generated'
 import type { CheckReply } from '../api/types'
+import { ContextSection } from '../components/ContextSection'
+import { NearMatches } from '../components/NearMatches'
 import { EvidenceList, PackHistory, ReasonList, SourcesLine } from '../components/Evidence'
 import { VerdictBlock, VerdictLoading } from '../components/VerdictBlock'
 import { Button, EmptyState, Field, Input, Notice, PageHeader, ProblemMessage, Select, Skeleton, Status, Table, Td } from '../components/ui'
@@ -89,17 +92,22 @@ export function Licences() {
 export function Investigate() {
   const [raw, setRaw] = useState('')
   const check = useMutation({ mutationFn: () => api<CheckReply>('/api/investigate', { method: 'POST', json: { raw } }) })
+  const similar = useMutation({ mutationFn: () => api<Similar>('/api/similar', { method: 'POST', json: { raw } }) })
   const r = check.data
   return (
     <div className="grid gap-6">
       <PageHeader title="Investigate" />
       <form className="grid max-w-xl gap-3" onSubmit={(e) => { e.preventDefault(); check.mutate() }}>
         <Field label="Code of the pack" hint="Type the code printed after SN, or paste a scanned code."><Input value={raw} onChange={(e) => setRaw(e.target.value)} required className="font-mono" /></Field>
-        <div><Button kind="primary" type="submit" disabled={check.isPending || raw.length < 3}>Trace pack</Button></div>
+        <div className="flex flex-wrap gap-3">
+          <Button kind="primary" type="submit" disabled={check.isPending || raw.length < 3}>Trace pack</Button>
+          <Button onClick={() => similar.mutate()} disabled={similar.isPending || raw.length < 3}>Find near matches</Button>
+        </div>
       </form>
-      <ProblemMessage error={check.error} />
+      <ProblemMessage error={check.error ?? similar.error} />
+      {similar.data && <NearMatches data={similar.data} />}
       {check.isPending && <VerdictLoading asked={0} total={0} />}
-      {r?.status === 'done' && <div className="grid gap-6"><VerdictBlock result={r.result} /><ReasonList reasons={r.result.reasons} /><PackHistory history={r.result.history} simulation={r.result.mode === 'simulation'} /><EvidenceList documents={r.result.documents} /><SourcesLine sources={r.result.sources} /></div>}
+      {r?.status === 'done' && <div className="grid gap-6"><VerdictBlock result={r.result} /><ReasonList reasons={r.result.reasons} /><PackHistory history={r.result.history} simulation={r.result.mode === 'simulation'} /><EvidenceList documents={r.result.documents} /><ContextSection context={r.result.context} related={r.result.context_documents} /><SourcesLine sources={r.result.sources} /></div>}
       {r && r.status !== 'done' && <Notice tone="warn">{r.message}</Notice>}
     </div>
   )

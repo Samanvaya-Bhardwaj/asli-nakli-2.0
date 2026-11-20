@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router'
 import { api } from '../api/client'
 import type { CheckReply, Config, VerifyResult } from '../api/types'
 import { Code } from '../components/Code'
+import { ContextSection } from '../components/ContextSection'
 import { EvidenceList, PackHistory, ReasonList, SourcesLine } from '../components/Evidence'
 import { ScanBox } from '../components/ScanBox'
 import { VerdictBlock, VerdictLoading } from '../components/VerdictBlock'
@@ -18,6 +19,7 @@ function Result({ result }: { result: VerifyResult }) {
       <ReasonList reasons={result.reasons} />
       <PackHistory history={result.history} simulation={result.mode === 'simulation'} />
       <EvidenceList documents={result.documents} />
+      <ContextSection context={result.context} related={result.context_documents} />
       <SourcesLine sources={result.sources} />
       <p><Link className="underline" to={`/report?code=${result.pack.serial}`}>Report a problem with this pack</Link></p>
     </div>

@@ -112,6 +112,61 @@ class DocHit(Shape):
     label: str
 
 
+class ContextProvenance(Shape):
+    organisation: str
+    table: str
+    column: str
+    step: int
+    relationship_path: list[str]
+    weight: float
+
+
+class ContextTerm(Shape):
+    term: str
+    key: str
+    kind: str
+    score: float
+    organisations: list[str]
+    local_scores: dict[str, float]
+    query_match: bool
+    why_relevant: list[str]
+    provenance: list[ContextProvenance]
+
+
+class ContextOrg(Shape):
+    org_id: str
+    name: str
+    status: Literal["answered", "unreachable"]
+    reason: str
+    explored_tables: list[str]
+    joins: list[str]
+    stop_reason: str
+    terms: int
+    engine: str | None
+
+
+class ContextAnchor(Shape):
+    term: str
+    organisations: list[str]
+
+
+class ContextBlock(Shape):
+    method: str
+    anchors: list[ContextAnchor]
+    organisations_asked: list[str]
+    organisations_contributing: list[str]
+    distinct_terms: int
+    terms: list[ContextTerm]
+    organisations: list[ContextOrg]
+    question_words: list[str]
+
+
+class ContextDocHit(DocHit):
+    matched_terms: list[str]
+    context_score: float
+    found_by: Literal["context"]
+
+
 class Source(Shape):
     org_id: str
     status: Literal["answered", "unreachable", "skipped"]
@@ -152,6 +207,8 @@ class VerifyResult(Shape):
     read: CodeRead | None
     history: list[HistoryHop]
     documents: list[DocHit]
+    context: ContextBlock | None
+    context_documents: list[ContextDocHit]
     sources: list[Source]
     mode: Mode
     checked_at: str
@@ -177,6 +234,41 @@ class CheckNeedsChoice(Shape):
     message: str
     read: CodeRead | None = None
     choices: list[str]
+
+
+class SimilarRead(Shape):
+    raw: str
+    serial: str | None
+    lot: str | None
+    expiry: str | None
+
+
+class SimilarMatch(Shape):
+    serial: str
+    gtin: str | None
+    org_id: str | None
+    cost: float
+    edits: list[str]
+    lot: str | None
+    expiry: str | None
+    product: str | None
+    fits_label: bool | None
+
+
+class SimilarSeen(Shape):
+    raw_input: str
+    serial_read: str
+    cost: float
+    edits: list[str]
+    city: str
+    at: str
+    portal: str
+
+
+class Similar(Shape):
+    read: SimilarRead
+    matches: list[SimilarMatch]
+    seen_as: list[SimilarSeen]
 
 
 class NetworkOrg(Shape):
@@ -220,7 +312,7 @@ class Parties(Shape):
 
 # Name in the generated file -> model. Order is the order in the generated file.
 EXPORTS: dict[str, type[BaseModel]] = {
-    "Config": Config, "Me": Me, "VerifyResult": VerifyResult, "CheckDone": CheckDone,
+    "Config": Config, "Me": Me, "Similar": Similar, "VerifyResult": VerifyResult, "ContextBlock": ContextBlock, "CheckDone": CheckDone,
     "CheckNeedsConfirmation": CheckNeedsConfirmation, "CheckNeedsChoice": CheckNeedsChoice,
     "Network": Network, "Parties": Parties,
 }  # fmt: skip

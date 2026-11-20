@@ -11,6 +11,12 @@ CITIES: dict[str, tuple[float, float]] = {
     "Thane": (19.2183, 72.9781), "Gurugram": (28.4595, 77.0266), "Noida": (28.5355, 77.3910),
 }  # fmt: skip
 
+CITY_STATE: dict[str, str] = {
+    "Delhi": "DL", "Mumbai": "MH", "Bengaluru": "KA", "Pune": "MH", "Hyderabad": "TG", "Baddi": "HP", "Chennai": "TN",
+    "Kolkata": "WB", "Ahmedabad": "GJ", "Jaipur": "RJ", "Lucknow": "UP", "Chandigarh": "CH", "Kochi": "KL", "Patna": "BR",
+    "Nagpur": "MH", "Thane": "MH", "Gurugram": "HR", "Noida": "UP",
+}  # fmt: skip
+
 
 def distance_km(a: str, b: str) -> float:
     """Haversine distance. Raises KeyError for a city that is not in the table; callers decide what that means."""

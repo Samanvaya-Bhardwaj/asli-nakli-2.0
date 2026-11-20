@@ -1,0 +1,310 @@
+{
+ "run_at": "2026-11-20T12:45:10",
+ "mode": "simulation on one computer; noise planted by script into legacy-style records",
+ "anomalies_before": {
+  "tarang": 0,
+  "medivra": 0,
+  "kesar": 0,
+  "dist-north": 0,
+  "dist-west": 0,
+  "dist-south": 0,
+  "shop-delhi": 0,
+  "shop-mumbai": 0,
+  "shop-bengaluru": 0,
+  "consumer-delhi": 1,
+  "consumer-mumbai": 0,
+  "regulator": 0
+ },
+ "anomalies_after_planting": {
+  "tarang": 0,
+  "medivra": 0,
+  "kesar": 0,
+  "dist-north": 3,
+  "dist-west": 3,
+  "dist-south": 3,
+  "shop-delhi": 3,
+  "shop-mumbai": 3,
+  "shop-bengaluru": 0,
+  "consumer-delhi": 1,
+  "consumer-mumbai": 0,
+  "regulator": 0
+ },
+ "anomalies_after_cleaning": {
+  "tarang": 0,
+  "medivra": 0,
+  "kesar": 0,
+  "dist-north": 0,
+  "dist-west": 0,
+  "dist-south": 0,
+  "shop-delhi": 0,
+  "shop-mumbai": 0,
+  "shop-bengaluru": 0,
+  "consumer-delhi": 1,
+  "consumer-mumbai": 0,
+  "regulator": 0
+ },
+ "records_checked": {
+  "tarang": 480,
+  "medivra": 480,
+  "kesar": 480,
+  "dist-north": 360,
+  "dist-west": 360,
+  "dist-south": 360,
+  "shop-delhi": 251,
+  "shop-mumbai": 252,
+  "shop-bengaluru": 252,
+  "consumer-delhi": 33,
+  "consumer-mumbai": 0,
+  "regulator": 0
+ },
+ "planted": [
+  {
+   "org": "shop-delhi",
+   "true": "MVP7KN19T5W",
+   "noisy": "MVP7KN1975W",
+   "rows": 1,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "MVP7KN19T5W",
+   "proposal_cost": 0.55,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 1
+  },
+  {
+   "org": "shop-delhi",
+   "true": "TPGKDHHFZSH",
+   "noisy": "TPGKDHNFZSH",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPGKDHHFZSH",
+   "proposal_cost": 0.7,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "shop-delhi",
+   "true": "TP2DNFBJ4YS",
+   "noisy": "TP2DNFBJ4Y5",
+   "rows": 1,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TP2DNFBJ4YS",
+   "proposal_cost": 0.3,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 1
+  },
+  {
+   "org": "dist-south",
+   "true": "TPHJJ6VGXTQ",
+   "noisy": "TPNJJ6VGXTQ",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPHJJ6VGXTQ",
+   "proposal_cost": 0.7,
+   "lot_fits": true,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "dist-south",
+   "true": "TPFRE4NQJ7Z",
+   "noisy": "TPFRE4MQJ7Z",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPFRE4NQJ7Z",
+   "proposal_cost": 0.7,
+   "lot_fits": true,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "dist-south",
+   "true": "KSMFKNYP6NE",
+   "noisy": "KSNFKNYP6NE",
+   "rows": 1,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "KSMFKNYP6NE",
+   "proposal_cost": 0.7,
+   "lot_fits": true,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 1
+  },
+  {
+   "org": "dist-north",
+   "true": "TPFA7M5KK4Z",
+   "noisy": "TPFA7M5KKAZ",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPFA7M5KK4Z",
+   "proposal_cost": 0.6,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "dist-north",
+   "true": "TP1ZQMKQ4P6",
+   "noisy": "TP1ZQMK04P6",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TP1ZQMKQ4P6",
+   "proposal_cost": 0.4,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "dist-north",
+   "true": "TPFW8X3JG78",
+   "noisy": "TPFW8X3JG18",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPFW8X3JG78",
+   "proposal_cost": 0.5,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "shop-mumbai",
+   "true": "MV0SRCEWX38",
+   "noisy": "MV05RCEWX38",
+   "rows": 1,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "MV0SRCEWX38",
+   "proposal_cost": 0.3,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 1
+  },
+  {
+   "org": "shop-mumbai",
+   "true": "MV4HJ1FCYWW",
+   "noisy": "MV4HJ1ECYWW",
+   "rows": 3,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "MV4HJ1FCYWW",
+   "proposal_cost": 0.6,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 3
+  },
+  {
+   "org": "shop-mumbai",
+   "true": "MV98W8H0D2E",
+   "noisy": "MV98W8HDD2E",
+   "rows": 3,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "MV98W8H0D2E",
+   "proposal_cost": 0.35,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 3
+  },
+  {
+   "org": "dist-west",
+   "true": "TP5NPRWV9DC",
+   "noisy": "TP5NPBWV9DC",
+   "rows": 4,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TP5NPRWV9DC",
+   "proposal_cost": 0.7,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 4
+  },
+  {
+   "org": "dist-west",
+   "true": "KSSM90X4VWP",
+   "noisy": "KS5M90X4VWP",
+   "rows": 2,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "KSSM90X4VWP",
+   "proposal_cost": 0.3,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 2
+  },
+  {
+   "org": "dist-west",
+   "true": "TPFCHQQ60HC",
+   "noisy": "TPFCHQQ60NC",
+   "rows": 4,
+   "found": true,
+   "problems": [
+    "the check character does not match the other characters"
+   ],
+   "proposed": "TPFCHQQ60HC",
+   "proposal_cost": 0.7,
+   "lot_fits": null,
+   "proposal_correct": true,
+   "applied": true,
+   "rows_changed": 4
+  }
+ ],
+ "summary": {
+  "planted": 15,
+  "found": 15,
+  "proposed_correctly": 15,
+  "applied": 15,
+  "left_after": 1,
+  "present_before_planting": 1
+ }
+}

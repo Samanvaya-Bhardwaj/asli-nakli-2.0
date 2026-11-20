@@ -1,12 +1,14 @@
 -- North Star Distributors, Delhi: PostgreSQL. Separate receipt and dispatch tables; stock is a view.
+CREATE TABLE IF NOT EXISTS parties (
+  org_id text PRIMARY KEY, org_type text NOT NULL CHECK (org_type IN ('pharma', 'distributor', 'shop', 'consumer', 'regulator')));
 CREATE TABLE IF NOT EXISTS receipts (
-  receipt_id text PRIMARY KEY, from_org_id text NOT NULL, source_ref text NOT NULL, received_at timestamptz NOT NULL,
+  receipt_id text PRIMARY KEY, from_org_id text NOT NULL REFERENCES parties(org_id), source_ref text NOT NULL, received_at timestamptz NOT NULL,
   received_by text);
 CREATE TABLE IF NOT EXISTS receipt_items (
   receipt_id text NOT NULL REFERENCES receipts(receipt_id), gtin char(14) NOT NULL, serial char(11) NOT NULL,
   PRIMARY KEY (receipt_id, serial));
 CREATE TABLE IF NOT EXISTS dispatches (
-  dispatch_id text PRIMARY KEY, to_org_id text NOT NULL, dispatched_at timestamptz NOT NULL, vehicle_no text);
+  dispatch_id text PRIMARY KEY, to_org_id text NOT NULL REFERENCES parties(org_id), dispatched_at timestamptz NOT NULL, vehicle_no text);
 CREATE TABLE IF NOT EXISTS dispatch_items (
   dispatch_id text NOT NULL REFERENCES dispatches(dispatch_id), gtin char(14) NOT NULL, serial char(11) NOT NULL,
   PRIMARY KEY (dispatch_id, serial));

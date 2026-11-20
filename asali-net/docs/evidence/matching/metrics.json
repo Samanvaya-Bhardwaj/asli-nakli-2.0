@@ -1,0 +1,313 @@
+{
+ "population": 1500,
+ "per_condition": 60,
+ "seed": 7,
+ "noise": [
+  "lookalike1",
+  "lookalike2",
+  "swap",
+  "drop",
+  "double",
+  "random1",
+  "lookalike_swap",
+  "lookalike_neighbours"
+ ],
+ "methods": [
+  "exact",
+  "levenshtein",
+  "weighted",
+  "weighted_checksum",
+  "weighted_checksum_context"
+ ],
+ "overall": {
+  "exact": {
+   "top1": 0.0,
+   "top3": 0.0,
+   "auto_accept": 0.0,
+   "wrong_auto_accept": 0.0
+  },
+  "levenshtein": {
+   "top1": 0.9125,
+   "top3": 0.9792,
+   "auto_accept": 0.525,
+   "wrong_auto_accept": 0.0
+  },
+  "weighted": {
+   "top1": 0.975,
+   "top3": 0.9979,
+   "auto_accept": 0.7625,
+   "wrong_auto_accept": 0.0
+  },
+  "weighted_checksum": {
+   "top1": 0.975,
+   "top3": 0.9979,
+   "auto_accept": 0.7688,
+   "wrong_auto_accept": 0.0
+  },
+  "weighted_checksum_context": {
+   "top1": 1.0,
+   "top3": 1.0,
+   "auto_accept": 0.8667,
+   "wrong_auto_accept": 0.0
+  }
+ },
+ "by_noise": {
+  "lookalike1": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "lookalike2": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.6167,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.6167,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.6167,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "swap": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "drop": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "double": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "random1": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "lookalike_swap": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.0167,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.25,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.3167,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 0.3167,
+    "wrong_auto_accept": 0.0
+   }
+  },
+  "lookalike_neighbours": {
+   "exact": {
+    "top1": 0.0,
+    "top3": 0.0,
+    "auto_accept": 0.0,
+    "wrong_auto_accept": 0.0
+   },
+   "levenshtein": {
+    "top1": 0.3,
+    "top3": 0.8333,
+    "auto_accept": 0.1833,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted": {
+    "top1": 0.8,
+    "top3": 0.9833,
+    "auto_accept": 0.2333,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum": {
+    "top1": 0.8,
+    "top3": 0.9833,
+    "auto_accept": 0.2167,
+    "wrong_auto_accept": 0.0
+   },
+   "weighted_checksum_context": {
+    "top1": 1.0,
+    "top3": 1.0,
+    "auto_accept": 1.0,
+    "wrong_auto_accept": 0.0
+   }
+  }
+ },
+ "label": "Generated codes and generated damage: shows how the methods rank against each other, not how many real scans will be right."
+}

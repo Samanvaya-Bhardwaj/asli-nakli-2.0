@@ -46,3 +46,20 @@ def test_reports_and_since_filter(consumer):
     assert [r.doc_id for r in consumer.reports()] == ["doc1", "doc2"]
     assert [r.doc_id for r in consumer.reports(since=AT + timedelta(days=1))] == ["doc2"]
     assert consumer.reports()[1].gtin is None
+
+
+def test_recorded_serials_lists_real_codes_once_and_skips_reports_with_no_code(consumer):
+    consumer.record_check(check("Delhi", AT))
+    consumer.record_check(check("Mumbai", AT + timedelta(minutes=5)))
+    consumer.record_report(NewReport(check_id=None, doc_id="d1", gtin=None, serial=None, city="Delhi", at=AT))
+    found = {r["value"]: r for r in consumer.recorded_serials()}
+    assert set(found) == {SERIAL}  # not "None"
+    assert found[SERIAL]["rows"] >= 2
+
+
+def test_renaming_a_recorded_code_changes_every_row_and_reports_how_many(consumer):
+    consumer.record_check(check("Delhi", AT))
+    consumer.record_check(check("Mumbai", AT + timedelta(minutes=5)))
+    assert consumer.rename_serial(SERIAL, "TP000000002") >= 2
+    assert {r["value"] for r in consumer.recorded_serials()} == {"TP000000002"}
+    assert consumer.rename_serial(SERIAL, "TP000000003") == 0

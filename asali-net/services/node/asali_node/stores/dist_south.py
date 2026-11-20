@@ -15,7 +15,7 @@ from asali_node.canonical import (
 )
 from asali_node.stores.protocols import NotSupported
 from asali_node.stores.sqlbase import to_date, to_ist
-from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, view
+from asali_node.stores.sqlcommon import SqlStore, chunks, in_clause, party_kind, view
 
 _IN_STOCK = (
     "NOT EXISTS (SELECT 1 FROM outward_lines ol JOIN outward o ON o.entry_id = ol.entry_id "
@@ -33,12 +33,18 @@ def _midnight(day: str) -> datetime:
 
 class DistSouthStore(SqlStore):
     ORG = "dist-south"
+    CONTEXT_ROOTS = (("inward_lines", "sn", "serial"), ("outward_lines", "sn", "serial"))
     STAFF = ("users", "username", "pw_hash", "user_role", "full_name")
     CORR = ("scan_fixes", "fixed_at", "raw", "which", "chosen", "cost", "by_user")
     DOCLNK = ("doc_refs", "doc_id", "ent_type", "ent_key", "conf", "linked_at")
 
     def record_receipt(self, r: NewReceipt) -> None:
         with self.db.tx() as tx:
+            tx.run(
+                "INSERT INTO parties (org_id, org_type) VALUES (?, ?) ON CONFLICT (org_id) DO NOTHING",
+                r.from_org,
+                party_kind(r.from_org),
+            )
             tx.run(
                 "INSERT INTO inward (supplier_org, dc_number, entry_date) VALUES (?, ?, ?)",
                 r.from_org, r.source_ref, _day(r.at),
@@ -69,6 +75,11 @@ class DistSouthStore(SqlStore):
             missing = {u.serial for u in d.units} - self._stock_serials(tx, [u.serial for u in d.units])
             if missing:
                 raise ValueError(f"not in stock: {sorted(missing)[:3]}")
+            tx.run(
+                "INSERT INTO parties (org_id, org_type) VALUES (?, ?) ON CONFLICT (org_id) DO NOTHING",
+                d.to_org,
+                party_kind(d.to_org),
+            )
             tx.run(
                 "INSERT INTO outward (customer_org, invoice_no, entry_date) VALUES (?, ?, ?)",
                 d.to_org, d.shipment_id, _day(d.at),

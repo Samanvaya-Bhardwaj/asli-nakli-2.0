@@ -16,6 +16,9 @@ from asali_codes.parse import Reading, parse
 Decision = Literal["accepted", "corrected", "needs_confirmation", "needs_choice", "unreadable"]
 Context = Literal["staff", "consumer"]
 ExistsFn = Callable[[str | None, list[str]], set[str]]
+# What the records say about each candidate pack: its lot and expiry, when known. Used to check a candidate
+# against what else is printed on the label (Phase 2: clean a noisy reading with the context around it).
+FactsFn = Callable[[list[str]], dict[str, tuple[str | None, date | None]]]
 
 AUTO_MAX_COST = 1.0
 AUTO_MIN_MARGIN = 0.5
@@ -55,6 +58,7 @@ def read(
     expected: Collection[tuple[str, str]] | None = None,
     exists: ExistsFn | None = None,
     known_gtins: Collection[str] = (),
+    facts: FactsFn | None = None,
 ) -> ReadResult:
     r = parse(raw)
 
@@ -85,6 +89,8 @@ def read(
         return _corrected(result, context, gtin_fix, gtin, r.serial or "", "product number", r.gtin or "")
 
     pool = _serial_pool(r.serial or "", gtin, issuers, expected, exists)
+    if facts is not None and len(pool) > 1 and (r.lot or r.expiry):
+        pool = _by_label(pool, facts, r.lot, r.expiry)
     if not pool or len(pool) > MAX_CHOICES:
         return result("unreadable", UNREADABLE)
     best = pool[0]
@@ -128,6 +134,29 @@ def _resolve_gtin(
     if len(cands) == 1 or (len(cands) > 1 and cands[1].cost - cands[0].cost >= AUTO_MIN_MARGIN):
         return cands[0].value, cands[0]
     return None, None
+
+
+def _by_label(pool: list[Candidate], facts: FactsFn, lot: str | None, expiry: date | None) -> list[Candidate]:
+    """Keep the candidates whose lot and expiry fit what the label also says, when that rules some out.
+
+    A candidate the records know nothing about is not ruled out. If no candidate fits, or all of them do,
+    the pool is left as it was: the context only counts when it separates one candidate from another.
+    """
+    known = facts([c.value for c in pool])
+    fits: list[Candidate] = []
+    for c in pool:
+        c_lot, c_exp = known.get(c.value, (None, None))
+        if (lot is None or c_lot is None or c_lot == lot) and (
+            expiry is None or c_exp is None or c_exp == expiry
+        ):
+            fits.append(c)
+    if not fits or len(fits) == len(pool):
+        return pool
+    said = " and ".join(x for x in ("lot" if lot else "", "expiry" if expiry else "") if x)
+    return [
+        Candidate(c.value, c.cost, (*c.edits, f"the {said} printed on the pack matches this code's record"))
+        for c in fits
+    ]
 
 
 def _serial_pool(

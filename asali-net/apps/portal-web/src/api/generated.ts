@@ -5,9 +5,11 @@ CheckDone: CheckDone
 CheckNeedsChoice: CheckNeedsChoice
 CheckNeedsConfirmation: CheckNeedsConfirmation
 Config: Config
+ContextBlock: ContextBlock
 Me: Me
 Network: Network
 Parties: Parties
+Similar: Similar
 VerifyResult: VerifyResult
 }
 /**
@@ -25,6 +27,8 @@ status: "done"
 export interface VerifyResult {
 action: string
 checked_at: string
+context: (ContextBlock | null)
+context_documents: ContextDocHit[]
 documents: DocHit[]
 headline: string
 history: HistoryHop[]
@@ -38,17 +42,86 @@ word: string
 }
 /**
  * This interface was referenced by `Contract`'s JSON-Schema
- * via the `definition` "DocHit".
+ * via the `definition` "ContextBlock".
  */
-export interface DocHit {
+export interface ContextBlock {
+anchors: ContextAnchor[]
+distinct_terms: number
+method: string
+organisations: ContextOrg[]
+organisations_asked: string[]
+organisations_contributing: string[]
+question_words: string[]
+terms: ContextTerm[]
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "ContextAnchor".
+ */
+export interface ContextAnchor {
+organisations: string[]
+term: string
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "ContextOrg".
+ */
+export interface ContextOrg {
+engine: (string | null)
+explored_tables: string[]
+joins: string[]
+name: string
+org_id: string
+reason: string
+status: ("answered" | "unreachable")
+stop_reason: string
+terms: number
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "ContextTerm".
+ */
+export interface ContextTerm {
+key: string
+kind: string
+local_scores: {
+[k: string]: number
+}
+organisations: string[]
+provenance: ContextProvenance[]
+query_match: boolean
+score: number
+term: string
+why_relevant: string[]
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "ContextProvenance".
+ */
+export interface ContextProvenance {
+column: string
+organisation: string
+relationship_path: string[]
+step: number
+table: string
+weight: number
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "ContextDocHit".
+ */
+export interface ContextDocHit {
 claims: ClaimRow[]
+context_score: number
 created_at: string
 doc_id: string
 doc_type: string
+found_by: "context"
 issue_labels: string[]
 kind: ("official" | "operational" | "allegation")
 label: string
 linked_to: DocLink[]
+matched_terms: string[]
 org_id: string
 org_name: string
 snippet: Snippet
@@ -79,6 +152,24 @@ entity: string
  */
 export interface Snippet {
 text: string
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "DocHit".
+ */
+export interface DocHit {
+claims: ClaimRow[]
+created_at: string
+doc_id: string
+doc_type: string
+issue_labels: string[]
+kind: ("official" | "operational" | "allegation")
+label: string
+linked_to: DocLink[]
+org_id: string
+org_name: string
+snippet: Snippet
+title: string
 }
 /**
  * This interface was referenced by `Contract`'s JSON-Schema
@@ -286,4 +377,51 @@ org_id: string
 org_type: ("pharma" | "distributor" | "shop" | "consumer" | "regulator")
 serves_here: boolean
 state: string
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "Similar".
+ */
+export interface Similar {
+matches: SimilarMatch[]
+read: SimilarRead
+seen_as: SimilarSeen[]
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "SimilarMatch".
+ */
+export interface SimilarMatch {
+cost: number
+edits: string[]
+expiry: (string | null)
+fits_label: (boolean | null)
+gtin: (string | null)
+lot: (string | null)
+org_id: (string | null)
+product: (string | null)
+serial: string
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "SimilarRead".
+ */
+export interface SimilarRead {
+expiry: (string | null)
+lot: (string | null)
+raw: string
+serial: (string | null)
+}
+/**
+ * This interface was referenced by `Contract`'s JSON-Schema
+ * via the `definition` "SimilarSeen".
+ */
+export interface SimilarSeen {
+at: string
+city: string
+cost: number
+edits: string[]
+portal: string
+raw_input: string
+serial_read: string
 }

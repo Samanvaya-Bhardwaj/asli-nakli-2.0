@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-20T10:07:09",
+ "run_at": "2026-11-20T12:44:16",
  "mode": "simulation on one computer",
  "results": {
   "S1": {
@@ -60,16 +60,16 @@
     "SIM-LOCAL"
    ],
    "documents": [
-    "counter_note",
     "consumer_complaint",
+    "counter_note",
     "batch_release_note",
-    "coa",
-    "coa",
     "deviation_report",
+    "batch_release_note",
     "coa",
     "coa",
     "batch_release_note",
-    "deviation_report"
+    "coa",
+    "coa"
    ],
    "expected": {
     "verdict": "do_not_use",
@@ -88,21 +88,21 @@
     "RECALLED"
    ],
    "mode": "simulation",
-   "headline": "Do not use this pack. Batch MV-2608-003 has been recalled.",
+   "headline": "Do not use this pack. Batch MV-2606-010 has been recalled.",
    "computers": [
     "SIM-LOCAL"
    ],
    "documents": [
     "recall_notice",
-    "consumer_complaint",
-    "batch_release_note",
-    "deviation_report",
-    "batch_release_note",
+    "nsq_alert",
+    "nsq_alert",
+    "ban_order",
+    "coa",
+    "nsq_alert",
+    "nsq_alert",
     "coa",
     "batch_release_note",
-    "coa",
-    "coa",
-    "coa"
+    "batch_release_note"
    ],
    "expected": {
     "verdict": "do_not_use",
@@ -125,14 +125,14 @@
    "documents": [
     "nsq_alert",
     "nsq_alert",
+    "deviation_report",
     "nsq_alert",
-    "coa",
+    "recall_notice",
     "ban_order",
-    "nsq_alert",
     "coa",
     "batch_release_note",
-    "batch_release_note",
-    "deviation_report"
+    "coa",
+    "batch_release_note"
    ],
    "expected": {
     "verdict": "do_not_use",
@@ -176,7 +176,8 @@
   "S7": {
    "verdict": "caution",
    "reasons": [
-    "CHAIN_BREAK"
+    "CHAIN_BREAK",
+    "COLD_CHAIN"
    ],
    "mode": "simulation",
    "headline": "Be careful with this pack. Namma Pharmacy recorded a receipt from North Star Distributors that North Star Distributors has no matching dispatch for.",
@@ -184,15 +185,15 @@
     "SIM-LOCAL"
    ],
    "documents": [
-    "batch_release_note",
+    "temperature_report",
+    "consumer_complaint",
+    "consumer_complaint",
+    "consumer_complaint",
+    "coa",
+    "coa",
     "coa",
     "batch_release_note",
-    "batch_release_note",
     "coa",
-    "coa",
-    "deviation_report",
-    "coa",
-    "deviation_report",
     "batch_release_note"
    ],
    "expected": {

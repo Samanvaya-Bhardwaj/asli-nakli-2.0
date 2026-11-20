@@ -2,27 +2,176 @@
   "collections": {
     "scans": {
       "bsonType": "object",
-      "required": ["_id", "input", "code", "result", "where", "when"],
+      "required": [
+        "_id",
+        "input",
+        "code",
+        "result",
+        "where",
+        "when"
+      ],
       "properties": {
-        "input": {"bsonType": "object", "required": ["raw"]},
-        "code": {"bsonType": "object"},
-        "result": {"bsonType": "object"},
-        "where": {"bsonType": "object", "required": ["city"]},
-        "when": {"bsonType": "date"}
+        "input": {
+          "bsonType": "object",
+          "required": [
+            "raw"
+          ]
+        },
+        "code": {
+          "bsonType": "object"
+        },
+        "result": {
+          "bsonType": "object"
+        },
+        "where": {
+          "bsonType": "object",
+          "required": [
+            "city"
+          ]
+        },
+        "when": {
+          "bsonType": "date"
+        }
       }
     },
     "reports": {
       "bsonType": "object",
-      "required": ["_id", "doc", "code", "where", "when"],
-      "properties": {"where": {"bsonType": "object", "required": ["city"]}, "when": {"bsonType": "date"}}
+      "required": [
+        "_id",
+        "doc",
+        "code",
+        "where",
+        "when"
+      ],
+      "properties": {
+        "where": {
+          "bsonType": "object",
+          "required": [
+            "city"
+          ]
+        },
+        "when": {
+          "bsonType": "date"
+        }
+      }
     },
-    "staff": {"bsonType": "object", "required": ["_id", "hash", "role", "name"]},
-    "scanFixes": {"bsonType": "object", "required": ["at", "raw", "field", "chosen", "cost", "by"]},
-    "docLinks": {"bsonType": "object", "required": ["docId", "entityType", "entityKey", "confidence", "linkedAt"]}
+    "staff": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "hash",
+        "role",
+        "name"
+      ]
+    },
+    "scanFixes": {
+      "bsonType": "object",
+      "required": [
+        "at",
+        "raw",
+        "field",
+        "chosen",
+        "cost",
+        "by"
+      ]
+    },
+    "docLinks": {
+      "bsonType": "object",
+      "required": [
+        "docId",
+        "entityType",
+        "entityKey",
+        "confidence",
+        "linkedAt"
+      ]
+    },
+    "verdicts": {
+      "bsonType": "object",
+      "required": [
+        "_id",
+        "meaning"
+      ],
+      "properties": {
+        "meaning": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "cities": {
+      "bsonType": "object",
+      "required": [
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "bsonType": "string"
+        }
+      }
+    },
+    "reasons": {
+      "bsonType": "object",
+      "required": [
+        "scan",
+        "code"
+      ],
+      "properties": {
+        "scan": {
+          "bsonType": "string"
+        },
+        "code": {
+          "bsonType": "string"
+        }
+      }
+    }
   },
   "indexes": {
-    "scans": [{"keys": [["code.gtin", 1], ["code.sn", 1]], "name": "code"}],
-    "reports": [{"keys": [["when", 1]], "name": "when"}],
-    "docLinks": [{"keys": [["entityKey", 1]], "name": "entity_key"}]
+    "scans": [
+      {
+        "keys": [
+          [
+            "code.gtin",
+            1
+          ],
+          [
+            "code.sn",
+            1
+          ]
+        ],
+        "name": "code"
+      }
+    ],
+    "reports": [
+      {
+        "keys": [
+          [
+            "when",
+            1
+          ]
+        ],
+        "name": "when"
+      }
+    ],
+    "docLinks": [
+      {
+        "keys": [
+          [
+            "entityKey",
+            1
+          ]
+        ],
+        "name": "entity_key"
+      }
+    ],
+    "reasons": [
+      {
+        "keys": [
+          [
+            "scan",
+            1
+          ]
+        ],
+        "name": "scan"
+      }
+    ]
   }
 }

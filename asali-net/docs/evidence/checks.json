@@ -1,15 +1,15 @@
 {
- "run_at": "2026-11-20T10:27:06",
+ "run_at": "2026-11-20T12:54:05",
  "results": [
   {
    "check": "pytest (all, network tests skipped)",
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "........................................................................ [ 60%]",
-    "........................................................................ [ 75%]",
+    "........................................................................ [ 64%]",
+    "........................................................................ [ 77%]",
     "........................................................................ [ 90%]",
-    "..........................sssssssssssssssssss                            [100%]"
+    ".................................sssssssssssssssssss                     [100%]"
    ]
   },
   {
@@ -33,7 +33,7 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "202 files already formatted"
+    "227 files already formatted"
    ]
   },
   {
@@ -41,7 +41,7 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    "Success: no issues found in 9 source files"
+    "Success: no issues found in 10 source files"
    ]
   },
   {
@@ -49,10 +49,10 @@
    "passed": true,
    "exit_code": 0,
    "tail": [
-    " Test Files  4 passed (4)",
-    "      Tests  48 passed (48)",
-    "   Start at  10:26:39",
-    "   Duration  4.34s (environment 66%, setup 16%, import 9%, tests 6%, transform 2%, worker 1%)"
+    " Test Files  6 passed (6)",
+    "      Tests  59 passed (59)",
+    "   Start at  12:53:37",
+    "   Duration  8.02s (environment 66%, setup 19%, import 7%, tests 6%, transform 1%, worker 1%)"
    ]
   },
   {
@@ -67,9 +67,9 @@
    "exit_code": 0,
    "tail": [
     "dist/assets/es-DvBOkqQP.js                                                   42.24 kB \u00e2\u201d\u201a gzip:  14.37 kB",
-    "dist/assets/StaffApp-DcwJx41l.js                                             72.58 kB \u00e2\u201d\u201a gzip:  22.95 kB",
-    "dist/assets/index-CqcpI3D-.js                                               468.87 kB \u00e2\u201d\u201a gzip: 150.04 kB",
-    "\u001b[32m\u00e2\u0153\u201c built in 1.55s\u001b[39m"
+    "dist/assets/StaffApp-CbEpAp0M.js                                             74.96 kB \u00e2\u201d\u201a gzip:  23.61 kB",
+    "dist/assets/index-CHcSChU8.js                                               471.50 kB \u00e2\u201d\u201a gzip: 150.64 kB",
+    "\u001b[32m\u00e2\u0153\u201c built in 1.89s\u001b[39m"
    ]
   },
   {

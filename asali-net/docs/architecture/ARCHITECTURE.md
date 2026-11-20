@@ -134,3 +134,21 @@ a do-not-use reason; a lower link only a caution; a temperature report only a ca
 - Nothing has run on four computers yet. The simulation runs all organisations as processes on one computer.
 - Docker and the generated compose files have not been run on this PC (no WSL2).
 - The issue-label model misses its target on unseen phrasings; the hand-written test set has not been provided.
+
+## Phase 2 and Phase 3 inside the network
+
+The three phases are one system. Phase 1 gave each source its own schema and an integration layer; Phase 2 added matching and cleaning under noise; Phase 3 added tables joined by keys, context found through them, and text searched with that context. In this network:
+
+**Noise (Phase 2).** A code that was misread is cleaned in three steps, each with a reason: the weighted edit search finds issued codes a look-alike slip away (`asali_codes/candidates.py`); the check character keeps the candidate set small and exact; and what else is printed with the code (lot, expiry) separates candidates the characters cannot (`read.py`, `_by_label`). A consumer always confirms; staff are corrected against the expected set. `POST /api/similar` lists every issued code near a reading and every reading recorded for an issued code. `GET /api/quality` audits an organisation's own recorded codes and proposes fixes; `POST /api/quality/apply` makes one and leaves a trail. `docs/evidence/matching/` and `docs/evidence/quality/` have the numbers.
+
+**Context (Phase 3).** Every database holds at least four related tables joined by keys. For a pack, each node on its route (and the regulator and the consumer portals) finds the rows that mention it in its own database, then follows its own foreign keys (PostgreSQL and SQLite read them from the database; MongoDB stores declare references) joining the neighbouring table that adds the most relevant terms, and returns the strongest terms with the table, column and join path (`context/score.py`, `/share/v1/context`). The asking node merges the terms, boosting those found by several organisations and those that match the question (`context/aggregate.py`, `verify/context.py`).
+
+**Text with the context.** The merged terms search every relevant text vault; a document that matches at least two of them and was not already linked by the text models is shown as related reading. Linked documents can still become reasons; related documents never do.
+
+```
+asking node                     each node on the route                 each node's text vault
+  trace the chain  ------------>  unit view (share API)
+  ask for context  ------------>  rows about the pack, then own foreign keys -> terms
+  merge terms      <------------  terms with table, column, join path
+  search text with the terms  ---------------------------------------->  documents sharing the terms
+```

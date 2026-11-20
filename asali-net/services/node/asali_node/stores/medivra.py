@@ -18,7 +18,7 @@ from asali_node.canonical import (
 )  # fmt: skip
 from asali_node.stores.mongobase import MongoStore, d2dt, dt2d, unknown_unit, view
 from asali_node.stores.sqlbase import to_ist
-from asali_node.stores.sqlcommon import batch_from, product_from
+from asali_node.stores.sqlcommon import batch_from, party_kind, product_from
 
 STATE = {"C": "in_stock", "S": "shipped", "D": "destroyed"}
 
@@ -37,6 +37,13 @@ def _join_strength(d: dict[str, Any]) -> str:
 
 class MedivraStore(MongoStore):
     ORG = "medivra"
+    CONTEXT_COLLECTIONS = ("skus", "lots", "consignments", "consignmentLines", "parties", "recalls")
+    CONTEXT_REFS = (
+        ("lots", "sku", "skus", "_id"), ("consignments", "consignee", "parties", "_id"),
+        ("consignmentLines", "consignment", "consignments", "_id"), ("consignmentLines", "lot", "lots", "_id"),
+        ("recalls", "lot", "lots", "_id"),
+    )  # fmt: skip
+    CONTEXT_ROOTS = (("lots", "units.sn", "serial"),)
 
     def add_product(self, p: NewProduct) -> Product:
         self.db["skus"].insert_one(
@@ -95,6 +102,11 @@ class MedivraStore(MongoStore):
                 raise ValueError(f"{u.serial} is not in stock to ship")
             by_lot.setdefault(doc["_id"], (u.gtin, []))[1].append(u.serial)
         out = {"consignment": s.shipment_id, "to": s.to_org, "at": s.at}
+        self._ensure("parties", s.to_org, {"orgType": party_kind(s.to_org)})
+        self.db["consignmentLines"].insert_many(
+            [{"_id": f"{s.shipment_id}/{lot}", "consignment": s.shipment_id, "lot": lot, "sku": sku, "count": len(sns)}
+             for lot, (sku, sns) in by_lot.items()]
+        )  # fmt: skip
         self.db["consignments"].insert_one(
             {"_id": s.shipment_id, "consignee": s.to_org, "dispatchedAt": s.at, "by": s.by, "vehicle": s.vehicle_no,
              "lines": [{"sku": sku, "lot": lot, "sns": sns} for lot, (sku, sns) in by_lot.items()]}
@@ -110,6 +122,9 @@ class MedivraStore(MongoStore):
     def recall_batch(self, gtin: str, lot: str, reason: str, level: str, at: datetime) -> None:
         self.db["lots"].update_one(
             {"_id": lot, "sku": gtin}, {"$set": {"recall": {"reason": reason, "at": at, "level": level}}}
+        )
+        self.db["recalls"].update_one(
+            {"_id": lot}, {"$set": {"lot": lot, "reason": reason, "level": level, "at": at}}, upsert=True
         )
 
     def unit_view(self, gtin: str, serial: str) -> UnitView:

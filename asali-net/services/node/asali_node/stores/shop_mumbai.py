@@ -25,6 +25,11 @@ _LAST = "l.entry_id = (SELECT MAX(m.entry_id) FROM inventory_ledger m WHERE m.gt
 class ShopMumbaiStore(SqlStore):
     ENGINE = "pg"
     ORG = "shop-mumbai"
+    CONTEXT_ROOTS = (
+        ("inventory_ledger", "serial", "serial"),
+        ("bill_lines", "serial", "serial"),
+        ("returns", "serial", "serial"),
+    )
 
     def record_receipt(self, r: NewReceipt) -> None:
         with self.db.tx() as tx:
@@ -57,6 +62,8 @@ class ShopMumbaiStore(SqlStore):
             tx.run("INSERT INTO bills (doc_no, at, amount_paise, customer_ref_hash) VALUES (?, ?, ?, ?)",
                    s.bill_no, s.at, sum(x.mrp_paise for x in s.lines), s.customer_ref_hash)  # fmt: skip
             for line in s.lines:
+                tx.run("INSERT INTO bill_lines (doc_no, gtin, serial, mrp_paise) VALUES (?, ?, ?, ?)",
+                       s.bill_no, line.gtin, line.serial, line.mrp_paise)  # fmt: skip
                 tx.run("INSERT INTO inventory_ledger (kind, gtin, serial, counterparty, doc_no, at) "
                        "VALUES ('SALE', ?, ?, NULL, ?, ?)", line.gtin, line.serial, s.bill_no, s.at)  # fmt: skip
 
@@ -69,6 +76,8 @@ class ShopMumbaiStore(SqlStore):
             )
             if not sold or self._last_kind(tx, r.gtin, r.serial) != "SALE":
                 raise ValueError(f"{r.serial} was not sold on bill {r.bill_no}")
+            tx.run("INSERT INTO returns (doc_no, gtin, serial, reason, at) VALUES (?, ?, ?, ?, ?)",
+                   r.bill_no, r.gtin, r.serial, r.reason, r.at)  # fmt: skip
             tx.run("INSERT INTO inventory_ledger (kind, gtin, serial, counterparty, doc_no, at) "
                    "VALUES ('RETURN', ?, ?, ?, ?, ?)", r.gtin, r.serial, r.reason, r.bill_no, r.at)  # fmt: skip
 

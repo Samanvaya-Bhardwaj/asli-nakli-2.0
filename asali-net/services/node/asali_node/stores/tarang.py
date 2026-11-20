@@ -27,6 +27,7 @@ def _f(x: object) -> float | None:
 class TarangStore(SqlStore):
     ENGINE = "pg"
     ORG = "tarang"
+    CONTEXT_ROOTS = (("units", "serial", "serial"), ("shipment_units", "serial", "serial"))
 
     def add_product(self, p: NewProduct) -> Product:
         self.db.run(

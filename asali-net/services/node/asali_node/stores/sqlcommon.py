@@ -4,6 +4,7 @@ Each organisation names these three tables its own way (Kesar: USR_MST, SCN_CORR
 subclass says which table and columns to use. Everything else is that organisation's own code.
 """
 
+import re
 from datetime import datetime
 from typing import Any
 
@@ -17,7 +18,11 @@ from asali_node.canonical import (
     StaffRecord,
     UnitView,
 )  # fmt: skip
+from asali_node.context.explore import INFRA_TABLES, Roots, explore
+from asali_node.context.graph import SqlGraph
 from asali_node.stores.sqlbase import SqlDb
+
+LOT_COLUMN = re.compile(r"^(lot|lot_no|lot_number)$", re.I)
 
 
 def view(
@@ -35,6 +40,19 @@ def view(
     )  # type: ignore[arg-type]
 
 
+def party_kind(org_id: str) -> str:
+    """The kind of organisation an id names, from the network's naming (dist-north, shop-delhi, consumer-delhi)."""
+    for prefix, kind in (
+        ("dist-", "distributor"),
+        ("shop-", "shop"),
+        ("consumer-", "consumer"),
+        ("regulator", "regulator"),
+    ):
+        if org_id.startswith(prefix):
+            return kind
+    return "pharma"
+
+
 def in_clause(n: int) -> str:
     return "(" + ",".join("?" * n) + ")"
 
@@ -49,6 +67,53 @@ class SqlStore:
     STAFF = ("staff", "username", "password_hash", "role", "display_name")
     CORR = ("scan_corrections", "at", "raw", "field", "chosen", "cost", "confirmed_by")
     DOCLNK = ("document_links", "doc_id", "entity_type", "entity_key", "confidence", "linked_at")
+    CONTEXT_ROOTS: Roots = ()  # (table, column, "serial" | "gtin" | "lot"): where this organisation's rows mention a pack
+
+    def context_for(
+        self, gtin: str | None, serial: str | None, lot: str | None, keywords: list[str], params: dict[str, Any] | None = None
+    ) -> dict[str, Any]:  # fmt: skip
+        """Phase 3: the context this database finds for a pack, through its own foreign keys (context/)."""
+        graph = SqlGraph(self.db, skip_tables=INFRA_TABLES)
+        return explore(
+            graph,
+            list(self.CONTEXT_ROOTS),
+            {"serial": serial, "gtin": gtin, "lot": lot},
+            self.ORG,
+            keywords,
+            params,
+        )
+
+    def recorded_serials(self) -> list[dict[str, Any]]:
+        """Every distinct code this organisation has recorded, where, how many rows, and the lot beside it if there is one."""
+        graph = SqlGraph(self.db, skip_tables=INFRA_TABLES)
+        out: dict[str, dict[str, Any]] = {}
+        for table, column, kind in self.CONTEXT_ROOTS:
+            if kind != "serial":
+                continue
+            lot_col = next((c for c in graph.fields(table) if LOT_COLUMN.match(c)), None)
+            lot_sql = f', MIN("{lot_col}")' if lot_col else ", NULL"
+            for value, rows, lot in self.db.rows(
+                f'SELECT "{column}", COUNT(*){lot_sql} FROM "{table}" GROUP BY "{column}"'
+            ):
+                if value is None:
+                    continue
+                e = out.setdefault(
+                    str(value), {"table": table, "column": column, "value": str(value), "rows": 0, "lot": lot}
+                )
+                e["rows"] += int(rows)
+        return list(out.values())
+
+    def rename_serial(self, old: str, new: str) -> int:
+        """Change a recorded code everywhere this organisation records it. Returns the rows changed."""
+        total = 0
+        for table, column, kind in self.CONTEXT_ROOTS:
+            if kind != "serial":
+                continue
+            n = int(self.db.rows(f'SELECT COUNT(*) FROM "{table}" WHERE "{column}" = ?', old)[0][0])
+            if n:
+                self.db.run(f'UPDATE "{table}" SET "{column}" = ? WHERE "{column}" = ?', new, old)
+                total += n
+        return total
 
     def __init__(self, target: str, mode: str = "rw", city: str = ""):
         self.db = SqlDb(self.ENGINE, target, mode)

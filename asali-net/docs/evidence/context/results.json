@@ -1,0 +1,3832 @@
+{
+ "run_at": "2026-11-20T12:44:53",
+ "mode": "simulation on one computer",
+ "summary": {
+  "packs": 30,
+  "mean_organisations_contributing": 3.13,
+  "mean_joins_followed": 9.13,
+  "engines_seen": [
+   "mongo",
+   "postgres",
+   "sqlite"
+  ],
+  "context_docs_naming_product": 0.732,
+  "question_only_docs_naming_product": 0.2,
+  "context_docs_per_pack": 1.87,
+  "question_only_docs_per_pack": 5.0
+ },
+ "packs": [
+  {
+   "pack": "S1",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 4,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [
+     "checks",
+     "verdicts",
+     "cities"
+    ],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ],
+    "consumer-delhi": [
+     "checks(verdict) -> verdicts(verdict)",
+     "checks(city) -> cities(city)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "SHP-e951a48044",
+     "score": 1.916,
+     "orgs": [
+      "dist-north",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-north, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "dist-north",
+     "score": 1.1739,
+     "orgs": [
+      "shop-delhi",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (shop-delhi, tarang)"
+     ]
+    },
+    {
+     "term": "B-86020348da",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "S3",
+   "verdict": "do_not_use",
+   "product": "Azivra (azithromycin)",
+   "asked": 6,
+   "contributing": 4,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [
+     "checks",
+     "verdicts",
+     "cities",
+     "check_reasons"
+    ],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ],
+    "consumer-delhi": [
+     "checks(verdict) -> verdicts(verdict)",
+     "checks(city) -> cities(city)",
+     "checks(check_id) -> check_reasons(check_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Azivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=azithromycin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-dfcfef4811",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-86020348da",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "Delhi",
+     "score": 1.0,
+     "orgs": [
+      "consumer-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): checks(city) -> cities(city)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "S7",
+   "verdict": "caution",
+   "product": "Glargikes (insulin glargine)",
+   "asked": 5,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "kesar": [
+     "SRL_MST",
+     "DSP_DTL",
+     "LOT_MST",
+     "ITEM_MST",
+     "DSP_HDR",
+     "PARTY_MST"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "receipts",
+     "parties"
+    ],
+    "consumer-delhi": [
+     "checks",
+     "verdicts",
+     "cities",
+     "check_reasons"
+    ],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "kesar": [
+     "SRL_MST(LOT_NO) -> LOT_MST(LOT_NO)",
+     "LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+     "DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)",
+     "DSP_HDR(PARTY_CD) -> PARTY_MST(PARTY_CD)"
+    ],
+    "dist-north": [
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "receipts(from_org_id) -> parties(org_id)"
+    ],
+    "consumer-delhi": [
+     "checks(verdict) -> verdicts(verdict)",
+     "checks(city) -> cities(city)",
+     "checks(check_id) -> check_reasons(check_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-eef035dd1e",
+     "score": 2.2797,
+     "orgs": [
+      "dist-north",
+      "kesar"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)",
+      "found independently by 2 organisations (dist-north, kesar)"
+     ]
+    },
+    {
+     "term": "ITEM_DESC=Glargikes",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "MOL_DESC=insulin glargine",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "Delhi",
+     "score": 1.0,
+     "orgs": [
+      "consumer-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): checks(city) -> cities(city)"
+     ]
+    },
+    {
+     "term": "RCP8224d5606e",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)"
+     ]
+    },
+    {
+     "term": "state=DL",
+     "score": 0.8889,
+     "orgs": [
+      "consumer-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): checks(city) -> cities(city)"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 1,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "S5",
+   "verdict": "do_not_use",
+   "product": "Cetivra (cetirizine)",
+   "asked": 6,
+   "contributing": 4,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [
+     "checks",
+     "verdicts",
+     "cities",
+     "check_reasons"
+    ],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ],
+    "consumer-delhi": [
+     "checks(verdict) -> verdicts(verdict)",
+     "checks(city) -> cities(city)",
+     "checks(check_id) -> check_reasons(check_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "QUALITY_FAILED",
+     "score": 1.5,
+     "orgs": [
+      "consumer-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): checks(check_id) -> check_reasons(check_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "brand=Cetivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=cetirizine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-dc598a2f2b",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-691014f0f3",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "S6",
+   "verdict": "caution",
+   "product": "Glargikes (insulin glargine)",
+   "asked": 6,
+   "contributing": 4,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "kesar": [
+     "SRL_MST",
+     "DSP_DTL",
+     "LOT_MST",
+     "ITEM_MST",
+     "DSP_HDR",
+     "PARTY_MST"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [
+     "checks",
+     "verdicts",
+     "cities",
+     "check_reasons"
+    ],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "kesar": [
+     "SRL_MST(LOT_NO) -> LOT_MST(LOT_NO)",
+     "LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+     "DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)",
+     "DSP_HDR(PARTY_CD) -> PARTY_MST(PARTY_CD)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ],
+    "consumer-delhi": [
+     "checks(verdict) -> verdicts(verdict)",
+     "checks(city) -> cities(city)",
+     "checks(check_id) -> check_reasons(check_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "SHP-eef035dd1e",
+     "score": 2.0914,
+     "orgs": [
+      "dist-north",
+      "kesar"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)",
+      "found independently by 2 organisations (dist-north, kesar)"
+     ]
+    },
+    {
+     "term": "COLD_CHAIN",
+     "score": 1.2342,
+     "orgs": [
+      "consumer-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): checks(check_id) -> check_reasons(check_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "ITEM_DESC=Glargikes",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "MOL_DESC=insulin glargine",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "dist-north",
+     "score": 1.2026,
+     "orgs": [
+      "kesar",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO) > DSP_HDR(PARTY_CD) -> PARTY_MST(PARTY_CD)",
+      "found independently by 2 organisations (kesar, shop-delhi)"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-01",
+   "verdict": "do_not_use",
+   "product": "Amlovra (amlodipine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-c46bb22f2a",
+     "score": 1.5252,
+     "orgs": [
+      "dist-south",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): inward_lines(entry_id) -> inward(entry_id)",
+      "found independently by 2 organisations (dist-south, medivra)"
+     ]
+    },
+    {
+     "term": "brand=Amlovra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=amlodipine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901002000048/MVGC07EGD4V",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-3f5cfca215/MVGC07EGD4V",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-02",
+   "verdict": "genuine",
+   "product": "Metvra (metformin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Metvra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=metformin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-c0989fa428",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-7f97834116",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "shop-delhi",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-03",
+   "verdict": "do_not_use",
+   "product": "Amlovra (amlodipine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-c46bb22f2a",
+     "score": 1.5252,
+     "orgs": [
+      "dist-south",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): inward_lines(entry_id) -> inward(entry_id)",
+      "found independently by 2 organisations (dist-south, medivra)"
+     ]
+    },
+    {
+     "term": "brand=Amlovra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=amlodipine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901002000048/MV3773VNDH1",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-9fd3ed25e8/MV3773VNDH1",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-04",
+   "verdict": "genuine",
+   "product": "Azivra (azithromycin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand=Azivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=azithromycin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffc4313fb9bbee124f2/MV8H795Q44H",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/MV8H795Q44H",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-c72ffa0c1b",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "storage.maxC=25.0",
+     "score": 0.8795,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 1,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-05",
+   "verdict": "do_not_use",
+   "product": "Cetivra (cetirizine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-393a011c97",
+     "score": 1.5252,
+     "orgs": [
+      "dist-south",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): inward_lines(entry_id) -> inward(entry_id)",
+      "found independently by 2 organisations (dist-south, medivra)"
+     ]
+    },
+    {
+     "term": "brand=Cetivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=cetirizine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901002000031/MVC2W1C9QEP",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-995230d6c8/MVC2W1C9QEP",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-06",
+   "verdict": "do_not_use",
+   "product": "Atorvatar (atorvastatin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-f6872abca6",
+     "score": 1.9874,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Atorvatar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=atorvastatin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000032/TPSF43RTMHM",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-ac71c6f707/TPSF43RTMHM",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 5,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 3
+  },
+  {
+   "pack": "sample-07",
+   "verdict": "genuine",
+   "product": "Metvra (metformin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-cdc52031dc",
+     "score": 1.5252,
+     "orgs": [
+      "dist-south",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): inward_lines(entry_id) -> inward(entry_id)",
+      "found independently by 2 organisations (dist-south, medivra)"
+     ]
+    },
+    {
+     "term": "brand=Metvra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=metformin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901002000024/MV05V9C1C12",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-feb0b4adcb/MV05V9C1C12",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-08",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-e00a101ec7",
+     "score": 1.9874,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000049/TPSHF1DBEKM",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-9fd3ed25e8/TPSHF1DBEKM",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 5,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-09",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-e00a101ec7",
+     "score": 1.9874,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000049/TP6YNM5ZFNT",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-fb53d8c0af/TP6YNM5ZFNT",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 5,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-10",
+   "verdict": "genuine",
+   "product": "Amlovra (amlodipine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand=Amlovra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=amlodipine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffd4313fb9bbee124f7/MV1345QHD1Q",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/MV1345QHD1Q",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-dcededeedd",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "storage.maxC=25.0",
+     "score": 0.8795,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    }
+   ],
+   "context_docs": 2,
+   "context_docs_naming_product": 2,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-11",
+   "verdict": "do_not_use",
+   "product": "Cetivra (cetirizine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Cetivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=cetirizine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-dc598a2f2b",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-87c58bb567",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "shop-delhi",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-12",
+   "verdict": "genuine",
+   "product": "Amlovra (amlodipine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand=Amlovra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=amlodipine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffd4313fb9bbee124f7/MVFRWRXFC7K",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/MVFRWRXFC7K",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-d00085ad7c",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "storage.maxC=25.0",
+     "score": 0.8795,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    }
+   ],
+   "context_docs": 2,
+   "context_docs_naming_product": 2,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-13",
+   "verdict": "do_not_use",
+   "product": "Atorvatar (atorvastatin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-f6872abca6",
+     "score": 1.9874,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Atorvatar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=atorvastatin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000032/TPA29SMPHPG",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-e5ef728f20/TPA29SMPHPG",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 5,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 3
+  },
+  {
+   "pack": "sample-14",
+   "verdict": "genuine",
+   "product": "Atorvatar (atorvastatin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "SHP-091b6ce60c",
+     "score": 1.916,
+     "orgs": [
+      "dist-north",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-north, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Atorvatar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=atorvastatin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "dist-north",
+     "score": 1.1739,
+     "orgs": [
+      "shop-delhi",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (shop-delhi, tarang)"
+     ]
+    },
+    {
+     "term": "B-c24581dcc2",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 4,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 3
+  },
+  {
+   "pack": "sample-15",
+   "verdict": "genuine",
+   "product": "Amoxitar (amoxicillin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-6c8c1f9e9d",
+     "score": 1.7565,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Amoxitar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=amoxicillin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000018/TPDGFH16408",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-e9d172fbb9/TPDGFH16408",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 1
+  },
+  {
+   "pack": "sample-16",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "SHP-e951a48044",
+     "score": 1.916,
+     "orgs": [
+      "dist-north",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-north, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "dist-north",
+     "score": 1.1739,
+     "orgs": [
+      "shop-delhi",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (shop-delhi, tarang)"
+     ]
+    },
+    {
+     "term": "B-c908bab1b6",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 5,
+   "context_docs_naming_product": 4,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-17",
+   "verdict": "do_not_use",
+   "product": "Cetivra (cetirizine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Cetivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=cetirizine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-dc598a2f2b",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-0ffd6e7057",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "shop-delhi",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-18",
+   "verdict": "genuine",
+   "product": "Metvra (metformin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Metvra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=metformin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-c0989fa428",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-032ac84eb1",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "shop-delhi",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-19",
+   "verdict": "genuine",
+   "product": "Metvra (metformin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand=Metvra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=metformin",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffc4313fb9bbee124f4/MV7WG2QD3DK",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/MV7WG2QD3DK",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-b9c8893f74",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "storage.maxC=30.0",
+     "score": 0.8795,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    }
+   ],
+   "context_docs": 3,
+   "context_docs_naming_product": 3,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-20",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffb4313fb9bbee124f1/TP2CM0YX842",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/TP2CM0YX842",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-f2b72c2fef",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "SHP-3545c1a20f",
+     "score": 0.8597,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)"
+     ]
+    }
+   ],
+   "context_docs": 2,
+   "context_docs_naming_product": 2,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-21",
+   "verdict": "genuine",
+   "product": "Amoxitar (amoxicillin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-south": [
+     "inward_lines",
+     "outward_lines",
+     "outward",
+     "inward",
+     "parties"
+    ],
+    "shop-bengaluru": [
+     "stock",
+     "billLines",
+     "bills",
+     "suppliers"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-south": [
+     "outward_lines(entry_id) -> outward(entry_id)",
+     "inward_lines(entry_id) -> inward(entry_id)",
+     "outward(customer_org) -> parties(org_id)"
+    ],
+    "shop-bengaluru": [
+     "billLines(bill) -> bills(_id)",
+     "stock(in.from) -> suppliers(_id)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "SHP-6c8c1f9e9d",
+     "score": 1.7565,
+     "orgs": [
+      "dist-south",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-south, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Amoxitar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=amoxicillin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "08901001000018/TP2RGPY8YC5",
+     "score": 1.0,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "1",
+     "score": 1.0,
+     "orgs": [
+      "dist-south"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): outward_lines(entry_id) -> outward(entry_id)"
+     ]
+    },
+    {
+     "term": "B-1ecdd3bd31/TP2RGPY8YC5",
+     "score": 0.9863,
+     "orgs": [
+      "shop-bengaluru"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 1
+  },
+  {
+   "pack": "sample-22",
+   "verdict": "do_not_use",
+   "product": "Cetivra (cetirizine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "medivra": [
+     "lots",
+     "skus",
+     "consignmentLines",
+     "consignments",
+     "parties"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "medivra": [
+     "lots(sku) -> skus(_id)",
+     "lots(_id) -> consignmentLines(lot)",
+     "consignmentLines(consignment) -> consignments(_id)",
+     "consignments(consignee) -> parties(_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "brand=Cetivra",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "molecule=cetirizine",
+     "score": 1.4826,
+     "orgs": [
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): lots(sku) -> skus(_id)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "SHP-dc598a2f2b",
+     "score": 1.4539,
+     "orgs": [
+      "dist-north",
+      "medivra"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): receipt_items(receipt_id) -> receipts(receipt_id)",
+      "found independently by 2 organisations (dist-north, medivra)"
+     ]
+    },
+    {
+     "term": "B-c24581dcc2",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "shop-delhi",
+     "score": 1.0,
+     "orgs": [
+      "dist-north"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 2
+  },
+  {
+   "pack": "sample-23",
+   "verdict": "genuine",
+   "product": "Pantotar (pantoprazole)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "brand_name=Pantotar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=pantoprazole",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffb4313fb9bbee124f1/TPCVGGRE057",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/TPCVGGRE057",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-5ecf628148",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "SHP-3545c1a20f",
+     "score": 0.8597,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)"
+     ]
+    }
+   ],
+   "context_docs": 2,
+   "context_docs_naming_product": 2,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-24",
+   "verdict": "caution",
+   "product": "Glargikes (insulin glargine)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "kesar": [
+     "SRL_MST",
+     "DSP_DTL",
+     "LOT_MST",
+     "ITEM_MST",
+     "DSP_HDR",
+     "PARTY_MST"
+    ],
+    "dist-west": [
+     "movements",
+     "movementItems",
+     "directions",
+     "partners"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger",
+     "bill_lines",
+     "entry_kinds",
+     "bills"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "kesar": [
+     "SRL_MST(LOT_NO) -> LOT_MST(LOT_NO)",
+     "LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+     "DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)",
+     "DSP_HDR(PARTY_CD) -> PARTY_MST(PARTY_CD)"
+    ],
+    "dist-west": [
+     "movements(dir) -> directions(_id)",
+     "movements(party) -> partners(_id)"
+    ],
+    "shop-mumbai": [
+     "inventory_ledger(kind) -> entry_kinds(kind)",
+     "bill_lines(doc_no) -> bills(doc_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "ITEM_DESC=Glargikes",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "MOL_DESC=insulin glargine",
+     "score": 1.2214,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 2 foreign key join(s): SRL_MST(LOT_NO) -> LOT_MST(LOT_NO) > LOT_MST(ITEM_CD) -> ITEM_MST(ITEM_CD)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "6affeffd4313fb9bbee124f9/KS0XV4ZWXBH",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "6affefff4313fb9bbee124fe/KS0XV4ZWXBH",
+     "score": 1.0,
+     "orgs": [
+      "dist-west"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "B-8dec8f8d93",
+     "score": 1.0,
+     "orgs": [
+      "shop-mumbai"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    },
+    {
+     "term": "SHP-8e2bcdb202",
+     "score": 1.0,
+     "orgs": [
+      "kesar"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): DSP_DTL(DSP_NO) -> DSP_HDR(DSP_NO)"
+     ]
+    }
+   ],
+   "context_docs": 0,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 0
+  },
+  {
+   "pack": "sample-25",
+   "verdict": "do_not_use",
+   "product": "Amoxitar (amoxicillin)",
+   "asked": 6,
+   "contributing": 3,
+   "engines": [
+    "mongo",
+    "postgres",
+    "sqlite"
+   ],
+   "tables_explored": {
+    "tarang": [
+     "units",
+     "shipment_units",
+     "products",
+     "batches",
+     "shipments"
+    ],
+    "dist-north": [
+     "receipt_items",
+     "dispatch_items",
+     "dispatches",
+     "receipts",
+     "parties"
+    ],
+    "shop-delhi": [
+     "purchase_items",
+     "sale_items",
+     "purchases",
+     "parties",
+     "sales"
+    ],
+    "consumer-delhi": [],
+    "consumer-mumbai": [],
+    "regulator": []
+   },
+   "joins": {
+    "tarang": [
+     "units(gtin) -> products(gtin)",
+     "units(lot) -> batches(lot)",
+     "shipment_units(shipment_id) -> shipments(shipment_id)"
+    ],
+    "dist-north": [
+     "dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+     "receipt_items(receipt_id) -> receipts(receipt_id)",
+     "dispatches(to_org_id) -> parties(org_id)"
+    ],
+    "shop-delhi": [
+     "purchase_items(pur_id) -> purchases(pur_id)",
+     "purchases(distributor_org) -> parties(org_id)",
+     "sale_items(bill_no) -> sales(bill_no)"
+    ]
+   },
+   "terms": [
+    {
+     "term": "DSP-7032f207be",
+     "score": 2.1439,
+     "orgs": [
+      "dist-north",
+      "shop-delhi"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): dispatch_items(dispatch_id) -> dispatches(dispatch_id)",
+      "found independently by 2 organisations (dist-north, shop-delhi)"
+     ]
+    },
+    {
+     "term": "SHP-36938d6f90",
+     "score": 1.916,
+     "orgs": [
+      "dist-north",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (dist-north, tarang)"
+     ]
+    },
+    {
+     "term": "brand_name=Amoxitar",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "generic_name=amoxicillin",
+     "score": 1.5,
+     "orgs": [
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): units(gtin) -> products(gtin)",
+      "matches the question's words"
+     ]
+    },
+    {
+     "term": "dist-north",
+     "score": 1.1739,
+     "orgs": [
+      "shop-delhi",
+      "tarang"
+     ],
+     "why": [
+      "reached through 1 foreign key join(s): shipment_units(shipment_id) -> shipments(shipment_id)",
+      "found independently by 2 organisations (shop-delhi, tarang)"
+     ]
+    },
+    {
+     "term": "B-05a1d62cdd",
+     "score": 1.0,
+     "orgs": [
+      "shop-delhi"
+     ],
+     "why": [
+      "in the rows that mention the pack"
+     ]
+    }
+   ],
+   "context_docs": 1,
+   "context_docs_naming_product": 0,
+   "linked_docs": 10,
+   "question_only_docs": 5,
+   "question_only_naming_product": 1
+  }
+ ]
+}

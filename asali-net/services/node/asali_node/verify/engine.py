@@ -1,5 +1,6 @@
 """Verify one pack: trace, rules, verdict, wording, in the one result shape the interface and tests share (12.5)."""
 
+import asyncio
 from collections.abc import Awaitable, Callable
 from dataclasses import replace
 from datetime import UTC, date, datetime
@@ -12,6 +13,8 @@ from asali_node.verify.verdict import verdict_of
 from asali_node.verify.wording import describe
 
 DocsFn = Callable[[Trace], Awaitable[tuple[list[DocSignal], list[dict[str, Any]]]]]
+ContextFn = Callable[[Trace], Awaitable[dict[str, Any]]]
+ContextDocsFn = Callable[[Trace, dict[str, Any], set[str]], Awaitable[list[dict[str, Any]]]]
 
 
 async def verify_pack(
@@ -24,11 +27,21 @@ async def verify_pack(
     read: dict[str, Any] | None = None,
     today: date | None = None,
     documents: DocsFn | None = None,
+    context: ContextFn | None = None,
+    context_docs: ContextDocsFn | None = None,
     tracer: Tracer | None = None,
 ) -> dict[str, Any]:
     tracer = tracer or Tracer(share, orgs)
     trace = await tracer.run(gtin, serial, today or datetime.now(UTC).astimezone().date())
-    signals, doc_hits = await documents(trace) if documents else ([], [])
+    # Linked documents and the context run side by side; the context then searches the text for related reading.
+    docs_task = asyncio.ensure_future(documents(trace)) if documents else None
+    found_context = await context(trace) if context else None
+    signals, doc_hits = await docs_task if docs_task else ([], [])
+    related = (
+        await context_docs(trace, found_context, {d["doc_id"] for d in doc_hits})
+        if context_docs and found_context
+        else []
+    )  # related reading never reaches the rules: only linked documents can
     facts = replace(trace.facts, doc_signals=tuple(signals))
     reasons = run_rules(facts)
     verdict = verdict_of(reasons)
@@ -51,6 +64,8 @@ async def verify_pack(
         "read": read,
         "history": trace.history,
         "documents": doc_hits,
+        "context": found_context,
+        "context_documents": related,
         "sources": trace.sources,
         "mode": mode,
         "checked_at": datetime.now(UTC).isoformat(),

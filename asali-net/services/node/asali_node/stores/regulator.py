@@ -12,6 +12,7 @@ def _states(text: str | None) -> list[str] | None:
 class RegulatorStore(SqlStore):
     ENGINE = "pg"
     ORG = "regulator"
+    CONTEXT_ROOTS = (("alerts", "lot", "lot"), ("alerts", "gtin", "gtin"))
 
     def add_alert(self, a: NewAlert) -> Alert:
         aid = new_id("AL")
@@ -21,6 +22,10 @@ class RegulatorStore(SqlStore):
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
             aid, a.kind, a.gtin, a.lot, a.manufacturer_org, a.issued_at, a.reason, a.doc_id, states,
         )  # fmt: skip
+        for state in a.states or []:
+            self.db.run(
+                "INSERT INTO alert_states (alert_id, state) VALUES (?, ?) ON CONFLICT DO NOTHING", aid, state
+            )
         return Alert(alert_id=aid, kind=a.kind, gtin=a.gtin, lot=a.lot, manufacturer_org=a.manufacturer_org,
                      issued_at=to_ist(a.issued_at), reason=a.reason, doc_id=a.doc_id, states=a.states)  # fmt: skip
 
@@ -49,6 +54,11 @@ class RegulatorStore(SqlStore):
 
     def set_licence(self, lic: Licence) -> None:
         self.db.run(
+            "INSERT INTO licence_types (licence_type, label) VALUES (?, ?) ON CONFLICT DO NOTHING",
+            lic.licence_type,
+            lic.licence_type,
+        )
+        self.db.run(
             "INSERT INTO licences (org_id, licence_no, licence_type, valid_from, valid_to, status) "
             "VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (org_id) DO UPDATE SET licence_no = EXCLUDED.licence_no, "
             "licence_type = EXCLUDED.licence_type, valid_from = EXCLUDED.valid_from, valid_to = EXCLUDED.valid_to, "
@@ -71,6 +81,11 @@ class RegulatorStore(SqlStore):
         ]  # fmt: skip
 
     def add_inspection(self, i: NewInspection) -> None:
+        self.db.run(
+            "INSERT INTO inspection_outcomes (outcome, label) VALUES (?, ?) ON CONFLICT DO NOTHING",
+            i.outcome,
+            i.outcome,
+        )
         self.db.run(
             "INSERT INTO inspections (inspection_id, org_id, inspected_at, outcome, doc_id) VALUES (?, ?, ?, ?, ?)",
             new_id("INS"), i.org_id, i.inspected_at, i.outcome, i.doc_id,

@@ -23,3 +23,9 @@ MongoDB, embedded documents, camelCase. Adapter: `stores/medivra.py`. Validators
 Rule kept from the plan: units stay embedded in the lot; seed data stays under 2,000 units per lot.
 Duplicate serials are refused by a unique multikey index on `lots.units.sn` and by a check before commissioning.
 Common collections: `staff`, `scanFixes`, `docLinks`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `parties` (consignees), `consignmentLines` (one document per lot in a consignment, with the count) and `recalls` (one per lot, next to `lots.recall`). References: `consignments.consignee`, `consignmentLines.consignment`, `consignmentLines.lot`, `recalls.lot`.

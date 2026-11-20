@@ -14,3 +14,9 @@ SQLite, purchase and sale bills. Adapter: `stores/shop_delhi.py`.
 
 A shop returns no shipments (`shipments_to` is empty) and raises `NotSupported` for dispatch.
 Common tables: `users`, `scan_fixes`, `doc_links`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `parties` (org id, kind): `purchases.distributor_org` references it. `returns.bill_no` now references `sales`.

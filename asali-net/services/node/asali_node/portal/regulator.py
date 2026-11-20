@@ -73,6 +73,19 @@ class InvestigateIn(BaseModel):
     raw: str = Field(min_length=3, max_length=500)
 
 
+class SimilarIn(BaseModel):
+    raw: str = Field(min_length=3)
+
+
+@router.post("/similar")
+async def similar(body: SimilarIn, request: Request) -> dict[str, Any]:
+    """Issued codes that approximately match a reading, and readings recorded against an issued code (Phase 2)."""
+    from asali_node.portal.consumer import _orgs
+    from asali_node.verify.similar import find_similar
+
+    return await find_similar(request.app.state.share, _orgs(request), body.raw)
+
+
 @router.post("/investigate")
 async def investigate(body: InvestigateIn, request: Request) -> dict[str, Any]:
     """The same verification a consumer gets, for a staff member to look into a pack. Nothing is recorded."""

@@ -17,6 +17,7 @@ from asali_node.canonical import NewCheck, NewReport
 from asali_node.problems import Problem
 from asali_node.stores.sqlbase import new_id
 from asali_node.verify.checks import PLACEHOLDER_GTIN, Resolution, resolve_input
+from asali_node.verify.context import context_documents, gather_context
 from asali_node.verify.documents import retrieve
 from asali_node.verify.engine import verify_pack
 from asali_node.verify.trace import Tracer
@@ -77,12 +78,22 @@ def _orgs(request: Request) -> list[dict[str, Any]]:
     return list(request.app.state.directory.known())
 
 
+def _pipelines(request: Request, orgs: list[dict[str, Any]]) -> dict[str, Any]:
+    """The text and context steps every verification runs after the trace."""
+    share = request.app.state.share
+    return {
+        "documents": lambda trace: retrieve(share, orgs, trace),
+        "context": lambda trace: gather_context(share, orgs, trace),
+        "context_docs": lambda trace, ctx, linked: context_documents(share, orgs, trace, ctx, linked),
+    }
+
+
 async def verify_resolved(
     request: Request, res: Resolution, record: bool, city: str = "", at: datetime | None = None
 ) -> dict[str, Any]:
     result = await verify_pack(request.app.state.share, _orgs(request), res.gtin or PLACEHOLDER_GTIN, res.serial or "",
                                mode=deps.settings_of(request).asali_mode, read=res.read,
-                               documents=lambda trace: retrieve(request.app.state.share, _orgs(request), trace))  # fmt: skip
+                               **_pipelines(request, _orgs(request)))  # fmt: skip
     if result["pack"]["gtin"] == PLACEHOLDER_GTIN:
         result["pack"]["gtin"] = None
     if record:
@@ -141,7 +152,7 @@ async def stream(request: Request, raw: str, city: str = "Unknown") -> Streaming
         tracer = Tracer(request.app.state.share, orgs)
         task = asyncio.create_task(verify_pack(request.app.state.share, orgs, res.gtin or PLACEHOLDER_GTIN, res.serial or "",
                                                mode=deps.settings_of(request).asali_mode, read=res.read, tracer=tracer,
-                                               documents=lambda trace: retrieve(request.app.state.share, orgs, trace)))  # fmt: skip
+                                               **_pipelines(request, orgs)))  # fmt: skip
         while not task.done():
             yield sse(
                 "progress",

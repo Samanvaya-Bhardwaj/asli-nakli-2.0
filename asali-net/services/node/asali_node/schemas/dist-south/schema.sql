@@ -1,12 +1,14 @@
 -- Dakshin Pharma Agencies, Bengaluru: SQLite. Keeps the raw scanned text next to the parsed values.
+CREATE TABLE IF NOT EXISTS parties (
+  org_id TEXT PRIMARY KEY, org_type TEXT NOT NULL CHECK (org_type IN ('pharma', 'distributor', 'shop', 'consumer', 'regulator')));
 CREATE TABLE IF NOT EXISTS inward (
-  entry_id INTEGER PRIMARY KEY, supplier_org TEXT NOT NULL, dc_number TEXT NOT NULL, entry_date TEXT NOT NULL);
+  entry_id INTEGER PRIMARY KEY, supplier_org TEXT NOT NULL REFERENCES parties(org_id), dc_number TEXT NOT NULL, entry_date TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS inward_lines (
   entry_id INTEGER NOT NULL REFERENCES inward(entry_id), barcode_raw TEXT, gtin TEXT NOT NULL, sn TEXT NOT NULL,
   lot TEXT, exp TEXT, corrected INTEGER NOT NULL DEFAULT 0 CHECK (corrected IN (0, 1)),
   PRIMARY KEY (entry_id, sn));
 CREATE TABLE IF NOT EXISTS outward (
-  entry_id INTEGER PRIMARY KEY, customer_org TEXT NOT NULL, invoice_no TEXT NOT NULL, entry_date TEXT NOT NULL);
+  entry_id INTEGER PRIMARY KEY, customer_org TEXT NOT NULL REFERENCES parties(org_id), invoice_no TEXT NOT NULL, entry_date TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS outward_lines (
   entry_id INTEGER NOT NULL REFERENCES outward(entry_id), barcode_raw TEXT, gtin TEXT NOT NULL, sn TEXT NOT NULL,
   PRIMARY KEY (entry_id, sn));

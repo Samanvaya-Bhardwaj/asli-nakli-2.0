@@ -15,3 +15,9 @@ SQLite, inward and outward registers keeping the raw scanned text. Adapter: `sto
 
 Lossy on purpose: times of day are not kept, so two events on one day are ordered receive first, then ship.
 Common tables use this register's style: `users`, `scan_fixes`, `doc_refs`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `parties` (org id, kind): `inward.supplier_org` and `outward.customer_org` reference it; a party is added when first named.

@@ -122,12 +122,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4117,
+                      "duration": 4707,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:53:32.256Z",
+                      "startTime": "2026-11-20T07:17:54.667Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -156,12 +156,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2238,
+                      "duration": 3259,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:53:36.612Z",
+                      "startTime": "2026-11-20T07:17:59.766Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -190,12 +190,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1725,
+                      "duration": 2364,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:53:38.880Z",
+                      "startTime": "2026-11-20T07:18:03.044Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -206,6 +206,40 @@
               "id": "c1cf76b2c3e27e53bcdc-77617a4367246e060ab2",
               "file": "consumer.spec.ts",
               "line": 30,
+              "column": 3
+            },
+            {
+              "title": "the result shows the context each organisation found through its own keys",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2631,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-20T07:18:05.422Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c1cf76b2c3e27e53bcdc-419bdc17ffd20804deca",
+              "file": "consumer.spec.ts",
+              "line": 41,
               "column": 3
             },
             {
@@ -224,12 +258,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1210,
+                      "duration": 1238,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:53:40.632Z",
+                      "startTime": "2026-11-20T07:18:08.072Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -239,7 +273,7 @@
               ],
               "id": "c1cf76b2c3e27e53bcdc-83f8dbc5efe6a6587a36",
               "file": "consumer.spec.ts",
-              "line": 41,
+              "line": 52,
               "column": 3
             },
             {
@@ -258,12 +292,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1153,
+                      "duration": 1188,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:53:41.862Z",
+                      "startTime": "2026-11-20T07:18:09.342Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -273,7 +307,7 @@
               ],
               "id": "c1cf76b2c3e27e53bcdc-200c32a82219c910aba3",
               "file": "consumer.spec.ts",
-              "line": 49,
+              "line": 60,
               "column": 3
             }
           ]
@@ -302,12 +336,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 16200,
+                  "duration": 21913,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-20T04:53:43.053Z",
+                  "startTime": "2026-11-20T07:18:10.559Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -344,7 +378,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 13477,
+                  "duration": 17602,
                   "errors": [],
                   "stdout": [],
                   "stderr": [
@@ -356,7 +390,7 @@
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2026-11-20T04:53:59.290Z",
+                  "startTime": "2026-11-20T07:18:32.513Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -393,12 +427,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3400,
+                  "duration": 3676,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-20T04:54:12.805Z",
+                  "startTime": "2026-11-20T07:18:50.155Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -427,12 +461,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1378,
+                  "duration": 1740,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-20T04:54:16.232Z",
+                  "startTime": "2026-11-20T07:18:53.861Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -476,12 +510,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2710,
+                      "duration": 4107,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:54:17.655Z",
+                      "startTime": "2026-11-20T07:18:55.650Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -492,6 +526,40 @@
               "id": "200767399f33751ddee1-efbb634e817414833af5",
               "file": "regulator.spec.ts",
               "line": 7,
+              "column": 3
+            },
+            {
+              "title": "a misread code lists the issued codes close to it, and an issued code lists how it was misread",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4787,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-20T07:18:59.780Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "200767399f33751ddee1-47b83ac5bc8eacf5d1ac",
+              "file": "regulator.spec.ts",
+              "line": 17,
               "column": 3
             },
             {
@@ -510,12 +578,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2288,
+                      "duration": 4489,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:54:20.382Z",
+                      "startTime": "2026-11-20T07:19:04.594Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -525,7 +593,7 @@
               ],
               "id": "200767399f33751ddee1-7372f502f5d179d933df",
               "file": "regulator.spec.ts",
-              "line": 17,
+              "line": 30,
               "column": 3
             },
             {
@@ -544,12 +612,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4642,
+                      "duration": 5376,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:54:22.688Z",
+                      "startTime": "2026-11-20T07:19:09.107Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -559,7 +627,7 @@
               ],
               "id": "200767399f33751ddee1-0d96c5adc50e6ebc37fb",
               "file": "regulator.spec.ts",
-              "line": 25,
+              "line": 38,
               "column": 3
             },
             {
@@ -578,12 +646,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2786,
+                      "duration": 2576,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-20T04:54:27.364Z",
+                      "startTime": "2026-11-20T07:19:14.515Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -593,7 +661,7 @@
               ],
               "id": "200767399f33751ddee1-0bf9486f27afa81349c4",
               "file": "regulator.spec.ts",
-              "line": 45,
+              "line": 58,
               "column": 3
             }
           ]
@@ -603,9 +671,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-20T04:53:31.443Z",
-    "duration": 58984.886999999995,
-    "expected": 13,
+    "startTime": "2026-11-20T07:17:53.526Z",
+    "duration": 83836.032,
+    "expected": 15,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

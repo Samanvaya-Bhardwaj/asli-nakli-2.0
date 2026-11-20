@@ -58,7 +58,7 @@ export function PackHistory({ history, simulation }: { history: HistoryHop[]; si
 
 const SHOWN_FIRST = 3
 
-function DocItem({ d }: { d: DocHit }) {
+export function DocItem({ d, extra }: { d: DocHit; extra?: string }) {
   return (
     <li className="prose-narrow border-t border-line pt-3">
       <p className="font-semibold">
@@ -66,6 +66,7 @@ function DocItem({ d }: { d: DocHit }) {
       </p>
       <p className="text-sm text-meta">{d.label}</p>
       <blockquote className="mt-1 border-l-2 border-line-strong pl-3">{d.snippet.text}</blockquote>
+      {extra && <p className="mt-1 text-sm text-muted">{extra}</p>}
       {d.linked_to[0] && (
         <p className="mt-1 text-sm text-muted">
           Linked because: {d.linked_to[0].because.join(', ') || 'weak match'}. Confidence {(d.linked_to[0].confidence * 100).toFixed(0)}%.

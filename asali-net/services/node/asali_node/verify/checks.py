@@ -3,7 +3,9 @@
 A correction is never silently accepted here: a consumer always has to confirm it against the printed pack.
 """
 
+import asyncio
 from dataclasses import dataclass, field
+from datetime import date
 from typing import Any
 
 from asali_codes.candidates import serial_candidates
@@ -52,6 +54,25 @@ async def _gtin_for(share: Any, orgs: list[dict[str, Any]], serial: str) -> str 
         return None
 
 
+async def _label_facts(
+    share: Any, orgs: list[dict[str, Any]], serials: list[str], cap: int = 6
+) -> dict[str, tuple[str | None, date | None]]:
+    """The lot and expiry the makers hold for each candidate, to check against what else the label says."""
+
+    async def one(s: str) -> tuple[str, tuple[str | None, date | None] | None]:
+        org = next((o["org_id"] for o in orgs if o.get("issuer_code") == s[:2]), None)
+        if org is None:
+            return s, None
+        try:
+            v = await share.get(org, f"/share/v1/units/by-serial/{s}")
+        except SourceUnavailable:
+            return s, None
+        exp = v.get("expiry")
+        return s, (v.get("lot"), date.fromisoformat(str(exp)[:10]) if exp else None)
+
+    return {s: f for s, f in await asyncio.gather(*[one(s) for s in serials[:cap]]) if f is not None}
+
+
 async def resolve_input(raw: str, share: Any, orgs: list[dict[str, Any]]) -> Resolution:
     issuers = {o["issuer_code"] for o in orgs if o.get("issuer_code")}
     first = parse(raw)
@@ -59,7 +80,11 @@ async def resolve_input(raw: str, share: Any, orgs: list[dict[str, Any]]) -> Res
     if first.status["serial"] not in ("valid", "missing") and first.serial:
         gtin = first.gtin if first.status["gtin"] == "valid" else None
         real = await _existing(share, orgs, gtin, [c.value for c in serial_candidates(first.serial, issuers)])
-    res = read(raw, context="consumer", issuers=issuers, exists=lambda _g, ss: {s for s in ss if s in real})
+    known: dict[str, tuple[str | None, date | None]] = {}
+    if len(real) > 1 and (first.lot or first.expiry):  # only worth asking when the label can separate them
+        known = await _label_facts(share, orgs, sorted(real))
+    res = read(raw, context="consumer", issuers=issuers, exists=lambda _g, ss: {s for s in ss if s in real},
+               facts=lambda ss: {s: known[s] for s in ss if s in known})  # fmt: skip
     info = {"raw": raw, "decision": res.decision, "corrections": []}
     if res.decision == "unreadable":
         return Resolution("unreadable", res.message, read=info)

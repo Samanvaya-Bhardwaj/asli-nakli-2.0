@@ -94,3 +94,49 @@ def test_expected_set_is_restricted_to_the_read_gtin():
         f"(01){GTIN}(21)TPM95346Q37", context="staff", issuers=ISSUERS, expected={("08901001000292", TRUE)}
     )
     assert r.decision == "unreadable"
+
+
+# ---- context from the label (Phase 2: clean a noisy reading with what else is printed on the pack) ----
+NEAR = [c.value for c in serial_candidates("TPM0S346Q37", ISSUERS) if c.cost == 1.0][:3]
+LABEL = f"https://id.asali.example/01/{GTIN}/21/TPM0S346Q37?10=TP24A017"
+
+
+def facts_of(table):
+    return lambda serials: {s: table[s] for s in serials if s in table}
+
+
+def test_the_lot_printed_on_the_label_picks_between_equally_close_codes():
+    table = {NEAR[0]: ("TP24A017", None), NEAR[1]: ("TP24A018", None), NEAR[2]: ("TP24A018", None)}
+    r = read(
+        LABEL, context="staff", issuers=ISSUERS, expected={(GTIN, s) for s in NEAR}, facts=facts_of(table)
+    )
+    assert (r.decision, r.serial) == ("corrected", NEAR[0])
+    assert "the lot printed on the pack matches" in r.chosen.edits[-1]
+
+
+def test_without_the_context_the_same_reading_needs_a_choice():
+    r = read(LABEL, context="staff", issuers=ISSUERS, expected={(GTIN, s) for s in NEAR})
+    assert r.decision == "needs_choice"
+
+
+def test_if_the_lot_fits_none_of_the_candidates_the_choice_is_left_to_the_person():
+    table = {s: ("TP24A099", None) for s in NEAR}
+    r = read(
+        LABEL, context="staff", issuers=ISSUERS, expected={(GTIN, s) for s in NEAR}, facts=facts_of(table)
+    )
+    assert r.decision == "needs_choice"
+
+
+def test_if_two_candidates_still_fit_the_label_it_stays_a_choice_between_those_two():
+    table = {NEAR[0]: ("TP24A017", None), NEAR[1]: ("TP24A017", None), NEAR[2]: ("TP24A018", None)}
+    r = read(
+        LABEL, context="staff", issuers=ISSUERS, expected={(GTIN, s) for s in NEAR}, facts=facts_of(table)
+    )
+    assert r.decision == "needs_choice"
+    assert sorted(c.value for c in r.choices) == sorted(NEAR[:2])
+
+
+def test_a_consumer_still_confirms_even_when_the_label_agrees():
+    table = {NEAR[0]: ("TP24A017", None), NEAR[1]: ("TP24A018", None), NEAR[2]: ("TP24A018", None)}
+    r = read(LABEL, context="consumer", issuers=ISSUERS, exists=exists_only(*NEAR), facts=facts_of(table))
+    assert r.decision == "needs_confirmation"

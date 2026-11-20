@@ -72,3 +72,11 @@ yes finish whats left and get it done and finish everything
 ```
 
 Result: milestones M3 to M12 built and checked. In the last round: seed and scenario scripts address nodes through the directory, API types generated from Pydantic models, regulator, outage and phone browser tests, theme switch and phone More menu, audit and critique fixes. Files written in this last round were **not** snapshotted before their first run (`addressing.py`, `contract.py`, `gen_api_types.py`, `theme.ts`, `ThemeSwitch.tsx`, the new e2e specs), so `docs/vibe/generated/` has no first version of them. The test for each fix was written before the fix.
+
+## V2-4: close the gaps against the three phases' rubrics (20 Nov 2026)
+
+```text
+make sure all the phases (like the previous code and the new phase 3 code is connected) are connected ... these are the rubrics from all the phases, now phase 3 is the final phase and it is the combination of all the phases, they are not different project, (1 project but just in different phases) so check if you are lagging behind somewhere, additional features are ok but we should not lag something which is mentioned in rubrics
+```
+
+Result: the rubrics were read against the code. Gaps found and closed: Phase 3 context discovery across foreign keys in each database, merged by the asking node and used to search the text (`asali_node/context/`, `verify/context.py`); every database with at least four related tables (`test_phase3_shape.py`); Phase 2 approximate matching in both directions with an accuracy comparison (`asali_codes/evaluate.py`, `/api/similar`); label context in correction; and audit and cleaning of recorded data (`/api/quality`). `docs/REPORT.md` now has a section with each rubric item, its marks and where it is shown. Files of this round were not snapshotted before their first run, so `docs/vibe/generated/` has no first version of them; the tests for each were written first.

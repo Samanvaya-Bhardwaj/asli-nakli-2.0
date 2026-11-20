@@ -14,3 +14,9 @@ MongoDB, one document per pack. Adapter: `stores/shop_bengaluru.py`.
 
 A pack that was already received cannot be received again (duplicate `_id` raises `ValueError`).
 Common collections: `staff`, `scanFixes`, `docLinks`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `suppliers` (org id, kind), `billLines` (one document per pack on a bill, with the price) and `returns`. Stock documents now carry `gtin` and `sn` as fields of their own, next to the `_id`. References: `stock.in.from`, `billLines.bill`, `billLines.stock`, `returns.stock`, `returns.bill`.

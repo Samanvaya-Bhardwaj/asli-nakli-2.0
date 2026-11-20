@@ -17,7 +17,8 @@ from asali_node.canonical import (
 )
 from asali_node.stores.mongobase import MongoStore, unknown_unit, view
 from asali_node.stores.protocols import NotSupported
-from asali_node.stores.sqlbase import to_ist
+from asali_node.stores.sqlbase import new_id, to_ist
+from asali_node.stores.sqlcommon import party_kind
 
 
 def _key(gtin: str, serial: str) -> str:
@@ -26,13 +27,20 @@ def _key(gtin: str, serial: str) -> str:
 
 class ShopBengaluruStore(MongoStore):
     ORG = "shop-bengaluru"
+    CONTEXT_COLLECTIONS = ("stock", "bills", "suppliers", "billLines", "returns")
+    CONTEXT_REFS = (
+        ("stock", "in.from", "suppliers", "_id"), ("billLines", "bill", "bills", "_id"),
+        ("billLines", "stock", "stock", "_id"), ("returns", "stock", "stock", "_id"), ("returns", "bill", "bills", "_id"),
+    )  # fmt: skip
+    CONTEXT_ROOTS = (("stock", "sn", "serial"), ("billLines", "sn", "serial"), ("returns", "sn", "serial"))
 
     def record_receipt(self, r: NewReceipt) -> None:
+        self._ensure("suppliers", r.from_org, {"orgType": party_kind(r.from_org)})
         for u in r.units:
             try:
                 self.db["stock"].insert_one(
-                    {"_id": _key(u.gtin, u.serial), "in": {"from": r.from_org, "at": r.at, "ref": r.source_ref},
-                     "sale": None, "ret": None}
+                    {"_id": _key(u.gtin, u.serial), "gtin": u.gtin, "sn": u.serial,
+                     "in": {"from": r.from_org, "at": r.at, "ref": r.source_ref}, "sale": None, "ret": None}
                 )  # fmt: skip
             except DuplicateKeyError as e:
                 raise ValueError(f"{u.serial} was already received") from e
@@ -59,6 +67,10 @@ class ShopBengaluruStore(MongoStore):
             {"_id": s.bill_no, "at": s.at, "lines": [_key(x.gtin, x.serial) for x in s.lines],
              "amountPaise": sum(x.mrp_paise for x in s.lines), "customerRef": s.customer_ref_hash}
         )  # fmt: skip
+        self.db["billLines"].insert_many(
+            [{"_id": f"{s.bill_no}/{x.serial}", "bill": s.bill_no, "stock": _key(x.gtin, x.serial), "gtin": x.gtin,
+              "sn": x.serial, "pricePaise": x.mrp_paise} for x in s.lines]
+        )  # fmt: skip
 
     def record_return(self, r: NewReturn) -> None:
         res = self.db["stock"].update_one(
@@ -67,6 +79,9 @@ class ShopBengaluruStore(MongoStore):
         )
         if res.matched_count != 1:
             raise ValueError(f"{r.serial} was not sold on bill {r.bill_no}")
+        self.db["returns"].insert_one(
+            {"_id": new_id("ret_"), "bill": r.bill_no, "stock": _key(r.gtin, r.serial), "sn": r.serial, "why": r.reason, "at": r.at}
+        )  # fmt: skip
 
     def unit_view(self, gtin: str, serial: str) -> UnitView:
         d = self.db["stock"].find_one({"_id": _key(gtin, serial)})

@@ -14,6 +14,19 @@ test.describe('regulator portal', () => {
     await noAxeViolations(page, 'regulator-investigate')
   })
 
+  test('a misread code lists the issued codes close to it, and an issued code lists how it was misread', async ({ page }) => {
+    await login(page, REGULATOR)
+    await page.getByRole('link', { name: 'Investigate' }).first().click()
+    await page.getByLabel('Code of the pack').fill(scenarios.S9!.raw)
+    await page.getByRole('button', { name: 'Find near matches' }).click()
+    await expect(page.getByRole('heading', { name: 'Issued codes close to this reading' })).toBeVisible()
+    await expect(page.getByText('Nothing here changes a record.')).toBeVisible()
+    await noAxeViolations(page, 'regulator-near-matches')
+    await page.getByLabel('Code of the pack').fill(scenarios.S9!.true_serial ?? scenarios.S9!.serial)
+    await page.getByRole('button', { name: 'Find near matches' }).click()
+    await expect(page.getByRole('heading', { name: 'Readings recorded for this code' })).toBeVisible()
+  })
+
   test('complaints are grouped by batch and the unusual ones are marked', async ({ page }) => {
     await login(page, REGULATOR)
     await page.getByRole('link', { name: 'Complaints' }).first().click()

@@ -3,6 +3,8 @@
 from datetime import datetime
 from typing import Any
 
+from bson import ObjectId
+
 from asali_node.canonical import (
     Event,
     NewDispatch,
@@ -17,19 +19,40 @@ from asali_node.canonical import (
 from asali_node.stores.mongobase import MongoStore, unknown_unit, view
 from asali_node.stores.protocols import NotSupported
 from asali_node.stores.sqlbase import to_ist
+from asali_node.stores.sqlcommon import party_kind
 
 
 class DistWestStore(MongoStore):
     ORG = "dist-west"
+    CONTEXT_COLLECTIONS = ("movements", "movementItems", "partners", "directions")
+    CONTEXT_REFS = (
+        ("movements", "party", "partners", "_id"), ("movements", "dir", "directions", "_id"),
+        ("movementItems", "movement", "movements", "_id"),
+    )  # fmt: skip
+    CONTEXT_ROOTS = (("movements", "items.s", "serial"), ("movementItems", "s", "serial"))
+
+    def _seed(self) -> None:
+        self._ensure("directions", "IN", {"label": "Received from a supplier"})
+        self._ensure("directions", "OUT", {"label": "Dispatched to a customer"})
+
+    def _record(self, direction: str, party: str, at, ref: str, by: str, vehicle: str | None, units) -> None:  # type: ignore[no-untyped-def]
+        """One movement, its lines as documents of their own, and the party it names."""
+        mid = str(ObjectId())  # time-ordered, so sorting by _id still follows the order of writing
+        self._ensure("partners", party, {"orgType": party_kind(party)})
+        doc = {"_id": mid, "dir": direction, "party": party, "at": at, "ref": ref, "by": by,
+               "items": [{"g": u.gtin, "s": u.serial} for u in units]}  # fmt: skip
+        if vehicle is not None:
+            doc["vehicle"] = vehicle
+        self.db["movements"].insert_one(doc)
+        self.db["movementItems"].insert_many(
+            [{"_id": f"{mid}/{u.serial}", "movement": mid, "g": u.gtin, "s": u.serial} for u in units]
+        )
 
     def _ordered(self, query: dict[str, Any]) -> Any:
         return self.db["movements"].find(query).sort([("at", 1), ("_id", 1)])
 
     def record_receipt(self, r: NewReceipt) -> None:
-        self.db["movements"].insert_one(
-            {"dir": "IN", "party": r.from_org, "at": r.at, "ref": r.source_ref, "by": r.by,
-             "items": [{"g": u.gtin, "s": u.serial} for u in r.units]}
-        )  # fmt: skip
+        self._record("IN", r.from_org, r.at, r.source_ref, r.by, None, r.units)
 
     def received_refs(self) -> set[tuple[str, str]]:
         return {
@@ -50,10 +73,7 @@ class DistWestStore(MongoStore):
         missing = [s for s in serials if last.get(s) != "IN"]
         if missing:
             raise ValueError(f"not in stock: {missing[:3]}")
-        self.db["movements"].insert_one(
-            {"dir": "OUT", "party": d.to_org, "at": d.at, "ref": d.shipment_id, "by": d.by, "vehicle": d.vehicle_no,
-             "items": [{"g": u.gtin, "s": u.serial} for u in d.units]}
-        )  # fmt: skip
+        self._record("OUT", d.to_org, d.at, d.shipment_id, d.by, d.vehicle_no, d.units)
         return Shipment(shipment_id=d.shipment_id, from_org=self.ORG, to_org=d.to_org, at=to_ist(d.at),
                         units=[UnitRef(gtin=u.gtin, serial=u.serial) for u in d.units])  # fmt: skip
 

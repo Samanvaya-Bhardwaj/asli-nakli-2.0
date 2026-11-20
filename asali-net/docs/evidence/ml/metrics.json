@@ -1,7 +1,7 @@
 {
  "metrics": {
   "m1_macro_f1": 0.9424156417533901,
-  "m2_micro_f1": 0.6426229508196721,
+  "m2_micro_f1": 0.6530612244897959,
   "codes_precision": 1.0,
   "codes_recall": 1.0,
   "names_precision": 0.9828802956432691,
@@ -27,20 +27,20 @@
  },
  "missed": {
   "m2_micro_f1": [
-   0.6426229508196721,
+   0.6530612244897959,
    0.8
   ]
  },
  "m3": {
   "precision": 1.0,
   "recall": 0.9064327485380117,
-  "brier": 0.017730189072302668,
-  "baseline_precision": 0.9425837320574163,
-  "baseline_recall": 0.5760233918128655,
+  "brier": 0.017839665541908654,
+  "baseline_precision": 0.9423076923076923,
+  "baseline_recall": 0.5730994152046783,
   "true_links": 342,
   "candidates": 608,
-  "noisy_code_links": 1,
-  "found_noisy_by_m3": 0,
+  "noisy_code_links": 2,
+  "found_noisy_by_m3": 1,
   "found_noisy_by_baseline": 0
  },
  "mentions": {
@@ -80,10 +80,10 @@
  },
  "per_label_f1": {
   "suspected_fake": 0.6071428571428571,
-  "packaging_different": 0.6666666666666666,
+  "packaging_different": 0.7547169811320755,
   "no_effect": 0.36363636363636365,
   "side_effect": 0.896551724137931,
-  "expired_or_near_expiry": 0.9,
+  "expired_or_near_expiry": 0.8717948717948718,
   "overcharged": 0.9523809523809523,
   "damaged_pack": 0.3111111111111111,
   "wrong_medicine": 0.5517241379310345,

@@ -1,6 +1,6 @@
 Hand-written set: not yet provided
 
-Date 2026-11-20, commit 98ae208, data hash 250c13f56be68490
+Date 2026-11-20, commit 3b815d3, data hash 2810be4764963ccd
 Dataset: 1113 documents; train 751, validation 180, test 182. Test families are not in training.
 
 ## Results on the generated test families
@@ -8,7 +8,7 @@ Dataset: 1113 documents; train 751, validation 180, test 182. Test families are 
 | Component | Metric | Result | Target | |
 |---|---|---|---|---|
 | M1 | m1_macro_f1 | 0.942 | >= 0.9 | met |
-| M2 | m2_micro_f1 | 0.643 | >= 0.8 | MISSED |
+| M2 | m2_micro_f1 | 0.653 | >= 0.8 | MISSED |
 | CODES | codes_precision | 1.000 | >= 0.98 | met |
 | CODES | codes_recall | 1.000 | >= 0.95 | met |
 | NAMES | names_precision | 0.983 | >= 0.9 | met |
@@ -21,14 +21,14 @@ Dataset: 1113 documents; train 751, validation 180, test 182. Test families are 
 
 ## Missed targets
 
-- m2_micro_f1: 0.643 against a target of 0.8
+- m2_micro_f1: 0.653 against a target of 0.8
 
 ## M3 against the baseline (exact code match only)
 
 - M3 at 0.8: precision 1.000, recall 0.906
-- Baseline: precision 0.943, recall 0.576
-- Links reached through a misread code or a name only (the baseline cannot find these): 1 in the test set, M3 found 0.
-- Brier score 0.0177. Reliability chart: m3_reliability.png
+- Baseline: precision 0.942, recall 0.573
+- Links reached through a misread code or a name only (the baseline cannot find these): 2 in the test set, M3 found 1.
+- Brier score 0.0178. Reliability chart: m3_reliability.png
 
 ## M1 confusion matrix (rows true, columns predicted)
 
@@ -52,10 +52,10 @@ Dataset: 1113 documents; train 751, validation 180, test 182. Test families are 
 ## M2 F1 per label
 
 - suspected_fake: 0.607
-- packaging_different: 0.667
+- packaging_different: 0.755
 - no_effect: 0.364
 - side_effect: 0.897
-- expired_or_near_expiry: 0.900
+- expired_or_near_expiry: 0.872
 - overcharged: 0.952
 - damaged_pack: 0.311
 - wrong_medicine: 0.552

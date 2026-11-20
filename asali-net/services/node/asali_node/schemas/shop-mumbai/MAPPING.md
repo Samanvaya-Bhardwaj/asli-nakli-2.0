@@ -14,3 +14,10 @@ PostgreSQL, one inventory ledger. Adapter: `stores/shop_mumbai.py`.
 For `RETURN` rows `counterparty` holds the customer's reason. The plan's ledger has no reason column.
 `bills` keeps the total and the hashed customer reference; neither is shared.
 Common tables: `staff`, `scan_corrections`, `document_links`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `entry_kinds` (IN, SALE, RETURN, DAMAGE with a label and the effect on stock): `inventory_ledger.kind` references it, replacing the CHECK.
+- `bill_lines` (bill, code, price): one row per pack on a bill, with the price; `returns` (bill, code, reason): one row per return. Both reference `bills`.

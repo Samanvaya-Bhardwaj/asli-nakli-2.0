@@ -72,6 +72,7 @@ def _status(code: str) -> str:
 
 class KesarStore(SqlStore):
     ORG = "kesar"
+    CONTEXT_ROOTS = (("SRL_MST", "SRL_NO", "serial"), ("DSP_DTL", "SRL_NO", "serial"))
     STAFF = ("USR_MST", "USR_ID", "PWD_HASH", "USR_ROLE", "USR_NM")
     CORR = ("SCN_CORR", "CORR_TS", "RAW_TXT", "FLD", "CHOSEN_VAL", "COST", "CONF_BY")
     DOCLNK = ("DOC_LNK", "DOC_ID", "ENT_TYPE", "ENT_KEY", "CONF", "LNK_TS")

@@ -1,6 +1,8 @@
 -- Sharma Medicos, Lajpat Nagar, Delhi: SQLite, purchase and sale bills.
+CREATE TABLE IF NOT EXISTS parties (
+  org_id TEXT PRIMARY KEY, org_type TEXT NOT NULL CHECK (org_type IN ('pharma', 'distributor', 'shop', 'consumer', 'regulator')));
 CREATE TABLE IF NOT EXISTS purchases (
-  pur_id TEXT PRIMARY KEY, distributor_org TEXT NOT NULL, bill_no TEXT NOT NULL, bill_date TEXT NOT NULL);
+  pur_id TEXT PRIMARY KEY, distributor_org TEXT NOT NULL REFERENCES parties(org_id), bill_no TEXT NOT NULL, bill_date TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS purchase_items (
   pur_id TEXT NOT NULL REFERENCES purchases(pur_id), gtin TEXT NOT NULL, sn TEXT NOT NULL, lot TEXT, exp TEXT,
   PRIMARY KEY (pur_id, sn));
@@ -10,7 +12,7 @@ CREATE TABLE IF NOT EXISTS sale_items (
   bill_no TEXT NOT NULL REFERENCES sales(bill_no), gtin TEXT NOT NULL, sn TEXT NOT NULL, mrp_paise INTEGER NOT NULL,
   PRIMARY KEY (bill_no, sn));
 CREATE TABLE IF NOT EXISTS returns (
-  ret_id TEXT PRIMARY KEY, bill_no TEXT NOT NULL, sn TEXT NOT NULL, reason TEXT NOT NULL, at TEXT NOT NULL);
+  ret_id TEXT PRIMARY KEY, bill_no TEXT NOT NULL REFERENCES sales(bill_no), sn TEXT NOT NULL, reason TEXT NOT NULL, at TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS users (
   username TEXT PRIMARY KEY, pw_hash TEXT NOT NULL, user_role TEXT NOT NULL, full_name TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS scan_fixes (

@@ -13,3 +13,9 @@ PostgreSQL, separate receipt and dispatch tables, stock as a view. Adapter: `sto
 | `Event.city` | not stored | the node's configured city | `Delhi` |
 
 Not kept: the raw scan text and whether a code was corrected. `received_by` is stored in `receipts.received_by`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `parties` (org id, kind): `receipts.from_org_id` and `dispatches.to_org_id` reference it; a party is added when first named.

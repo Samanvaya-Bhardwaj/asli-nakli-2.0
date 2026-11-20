@@ -1,8 +1,8 @@
 {
  "sklearn": "1.9.1",
- "data_hash": "250c13f56be68490",
- "m1_val_macro_f1": 0.9891,
- "m2_val_micro_f1": 0.6494,
+ "data_hash": "2810be4764963ccd",
+ "m1_val_macro_f1": 0.985,
+ "m2_val_micro_f1": 0.6489,
  "m3_val_precision_at_08": 1.0,
  "m3_val_recall_at_08": 0.908
 }

@@ -12,7 +12,9 @@ def main() -> int:
     big = []
     for pattern in ("*.py", "*.ts", "*.tsx"):
         for p in ROOT.rglob(pattern):
-            if SKIP & set(p.relative_to(ROOT).parts) or p.name.endswith(".d.ts"):
+            if (
+                SKIP & set(p.relative_to(ROOT).parts) or p.name.endswith(".d.ts") or p.name == "generated.ts"
+            ):  # generated.ts is written by a tool, not by hand
                 continue
             n = sum(1 for _ in p.open(encoding="utf-8", errors="replace"))
             if n > LIMIT:

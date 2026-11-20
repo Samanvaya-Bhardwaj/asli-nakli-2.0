@@ -14,3 +14,10 @@ MongoDB, one event-sourced `movements` collection. Adapter: `stores/dist_west.py
 
 Index: `items.s`, so a serial lookup does not scan the collection.
 Common collections: `staff`, `scanFixes`, `docLinks`.
+
+## Related tables for Phase 3 (context discovery)
+
+Every organisation's database holds at least four related tables, joined by keys, so that what is known about a pack is spread across them and a database can find context by following its own keys.
+
+- `partners` (org id, kind), `directions` (IN, OUT) and `movementItems` (one document per code in a movement, next to `movements.items`). References: `movements.party`, `movements.dir`, `movementItems.movement`.
+- A movement now has a string `_id` (an ObjectId in text form, so it still sorts by time of writing).
